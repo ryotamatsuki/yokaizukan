@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-24",
+  "prompts": [
+    {
+      "id": "abura_sumashi",
+      "name": "油すまし",
+      "visualFeatures": [
+        "石のような顔",
+        "山道",
+        "油壺",
+        "古い峠"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。油すましを石のような顔と小さな体で描く。山道、石、油壺や小さな灯りを添える。和紙水彩、墨線、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Abura-sumashi, a small yokai with a stone-like face on a rocky mountain path, with an oil jar or small lamp. Washi watercolor, sumi outlines, not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/abura_sumashi.png",
+      "status": "generated"
+    },
+    {
+      "id": "ame_onna",
+      "name": "雨女",
+      "visualFeatures": [
+        "雨の女性妖怪",
+        "傘",
+        "雨粒",
+        "しずか"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。雨女をしとしと雨の中に立つやさしい女性妖怪として描く。傘、雲、雨粒。和紙水彩、墨線、暗すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Ame-onna, a gentle rain woman in a pale kimono under soft rain with umbrella and clouds. Washi watercolor, sumi outlines, calm and not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/ame_onna.png",
+      "status": "generated"
+    },
+    {
+      "id": "betobeto_san",
+      "name": "べとべとさん",
+      "visualFeatures": [
+        "足あと",
+        "見えない妖怪",
+        "夜道",
+        "小さな影"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。べとべとさんを、夜道に続くかわいい足あとと小さな影の気配で表現する。和紙水彩、墨線、シンプル背景、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Betobeto-san as cute glowing footprints and a small soft shadow on a quiet night road. Washi watercolor, sumi outlines, mysterious but not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/betobeto_san.png",
+      "status": "generated"
+    },
+    {
+      "id": "daidarabotchi",
+      "name": "だいだらぼっち",
+      "visualFeatures": [
+        "巨大な巨人",
+        "山と湖",
+        "足あと",
+        "やさしい表情"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。だいだらぼっちを山や湖より大きい巨人として描く。大きな足あと、広い野原、やさしい表情。和紙水彩、墨線、迫力はあるが怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Daidarabotchi, an enormous gentle giant behind mountains and a lake with a huge footprint in a field. Washi watercolor, sumi outlines, awe-inspiring but friendly.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/daidarabotchi.png",
+      "status": "generated"
+    },
+    {
+      "id": "enenra",
+      "name": "煙々羅",
+      "visualFeatures": [
+        "煙の妖怪",
+        "たき火",
+        "半透明",
+        "ゆらゆら"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。煙々羅をたき火や囲炉裏の煙の中に現れる半透明の妖怪として描く。煙にやさしい顔が見える。和紙水彩、墨線、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Enenra, a translucent smoke yokai with a gentle face appearing above a safe hearth. Washi watercolor, sumi outlines, soft smoky forms, not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/enenra.png",
+      "status": "generated"
+    },
+    {
+      "id": "fumikuruma_yohi",
+      "name": "文車妖妃",
+      "visualFeatures": [
+        "古い手紙",
+        "文箱",
+        "紙片が舞う",
+        "上品な怪異"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。古い手紙や文箱から現れる文車妖妃。紙片がふわっと舞い、上品でふしぎな姿。和紙水彩、墨線、古い書斎のシンプル背景、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Fumikuruma-yohi, a graceful spirit of old letters and a document box, paper slips floating softly. Washi watercolor, sumi outlines, simple old study, not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/fumikuruma_yohi.png",
+      "status": "generated"
+    },
+    {
+      "id": "hyosube",
+      "name": "ひょうすべ",
+      "visualFeatures": [
+        "水辺の妖怪",
+        "河童と違う表情",
+        "川辺",
+        "小さな体"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。ひょうすべを河童に近いが違う水辺の小さな妖怪として描く。茶色がかった体、表情豊か、川辺。和紙水彩、墨線、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Hyosube, a small water-side yokai related to kappa but distinct, greenish-brown body and mischievous gentle face by a riverbank. Washi watercolor, sumi outlines.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/hyosube.png",
+      "status": "generated"
+    },
+    {
+      "id": "ittan_momen",
+      "name": "一反木綿",
+      "visualFeatures": [
+        "飛ぶ白い布",
+        "夜空",
+        "風",
+        "付喪神"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。一反木綿を夜空をひらひら飛ぶ長い白い布の妖怪として描く。小さなやさしい顔、風の線。和紙水彩、墨線、明るく軽い。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Ittan-momen, a long white cotton cloth yokai flying like a friendly ribbon through the night sky. Washi watercolor, sumi outlines, light and not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/ittan_momen.png",
+      "status": "generated"
+    },
+    {
+      "id": "kaichigo",
+      "name": "貝児",
+      "visualFeatures": [
+        "貝の中の小さな妖怪",
+        "浜辺",
+        "かわいい",
+        "泡"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。大きな貝から小さな貝児が顔を出す。浜辺、貝殻、小さな波を入れる。和紙水彩、墨線、明るくかわいい雰囲気。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Kaichigo, a tiny cute shell-child yokai peeking from a seashell on a beach. Washi watercolor, sumi outlines, simple seaside background, not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/kaichigo.png",
+      "status": "generated"
+    },
+    {
+      "id": "kamikiri",
+      "name": "髪切り",
+      "visualFeatures": [
+        "はさみの妖怪",
+        "髪の影",
+        "夜の部屋",
+        "怖すぎない"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。髪切りを、はさみの影と髪のゆらぎで表す小さな妖怪として描く。夜の部屋、鏡、和紙水彩、墨線、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Kamikiri, a small mysterious yokai with safe stylized scissor motifs and floating hair ribbons in an old room. Washi watercolor, sumi outlines, no injury.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/kamikiri.png",
+      "status": "generated"
+    },
+    {
+      "id": "konaki_jiji",
+      "name": "子泣き爺",
+      "visualFeatures": [
+        "小さなお爺さん妖怪",
+        "山道",
+        "泣き声",
+        "怖すぎない"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。子泣き爺を山道にいる小さなお爺さん妖怪として描く。少し泣き顔だがコミカルでやさしい。和紙水彩、墨線、森の背景。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Konaki-jiji, a small old-man yokai with a comical teary face on a mountain path. Washi watercolor, sumi outlines, gentle and not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/konaki_jiji.png",
+      "status": "generated"
+    },
+    {
+      "id": "koto_furunushi",
+      "name": "琴古主",
+      "visualFeatures": [
+        "古い琴",
+        "弦",
+        "音の妖怪",
+        "古い屋敷"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。古い琴が妖怪になった琴古主。弦が見え、小さな顔と音のゆらぎがある。和紙水彩、墨線、古い畳の部屋、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Koto-furunushi, an old Japanese koto tsukumogami with expressive strings and a gentle face. Washi watercolor, sumi outlines, simple tatami music room, not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/koto_furunushi.png",
+      "status": "generated"
+    },
+    {
+      "id": "mokumokuren",
+      "name": "目目連",
+      "visualFeatures": [
+        "古い障子にたくさんの目",
+        "古い日本家屋",
+        "コミカルな視線",
+        "怖すぎない"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。古い障子やふすまにたくさんの目が現れる目目連。目は好奇心のある表情で、古い家の中を見守るように描く。和紙水彩、墨線、シンプル背景、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Mokumokuren: many curious eyes appearing on old shoji and fusuma screens inside an old Japanese room. Gentle washi watercolor and sumi outlines, simple background, not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/mokumokuren.png",
+      "status": "generated"
+    },
+    {
+      "id": "nuppeppo",
+      "name": "ぬっぺっぽう",
+      "visualFeatures": [
+        "やわらかいかたまり",
+        "小さな目",
+        "夜道",
+        "奇妙だが親しみやすい"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。ぬっぺっぽうを丸くやわらかなかたまりの妖怪として描く。小さな目と口で奇妙だが親しみやすい表情。和紙水彩、墨線、夜道のシンプル背景、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Nuppeppo as a soft rounded lump-like yokai with tiny friendly eyes, on a quiet old night road. Washi watercolor, sumi outlines, simple background, odd but not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/nuppeppo.png",
+      "status": "generated"
+    },
+    {
+      "id": "okuri_inu",
+      "name": "送り犬",
+      "visualFeatures": [
+        "犬の妖怪",
+        "山道",
+        "夜",
+        "長い影"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。送り犬を夜の山道で静かについてくる犬の妖怪として描く。長い影とやさしい目。和紙水彩、墨線、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Okuri-inu, a quiet dog yokai following on a mountain road at night with a soft long shadow. Washi watercolor, sumi outlines, tense but not violent.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/okuri_inu.png",
+      "status": "generated"
+    },
+    {
+      "id": "shiro_uneri",
+      "name": "白うねり",
+      "visualFeatures": [
+        "白い古布",
+        "うねる布",
+        "付喪神",
+        "物置"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。古い白い布がうねうね動く白うねり。小さな顔を付け、物置にふわっと現れる。和紙水彩、墨線、シンプル背景、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Shiro-uneri, an old white cloth tsukumogami waving like a soft ribbon with a small gentle face in an old storage room. Washi watercolor, sumi outlines, not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/shiro_uneri.png",
+      "status": "generated"
+    },
+    {
+      "id": "sunakake_baba",
+      "name": "砂かけ婆",
+      "visualFeatures": [
+        "砂をかける老婆妖怪",
+        "道ばた",
+        "砂粒",
+        "怖すぎない"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。砂かけ婆を道ばたのいたずら好きなおばあさん妖怪として描く。手元から砂粒がさらっと舞う。和紙水彩、墨線、怖すぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Sunakake-baba, an elderly yokai gently tossing a small amount of sand by an old roadside. Washi watercolor, sumi outlines, playful and not too scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/sunakake_baba.png",
+      "status": "generated"
+    },
+    {
+      "id": "sunekosuri",
+      "name": "すねこすり",
+      "visualFeatures": [
+        "小動物の妖怪",
+        "足もと",
+        "夜道",
+        "ふわふわ"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。すねこすりを小さくふわふわした動物のような妖怪として描く。足もとに寄り添い、夜道の雰囲気。和紙水彩、墨線、かわいい。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Sunekosuri, a tiny fluffy animal-like yokai rubbing against a traveler’s lower leg on a dim road. Washi watercolor, sumi outlines, cute and not scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/sunekosuri.png",
+      "status": "generated"
+    },
+    {
+      "id": "ubume",
+      "name": "うぶめ / 産女",
+      "visualFeatures": [
+        "霧の女性怪異",
+        "川辺",
+        "雨の夜",
+        "怖すぎない"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。うぶめを雨の夜の川辺に立つ霧の中の女性の怪異として描く。やわらかな霧と雨、白い着物。和紙水彩、墨線、暗くしすぎない。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Ubume, a mysterious woman in pale kimono standing gently in river mist on a rainy night path. Washi watercolor, sumi outlines, not tragic or scary.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/ubume.png",
+      "status": "generated"
+    },
+    {
+      "id": "ushi_oni",
+      "name": "牛鬼",
+      "visualFeatures": [
+        "牛の頭",
+        "大きな怪物",
+        "海辺",
+        "地域妖怪"
+      ],
+      "promptJa": "子ども向け妖怪図鑑の正方形イラスト。牛鬼を牛のような頭と大きな体の怪物妖怪として描く。海辺や岩場、力強いが怖すぎない目。和紙水彩、墨線。",
+      "promptEn": "Square children’s yokai encyclopedia illustration of Ushi-oni, a large regional monster with a bull-like head and sturdy body near a rocky shore. Washi watercolor, sumi outlines, powerful but not terrifying.",
+      "negativePrompt": "blood, gore, horror, realistic violence, sexy, modern anime character, copyrighted character",
+      "outputPath": "public/assets/yokai/generated/ushi_oni.png",
+      "status": "generated"
+    }
+  ]
+}

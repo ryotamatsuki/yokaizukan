@@ -1,0 +1,6 @@
+node_modules/
+public/assets/yokai/*.png
+.DS_Store
+Thumbs.db
+npm-debug.log*
+public/assets/opening/chrome-profile/

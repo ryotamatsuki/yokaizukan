@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>出典・参考資料 | こども妖怪図鑑</title>
+    <meta name="description" content="こども妖怪図鑑で参考にした古典資料や公開サービスを紹介します。">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <header class="site-header compact-header">
+      <nav class="top-nav" aria-label="ページ">
+        <a class="brand-link" href="index.html">こども妖怪図鑑</a>
+        <div class="nav-links">
+          <a href="about.html">この図鑑について</a>
+          <a href="sources.html" aria-current="page">出典・参考資料</a>
+        </div>
+      </nav>
+      <div class="hero sub-hero sources-hero">
+        <div>
+          <p class="eyebrow">古典資料への入口</p>
+          <h1>出典・参考資料</h1>
+        </div>
+        <div class="source-yokai" aria-hidden="true">
+          <img src="public/assets/yokai/generated/karakasa-kozo.png" alt="">
+          <img src="public/assets/yokai/generated/chochin-obake.png" alt="">
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell text-page">
+      <section class="text-section callout">
+        <h2>生成イラストについて</h2>
+        <p>本図鑑の生成イラストは、古典資料に見られる妖怪の特徴を参考にし、子ども向けに再解釈したものです。昔の絵そのものではありません。</p>
+      </section>
+
+      <section class="text-section">
+        <h2>主な出典候補</h2>
+        <ul class="source-list">
+          <li><a href="https://www.ndl.go.jp/imagebank/yokai" target="_blank" rel="noreferrer">国立国会図書館「NDLイメージバンク」</a></li>
+          <li><a href="https://jpsearch.go.jp/" target="_blank" rel="noreferrer">Japan Search</a></li>
+          <li><a href="https://colbase.nich.go.jp/" target="_blank" rel="noreferrer">ColBase（国立文化財機構所蔵品統合検索システム）</a></li>
+          <li><a href="https://www.fujibi.or.jp/" target="_blank" rel="noreferrer">東京富士美術館</a></li>
+        </ul>
+      </section>
+
+      <section class="text-section">
+        <h2>50体版で追加した妖怪について</h2>
+        <p>目目連、ぬっぺっぽう、白うねり、文車妖妃、琴古主、貝児、油すまし、すねこすり、砂かけ婆、子泣き爺、べとべとさん、送り犬、煙々羅、雨女、髪切り、一反木綿、うぶめ、牛鬼、ひょうすべ、だいだらぼっちは、古典妖怪画・妖怪絵巻・鳥山石燕系妖怪図鑑等に見られる特徴を参考に、子ども向けに再解釈しています。</p>
+        <p>各妖怪の詳細記事には、NDLイメージバンク、NDLサーチ、Japan Search、ColBaseなど、原典確認の入口になる参考リンクを入れています。利用条件が確認できない画像は、史料画像として採用していません。</p>
+      </section>
+
+      <section class="text-section">
+        <h2>妖怪データ内の参考URL</h2>
+        <div id="yokai-reference-list" class="reference-grid">
+          <p>読み込み中です。</p>
+        </div>
+      </section>
+
+      <section class="text-section">
+        <h2>追加の画像出典データ</h2>
+        <div id="image-source-list" class="reference-grid">
+          <p>追加の画像出典データがある場合はここに表示します。</p>
+        </div>
+      </section>
+    </main>
+
+    <script type="module">
+      import { loadYokaiData, loadOptionalJson } from './js/dataLoader.js';
+      import { renderSourcesPage } from './js/render.js';
+
+      const yokaiTarget = document.querySelector('#yokai-reference-list');
+      const imageTarget = document.querySelector('#image-source-list');
+
+      try {
+        const data = await loadYokaiData();
+        renderSourcesPage(yokaiTarget, data.items, data.referenceSources);
+      } catch (error) {
+        yokaiTarget.textContent = '妖怪データの参考URLを読み込めませんでした。';
+      }
+
+      const imageSources = await loadOptionalJson('public/data/image_sources.json');
+      if (imageSources) {
+        renderSourcesPage(imageTarget, [], Array.isArray(imageSources) ? imageSources : imageSources.sources || []);
+      }
+    </script>
+  </body>
+</html>
