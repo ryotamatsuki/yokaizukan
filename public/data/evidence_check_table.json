@@ -1,0 +1,128 @@
+{
+  "updatedAt": "2026-05-26",
+  "legendEvidence": [
+    {
+      "legendId": "uwajima_ushioni_cluster",
+      "level": "B",
+      "checked": [
+        "公式観光資料",
+        "県史系民俗データベース"
+      ],
+      "needsFollowUp": [
+        "牛鬼淵・山伏退治譚の個別出典"
+      ]
+    },
+    {
+      "legendId": "matsuyama_tanuki_cluster",
+      "level": "B",
+      "checked": [
+        "公式観光資料",
+        "NDLレファレンス協同データベース"
+      ],
+      "needsFollowUp": [
+        "講談・郷土資料の原本確認"
+      ]
+    },
+    {
+      "legendId": "iyo_basan_cluster",
+      "level": "B",
+      "checked": [
+        "妖怪資料サイト",
+        "NDLイメージバンクの妖怪図鑑解説"
+      ],
+      "needsFollowUp": [
+        "古典図像の書誌単位での確認"
+      ]
+    },
+    {
+      "legendId": "ishizuchi_tengu_cluster",
+      "level": "A",
+      "checked": [
+        "石鎚神社公式資料"
+      ],
+      "needsFollowUp": [
+        "天狗伝承そのものの民俗資料"
+      ]
+    },
+    {
+      "legendId": "dogo_myth_cluster",
+      "level": "A",
+      "checked": [
+        "道後温泉公式サイト"
+      ],
+      "needsFollowUp": [
+        "伊予国風土記逸文の原文確認"
+      ]
+    },
+    {
+      "legendId": "ishiteji_emon_saburo_cluster",
+      "level": "B",
+      "checked": [
+        "観光資源台帳",
+        "松山市文化財保存活用地域計画"
+      ],
+      "needsFollowUp": [
+        "寺公式資料・縁起本文の確認"
+      ]
+    },
+    {
+      "legendId": "uwakai_sea_mystery_cluster",
+      "level": "B",
+      "checked": [
+        "えひめの記憶",
+        "怪異・妖怪伝承データベース"
+      ],
+      "needsFollowUp": [
+        "島ごとの口承記録"
+      ]
+    },
+    {
+      "legendId": "setouchi_murakami_kaizoku_cluster",
+      "level": "C",
+      "checked": [
+        "村上海賊ミュージアム公式資料"
+      ],
+      "needsFollowUp": [
+        "夜火・亡霊など怪異部分の個別出典"
+      ]
+    },
+    {
+      "legendId": "kihoku_oni_cluster",
+      "level": "B",
+      "checked": [
+        "鬼北町公式資料"
+      ],
+      "needsFollowUp": [
+        "鬼ヶ城山周辺の古い伝承本文"
+      ]
+    },
+    {
+      "legendId": "ehime_night_road_mysteries_cluster",
+      "level": "C",
+      "checked": [
+        "怪異・妖怪伝承データベース"
+      ],
+      "needsFollowUp": [
+        "夜雀・伸上り・雪婆・金の神の火の愛媛県内個別出典"
+      ]
+    }
+  ],
+  "levels": [
+    {
+      "level": "A",
+      "label": "公式資料・公的資料で主要事項を確認"
+    },
+    {
+      "level": "B",
+      "label": "公式資料または公的データベースに加え、郷土資料で確認"
+    },
+    {
+      "level": "C",
+      "label": "関連資料は確認済みだが、怪異本文の原典確認が必要"
+    },
+    {
+      "level": "D",
+      "label": "候補段階。本文採用前に追加調査が必要"
+    }
+  ]
+}

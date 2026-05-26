@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>こども妖怪図鑑</title>
+    <meta name="description" content="昔から伝わる妖怪たちを、子どもにも見やすいイラストとやさしい説明で紹介する図鑑です。">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <section id="openingScreen" class="opening-screen" role="dialog" aria-modal="true" aria-labelledby="opening-title">
+      <div class="opening-stage">
+        <img class="storybook-cad-depth" src="public/assets/opening/storybook_cad_depth.png" alt="" aria-hidden="true" data-opening-asset>
+        <div id="storybook" class="storybook">
+          <div class="book-cover">
+            <img class="book-cover-art" src="public/assets/opening/storybook_cover.png" alt="" aria-hidden="true" data-opening-asset>
+            <div class="book-spine"></div>
+            <div id="opening-title" class="book-title">こども<br>妖怪図鑑</div>
+            <div class="book-seal">開</div>
+          </div>
+
+          <div class="book-pages">
+            <div class="page left-page"></div>
+            <div class="page right-page"></div>
+
+            <div class="popup-scene" aria-hidden="true">
+              <img class="popup-scene-art" src="public/assets/opening/storybook_scene.png" alt="" aria-hidden="true" data-opening-asset>
+              <div class="popup-sky"></div>
+              <div class="popup-moon"></div>
+              <div class="popup-cloud cloud-1"></div>
+              <div class="popup-cloud cloud-2"></div>
+              <div class="popup-mountain mountain-1"></div>
+              <div class="popup-mountain mountain-2"></div>
+              <div class="popup-tree tree-1"></div>
+              <div class="popup-tree tree-2"></div>
+              <div class="popup-river"></div>
+              <div class="popup-snow"></div>
+            </div>
+
+            <div class="popup-yokai-layer" aria-hidden="true">
+              <img src="public/assets/yokai/generated/kappa.png" class="popup-yokai popup-yokai-1" alt="" data-popup-yokai>
+              <img src="public/assets/yokai/generated/tengu.png" class="popup-yokai popup-yokai-2" alt="" data-popup-yokai>
+              <img src="public/assets/yokai/generated/oni.png" class="popup-yokai popup-yokai-3" alt="" data-popup-yokai>
+              <img src="public/assets/yokai/generated/karakasa-kozo.png" class="popup-yokai popup-yokai-4" alt="" data-popup-yokai>
+              <img src="public/assets/yokai/generated/chochin-obake.png" class="popup-yokai popup-yokai-5" alt="" data-popup-yokai>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="opening-copy">閉じた本をひらくと、ふしぎな妖怪たちが飛び出します。</p>
+      <div class="opening-actions">
+        <button id="openBookButton" class="open-book-button" type="button">図鑑をひらく</button>
+        <button id="skipOpeningButton" class="skip-opening-button" type="button">スキップ</button>
+      </div>
+    </section>
+
+    <header class="site-header">
+      <nav class="top-nav" aria-label="ページ">
+        <a class="brand-link" href="yokai.html" aria-current="page">こども妖怪図鑑</a>
+        <div class="nav-links">
+          <a href="index.html">ポータル</a>
+          <a href="ehime.html">愛媛版</a>
+          <a href="about.html">この図鑑について</a>
+          <a href="sources.html">出典・参考資料</a>
+        </div>
+      </nav>
+
+      <div class="hero hero-main">
+        <img class="hero-yokai hero-yokai-left" src="public/assets/yokai/generated/kappa.png" alt="" aria-hidden="true">
+        <div class="hero-title">
+          <h1>こども妖怪図鑑</h1>
+          <p class="eyebrow">昔の絵から生まれた、ふしぎな妖怪たち</p>
+          <p class="hero-copy">この図鑑では、昔から伝わる妖怪たちを、子どもにも見やすいイラストとやさしい説明で紹介します。</p>
+          <div class="hero-actions">
+            <button id="replayOpeningButton" class="button button-secondary replay-opening-button" type="button">もう一度オープニングを見る</button>
+          </div>
+        </div>
+        <div class="hero-friends" aria-hidden="true">
+          <img src="public/assets/yokai/generated/karakasa-kozo.png" alt="">
+          <img src="public/assets/yokai/generated/chochin-obake.png" alt="">
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <section class="tool-panel" aria-labelledby="filter-title">
+        <div class="section-heading">
+          <h2 id="filter-title">妖怪をさがす</h2>
+          <p id="results-count" class="result-count" aria-live="polite">読み込み中です。</p>
+        </div>
+
+        <form id="filter-form" class="filters" action="#" autocomplete="off">
+          <label class="field">
+            <span>キーワード</span>
+            <input id="keyword-input" type="search" name="keyword" placeholder="妖怪名や特徴を入力してさがす">
+          </label>
+
+          <label class="field">
+            <span>カテゴリ</span>
+            <select id="category-select" name="category">
+              <option value="">すべて</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>こわさ</span>
+            <select id="scary-select" name="scary">
+              <option value="">すべて</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>並び替え</span>
+            <select id="sort-select" name="sort">
+              <option value="kana">五十音順</option>
+              <option value="scary">こわさレベル順</option>
+              <option value="category">カテゴリ順</option>
+            </select>
+          </label>
+
+          <button id="reset-button" class="button button-secondary" type="reset">リセット</button>
+        </form>
+      </section>
+
+      <section class="catalog-section" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <h2 id="catalog-title">妖怪カード</h2>
+          <p class="section-note">カードを選ぶと、くわしい図鑑ページを開きます。</p>
+        </div>
+        <div id="status-message" class="status-message" role="status" aria-live="polite"></div>
+        <div id="yokai-grid" class="yokai-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <div id="detail-modal" class="modal" hidden>
+      <div class="modal-backdrop" data-close-detail></div>
+      <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1">
+        <button id="detail-close" class="icon-button close-button" type="button" aria-label="詳細を閉じる" data-close-detail>×</button>
+        <div id="detail-content" class="detail-content"></div>
+      </section>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "updatedAt": "2026-05-26",
+  "sources": [
+    {
+      "id": "uwajima_ushioni_official",
+      "title": "牛鬼まつりとは",
+      "organization": "うわじま牛鬼まつり公式ホームページ",
+      "url": "https://ushioni.gaina.ne.jp/ushioni-festival/",
+      "type": "official",
+      "note": "宇和島の祭礼に登場する牛鬼、開催時期、練り歩きなどの確認に使用。"
+    },
+    {
+      "id": "inugami_gyobu_yokai_reference",
+      "title": "隠神刑部",
+      "organization": "YOKAI.JP",
+      "url": "https://yokai.jp/yokai/inugami-gyobu",
+      "type": "reference",
+      "note": "松山騒動八百八狸物語、隠神刑部狸、講談化された経緯の概要確認に使用。"
+    },
+    {
+      "id": "ndl_reference_tanuki",
+      "title": "八百八狸について知りたい。",
+      "organization": "国立国会図書館 レファレンス協同データベース",
+      "url": "https://crd.ndl.go.jp/reference/entry/index.php?id=1000101469&page=ref_view",
+      "type": "reference",
+      "note": "八百八狸の関連文献と郷土資料へのあたり先を確認するために使用。"
+    },
+    {
+      "id": "basan_yokai_reference",
+      "title": "波山",
+      "organization": "YOKAI.JP",
+      "url": "https://yokai.jp/yokai/basan",
+      "type": "reference",
+      "note": "伊予の怪鳥、竹藪、羽音、熱を伴わない怪火などの伝承整理に使用。"
+    },
+    {
+      "id": "ndl_sekien_column",
+      "title": "鳥山石燕の妖怪図鑑でみる妖怪の世界",
+      "organization": "国立国会図書館 NDLイメージバンク",
+      "url": "https://ndlsearch.ndl.go.jp/imagebank/column/sekienyokai",
+      "type": "public_collection",
+      "note": "江戸時代の妖怪図鑑文化を説明する背景資料として使用。"
+    },
+    {
+      "id": "ishizuchi_official",
+      "title": "石鎚山について",
+      "organization": "石鎚神社",
+      "url": "https://ishizuchisan.jp/mountain/about/",
+      "type": "official",
+      "note": "石鎚山、天狗岳、山岳信仰、修験道との関係確認に使用。"
+    },
+    {
+      "id": "ishizuchi_teaching",
+      "title": "石鎚信仰の教え",
+      "organization": "石鎚神社",
+      "url": "https://ishizuchisan.jp/about/teaching/",
+      "type": "official",
+      "note": "石鎚信仰が登拝と結びつくことの確認に使用。"
+    },
+    {
+      "id": "dogo_official_history",
+      "title": "道後温泉の歴史・泉質・風情",
+      "organization": "道後温泉公式サイト",
+      "url": "https://dogo.jp/about",
+      "type": "official",
+      "note": "白鷺伝説、伊予国風土記逸文の少彦名命・大国主命、玉の石説話の確認に使用。"
+    },
+    {
+      "id": "ishiteji_jtb_reference",
+      "title": "石手寺",
+      "organization": "全国観光資源台帳（日本交通公社）",
+      "url": "https://tabi.jtb.or.jp/res/380024-",
+      "type": "reference",
+      "note": "石手寺の創建、衛門三郎伝説、国宝二王門などの確認に使用。"
+    },
+    {
+      "id": "matsuyama_culture_pdf",
+      "title": "松山市文化財保存活用地域計画 第3章",
+      "organization": "松山市",
+      "url": "https://www.city.matsuyama.ehime.jp/shisei/keikaku/bunkazaikeikaku.files/mbunkeikaku_03.pdf",
+      "type": "official_pdf",
+      "note": "石手寺、衛門三郎、松山の歴史文化の背景確認に使用。"
+    },
+    {
+      "id": "ehime_memory_sea",
+      "title": "愛媛県史 民俗 上 海の怪異に関する記述",
+      "organization": "データベース『えひめの記憶』",
+      "url": "https://www.i-manabi.jp/system/regionals/regionals/ecode%3A2/49/view/6556",
+      "type": "public_database",
+      "note": "宇和海の船幽霊、杓くれ、海坊主、怪火などの民俗記述確認に使用。"
+    },
+    {
+      "id": "murakami_kaizoku_official",
+      "title": "村上海賊ミュージアム 施設について",
+      "organization": "今治市 文化振興課",
+      "url": "https://www.city.imabari.ehime.jp/museum/suigun/",
+      "type": "official",
+      "note": "能島村上氏、瀬戸内海の海上勢力、村上海賊の歴史確認に使用。"
+    },
+    {
+      "id": "kihoku_spot_official",
+      "title": "観光スポット 鬼のモニュメント",
+      "organization": "鬼北町",
+      "url": "https://www.town.kihoku.ehime.jp/site/oni/11317.html",
+      "type": "official",
+      "note": "鬼王丸、柚鬼媛、鬼のまちづくりの確認に使用。"
+    },
+    {
+      "id": "kihoku_toumyoji_oni",
+      "title": "等妙寺旧境内と鬼北の鬼伝説",
+      "organization": "鬼北町",
+      "url": "https://www.town.kihoku.ehime.jp/site/toumyo-jitemple/27320.html",
+      "type": "official",
+      "note": "鬼ヶ城、鬼王段三郎、山岳信仰と鬼北の鬼伝説の確認に使用。"
+    },
+    {
+      "id": "nichibun_yokai_db",
+      "title": "怪異・妖怪伝承データベース",
+      "organization": "国際日本文化研究センター",
+      "url": "https://www.nichibun.ac.jp/YoukaiDB/search.html",
+      "type": "public_database",
+      "note": "愛媛県内の個別怪異名を調べ直すための入口として使用。"
+    }
+  ]
+}

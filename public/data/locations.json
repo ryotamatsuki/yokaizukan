@@ -1,0 +1,135 @@
+{
+  "updatedAt": "2026-05-26",
+  "locations": [
+    {
+      "id": "uwajima",
+      "name": "宇和島市中心部・和霊神社周辺",
+      "region": "南予",
+      "municipality": "宇和島市",
+      "summary": "牛鬼が祭りに登場し、川面や町なかを練り歩く南予の中心地。",
+      "mapPosition": {
+        "x": 30,
+        "y": 76
+      },
+      "lat": 33.2232,
+      "lng": 132.5606
+    },
+    {
+      "id": "matsuyama_castle",
+      "name": "松山市・松山城下",
+      "region": "中予",
+      "municipality": "松山市",
+      "summary": "八百八狸や隠神刑部の物語が語られる城下町。",
+      "mapPosition": {
+        "x": 47,
+        "y": 42
+      },
+      "lat": 33.8392,
+      "lng": 132.7657
+    },
+    {
+      "id": "iyo_general",
+      "name": "伊予地方の山里・竹藪",
+      "region": "中予",
+      "municipality": "愛媛県内各地",
+      "summary": "波山の羽音や怪火が想像された、山と里の境目。",
+      "mapPosition": {
+        "x": 42,
+        "y": 50
+      },
+      "lat": 33.756,
+      "lng": 132.725
+    },
+    {
+      "id": "ishizuchi",
+      "name": "石鎚山・天狗岳",
+      "region": "東予",
+      "municipality": "西条市・久万高原町",
+      "summary": "西日本最高峰とされ、山岳信仰や修験の記憶が重なる霊山。",
+      "mapPosition": {
+        "x": 63,
+        "y": 45
+      },
+      "lat": 33.7673,
+      "lng": 133.115
+    },
+    {
+      "id": "dogo_onsen",
+      "name": "道後温泉",
+      "region": "中予",
+      "municipality": "松山市",
+      "summary": "白鷺伝説、少彦名命と大国主命の説話が残る温泉地。",
+      "mapPosition": {
+        "x": 50,
+        "y": 40
+      },
+      "lat": 33.8521,
+      "lng": 132.7863
+    },
+    {
+      "id": "ishiteji",
+      "name": "石手寺",
+      "region": "中予",
+      "municipality": "松山市",
+      "summary": "四国遍路と衛門三郎伝説にゆかりのある寺。",
+      "mapPosition": {
+        "x": 52,
+        "y": 42
+      },
+      "lat": 33.848,
+      "lng": 132.795
+    },
+    {
+      "id": "uwakai",
+      "name": "宇和海沿岸",
+      "region": "南予",
+      "municipality": "宇和島市・愛南町ほか",
+      "summary": "海坊主、船幽霊、怪火など海の民俗が豊かに残る沿岸部。",
+      "mapPosition": {
+        "x": 24,
+        "y": 82
+      },
+      "lat": 33.08,
+      "lng": 132.45
+    },
+    {
+      "id": "noshima",
+      "name": "能島・来島海峡周辺",
+      "region": "東予",
+      "municipality": "今治市",
+      "summary": "村上海賊の歴史と、潮流の激しい瀬戸内の記憶が重なる海域。",
+      "mapPosition": {
+        "x": 72,
+        "y": 18
+      },
+      "lat": 34.19,
+      "lng": 133.06
+    },
+    {
+      "id": "kihoku",
+      "name": "鬼北町・鬼ヶ城山系",
+      "region": "南予",
+      "municipality": "鬼北町・松野町周辺",
+      "summary": "山の神としての鬼、鬼王丸、柚鬼媛などが語られる山あい。",
+      "mapPosition": {
+        "x": 35,
+        "y": 72
+      },
+      "lat": 33.2556,
+      "lng": 132.684
+    },
+    {
+      "id": "ehime_general",
+      "name": "愛媛県内の山道・夜道",
+      "region": "県内各地",
+      "municipality": "県内各地",
+      "summary": "夜雀、伸上り、怪火など、暗い道の不安から生まれた怪異をまとめる入口。",
+      "mapPosition": {
+        "x": 56,
+        "y": 58
+      },
+      "lat": 33.72,
+      "lng": 132.88
+    }
+  ]
+}

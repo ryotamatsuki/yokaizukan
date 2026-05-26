@@ -1,24 +1,36 @@
-# こども妖怪図鑑
+# こども妖怪図鑑ポータル
 
-子ども向けの静的HTML妖怪図鑑です。`public/data/yokai.json` を正本として読み込み、50体の妖怪イラスト、説明文、カテゴリ、こわさレベル、豆知識、出典情報を表示します。画像が未生成の妖怪は「画像準備中」として表示されます。
+子ども向けの静的HTML図鑑ポータルです。トップページから、全国50体の「こども妖怪図鑑」と、愛媛県の妖怪・怪異・神話・祭礼を扱う「愛媛ふしぎ伝承図鑑」に入れます。どちらもJSONを正本として読み込み、HTMLに個別データを直書きしない構成です。
 
 ## ファイル構成
 
 ```txt
-index.html              # 図鑑本編
+index.html              # 統合トップページ
+yokai.html              # こども妖怪図鑑本編
+ehime.html              # 愛媛ふしぎ伝承図鑑
 about.html              # 図鑑の説明
 sources.html            # 出典・参考資料
 css/style.css           # 画面デザイン
+css/ehime.css           # 統合トップ・愛媛版デザイン
 js/app.js               # 初期化とイベント登録
 js/dataLoader.js        # JSON読み込みと正規化
 js/render.js            # カード・出典表示
 js/filters.js           # 検索・絞込・並び替え
 js/detail.js            # 詳細モーダル
 js/opening.js           # 絵本を開くオープニング
+js/ehime.js             # 愛媛版の描画・検索・詳細・手帳・クイズ
 public/data/yokai.json  # 妖怪データ
 public/data/generation_prompts.json # 生成プロンプト管理
+public/data/legends.json # 愛媛版の伝承クラスター
+public/data/articles.json # 愛媛版の詳しい記事
+public/data/child_articles.json # 愛媛版の派生項目ごとの詳しい記事
+public/data/locations.json # 愛媛版の場所データ
+public/data/courses.json # 愛媛版の探検コース
+public/data/sources.json # 愛媛版の出典データ
+public/data/evidence_check_table.json # 愛媛版の確認度メモ
 public/assets/yokai/generated/ # 生成イラスト
 public/assets/opening/ # オープニング用の生成背景・ForgeCADレンダー
+public/assets/ehime/generated/ # 愛媛版の生成イラスト
 scripts/update_50_yokai_data.mjs # 50体版データ同期用の補助スクリプト
 scripts/build_detailed_articles.mjs # もっと詳しく記事の同期用スクリプト
 scripts/enrich_tradition_history.mjs # 伝承史4観点の増補スクリプト
@@ -31,7 +43,7 @@ yokai_detailed_articles.md # 詳細記事の原稿
 
 `fetch` でJSONを読むため、HTMLファイルの直接オープンではなく簡易サーバーで起動してください。
 
-Windowsでは、ルートにある `start-yokai-zukan.bat` をダブルクリックすると、ローカルサーバーを起動してブラウザで図鑑を開きます。終了するときは、起動した黒いウィンドウを閉じてください。
+Windowsでは、ルートにある `start-yokai-zukan.bat` をダブルクリックすると、ローカルサーバーを起動してブラウザでポータルを開きます。終了するときは、起動した黒いウィンドウを閉じてください。
 
 ```bash
 python -m http.server 8000
@@ -42,6 +54,12 @@ python -m http.server 8000
 ```txt
 http://localhost:8000/
 ```
+
+主なページ:
+
+- `http://localhost:8000/` 統合トップページ
+- `http://localhost:8000/yokai.html` こども妖怪図鑑
+- `http://localhost:8000/ehime.html` 愛媛ふしぎ伝承図鑑
 
 ## GitHub Pagesで公開する方法
 
@@ -56,7 +74,7 @@ https://ryotamatsuki.github.io/yokaizukan/
 - `node_modules/` はアップロード不要です。`.gitignore` で除外しています。
 - GitHub PagesのJekyll処理を避けるため、空の `.nojekyll` を置いています。
 - 画像やJSONは相対パスで参照しているため、プロジェクトPagesの `/yokaizukan/` 配下でも動きます。
-- GitHub Pagesは大文字小文字を区別するため、画像ファイル名を変更するときは `yokai.json` の `generatedImagePath` と完全に一致させてください。
+- GitHub Pagesは大文字小文字を区別するため、画像ファイル名を変更するときは `yokai.json` の `generatedImagePath` や愛媛版データの `imagePath` と完全に一致させてください。
 
 ## データ追加方法
 
@@ -105,9 +123,43 @@ node scripts/build_detailed_articles.mjs
 
 追加20体分の画像生成プロンプトは `public/data/generation_prompts.json` にまとめています。画像を再生成する場合は、対象IDの `promptJa` / `promptEn` と `outputPath` を確認し、同じパスへPNGを保存してください。
 
+## 愛媛ふしぎ伝承図鑑
+
+`ehime.html` は、愛媛県の妖怪・怪異・神話・祭礼・霊地を10大クラスターとして整理した地域版です。`public/data/legends.json`、`articles.json`、`locations.json`、`courses.json`、`sources.json`、`evidence_check_table.json` を読み込みます。
+
+初期実装の10大クラスター:
+
+- 南予・宇和島の牛鬼
+- 松山の八百八狸と隠神刑部
+- 伊予の怪鳥・波山
+- 石鎚山の天狗と山岳信仰
+- 道後温泉の神話と白鷺伝説
+- 石手寺と衛門三郎
+- 宇和海の海の怪異
+- 瀬戸内・村上海賊の海の怪異
+- 鬼北の鬼と鬼ヶ城山
+- 愛媛の夜道の怪異
+
+愛媛版では、親項目を一覧・地図・コースに表示し、派生伝承は詳細画面の「関連する伝承」に格納しています。画像は `public/assets/ehime/generated/` に保存し、各クラスターの `imagePath` から参照します。出典リンクは `public/data/sources.json` に集約し、詳細画面と出典タブで確認できます。
+
+親クラスターの下には、46件の派生項目を置いています。各派生項目には `id`、説明文、見た目の手がかり、出典ID、個別画像パスを持たせ、親クラスター詳細内の小カードからクリックして読めるようにしています。派生画像は、クラスターごとの生成パネル画像を新規生成し、`public/assets/ehime/generated/children/` に個別PNGとして切り出しています。元の生成パネルは `public/assets/ehime/generated/children/_sheets/` に残しています。
+
+派生項目にも「もっと詳しく読む」記事を追加しています。本文は `public/data/child_articles.json` に分離し、各派生項目の詳細画面でボタンを押したときだけ開く構造です。記事には、伝承の型、資料上の扱い、場所との関係、図鑑での再解釈、参考リンクを入れています。
+
+新しい愛媛の伝承を追加する場合は、次の順に更新します。
+
+1. `public/data/legends.json` に親項目または派生項目を追加する
+2. 詳しい本文を `public/data/articles.json` に追加する
+3. 場所が増える場合は `locations.json`、コースに入れる場合は `courses.json` を更新する
+4. 参考資料を `sources.json` に追加し、`sourceIds` で伝承にひも付ける
+5. 確認度や追加調査メモを `evidence_check_table.json` に記録する
+6. 生成画像を `public/assets/ehime/generated/` に置き、`imagePath` を合わせる
+
+派生項目を追加する場合は、親項目の `childItemIds` と `childItems` の両方に追加し、画像を `public/assets/ehime/generated/children/` に保存します。派生項目はトップの一覧には出さず、親クラスターの詳細からたどる構造にしています。
+
 ## オープニングアニメーション
 
-`index.html` の冒頭に、絵本を開くような `opening-screen` を用意しています。閉じた本を開くと、生成した絵本表紙と見開き風景が現れ、ページから立体的な風景と妖怪たちが順番に飛び出します。外部ライブラリは使わず、CSS transform / animation と `js/opening.js` の class 切替で動かしています。
+`yokai.html` の冒頭に、絵本を開くような `opening-screen` を用意しています。閉じた本を開くと、生成した絵本表紙と見開き風景が現れ、ページから立体的な風景と妖怪たちが順番に飛び出します。外部ライブラリは使わず、CSS transform / animation と `js/opening.js` の class 切替で動かしています。
 
 オープニングの立体感を出すため、次のアセットを使っています。
 
@@ -122,11 +174,11 @@ ForgeCADレンダーを作り直す場合は、ForgeCAD CLIが使える状態で
 node node_modules/forgecad/dist-cli/forgecad.js render 3d scripts/forgecad/opening_storybook.forge.js --output public/assets/opening/storybook_cad_depth.png --view hero --edges off --size 1200 --chrome-path "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
 ```
 
-オープニングは、`index.html` を開いたときに毎回表示されます。「スキップ」ボタンはその場で図鑑へ進むためのもので、次回起動時まで自動スキップを持ち越しません。以前の版で使っていた `localStorage` の `openingSeen` は、起動時に削除されるようにしています。もう一度見たい場合は、トップ画面の「もう一度オープニングを見る」ボタンを押してください。
+オープニングは、`yokai.html` を開いたときに毎回表示されます。「スキップ」ボタンはその場で図鑑へ進むためのもので、次回起動時まで自動スキップを持ち越しません。以前の版で使っていた `localStorage` の `openingSeen` は、起動時に削除されるようにしています。もう一度見たい場合は、こども妖怪図鑑内の「もう一度オープニングを見る」ボタンを押してください。
 
 飛び出す妖怪は、`public/data/yokai.json` の画像パスから毎回ランダムに選ばれます。最初に飛び出す妖怪は「今日の妖怪」として日付から決まり、節分の時期は鬼が優先されます。背景は季節で変わり、夏は川辺、冬は雪景色、節分は鬼が似合う夜景、春秋は通常の山と川になります。ボタン操作時には、ページをめくるような短い効果音をWeb Audio APIで鳴らします。
 
-オープニング画像を差し替える場合は、表紙なら `public/assets/opening/storybook_cover.png`、風景なら `public/assets/opening/storybook_scene.png` を同じファイル名で差し替えます。奥行き補助の見た目を変えたい場合は `scripts/forgecad/opening_storybook.forge.js` を調整し、`storybook_cad_depth.png` を再レンダーしてください。飛び出す妖怪画像を変える場合は、`public/assets/yokai/generated/` に画像を追加し、`public/data/yokai.json` の `generatedImagePath` を更新します。初期表示用の固定画像を変えたい場合は、`index.html` の `data-popup-yokai` 付き画像と、`js/opening.js` の `DEFAULT_POPUP_YOKAI` を同じパスにそろえます。
+オープニング画像を差し替える場合は、表紙なら `public/assets/opening/storybook_cover.png`、風景なら `public/assets/opening/storybook_scene.png` を同じファイル名で差し替えます。奥行き補助の見た目を変えたい場合は `scripts/forgecad/opening_storybook.forge.js` を調整し、`storybook_cad_depth.png` を再レンダーしてください。飛び出す妖怪画像を変える場合は、`public/assets/yokai/generated/` に画像を追加し、`public/data/yokai.json` の `generatedImagePath` を更新します。初期表示用の固定画像を変えたい場合は、`yokai.html` の `data-popup-yokai` 付き画像と、`js/opening.js` の `DEFAULT_POPUP_YOKAI` を同じパスにそろえます。
 
 ## 妖怪ごとの詳細アニメーション
 
