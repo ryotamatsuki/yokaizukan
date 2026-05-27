@@ -256,3 +256,19 @@ node node_modules/forgecad/dist-cli/forgecad.js render 3d scripts/forgecad/openi
 - 生成イラストは古典資料の特徴を参考にした再解釈で、昔の絵そのものではありません。
 - 子ども向けのため、過度に怖い表現、残酷表現、流血表現は避けます。
 - `public/data/image_sources.json` が追加された場合は、必要に応じて出典ページや運用資料に反映できます。
+## 画像生成エフェクト素材を使った詳細演出
+
+既存10妖怪の詳細画面に、画像生成した透明背景WebP素材を重ねる「妖怪ステージ」を追加しました。妖怪画像をタップすると通常リアクションが出て、「ひっさつわざ！」ボタンでは妖怪ごとの大きめの演出が再生されます。
+
+- エフェクト素材: `public/assets/effects/`
+- 生成元シート: `public/assets/effects/_sheets/`
+- プレビュー: `public/assets/effects/_preview/effect_sheet_contact.png`
+- 素材管理: `public/data/effect_assets.json`
+- 生成プロンプト管理: `public/data/effect_generation_prompts.json`
+- 効果音置き場: `public/assets/sounds/`
+
+音はユーザー操作後にだけ再生されます。実音声ファイルが未配置の場合でも画面は止まらず、`js/sound.js` のWeb Audioフォールバックで短い効果音を鳴らします。ミュート状態は `localStorage` に保存され、詳細画面の「おと オン / オフ」ボタンで切り替えできます。
+
+新しい妖怪に同じ仕組みを追加する場合は、`public/data/yokai.json` の対象妖怪に `animationProfile` と `specialMove` を追加し、使用する素材を `public/assets/effects/` に配置します。その後、必要に応じて `public/data/effect_assets.json` と `public/data/effect_generation_prompts.json` に素材情報とプロンプトを追加してください。
+
+`prefers-reduced-motion: reduce` に対応しており、動きを減らす設定の環境では強い動きの代わりに短い表示変化で反応します。

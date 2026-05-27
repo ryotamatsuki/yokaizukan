@@ -153,6 +153,28 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "splashIn",
+        "tapEffect": "waterSplash",
+        "actionLabel": "みずしぶき！",
+        "sound": "splash.mp3",
+        "effectAssets": [
+          "public/assets/effects/water/water_splash.webp",
+          "public/assets/effects/water/ripple.webp",
+          "public/assets/effects/water/water_drops.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "みずのうずまき！",
+        "effect": "kappaWaterSpiral",
+        "sound": "special_water_spiral.mp3",
+        "assets": [
+          "public/assets/effects/water/water_spiral.webp",
+          "public/assets/effects/water/big_splash.webp",
+          "public/assets/effects/water/water_drops.webp"
+        ]
       }
     },
     {
@@ -278,6 +300,28 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "mountain",
+        "enterEffect": "windIn",
+        "tapEffect": "leafWind",
+        "actionLabel": "かぜ！",
+        "sound": "wind.mp3",
+        "effectAssets": [
+          "public/assets/effects/wind/wind_swirl.webp",
+          "public/assets/effects/wind/leaves.webp",
+          "public/assets/effects/wind/feather.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "てんぐの大かぜ！",
+        "effect": "tenguGreatWind",
+        "sound": "special_wind.mp3",
+        "assets": [
+          "public/assets/effects/wind/wind_tornado.webp",
+          "public/assets/effects/wind/flying_leaves.webp",
+          "public/assets/effects/wind/feathers.webp"
+        ]
       }
     },
     {
@@ -397,6 +441,28 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "cave",
+        "enterEffect": "stompIn",
+        "tapEffect": "clubStomp",
+        "actionLabel": "どん！",
+        "sound": "drum.mp3",
+        "effectAssets": [
+          "public/assets/effects/impact/impact_burst.webp",
+          "public/assets/effects/impact/dust.webp",
+          "public/assets/effects/impact/shockwave.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "おにのどん！",
+        "effect": "oniStomp",
+        "sound": "special_oni_drum.mp3",
+        "assets": [
+          "public/assets/effects/impact/impact_burst.webp",
+          "public/assets/effects/impact/dust_cloud.webp",
+          "public/assets/effects/impact/shockwave.webp"
+        ]
       }
     },
     {
@@ -514,6 +580,26 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "room",
+        "enterEffect": "fadeIn",
+        "tapEffect": "neckStretch",
+        "actionLabel": "のびる！",
+        "sound": "stretch.mp3",
+        "effectAssets": [
+          "public/assets/effects/magic/spooky_trail.webp",
+          "public/assets/effects/magic/stretch_shadow.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "にょろりんサーチ！",
+        "effect": "rokurokubiSearch",
+        "sound": "special_stretch.mp3",
+        "assets": [
+          "public/assets/effects/magic/stretch_line.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
       }
     },
     {
@@ -625,6 +711,27 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E5%8C%96%E3%81%91%E7%8C%AB%20%E7%8C%AB%E5%8F%88",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "walkIn",
+        "tapEffect": "tailWiggle",
+        "actionLabel": "にゃん！",
+        "sound": "cat.mp3",
+        "effectAssets": [
+          "public/assets/effects/cat/tail_trail.webp",
+          "public/assets/effects/cat/pawprints.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ねこまたダンス！",
+        "effect": "nekomataDance",
+        "sound": "special_cat_dance.mp3",
+        "assets": [
+          "public/assets/effects/cat/pawprint_circle.webp",
+          "public/assets/effects/cat/tail_trail.webp",
+          "public/assets/effects/cat/moon_sparkle.webp"
         ]
       }
     },
@@ -755,6 +862,27 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "street",
+        "enterEffect": "hopIn",
+        "tapEffect": "umbrellaJump",
+        "actionLabel": "ぴょん！",
+        "sound": "hop.mp3",
+        "effectAssets": [
+          "public/assets/effects/pop/jump_dust.webp",
+          "public/assets/effects/pop/pop_mark.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "からかさジャンプ！",
+        "effect": "karakasaBigJump",
+        "sound": "special_jump.mp3",
+        "assets": [
+          "public/assets/effects/pop/paper_confetti.webp",
+          "public/assets/effects/pop/jump_dust.webp",
+          "public/assets/effects/pop/star_pop.webp"
+        ]
       }
     },
     {
@@ -884,6 +1012,26 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "glowIn",
+        "tapEffect": "lanternGlow",
+        "actionLabel": "ぽわん！",
+        "sound": "glow.mp3",
+        "effectAssets": [
+          "public/assets/effects/glow/lantern_glow.webp",
+          "public/assets/effects/glow/warm_light.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ぽわぽわライト！",
+        "effect": "chochinLightBurst",
+        "sound": "special_glow.mp3",
+        "assets": [
+          "public/assets/effects/glow/lantern_light_burst.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -1010,6 +1158,27 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "snow",
+        "enterEffect": "snowFadeIn",
+        "tapEffect": "snowBreath",
+        "actionLabel": "ゆき！",
+        "sound": "snow.mp3",
+        "effectAssets": [
+          "public/assets/effects/snow/snow_crystal.webp",
+          "public/assets/effects/snow/cold_mist.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ゆきのまほう！",
+        "effect": "yukiOnnaSnowMagic",
+        "sound": "special_snow_magic.mp3",
+        "assets": [
+          "public/assets/effects/snow/snow_magic_circle.webp",
+          "public/assets/effects/snow/ice_crystals.webp",
+          "public/assets/effects/snow/cold_mist.webp"
+        ]
       }
     },
     {
@@ -1133,6 +1302,27 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E3%81%AC%E3%82%8A%E3%81%8B%E3%81%B9%20%E4%B9%9D%E5%B7%9E",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "wallSlideIn",
+        "tapEffect": "wallBump",
+        "actionLabel": "どーん！",
+        "sound": "bump.mp3",
+        "effectAssets": [
+          "public/assets/effects/wall/wall_shadow.webp",
+          "public/assets/effects/wall/dust_slide.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ぬりかべガード！",
+        "effect": "nurikabeGuard",
+        "sound": "special_wall.mp3",
+        "assets": [
+          "public/assets/effects/wall/wall_guard.webp",
+          "public/assets/effects/wall/stone_dust.webp",
+          "public/assets/effects/wall/impact_ring.webp"
         ]
       }
     },
@@ -1258,6 +1448,28 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E6%AD%8C%E5%B7%9D%E5%9B%BD%E8%8A%B3%20%E5%B7%A8%E5%A4%A7%E9%AA%B8%E9%AA%A8",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "moon",
+        "enterEffect": "shadowRise",
+        "tapEffect": "boneRattle",
+        "actionLabel": "カタカタ！",
+        "sound": "rattle.mp3",
+        "effectAssets": [
+          "public/assets/effects/bone/bone_fragments.webp",
+          "public/assets/effects/bone/giant_shadow_soft.webp",
+          "public/assets/effects/bone/moon_glow.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ほねほねパレード！",
+        "effect": "gashadokuroBoneParade",
+        "sound": "special_bone_rattle.mp3",
+        "assets": [
+          "public/assets/effects/bone/bone_fragments.webp",
+          "public/assets/effects/bone/giant_shadow_soft.webp",
+          "public/assets/effects/bone/moon_glow.webp"
         ]
       }
     },

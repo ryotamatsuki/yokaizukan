@@ -1,0 +1,260 @@
+[
+  {
+    "id": "bone_fragments",
+    "path": "public/assets/effects/bone/bone_fragments.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のbone系エフェクト素材。がしゃどくろの骨片、やわらかな巨大影、月光素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "giant_shadow_soft",
+    "path": "public/assets/effects/bone/giant_shadow_soft.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のbone系エフェクト素材。がしゃどくろの骨片、やわらかな巨大影、月光素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "moon_glow",
+    "path": "public/assets/effects/bone/moon_glow.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のbone系エフェクト素材。がしゃどくろの骨片、やわらかな巨大影、月光素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "moon_sparkle",
+    "path": "public/assets/effects/cat/moon_sparkle.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のcat系エフェクト素材。猫又のしっぽや足あと、月のきらめきを表す猫系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "pawprint_circle",
+    "path": "public/assets/effects/cat/pawprint_circle.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のcat系エフェクト素材。猫又のしっぽや足あと、月のきらめきを表す猫系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "pawprints",
+    "path": "public/assets/effects/cat/pawprints.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のcat系エフェクト素材。猫又のしっぽや足あと、月のきらめきを表す猫系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "tail_trail",
+    "path": "public/assets/effects/cat/tail_trail.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のcat系エフェクト素材。猫又のしっぽや足あと、月のきらめきを表す猫系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "lantern_glow",
+    "path": "public/assets/effects/glow/lantern_glow.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "lantern_light_burst",
+    "path": "public/assets/effects/glow/lantern_light_burst.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "warm_light",
+    "path": "public/assets/effects/glow/warm_light.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "warm_light_orbs",
+    "path": "public/assets/effects/glow/warm_light_orbs.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "dust",
+    "path": "public/assets/effects/impact/dust.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のimpact系エフェクト素材。鬼がどんっと登場したときの丸い衝撃、土ぼこり、衝撃波素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "dust_cloud",
+    "path": "public/assets/effects/impact/dust_cloud.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のimpact系エフェクト素材。鬼がどんっと登場したときの丸い衝撃、土ぼこり、衝撃波素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "impact_burst",
+    "path": "public/assets/effects/impact/impact_burst.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のimpact系エフェクト素材。鬼がどんっと登場したときの丸い衝撃、土ぼこり、衝撃波素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "shockwave",
+    "path": "public/assets/effects/impact/shockwave.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のimpact系エフェクト素材。鬼がどんっと登場したときの丸い衝撃、土ぼこり、衝撃波素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "sparkle_trail",
+    "path": "public/assets/effects/magic/sparkle_trail.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のmagic系エフェクト素材。ろくろ首の首が伸びる印象を助ける、やさしい魔法線と光の軌跡素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "spooky_trail",
+    "path": "public/assets/effects/magic/spooky_trail.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のmagic系エフェクト素材。ろくろ首の首が伸びる印象を助ける、やさしい魔法線と光の軌跡素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "stretch_line",
+    "path": "public/assets/effects/magic/stretch_line.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のmagic系エフェクト素材。ろくろ首の首が伸びる印象を助ける、やさしい魔法線と光の軌跡素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "stretch_shadow",
+    "path": "public/assets/effects/magic/stretch_shadow.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のmagic系エフェクト素材。ろくろ首の首が伸びる印象を助ける、やさしい魔法線と光の軌跡素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "jump_dust",
+    "path": "public/assets/effects/pop/jump_dust.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のpop系エフェクト素材。からかさ小僧が跳ねるときの砂ぼこり、紙吹雪、星のポップ素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "paper_confetti",
+    "path": "public/assets/effects/pop/paper_confetti.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のpop系エフェクト素材。からかさ小僧が跳ねるときの砂ぼこり、紙吹雪、星のポップ素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "pop_mark",
+    "path": "public/assets/effects/pop/pop_mark.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のpop系エフェクト素材。からかさ小僧が跳ねるときの砂ぼこり、紙吹雪、星のポップ素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "star_pop",
+    "path": "public/assets/effects/pop/star_pop.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のpop系エフェクト素材。からかさ小僧が跳ねるときの砂ぼこり、紙吹雪、星のポップ素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "cold_mist",
+    "path": "public/assets/effects/snow/cold_mist.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のsnow系エフェクト素材。雪女の雪の結晶、氷、冷気、雪の魔法素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "ice_crystals",
+    "path": "public/assets/effects/snow/ice_crystals.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のsnow系エフェクト素材。雪女の雪の結晶、氷、冷気、雪の魔法素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "snow_crystal",
+    "path": "public/assets/effects/snow/snow_crystal.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のsnow系エフェクト素材。雪女の雪の結晶、氷、冷気、雪の魔法素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "snow_magic_circle",
+    "path": "public/assets/effects/snow/snow_magic_circle.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のsnow系エフェクト素材。雪女の雪の結晶、氷、冷気、雪の魔法素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "dust_slide",
+    "path": "public/assets/effects/wall/dust_slide.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwall系エフェクト素材。ぬりかべの壁、石ぼこり、守りの波紋を表す素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "impact_ring",
+    "path": "public/assets/effects/wall/impact_ring.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwall系エフェクト素材。ぬりかべの壁、石ぼこり、守りの波紋を表す素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "stone_dust",
+    "path": "public/assets/effects/wall/stone_dust.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwall系エフェクト素材。ぬりかべの壁、石ぼこり、守りの波紋を表す素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "wall_guard",
+    "path": "public/assets/effects/wall/wall_guard.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwall系エフェクト素材。ぬりかべの壁、石ぼこり、守りの波紋を表す素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "wall_shadow",
+    "path": "public/assets/effects/wall/wall_shadow.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwall系エフェクト素材。ぬりかべの壁、石ぼこり、守りの波紋を表す素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "big_splash",
+    "path": "public/assets/effects/water/big_splash.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwater系エフェクト素材。水しぶき、波紋、水滴、水のうずまきなどの水系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "ripple",
+    "path": "public/assets/effects/water/ripple.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwater系エフェクト素材。水しぶき、波紋、水滴、水のうずまきなどの水系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "water_drops",
+    "path": "public/assets/effects/water/water_drops.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwater系エフェクト素材。水しぶき、波紋、水滴、水のうずまきなどの水系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "water_spiral",
+    "path": "public/assets/effects/water/water_spiral.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwater系エフェクト素材。水しぶき、波紋、水滴、水のうずまきなどの水系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "water_splash",
+    "path": "public/assets/effects/water/water_splash.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwater系エフェクト素材。水しぶき、波紋、水滴、水のうずまきなどの水系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "feather",
+    "path": "public/assets/effects/wind/feather.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "feathers",
+    "path": "public/assets/effects/wind/feathers.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "flying_leaves",
+    "path": "public/assets/effects/wind/flying_leaves.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "leaves",
+    "path": "public/assets/effects/wind/leaves.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "wind_swirl",
+    "path": "public/assets/effects/wind/wind_swirl.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "wind_tornado",
+    "path": "public/assets/effects/wind/wind_tornado.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  }
+]

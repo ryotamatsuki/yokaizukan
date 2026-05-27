@@ -1,4 +1,6 @@
-import { createImageFrame, createScaryStars } from './render.js';
+import { createScaryStars } from './render.js';
+import { clearEffects, playEnterEffect, playSpecialMove, playTapEffect } from './effects.js';
+import { getMuted, toggleMuted } from './sound.js';
 
 let modal;
 let dialog;
@@ -131,6 +133,7 @@ export function openDetail(yokai) {
   modal.hidden = false;
   document.body.classList.add('modal-open');
   dialog.focus();
+  requestAnimationFrame(() => playEnterEffect(yokai));
 }
 
 export function closeDetail() {
@@ -140,6 +143,7 @@ export function closeDetail() {
 
   modal.hidden = true;
   document.body.classList.remove('modal-open');
+  clearEffects();
   resetDetailAnimation();
 
   if (previousFocus && typeof previousFocus.focus === 'function') {
@@ -181,20 +185,9 @@ function createDetailContent(yokai) {
   const media = document.createElement('div');
   media.className = 'detail-media';
 
-  const effectStage = document.createElement('div');
   const effectClass = getEffectClass(yokai);
-  effectStage.className = ['detail-effect-stage', effectClass].filter(Boolean).join(' ');
-  effectStage.dataset.yokaiId = yokai.id || '';
-
-  const animationLayer = document.createElement('div');
-  animationLayer.id = 'animationLayer';
-  animationLayer.className = ['animation-layer', effectClass].filter(Boolean).join(' ');
-  animationLayer.setAttribute('aria-hidden', 'true');
-  populateAnimationLayer(animationLayer, effectClass);
+  const effectStage = createYokaiStage(yokai, effectClass);
   currentEffectClass = effectClass;
-
-  const imageFrame = createImageFrame(yokai, 'detail-image');
-  effectStage.append(animationLayer, imageFrame);
   media.append(effectStage);
 
   const generatedNote = document.createElement('p');
@@ -224,6 +217,104 @@ function createDetailContent(yokai) {
     wrapper.classList.add(effectClass);
   }
   return wrapper;
+}
+
+function createYokaiStage(yokai, effectClass) {
+  const profile = yokai.animationProfile || {};
+  const specialMove = yokai.specialMove || {};
+  const stageName = profile.stage || 'paper';
+
+  const stage = document.createElement('div');
+  stage.id = 'yokaiStage';
+  stage.className = ['yokai-stage', 'detail-effect-stage', `stage-${stageName}`, effectClass].filter(Boolean).join(' ');
+  stage.dataset.yokaiId = yokai.id || '';
+
+  const background = document.createElement('div');
+  background.id = 'stageBackground';
+  background.className = 'stage-background';
+
+  const effectLayer = document.createElement('div');
+  effectLayer.id = 'effectLayer';
+  effectLayer.className = ['effect-layer', 'animation-layer', effectClass].filter(Boolean).join(' ');
+  effectLayer.setAttribute('aria-hidden', 'true');
+  populateAnimationLayer(effectLayer, effectClass);
+
+  const imageButton = document.createElement('button');
+  imageButton.id = 'yokaiImageButton';
+  imageButton.className = 'yokai-image-button';
+  imageButton.type = 'button';
+  imageButton.setAttribute('aria-label', `${yokai.name}をうごかす`);
+  const hasInteractiveEffects = Boolean(
+    profile.tapEffect ||
+    profile.effectAssets?.length ||
+    specialMove.effect ||
+    specialMove.assets?.length
+  );
+
+  const placeholder = document.createElement('span');
+  placeholder.className = 'image-placeholder stage-placeholder';
+  placeholder.textContent = '画像準備中';
+  placeholder.hidden = Boolean(yokai.generatedImagePath);
+
+  if (yokai.generatedImagePath) {
+    const image = document.createElement('img');
+    image.id = 'detailYokaiImage';
+    image.className = 'detail-yokai-image';
+    image.src = yokai.generatedImagePath;
+    image.alt = `${yokai.name}の子ども向け再解釈イラスト`;
+    image.decoding = 'async';
+    image.addEventListener('error', () => {
+      image.remove();
+      placeholder.hidden = false;
+    }, { once: true });
+    imageButton.append(image);
+  }
+
+  imageButton.append(placeholder);
+  if (hasInteractiveEffects) {
+    imageButton.addEventListener('click', () => playTapEffect(yokai));
+  }
+
+  const actionRow = document.createElement('div');
+  actionRow.className = 'yokai-action-row';
+
+  const actionButton = document.createElement('button');
+  actionButton.id = 'yokaiActionButton';
+  actionButton.className = 'yokai-action-button';
+  actionButton.type = 'button';
+  actionButton.textContent = profile.actionLabel || 'もういちど！';
+  actionButton.addEventListener('click', () => playTapEffect(yokai));
+
+  const specialButton = document.createElement('button');
+  specialButton.id = 'specialMoveButton';
+  specialButton.className = 'special-move-button';
+  specialButton.type = 'button';
+  specialButton.textContent = specialMove.label || 'ひっさつわざ！';
+  specialButton.addEventListener('click', () => playSpecialMove(yokai));
+
+  const muteButton = document.createElement('button');
+  muteButton.id = 'soundMuteButton';
+  muteButton.className = 'mute-sound-button';
+  muteButton.type = 'button';
+  updateMuteButton(muteButton);
+  muteButton.addEventListener('click', () => {
+    toggleMuted();
+    updateMuteButton(muteButton);
+  });
+
+  actionRow.append(actionButton, specialButton, muteButton);
+  stage.append(background, effectLayer, imageButton);
+  if (hasInteractiveEffects) {
+    stage.append(actionRow);
+  }
+  return stage;
+}
+
+function updateMuteButton(button) {
+  const muted = getMuted();
+  button.textContent = muted ? 'おと オフ' : 'おと オン';
+  button.setAttribute('aria-pressed', String(muted));
+  button.setAttribute('aria-label', muted ? '音をオンにする' : '音をオフにする');
 }
 
 function createDetailedArticleBlocks(yokai) {
@@ -383,11 +474,11 @@ function resetDetailAnimation() {
     return;
   }
 
-  const layer = content.querySelector('#animationLayer');
+  const layer = content.querySelector('#animationLayer, #effectLayer');
   if (layer) {
     layer.replaceChildren();
     layer.removeAttribute('class');
-    layer.className = 'animation-layer';
+    layer.className = layer.id === 'effectLayer' ? 'effect-layer animation-layer' : 'animation-layer';
   }
 
   content.querySelectorAll('.detail-page, .detail-effect-stage, .animation-layer').forEach((element) => {

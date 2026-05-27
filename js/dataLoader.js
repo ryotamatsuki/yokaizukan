@@ -98,7 +98,29 @@ function normalizeYokai(item = {}, index, scaryLabels) {
     tags: toArray(item.tags).map(safeText).filter(Boolean),
     missions: toArray(item.missions).map(safeText).filter(Boolean),
     quiz: toArray(item.quiz).map(normalizeQuiz).filter((quiz) => quiz.question && quiz.choices.length > 0),
-    detailedArticle
+    detailedArticle,
+    animationProfile: normalizeAnimationProfile(item.animationProfile),
+    specialMove: normalizeSpecialMove(item.specialMove)
+  };
+}
+
+function normalizeAnimationProfile(profile = {}) {
+  return {
+    stage: safeText(profile.stage),
+    enterEffect: safeText(profile.enterEffect),
+    tapEffect: safeText(profile.tapEffect),
+    actionLabel: safeText(profile.actionLabel),
+    sound: safeText(profile.sound),
+    effectAssets: toArray(profile.effectAssets).map(normalizeImagePath).filter(Boolean)
+  };
+}
+
+function normalizeSpecialMove(move = {}) {
+  return {
+    label: safeText(move.label),
+    effect: safeText(move.effect),
+    sound: safeText(move.sound),
+    assets: toArray(move.assets).map(normalizeImagePath).filter(Boolean)
   };
 }
 

@@ -3099,3 +3099,533 @@ body.opening-active {
     animation-duration: 1ms !important;
   }
 }
+
+/* Image-generated effect stage for the main yokai detail view. */
+.yokai-stage {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  border: 2px solid rgba(117, 88, 45, 0.24);
+  border-radius: 12px;
+  background: #f9efd8;
+  isolation: isolate;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.65), 0 14px 28px rgba(46, 34, 20, 0.16);
+}
+
+.stage-background,
+.effect-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stage-background {
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 246, 190, 0.72), transparent 30%),
+    linear-gradient(180deg, rgba(255, 250, 230, 0.92), rgba(235, 211, 157, 0.82));
+}
+
+.effect-layer {
+  z-index: 2;
+}
+
+.yokai-image-button {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 280px;
+  border: 0;
+  padding: 1rem 1rem 0.25rem;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.yokai-image-button:focus-visible,
+.yokai-action-row button:focus-visible {
+  outline: 4px solid rgba(247, 180, 54, 0.9);
+  outline-offset: 4px;
+}
+
+.detail-yokai-image {
+  position: relative;
+  z-index: 3;
+  width: min(76%, 320px);
+  max-height: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 16px rgba(60, 45, 25, 0.2));
+  transform-origin: 50% 78%;
+  will-change: transform, filter;
+}
+
+.stage-placeholder {
+  display: grid;
+  place-items: center;
+  min-width: 220px;
+  min-height: 220px;
+  border-radius: 10px;
+  background: rgba(255, 251, 240, 0.84);
+  color: #6a5431;
+  font-weight: 900;
+}
+
+.yokai-action-row {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr auto;
+  gap: 0.65rem;
+  padding: 0.7rem;
+}
+
+.yokai-action-row button {
+  min-height: 54px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0;
+  box-shadow: 0 8px 0 rgba(80, 52, 20, 0.22);
+}
+
+.yokai-action-button {
+  background: #497a41;
+}
+
+.special-move-button {
+  background: linear-gradient(180deg, #e45e38, #a83b28);
+}
+
+.special-move-button.is-playing {
+  filter: saturate(1.25) brightness(1.06);
+}
+
+.mute-sound-button {
+  min-width: 92px;
+  background: #5d6f8f;
+}
+
+.stage-water .stage-background {
+  background:
+    radial-gradient(ellipse at 50% 74%, rgba(66, 170, 210, 0.44), transparent 42%),
+    linear-gradient(180deg, #e7f7ff 0%, #c5e8ef 55%, #9fd0dd 100%);
+}
+
+.stage-mountain .stage-background {
+  background:
+    linear-gradient(135deg, transparent 58%, rgba(78, 121, 76, 0.34) 58% 72%, transparent 72%),
+    linear-gradient(225deg, transparent 54%, rgba(61, 98, 72, 0.28) 54% 70%, transparent 70%),
+    linear-gradient(180deg, #eef6e1, #d8e5bf);
+}
+
+.stage-cave .stage-background {
+  background:
+    radial-gradient(circle at 50% 82%, rgba(222, 166, 88, 0.42), transparent 44%),
+    linear-gradient(180deg, #ded0b0, #b99b70);
+}
+
+.stage-room .stage-background {
+  background:
+    linear-gradient(90deg, rgba(133, 101, 58, 0.12) 1px, transparent 1px) 0 0 / 42px 100%,
+    linear-gradient(180deg, #fff7e6, #e9d2ac);
+}
+
+.stage-night .stage-background {
+  background:
+    radial-gradient(circle at 78% 18%, rgba(255, 231, 149, 0.78), transparent 12%),
+    linear-gradient(180deg, #223556, #5c6378 58%, #a28a63);
+}
+
+.stage-street .stage-background {
+  background:
+    linear-gradient(90deg, rgba(115, 91, 55, 0.18) 1px, transparent 1px) 0 68% / 54px 32%,
+    linear-gradient(180deg, #f7efd8, #d6c298);
+}
+
+.stage-snow .stage-background {
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255, 255, 255, 0.86), transparent 20%),
+    linear-gradient(180deg, #f5fbff, #d8ecf6 58%, #eef8fb);
+}
+
+.stage-road .stage-background {
+  background:
+    linear-gradient(90deg, transparent 0 42%, rgba(128, 105, 70, 0.22) 42% 58%, transparent 58%),
+    linear-gradient(180deg, #edf1df, #d6c7a0);
+}
+
+.stage-moon .stage-background {
+  background:
+    radial-gradient(circle at 76% 18%, rgba(255, 232, 153, 0.88), transparent 13%),
+    radial-gradient(ellipse at 50% 80%, rgba(92, 82, 104, 0.42), transparent 42%),
+    linear-gradient(180deg, #17223b, #353b58 64%, #756858);
+}
+
+.effect-sprite {
+  position: absolute;
+  left: var(--fx-x, 50%);
+  top: var(--fx-y, 50%);
+  width: var(--fx-size, min(75vw, 440px));
+  transform: translate(-50%, -50%) rotate(var(--fx-rotate, 0deg));
+  pointer-events: none;
+  opacity: 0;
+  animation-duration: var(--fx-duration, 1000ms);
+  animation-delay: var(--fx-delay, 0ms);
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.25, 1);
+  will-change: transform, opacity;
+}
+
+.enter-splashIn,
+.enter-windIn,
+.enter-stompIn,
+.enter-fadeIn,
+.enter-walkIn,
+.enter-hopIn,
+.enter-glowIn,
+.enter-snowFadeIn,
+.enter-wallSlideIn,
+.enter-shadowRise {
+  animation-name: splashIn;
+}
+
+.tap-waterSplash { animation-name: waterSplash; }
+.tap-leafWind { animation-name: leafWind; }
+.tap-clubStomp { animation-name: clubStomp; }
+.tap-neckStretch { animation-name: neckStretch; }
+.tap-tailWiggle { animation-name: tailWiggle; }
+.tap-umbrellaJump { animation-name: umbrellaJump; }
+.tap-lanternGlow { animation-name: lanternGlow; }
+.tap-snowBreath { animation-name: snowBreath; }
+.tap-wallBump { animation-name: wallBump; }
+.tap-boneRattle { animation-name: boneRattle; }
+
+.special-kappaWaterSpiral { animation-name: kappaWaterSpiral; }
+.special-tenguGreatWind { animation-name: tenguGreatWind; }
+.special-oniStomp { animation-name: oniStomp; }
+.special-rokurokubiSearch { animation-name: rokurokubiSearch; }
+.special-nekomataDance { animation-name: nekomataDance; }
+.special-karakasaBigJump { animation-name: karakasaBigJump; }
+.special-chochinLightBurst { animation-name: chochinLightBurst; }
+.special-yukiOnnaSnowMagic { animation-name: yukiOnnaSnowMagic; }
+.special-nurikabeGuard { animation-name: nurikabeGuard; }
+.special-gashadokuroBoneParade { animation-name: gashadokuroBoneParade; }
+
+.stage-particle {
+  position: absolute;
+  left: var(--p-x);
+  top: var(--p-y);
+  width: var(--p-size);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: rgba(255, 225, 108, 0.9);
+  opacity: 0;
+  animation: stageParticlePop 950ms ease-out var(--p-delay) both;
+}
+
+.particle-water,
+.particle-snow {
+  background: rgba(130, 211, 245, 0.85);
+}
+
+.particle-mountain,
+.particle-wind,
+.particle-night {
+  background: rgba(168, 196, 86, 0.85);
+}
+
+.particle-cave,
+.particle-road {
+  background: rgba(184, 137, 80, 0.85);
+}
+
+.motion-splashIn,
+.motion-waterSplash,
+.motion-hopIn,
+.motion-umbrellaJump {
+  animation: yokaiStageBounce 760ms cubic-bezier(0.18, 0.8, 0.24, 1) both;
+}
+
+.motion-windIn,
+.motion-leafWind,
+.motion-tenguGreatWind {
+  animation: yokaiStageFloat 980ms ease-in-out both;
+}
+
+.motion-stompIn,
+.motion-clubStomp,
+.motion-oniStomp,
+.motion-wallBump,
+.motion-nurikabeGuard {
+  animation: yokaiStageStomp 620ms ease-out both;
+}
+
+.motion-neckStretch,
+.motion-rokurokubiSearch {
+  animation: yokaiStageStretch 1100ms ease-in-out both;
+}
+
+.motion-tailWiggle,
+.motion-nekomataDance {
+  animation: yokaiStageDance 1100ms ease-in-out both;
+}
+
+.motion-glowIn,
+.motion-lanternGlow,
+.motion-chochinLightBurst {
+  animation: yokaiStageGlow 1200ms ease-out both;
+}
+
+.motion-snowFadeIn,
+.motion-snowBreath,
+.motion-yukiOnnaSnowMagic {
+  animation: yokaiStageSnow 1200ms ease-out both;
+}
+
+.motion-shadowRise,
+.motion-boneRattle,
+.motion-gashadokuroBoneParade {
+  animation: yokaiStageRattle 1100ms ease-in-out both;
+}
+
+.motion-karakasaBigJump {
+  animation: yokaiStageBigJump 1300ms cubic-bezier(0.16, 0.84, 0.24, 1) both;
+}
+
+@keyframes splashIn {
+  0% { opacity: 0; transform: translate(-50%, -42%) rotate(var(--fx-rotate, 0deg)) scale(0.64); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(var(--fx-rotate, 0deg)) scale(1.12); }
+}
+
+@keyframes waterSplash {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.48); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -56%) scale(1.22); }
+}
+
+@keyframes windIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes leafWind {
+  0% { opacity: 0; transform: translate(-72%, -44%) rotate(-18deg) scale(0.7); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-28%, -56%) rotate(20deg) scale(1.05); }
+}
+
+@keyframes stompIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes clubStomp {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.38); }
+  35% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.25); }
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes neckStretch {
+  0% { opacity: 0; transform: translate(-50%, -50%) scaleY(0.6); }
+  45% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(-50%, -68%) scaleY(1.35); }
+}
+
+@keyframes walkIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes tailWiggle {
+  0% { opacity: 0; transform: translate(-58%, -50%) rotate(-10deg) scale(0.7); }
+  50% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(-42%, -50%) rotate(12deg) scale(1.08); }
+}
+
+@keyframes hopIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes umbrellaJump {
+  0% { opacity: 0; transform: translate(-50%, -30%) scale(0.6); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -64%) scale(1.1); }
+}
+
+@keyframes glowIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes lanternGlow {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.55); }
+  40% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.45); }
+}
+
+@keyframes snowFadeIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes snowBreath {
+  0% { opacity: 0; transform: translate(-50%, -42%) scale(0.62); }
+  55% { opacity: 0.88; }
+  100% { opacity: 0; transform: translate(-50%, -60%) scale(1.18); }
+}
+
+@keyframes wallSlideIn { from { opacity: 0; } to { opacity: 0; } }
+@keyframes wallBump {
+  0% { opacity: 0; transform: translate(-82%, -50%) scale(0.92); }
+  45% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.06); }
+}
+
+@keyframes shadowRise { from { opacity: 0; } to { opacity: 0; } }
+@keyframes boneRattle {
+  0% { opacity: 0; transform: translate(-48%, -38%) rotate(-8deg) scale(0.72); }
+  45% { opacity: 0.88; }
+  100% { opacity: 0; transform: translate(-52%, -56%) rotate(8deg) scale(1.08); }
+}
+
+@keyframes kappaWaterSpiral {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-90deg) scale(0.38); }
+  48% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(160deg) scale(1.36); }
+}
+
+@keyframes tenguGreatWind {
+  0% { opacity: 0; transform: translate(-84%, -50%) rotate(-24deg) scale(0.72); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-18%, -50%) rotate(28deg) scale(1.18); }
+}
+
+@keyframes oniStomp {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.35); }
+  38% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.46); }
+}
+
+@keyframes rokurokubiSearch {
+  0% { opacity: 0; transform: translate(-50%, -34%) scaleY(0.35); }
+  50% { opacity: 0.95; }
+  100% { opacity: 0; transform: translate(-50%, -72%) scaleY(1.45); }
+}
+
+@keyframes nekomataDance {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-25deg) scale(0.74); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(25deg) scale(1.18); }
+}
+
+@keyframes karakasaBigJump {
+  0% { opacity: 0; transform: translate(-50%, -26%) scale(0.65); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -72%) scale(1.2); }
+}
+
+@keyframes chochinLightBurst {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.42); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.62); }
+}
+
+@keyframes yukiOnnaSnowMagic {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-40deg) scale(0.42); }
+  50% { opacity: 0.95; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(70deg) scale(1.34); }
+}
+
+@keyframes nurikabeGuard {
+  0% { opacity: 0; transform: translate(-50%, -50%) scaleX(0.55); }
+  50% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scaleX(1.25); }
+}
+
+@keyframes gashadokuroBoneParade {
+  0% { opacity: 0; transform: translate(-62%, -48%) rotate(-10deg) scale(0.7); }
+  50% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(-38%, -54%) rotate(10deg) scale(1.18); }
+}
+
+@keyframes stageParticlePop {
+  0% { opacity: 0; transform: translateY(10px) scale(0.4); }
+  45% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-28px) scale(1.1); }
+}
+
+@keyframes yokaiStageBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-22px) scale(1.04); }
+  72% { transform: translateY(4px) scale(0.99); }
+}
+
+@keyframes yokaiStageFloat {
+  0%, 100% { transform: translateX(0) translateY(0) rotate(0deg); }
+  45% { transform: translateX(8px) translateY(-18px) rotate(2deg); }
+}
+
+@keyframes yokaiStageStomp {
+  0%, 100% { transform: translateY(0) scale(1); }
+  35% { transform: translateY(8px) scale(1.04, 0.96); }
+  62% { transform: translateY(-8px) scale(0.98, 1.02); }
+}
+
+@keyframes yokaiStageStretch {
+  0%, 100% { transform: scale(1); }
+  48% { transform: scale(0.96, 1.14) translateY(-14px); }
+}
+
+@keyframes yokaiStageDance {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-14px) rotate(-4deg); }
+  55% { transform: translateX(14px) rotate(4deg); }
+  78% { transform: translateX(-6px) rotate(-2deg); }
+}
+
+@keyframes yokaiStageGlow {
+  0%, 100% { filter: drop-shadow(0 12px 16px rgba(60, 45, 25, 0.2)); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 26px rgba(255, 207, 91, 0.95)); transform: scale(1.04); }
+}
+
+@keyframes yokaiStageSnow {
+  0%, 100% { filter: drop-shadow(0 12px 16px rgba(60, 45, 25, 0.2)); transform: translateY(0); }
+  50% { filter: drop-shadow(0 0 22px rgba(188, 230, 255, 0.88)); transform: translateY(-10px); }
+}
+
+@keyframes yokaiStageRattle {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  20% { transform: translateX(-5px) rotate(-2deg); }
+  40% { transform: translateX(5px) rotate(2deg); }
+  60% { transform: translateX(-4px) rotate(-1deg); }
+  80% { transform: translateX(4px) rotate(1deg); }
+}
+
+@keyframes yokaiStageBigJump {
+  0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+  38% { transform: translateY(-64px) rotate(-5deg) scale(1.07); }
+  70% { transform: translateY(6px) rotate(3deg) scale(0.98); }
+}
+
+@media (max-width: 720px) {
+  .yokai-stage {
+    min-height: 330px;
+  }
+
+  .yokai-image-button {
+    min-height: 230px;
+  }
+
+  .detail-yokai-image {
+    width: min(84%, 270px);
+    max-height: 245px;
+  }
+
+  .yokai-action-row {
+    grid-template-columns: 1fr;
+  }
+
+  .yokai-action-row button {
+    width: 100%;
+    min-height: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .effect-sprite {
+    animation: none !important;
+    opacity: 0.85;
+  }
+
+  .stage-particle {
+    animation: none !important;
+    opacity: 0.8;
+  }
+
+  .detail-yokai-image {
+    transition: filter 0.01ms !important;
+  }
+}
