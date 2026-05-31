@@ -1276,7 +1276,7 @@
       "childDescription": "夜の道では、姿の見えない音や、遠くの光、大きく見える影が怖く感じられます。愛媛の夜道の怪異は、暗い道を一人で歩くときの不安や注意を、物語として伝えてきました。",
       "locationId": "ehime_general",
       "imagePath": "public/assets/ehime/generated/ehime_night_mystery_cluster.png",
-      "articleId": "ehime_night_mystery_cluster",
+      "articleId": "ehime_night_road_mysteries_cluster",
       "sourceIds": [
         "nichibun_yokai_db"
       ],
