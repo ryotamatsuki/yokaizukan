@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "validate:data": "node scripts/validate_data_integrity.mjs"
+  },
   "dependencies": {
     "forgecad": "^0.9.10"
   }
