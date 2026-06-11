@@ -1496,6 +1496,28 @@
         "すばやく飛ぶ姿で描かれる"
       ],
       "generatedImagePath": "public/assets/yokai/generated/karasu-tengu.png",
+      "animationProfile": {
+        "stage": "mountain",
+        "enterEffect": "windIn",
+        "tapEffect": "blackFeatherWind",
+        "actionLabel": "はねかぜ！",
+        "sound": "feather_wind.mp3",
+        "effectAssets": [
+          "public/assets/effects/wind/black_feathers.webp",
+          "public/assets/effects/wind/wind_swirl.webp",
+          "public/assets/effects/wind/feather.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "からす羽うずまき！",
+        "effect": "karasuFeatherWhirl",
+        "sound": "special_wind_feather_whirl.mp3",
+        "assets": [
+          "public/assets/effects/wind/feather_whirl.webp",
+          "public/assets/effects/wind/black_feathers.webp",
+          "public/assets/effects/wind/feathers.webp"
+        ]
+      },
       "historicalImages": [],
       "textReferenceUrls": [
         {
@@ -1829,6 +1851,28 @@
         "人のようなしぐさをすることがある"
       ],
       "generatedImagePath": "public/assets/yokai/generated/bakeneko.png",
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "walkIn",
+        "tapEffect": "bakenekoPawStep",
+        "actionLabel": "ぺたぺた！",
+        "sound": "paw_step.mp3",
+        "effectAssets": [
+          "public/assets/effects/cat/moon_pawprints.webp",
+          "public/assets/effects/cat/pawprints.webp",
+          "public/assets/effects/cat/tail_trail.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "つきよのねこステップ！",
+        "effect": "bakenekoMoonStep",
+        "sound": "special_cat_moon_step.mp3",
+        "assets": [
+          "public/assets/effects/cat/moon_pawprints.webp",
+          "public/assets/effects/cat/pawprint_circle.webp",
+          "public/assets/effects/cat/moon_sparkle.webp"
+        ]
+      },
       "historicalImages": [],
       "textReferenceUrls": [
         {
@@ -1943,6 +1987,28 @@
         "夜の景色にあらわれる"
       ],
       "generatedImagePath": "public/assets/yokai/generated/kitsunebi.png",
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "glowIn",
+        "tapEffect": "foxfireFloat",
+        "actionLabel": "ぽっ！",
+        "sound": "foxfire.mp3",
+        "effectAssets": [
+          "public/assets/effects/glow/blue_foxfire.webp",
+          "public/assets/effects/glow/warm_light.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "きつね火のわ！",
+        "effect": "foxfireRing",
+        "sound": "special_foxfire_ring.mp3",
+        "assets": [
+          "public/assets/effects/glow/foxfire_ring.webp",
+          "public/assets/effects/glow/blue_foxfire.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
+      },
       "historicalImages": [],
       "textReferenceUrls": [
         {
@@ -2284,6 +2350,28 @@
         "音が先に聞こえる"
       ],
       "generatedImagePath": "public/assets/yokai/generated/azuki-arai.png",
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "splashIn",
+        "tapEffect": "azukiScatter",
+        "actionLabel": "ざくざく！",
+        "sound": "azuki_grains.mp3",
+        "effectAssets": [
+          "public/assets/effects/pop/azuki_grains.webp",
+          "public/assets/effects/water/water_drops.webp",
+          "public/assets/effects/water/ripple.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "あずきシャワー！",
+        "effect": "azukiShower",
+        "sound": "special_azuki_shower.mp3",
+        "assets": [
+          "public/assets/effects/pop/azuki_shower.webp",
+          "public/assets/effects/pop/azuki_grains.webp",
+          "public/assets/effects/water/water_drops.webp"
+        ]
+      },
       "historicalImages": [],
       "textReferenceUrls": [
         {
@@ -2728,6 +2816,28 @@
         "すばやく動く"
       ],
       "generatedImagePath": "public/assets/yokai/generated/kamaitachi.png",
+      "animationProfile": {
+        "stage": "mountain",
+        "enterEffect": "windIn",
+        "tapEffect": "softWindSlash",
+        "actionLabel": "ひゅん！",
+        "sound": "wind_slash.mp3",
+        "effectAssets": [
+          "public/assets/effects/wind/soft_wind_slash.webp",
+          "public/assets/effects/wind/wind_swirl.webp",
+          "public/assets/effects/wind/leaves.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "三つのつむじ風！",
+        "effect": "tripleWhirlwind",
+        "sound": "special_triple_wind.mp3",
+        "assets": [
+          "public/assets/effects/wind/triple_whirlwind.webp",
+          "public/assets/effects/wind/soft_wind_slash.webp",
+          "public/assets/effects/wind/wind_tornado.webp"
+        ]
+      },
       "historicalImages": [],
       "textReferenceUrls": [
         {

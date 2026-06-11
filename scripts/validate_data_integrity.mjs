@@ -60,6 +60,7 @@ function validateYokai(yokaiData) {
 
   checkUniqueIds(filePath, 'items', items);
   validateYokaiSoundReferences(items);
+  validateYokaiEffectReferences(items);
 
   for (const item of items) {
     const itemId = getId(item);
@@ -117,6 +118,42 @@ function validateYokaiSoundReferences(items) {
     if (!fs.existsSync(soundPath)) {
       addWarning(`${DATA_FILES.yokai} [${ref.itemId}]: ${ref.owner} references missing optional sound file: ${soundPath}`);
     }
+  }
+}
+
+function validateYokaiEffectReferences(items) {
+  for (const item of items) {
+    const itemId = getId(item);
+    const tapAssets = getArrayFromValue(item?.animationProfile?.effectAssets, DATA_FILES.yokai, itemId, 'animationProfile.effectAssets');
+    const specialAssets = getArrayFromValue(item?.specialMove?.assets, DATA_FILES.yokai, itemId, 'specialMove.assets');
+
+    if (tapAssets.length > 3) {
+      addError(DATA_FILES.yokai, itemId, 'animationProfile.effectAssets must contain at most 3 assets');
+    }
+    if (specialAssets.length > 4) {
+      addError(DATA_FILES.yokai, itemId, 'specialMove.assets must contain at most 4 assets');
+    }
+
+    for (const assetPath of tapAssets) {
+      checkYokaiEffectAssetPath(itemId, 'animationProfile.effectAssets', assetPath);
+    }
+    for (const assetPath of specialAssets) {
+      checkYokaiEffectAssetPath(itemId, 'specialMove.assets', assetPath);
+    }
+  }
+}
+
+function checkYokaiEffectAssetPath(itemId, fieldName, assetPath) {
+  if (!isNonEmptyString(assetPath)) {
+    addError(DATA_FILES.yokai, itemId, `${fieldName} contains an empty asset path`);
+    return;
+  }
+  if (!assetPath.startsWith('public/assets/effects/')) {
+    addError(DATA_FILES.yokai, itemId, `${fieldName} must reference public/assets/effects/: ${assetPath}`);
+    return;
+  }
+  if (!fs.existsSync(assetPath)) {
+    addError(DATA_FILES.yokai, itemId, `${fieldName} references missing effect asset: ${assetPath}`);
   }
 }
 

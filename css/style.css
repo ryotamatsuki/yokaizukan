@@ -3357,12 +3357,18 @@ body.opening-active {
 .motion-splashIn,
 .motion-waterSplash,
 .motion-hopIn,
+.motion-azukiScatter,
+.motion-azukiShower,
 .motion-umbrellaJump {
   animation: yokaiStageBounce 760ms cubic-bezier(0.18, 0.8, 0.24, 1) both;
 }
 
 .motion-windIn,
 .motion-leafWind,
+.motion-blackFeatherWind,
+.motion-karasuFeatherWhirl,
+.motion-softWindSlash,
+.motion-tripleWhirlwind,
 .motion-tenguGreatWind {
   animation: yokaiStageFloat 980ms ease-in-out both;
 }
@@ -3381,12 +3387,17 @@ body.opening-active {
 }
 
 .motion-tailWiggle,
+.motion-walkIn,
+.motion-bakenekoPawStep,
+.motion-bakenekoMoonStep,
 .motion-nekomataDance {
   animation: yokaiStageDance 1100ms ease-in-out both;
 }
 
 .motion-glowIn,
 .motion-lanternGlow,
+.motion-foxfireFloat,
+.motion-foxfireRing,
 .motion-chochinLightBurst {
   animation: yokaiStageGlow 1200ms ease-out both;
 }

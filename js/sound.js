@@ -160,7 +160,7 @@ function getDuration(soundFile) {
 }
 
 function getPattern(soundFile) {
-  if (soundFile.includes('cat')) {
+  if (soundFile.includes('cat') || soundFile.includes('paw')) {
     return [
       { from: 620, to: 760, length: 0.14, volume: 0.18, type: 'triangle' },
       { from: 780, to: 560, length: 0.16, volume: 0.12, type: 'triangle' }
@@ -174,10 +174,25 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('fire') || soundFile.includes('foxfire')) {
+    return [
+      { from: 520, to: 860, length: 0.2, volume: 0.12, type: 'sine' },
+      { from: 780, to: 1180, length: 0.22, volume: 0.09, type: 'triangle' }
+    ];
+  }
+
   if (soundFile.includes('wind')) {
     return [
       { from: 220, to: 440, length: 0.32, volume: 0.09, type: 'sawtooth' },
       { from: 330, to: 260, length: 0.26, volume: 0.07, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('azuki') || soundFile.includes('grain')) {
+    return [
+      { from: 420, to: 520, length: 0.07, volume: 0.11, type: 'square' },
+      { from: 500, to: 620, length: 0.07, volume: 0.1, type: 'triangle' },
+      { from: 460, to: 560, length: 0.07, volume: 0.09, type: 'square' }
     ];
   }
 

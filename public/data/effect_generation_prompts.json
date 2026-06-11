@@ -256,5 +256,59 @@
     "path": "public/assets/effects/wind/wind_tornado.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
     "status": "generated"
+  },
+  {
+    "id": "moon_pawprints",
+    "path": "public/assets/effects/cat/moon_pawprints.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Moonlit pawprints for Bakeneko animation: a curved trail of cute cat pawprints glowing softly in moonlight with tiny crescent moon sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, generous padding, no text, no logo, no watermark, no scary face, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "blue_foxfire",
+    "path": "public/assets/effects/glow/blue_foxfire.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Soft blue foxfire wisps for Kitsunebi animation: several small rounded floating magical flame wisps, mysterious but friendly. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no burning objects, no scary face, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "foxfire_ring",
+    "path": "public/assets/effects/glow/foxfire_ring.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. A ring of soft blue foxfire for Kitsunebi special move: rounded blue magical wisps forming a gentle circular ring with tiny sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no scary fire, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "azuki_grains",
+    "path": "public/assets/effects/pop/azuki_grains.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Cheerful azuki red bean grains for Azuki-arai animation: shiny red beans bouncing and flowing in a playful curved stream with a few tiny water droplets. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no dirt, no scary elements, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "azuki_shower",
+    "path": "public/assets/effects/pop/azuki_shower.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Azuki red bean shower for Azuki-arai special move: shiny azuki beans and small clear blue water droplets falling in gentle curved streams. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Clean isolated elements only, no white blocks, no checkerboard, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "black_feathers",
+    "path": "public/assets/effects/wind/black_feathers.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Black feathers drifting in a friendly wind for Karasu-tengu animation: soft black crow feathers with gentle curved wind motion and light playful trails. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no weapons, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "feather_whirl",
+    "path": "public/assets/effects/wind/feather_whirl.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. A playful feather whirlwind for Karasu-tengu special move: a spiral of soft black crow feathers and pale wind ribbons forming a friendly small whirlwind. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no weapons, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "soft_wind_slash",
+    "path": "public/assets/effects/wind/soft_wind_slash.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Soft wind streaks for Kamaitachi animation, harmless air ribbons only: smooth white and pale blue ribbon-like wind streaks sweeping diagonally. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. No sharp edges, no blades, no cut marks, no blood, no white blocks, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "triple_whirlwind",
+    "path": "public/assets/effects/wind/triple_whirlwind.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Triple whirlwind for Kamaitachi special move: three small friendly white whirlwinds made of ribbon-like wind trails with tiny sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. No blades, no cuts, no weapons, no text, child-friendly.",
+    "status": "generated"
   }
 ]

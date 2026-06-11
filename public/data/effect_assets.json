@@ -566,5 +566,127 @@
     ],
     "fallbackClass": "fallback-wind-tornado",
     "status": "available"
+  },
+  {
+    "id": "moon_pawprints",
+    "path": "public/assets/effects/cat/moon_pawprints.webp",
+    "category": "cat",
+    "usedBy": [
+      "bakeneko"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-moon-pawprints",
+    "status": "available"
+  },
+  {
+    "id": "blue_foxfire",
+    "path": "public/assets/effects/glow/blue_foxfire.webp",
+    "category": "glow",
+    "usedBy": [
+      "kitsunebi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-blue-foxfire",
+    "status": "available"
+  },
+  {
+    "id": "foxfire_ring",
+    "path": "public/assets/effects/glow/foxfire_ring.webp",
+    "category": "glow",
+    "usedBy": [
+      "kitsunebi"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-foxfire-ring",
+    "status": "available"
+  },
+  {
+    "id": "azuki_grains",
+    "path": "public/assets/effects/pop/azuki_grains.webp",
+    "category": "pop",
+    "usedBy": [
+      "azuki-arai"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-azuki-grains",
+    "status": "available"
+  },
+  {
+    "id": "azuki_shower",
+    "path": "public/assets/effects/pop/azuki_shower.webp",
+    "category": "pop",
+    "usedBy": [
+      "azuki-arai"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-azuki-shower",
+    "status": "available"
+  },
+  {
+    "id": "black_feathers",
+    "path": "public/assets/effects/wind/black_feathers.webp",
+    "category": "wind",
+    "usedBy": [
+      "karasu-tengu"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-black-feathers",
+    "status": "available"
+  },
+  {
+    "id": "feather_whirl",
+    "path": "public/assets/effects/wind/feather_whirl.webp",
+    "category": "wind",
+    "usedBy": [
+      "karasu-tengu"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-feather-whirl",
+    "status": "available"
+  },
+  {
+    "id": "soft_wind_slash",
+    "path": "public/assets/effects/wind/soft_wind_slash.webp",
+    "category": "wind",
+    "usedBy": [
+      "kamaitachi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-soft-wind-slash",
+    "status": "available"
+  },
+  {
+    "id": "triple_whirlwind",
+    "path": "public/assets/effects/wind/triple_whirlwind.webp",
+    "category": "wind",
+    "usedBy": [
+      "kamaitachi"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-triple-whirlwind",
+    "status": "available"
   }
 ]
