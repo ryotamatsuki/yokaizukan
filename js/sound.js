@@ -6,18 +6,53 @@ let userActivated = false;
 let muted = readMuted();
 
 const audioCache = new Map();
+const soundAvailability = new Map();
+
+export async function unlockAudio() {
+  userActivated = true;
+
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) {
+    console.warn('AudioContext is not available. Sound effects cannot be synthesized on this browser.');
+    return false;
+  }
+
+  audioContext ||= new AudioContext();
+  if (audioContext.state === 'suspended') {
+    try {
+      await audioContext.resume();
+    } catch (error) {
+      console.warn('AudioContext resume failed. On iPad Safari, tap the sound button or yokai image again.', error);
+      return false;
+    }
+  }
+
+  return audioContext.state === 'running';
+}
 
 export function playSound(soundFile) {
   if (!soundFile || muted) {
     return;
   }
 
-  userActivated = true;
-  const audio = getAudio(soundFile);
+  unlockAudio().then((unlocked) => {
+    if (!unlocked) {
+      console.warn(`Audio is not unlocked; sound effect may be silent: ${soundFile}`);
+    }
+  });
 
+  const availability = soundAvailability.get(soundFile);
+  if (availability !== true) {
+    playSynth(soundFile);
+    ensureSoundAvailability(soundFile);
+    return;
+  }
+
+  const audio = getAudio(soundFile);
   audio.currentTime = 0;
   audio.play().catch((error) => {
-    console.warn(`Sound file unavailable, using synthesized fallback: ${soundFile}`, error);
+    soundAvailability.set(soundFile, false);
+    console.warn(`Sound file could not be played, using synthesized fallback: ${soundFile}`, error);
     playSynth(soundFile);
   });
 }
@@ -43,6 +78,7 @@ export function toggleMuted() {
 
 export function preloadSounds(soundFiles = []) {
   soundFiles.filter(Boolean).forEach((soundFile) => {
+    ensureSoundAvailability(soundFile);
     getAudio(soundFile).preload = 'auto';
   });
 }
@@ -52,7 +88,11 @@ function getAudio(soundFile) {
     const audio = new Audio(`${SOUND_BASE}${soundFile}`);
     audio.preload = 'none';
     audio.addEventListener('error', () => {
+      soundAvailability.set(soundFile, false);
       console.warn(`Sound file unavailable: ${soundFile}`);
+    }, { once: true });
+    audio.addEventListener('canplaythrough', () => {
+      soundAvailability.set(soundFile, true);
     }, { once: true });
     audioCache.set(soundFile, audio);
   }
@@ -60,19 +100,33 @@ function getAudio(soundFile) {
   return audioCache.get(soundFile);
 }
 
-function playSynth(soundFile) {
+async function ensureSoundAvailability(soundFile) {
+  if (!soundFile || soundAvailability.has(soundFile) || typeof fetch !== 'function') {
+    return soundAvailability.get(soundFile);
+  }
+
+  try {
+    const response = await fetch(`${SOUND_BASE}${soundFile}`, { method: 'HEAD', cache: 'force-cache' });
+    soundAvailability.set(soundFile, response.ok);
+    if (!response.ok) {
+      console.warn(`Sound file is not placed; synthesized fallback will be used: ${soundFile} (${response.status})`);
+    }
+  } catch (error) {
+    soundAvailability.set(soundFile, false);
+    console.warn(`Sound file check failed; synthesized fallback will be used: ${soundFile}`, error);
+  }
+
+  return soundAvailability.get(soundFile);
+}
+
+async function playSynth(soundFile) {
   if (!userActivated || muted) {
     return;
   }
 
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContext) {
+  const unlocked = await unlockAudio();
+  if (!unlocked || !audioContext) {
     return;
-  }
-
-  audioContext ||= new AudioContext();
-  if (audioContext.state === 'suspended') {
-    audioContext.resume();
   }
 
   const now = audioContext.currentTime;

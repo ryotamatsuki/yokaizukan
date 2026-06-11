@@ -12,6 +12,7 @@ const DATA_FILES = {
 };
 
 const errors = [];
+const warnings = [];
 
 const data = Object.fromEntries(
   Object.entries(DATA_FILES).map(([key, filePath]) => [key, readJson(filePath)])
@@ -28,6 +29,13 @@ if (errors.length > 0) {
     console.error(`- ${error}`);
   }
   process.exit(1);
+}
+
+if (warnings.length > 0) {
+  console.warn('Data integrity warnings:');
+  for (const warning of warnings) {
+    console.warn(`- ${warning}`);
+  }
 }
 
 console.log('Data integrity check passed.');
@@ -51,6 +59,7 @@ function validateYokai(yokaiData) {
   }
 
   checkUniqueIds(filePath, 'items', items);
+  validateYokaiSoundReferences(items);
 
   for (const item of items) {
     const itemId = getId(item);
@@ -72,6 +81,41 @@ function validateYokai(yokaiData) {
       if (!Array.isArray(article.body) || article.body.length === 0) {
         addError(filePath, itemId, 'detailedArticle.body must be a non-empty array');
       }
+    }
+  }
+}
+
+function validateYokaiSoundReferences(items) {
+  const soundReferences = [];
+
+  for (const item of items) {
+    const itemId = getId(item);
+    for (const [owner, soundFile] of [
+      ['animationProfile.sound', item?.animationProfile?.sound],
+      ['specialMove.sound', item?.specialMove?.sound]
+    ]) {
+      if (soundFile === undefined || soundFile === null || soundFile === '') {
+        continue;
+      }
+      if (!isNonEmptyString(soundFile)) {
+        addError(DATA_FILES.yokai, itemId, `${owner} must be a non-empty string when present`);
+        continue;
+      }
+      soundReferences.push({ itemId, owner, soundFile });
+    }
+  }
+
+  if (soundReferences.length === 0) {
+    addWarning('yokai sounds: no animationProfile.sound or specialMove.sound references found');
+    return;
+  }
+
+  addWarning(`yokai sound references (${soundReferences.length}): ${soundReferences.map((ref) => `${ref.itemId} ${ref.owner}=${ref.soundFile}`).join('; ')}`);
+
+  for (const ref of soundReferences) {
+    const soundPath = `public/assets/sounds/${ref.soundFile}`;
+    if (!fs.existsSync(soundPath)) {
+      addWarning(`${DATA_FILES.yokai} [${ref.itemId}]: ${ref.owner} references missing optional sound file: ${soundPath}`);
     }
   }
 }
@@ -267,4 +311,8 @@ function isNonEmptyString(value) {
 
 function addError(filePath, id, message) {
   errors.push(`${filePath} [${id}]: ${message}`);
+}
+
+function addWarning(message) {
+  warnings.push(message);
 }

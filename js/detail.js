@@ -1,6 +1,6 @@
 import { createScaryStars } from './render.js';
 import { clearEffects, playEnterEffect, playSpecialMove, playTapEffect } from './effects.js';
-import { getMuted, toggleMuted } from './sound.js';
+import { getMuted, toggleMuted, unlockAudio } from './sound.js';
 
 let modal;
 let dialog;
@@ -272,7 +272,10 @@ function createYokaiStage(yokai, effectClass) {
 
   imageButton.append(placeholder);
   if (hasInteractiveEffects) {
-    imageButton.addEventListener('click', () => playTapEffect(yokai));
+    imageButton.addEventListener('click', () => {
+      unlockAudio();
+      playTapEffect(yokai);
+    });
   }
 
   const actionRow = document.createElement('div');
@@ -283,14 +286,20 @@ function createYokaiStage(yokai, effectClass) {
   actionButton.className = 'yokai-action-button';
   actionButton.type = 'button';
   actionButton.textContent = profile.actionLabel || 'もういちど！';
-  actionButton.addEventListener('click', () => playTapEffect(yokai));
+  actionButton.addEventListener('click', () => {
+    unlockAudio();
+    playTapEffect(yokai);
+  });
 
   const specialButton = document.createElement('button');
   specialButton.id = 'specialMoveButton';
   specialButton.className = 'special-move-button';
   specialButton.type = 'button';
   specialButton.textContent = specialMove.label || 'ひっさつわざ！';
-  specialButton.addEventListener('click', () => playSpecialMove(yokai));
+  specialButton.addEventListener('click', () => {
+    unlockAudio();
+    playSpecialMove(yokai);
+  });
 
   const muteButton = document.createElement('button');
   muteButton.id = 'soundMuteButton';
@@ -300,6 +309,7 @@ function createYokaiStage(yokai, effectClass) {
   muteButton.addEventListener('click', () => {
     toggleMuted();
     updateMuteButton(muteButton);
+    unlockAudio();
   });
 
   actionRow.append(actionButton, specialButton, muteButton);
@@ -312,9 +322,14 @@ function createYokaiStage(yokai, effectClass) {
 
 function updateMuteButton(button) {
   const muted = getMuted();
-  button.textContent = muted ? 'おと オフ' : 'おと オン';
+  button.textContent = muted ? '\u304a\u3068\uff1a\u30aa\u30d5' : '\u304a\u3068\uff1a\u30aa\u30f3';
   button.setAttribute('aria-pressed', String(muted));
-  button.setAttribute('aria-label', muted ? '音をオンにする' : '音をオフにする');
+  button.setAttribute(
+    'aria-label',
+    muted
+      ? '\u73fe\u5728\u306f\u97f3\u304c\u30aa\u30d5\u3067\u3059\u3002\u62bc\u3059\u3068\u97f3\u3092\u30aa\u30f3\u306b\u3057\u307e\u3059'
+      : '\u73fe\u5728\u306f\u97f3\u304c\u30aa\u30f3\u3067\u3059\u3002\u62bc\u3059\u3068\u97f3\u3092\u30aa\u30d5\u306b\u3057\u307e\u3059'
+  );
 }
 
 function createDetailedArticleBlocks(yokai) {

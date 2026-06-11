@@ -269,7 +269,7 @@ node node_modules/forgecad/dist-cli/forgecad.js render 3d scripts/forgecad/openi
 - 生成プロンプト管理: `public/data/effect_generation_prompts.json`
 - 効果音置き場: `public/assets/sounds/`
 
-音はユーザー操作後にだけ再生されます。実音声ファイルが未配置の場合でも画面は止まらず、`js/sound.js` のWeb Audioフォールバックで短い効果音を鳴らします。ミュート状態は `localStorage` に保存され、詳細画面の「おと オン / オフ」ボタンで切り替えできます。
+音はユーザー操作後にだけ再生されます。画像タップ、もういちどボタン、ひっさつわざボタン、音ボタンでは `unlockAudio()` が `AudioContext` を初期化・resume します。実音声ファイルが未配置の場合でも画面は止まらず、`js/sound.js` のWeb Audioフォールバックで短い効果音を鳴らします。ミュート状態は `localStorage` に保存され、詳細画面の「おと：オン」「おと：オフ」ボタンで切り替えできます。
 
 新しい妖怪に同じ仕組みを追加する場合は、`public/data/yokai.json` の対象妖怪に `animationProfile` と `specialMove` を追加し、使用する素材を `public/assets/effects/` に配置します。その後、必要に応じて `public/data/effect_assets.json` と `public/data/effect_generation_prompts.json` に素材情報とプロンプトを追加してください。
 
