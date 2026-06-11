@@ -271,6 +271,8 @@ node node_modules/forgecad/dist-cli/forgecad.js render 3d scripts/forgecad/openi
 
 音はユーザー操作後にだけ再生されます。画像タップ、もういちどボタン、ひっさつわざボタン、音ボタンでは `unlockAudio()` が `AudioContext` を初期化・resume します。実音声ファイルが未配置の場合でも画面は止まらず、`js/sound.js` のWeb Audioフォールバックで短い効果音を鳴らします。ミュート状態は `localStorage` に保存され、詳細画面の「おと：オン」「おと：オフ」ボタンで切り替えできます。
 
+iPhone / iPad では、本体の消音モードがオンだとSafari上の効果音が聞こえない場合があります。効果音を確認するときは、消音モードを解除し、本体音量を上げてください。あわせて、アプリ内の「おと：オン / オフ」ボタンも確認してください。
+
 新しい妖怪に同じ仕組みを追加する場合は、`public/data/yokai.json` の対象妖怪に `animationProfile` と `specialMove` を追加し、使用する素材を `public/assets/effects/` に配置します。その後、必要に応じて `public/data/effect_assets.json` と `public/data/effect_generation_prompts.json` に素材情報とプロンプトを追加してください。
 
 `prefers-reduced-motion: reduce` に対応しており、動きを減らす設定の環境では強い動きの代わりに短い表示変化で反応します。

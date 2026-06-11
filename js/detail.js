@@ -313,9 +313,12 @@ function createYokaiStage(yokai, effectClass) {
   });
 
   actionRow.append(actionButton, specialButton, muteButton);
+  const soundHint = document.createElement('p');
+  soundHint.className = 'sound-device-hint';
+  soundHint.textContent = 'iPhone\u30fbiPad\u3067\u97f3\u304c\u51fa\u306a\u3044\u3068\u304d\u306f\u3001\u672c\u4f53\u306e\u6d88\u97f3\u30e2\u30fc\u30c9\u3082\u78ba\u8a8d\u3057\u3066\u304f\u3060\u3055\u3044\u3002';
   stage.append(background, effectLayer, imageButton);
   if (hasInteractiveEffects) {
-    stage.append(actionRow);
+    stage.append(actionRow, soundHint);
   }
   return stage;
 }

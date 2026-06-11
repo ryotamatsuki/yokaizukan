@@ -3209,6 +3209,17 @@ body.opening-active {
   background: #5d6f8f;
 }
 
+.sound-device-hint {
+  position: relative;
+  z-index: 4;
+  margin: -0.25rem 0.8rem 0.8rem;
+  color: #5b4b37;
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.55;
+  text-align: center;
+}
+
 .stage-water .stage-background {
   background:
     radial-gradient(ellipse at 50% 74%, rgba(66, 170, 210, 0.44), transparent 42%),
