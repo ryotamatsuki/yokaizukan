@@ -46,7 +46,8 @@
     "path": "public/assets/effects/cat/moon_sparkle.webp",
     "category": "cat",
     "usedBy": [
-      "nekomata"
+      "nekomata",
+      "bakeneko"
     ],
     "usedFor": [
       "specialMove"
@@ -59,7 +60,8 @@
     "path": "public/assets/effects/cat/pawprint_circle.webp",
     "category": "cat",
     "usedBy": [
-      "nekomata"
+      "nekomata",
+      "bakeneko"
     ],
     "usedFor": [
       "specialMove"
@@ -72,7 +74,8 @@
     "path": "public/assets/effects/cat/pawprints.webp",
     "category": "cat",
     "usedBy": [
-      "nekomata"
+      "nekomata",
+      "bakeneko"
     ],
     "usedFor": [
       "tapEffect"
@@ -85,7 +88,8 @@
     "path": "public/assets/effects/cat/tail_trail.webp",
     "category": "cat",
     "usedBy": [
-      "nekomata"
+      "nekomata",
+      "bakeneko"
     ],
     "usedFor": [
       "tapEffect",
@@ -125,7 +129,8 @@
     "path": "public/assets/effects/glow/warm_light.webp",
     "category": "glow",
     "usedBy": [
-      "chochin-obake"
+      "chochin-obake",
+      "kitsunebi"
     ],
     "usedFor": [
       "tapEffect"
@@ -138,9 +143,11 @@
     "path": "public/assets/effects/glow/warm_light_orbs.webp",
     "category": "glow",
     "usedBy": [
-      "chochin-obake"
+      "chochin-obake",
+      "kitsunebi"
     ],
     "usedFor": [
+      "tapEffect",
       "specialMove"
     ],
     "fallbackClass": "fallback-warm-light-orbs",
@@ -441,7 +448,8 @@
     "path": "public/assets/effects/water/ripple.webp",
     "category": "water",
     "usedBy": [
-      "kappa"
+      "kappa",
+      "azuki-arai"
     ],
     "usedFor": [
       "tapEffect"
@@ -454,7 +462,8 @@
     "path": "public/assets/effects/water/water_drops.webp",
     "category": "water",
     "usedBy": [
-      "kappa"
+      "kappa",
+      "azuki-arai"
     ],
     "usedFor": [
       "tapEffect",
@@ -494,7 +503,8 @@
     "path": "public/assets/effects/wind/feather.webp",
     "category": "wind",
     "usedBy": [
-      "tengu"
+      "tengu",
+      "karasu-tengu"
     ],
     "usedFor": [
       "tapEffect"
@@ -507,7 +517,8 @@
     "path": "public/assets/effects/wind/feathers.webp",
     "category": "wind",
     "usedBy": [
-      "tengu"
+      "tengu",
+      "karasu-tengu"
     ],
     "usedFor": [
       "specialMove"
@@ -533,7 +544,8 @@
     "path": "public/assets/effects/wind/leaves.webp",
     "category": "wind",
     "usedBy": [
-      "tengu"
+      "tengu",
+      "kamaitachi"
     ],
     "usedFor": [
       "tapEffect"
@@ -546,7 +558,9 @@
     "path": "public/assets/effects/wind/wind_swirl.webp",
     "category": "wind",
     "usedBy": [
-      "tengu"
+      "tengu",
+      "karasu-tengu",
+      "kamaitachi"
     ],
     "usedFor": [
       "tapEffect"
@@ -559,7 +573,8 @@
     "path": "public/assets/effects/wind/wind_tornado.webp",
     "category": "wind",
     "usedBy": [
-      "tengu"
+      "tengu",
+      "kamaitachi"
     ],
     "usedFor": [
       "specialMove"

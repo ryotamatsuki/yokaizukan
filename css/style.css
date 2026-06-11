@@ -3314,6 +3314,11 @@ body.opening-active {
 .tap-snowBreath { animation-name: snowBreath; }
 .tap-wallBump { animation-name: wallBump; }
 .tap-boneRattle { animation-name: boneRattle; }
+.tap-blackFeatherWind { animation-name: blackFeatherWind; }
+.tap-bakenekoPawStep { animation-name: bakenekoPawStep; }
+.tap-foxfireFloat { animation-name: foxfireFloatAsset; }
+.tap-azukiScatter { animation-name: azukiScatterAsset; }
+.tap-softWindSlash { animation-name: softWindSlashAsset; }
 
 .special-kappaWaterSpiral { animation-name: kappaWaterSpiral; }
 .special-tenguGreatWind { animation-name: tenguGreatWind; }
@@ -3325,6 +3330,11 @@ body.opening-active {
 .special-yukiOnnaSnowMagic { animation-name: yukiOnnaSnowMagic; }
 .special-nurikabeGuard { animation-name: nurikabeGuard; }
 .special-gashadokuroBoneParade { animation-name: gashadokuroBoneParade; }
+.special-karasuFeatherWhirl { animation-name: karasuFeatherWhirl; }
+.special-bakenekoMoonStep { animation-name: bakenekoMoonStep; }
+.special-foxfireRing { animation-name: foxfireRingAsset; }
+.special-azukiShower { animation-name: azukiShowerAsset; }
+.special-tripleWhirlwind { animation-name: tripleWhirlwindAsset; }
 
 .stage-particle {
   position: absolute;
@@ -3551,6 +3561,66 @@ body.opening-active {
   0% { opacity: 0; transform: translate(-62%, -48%) rotate(-10deg) scale(0.7); }
   50% { opacity: 0.9; }
   100% { opacity: 0; transform: translate(-38%, -54%) rotate(10deg) scale(1.18); }
+}
+
+@keyframes blackFeatherWind {
+  0% { opacity: 0; transform: translate(-70%, -62%) rotate(-18deg) scale(0.68); }
+  35% { opacity: 0.95; }
+  100% { opacity: 0; transform: translate(-28%, -34%) rotate(26deg) scale(1.14); }
+}
+
+@keyframes karasuFeatherWhirl {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-80deg) scale(0.42); }
+  42%, 72% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(220deg) scale(1.72); }
+}
+
+@keyframes bakenekoPawStep {
+  0% { opacity: 0; transform: translate(-64%, -42%) rotate(-10deg) scale(0.58); }
+  38%, 70% { opacity: 0.92; }
+  100% { opacity: 0; transform: translate(-36%, -56%) rotate(10deg) scale(1.12); }
+}
+
+@keyframes bakenekoMoonStep {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-30deg) scale(0.48); }
+  45%, 72% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(95deg) scale(1.58); }
+}
+
+@keyframes foxfireFloatAsset {
+  0% { opacity: 0; transform: translate(-50%, -40%) scale(0.52) rotate(-8deg); }
+  36%, 74% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-50%, -64%) scale(1.18) rotate(9deg); }
+}
+
+@keyframes foxfireRingAsset {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.36) rotate(-28deg); }
+  45%, 78% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.74) rotate(120deg); }
+}
+
+@keyframes azukiScatterAsset {
+  0% { opacity: 0; transform: translate(-52%, -76%) rotate(-8deg) scale(0.62); }
+  28%, 74% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-46%, -20%) rotate(18deg) scale(1.1); }
+}
+
+@keyframes azukiShowerAsset {
+  0% { opacity: 0; transform: translate(-50%, -72%) scale(0.54); }
+  32%, 78% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -34%) scale(1.56); }
+}
+
+@keyframes softWindSlashAsset {
+  0% { opacity: 0; transform: translate(-86%, -42%) rotate(-9deg) scale(0.68); }
+  38%, 68% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-12%, -58%) rotate(7deg) scale(1.16); }
+}
+
+@keyframes tripleWhirlwindAsset {
+  0% { opacity: 0; transform: translate(-74%, -50%) rotate(-18deg) scale(0.48); }
+  42%, 78% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-26%, -50%) rotate(34deg) scale(1.62); }
 }
 
 @keyframes stageParticlePop {

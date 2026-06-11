@@ -2,6 +2,7 @@ import fs from 'node:fs';
 
 const DATA_FILES = {
   yokai: 'public/data/yokai.json',
+  effectAssets: 'public/data/effect_assets.json',
   legends: 'public/data/legends.json',
   articles: 'public/data/articles.json',
   childArticles: 'public/data/child_articles.json',
@@ -10,6 +11,7 @@ const DATA_FILES = {
   sources: 'public/data/sources.json',
   evidence: 'public/data/evidence_check_table.json'
 };
+const STYLE_FILE = 'css/style.css';
 
 const errors = [];
 const warnings = [];
@@ -17,9 +19,10 @@ const warnings = [];
 const data = Object.fromEntries(
   Object.entries(DATA_FILES).map(([key, filePath]) => [key, readJson(filePath)])
 );
+const styleCss = readText(STYLE_FILE);
 
 if (errors.length === 0) {
-  validateYokai(data.yokai);
+  validateYokai(data.yokai, styleCss, data.effectAssets);
   validateEhime(data);
 }
 
@@ -49,7 +52,16 @@ function readJson(filePath) {
   }
 }
 
-function validateYokai(yokaiData) {
+function readText(filePath) {
+  try {
+    return fs.readFileSync(filePath, 'utf8');
+  } catch (error) {
+    addError(filePath, '(file)', `cannot read file: ${error.message}`);
+    return '';
+  }
+}
+
+function validateYokai(yokaiData, cssText, effectAssetsData) {
   const filePath = DATA_FILES.yokai;
   const items = yokaiData?.items;
 
@@ -60,7 +72,8 @@ function validateYokai(yokaiData) {
 
   checkUniqueIds(filePath, 'items', items);
   validateYokaiSoundReferences(items);
-  validateYokaiEffectReferences(items);
+  const effectUsageByPath = validateYokaiEffectReferences(items, cssText);
+  validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath);
 
   for (const item of items) {
     const itemId = getId(item);
@@ -121,11 +134,16 @@ function validateYokaiSoundReferences(items) {
   }
 }
 
-function validateYokaiEffectReferences(items) {
+function validateYokaiEffectReferences(items, cssText) {
+  const effectUsageByPath = new Map();
+
   for (const item of items) {
     const itemId = getId(item);
     const tapAssets = getArrayFromValue(item?.animationProfile?.effectAssets, DATA_FILES.yokai, itemId, 'animationProfile.effectAssets');
     const specialAssets = getArrayFromValue(item?.specialMove?.assets, DATA_FILES.yokai, itemId, 'specialMove.assets');
+
+    checkEffectCssClass(itemId, 'animationProfile.tapEffect', item?.animationProfile?.tapEffect, 'tap', cssText);
+    checkEffectCssClass(itemId, 'specialMove.effect', item?.specialMove?.effect, 'special', cssText);
 
     if (tapAssets.length > 3) {
       addError(DATA_FILES.yokai, itemId, 'animationProfile.effectAssets must contain at most 3 assets');
@@ -136,11 +154,15 @@ function validateYokaiEffectReferences(items) {
 
     for (const assetPath of tapAssets) {
       checkYokaiEffectAssetPath(itemId, 'animationProfile.effectAssets', assetPath);
+      registerEffectAssetUsage(effectUsageByPath, assetPath, itemId);
     }
     for (const assetPath of specialAssets) {
       checkYokaiEffectAssetPath(itemId, 'specialMove.assets', assetPath);
+      registerEffectAssetUsage(effectUsageByPath, assetPath, itemId);
     }
   }
+
+  return effectUsageByPath;
 }
 
 function checkYokaiEffectAssetPath(itemId, fieldName, assetPath) {
@@ -154,6 +176,99 @@ function checkYokaiEffectAssetPath(itemId, fieldName, assetPath) {
   }
   if (!fs.existsSync(assetPath)) {
     addError(DATA_FILES.yokai, itemId, `${fieldName} references missing effect asset: ${assetPath}`);
+  }
+}
+
+function checkEffectCssClass(itemId, fieldName, effectName, classPrefix, cssText) {
+  if (effectName === undefined || effectName === null || effectName === '') {
+    return;
+  }
+  if (!isNonEmptyString(effectName)) {
+    addError(DATA_FILES.yokai, itemId, `${fieldName} must be a non-empty string when present`);
+    return;
+  }
+
+  const className = `${classPrefix}-${effectName}`;
+  if (!cssHasClass(cssText, className)) {
+    addError(DATA_FILES.yokai, itemId, `${fieldName} references missing CSS class .${className} in ${STYLE_FILE}`);
+  }
+}
+
+function cssHasClass(cssText, className) {
+  const classPattern = new RegExp(`\\.${escapeRegExp(className)}(?=[\\s,{.#:>\\[]|$)`);
+  return classPattern.test(cssText);
+}
+
+function registerEffectAssetUsage(effectUsageByPath, assetPath, itemId) {
+  if (!isNonEmptyString(assetPath)) {
+    return;
+  }
+  if (!effectUsageByPath.has(assetPath)) {
+    effectUsageByPath.set(assetPath, new Set());
+  }
+  effectUsageByPath.get(assetPath).add(itemId);
+}
+
+function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
+  const filePath = DATA_FILES.effectAssets;
+
+  if (!Array.isArray(effectAssetsData)) {
+    addError(filePath, '(root)', 'effect_assets.json must be an array');
+    return;
+  }
+
+  checkUniqueIds(filePath, '(root)', effectAssetsData);
+
+  const metadataByPath = new Map();
+  for (const asset of effectAssetsData) {
+    const assetId = getId(asset);
+
+    if (!isNonEmptyString(asset?.path)) {
+      addError(filePath, assetId, 'path is missing or empty');
+      continue;
+    }
+    if (!asset.path.startsWith('public/assets/effects/')) {
+      addError(filePath, assetId, `path must reference public/assets/effects/: ${asset.path}`);
+      continue;
+    }
+    if (!fs.existsSync(asset.path)) {
+      addError(filePath, assetId, `path references missing effect asset: ${asset.path}`);
+    }
+    if (metadataByPath.has(asset.path)) {
+      addWarning(`${filePath} [${assetId}]: duplicate metadata path also used by ${metadataByPath.get(asset.path).id}: ${asset.path}`);
+    } else {
+      metadataByPath.set(asset.path, asset);
+    }
+
+    if (!Array.isArray(asset?.usedBy)) {
+      addError(filePath, assetId, 'usedBy must be an array');
+      continue;
+    }
+    for (const yokaiId of asset.usedBy) {
+      if (!isNonEmptyString(yokaiId)) {
+        addError(filePath, assetId, 'usedBy contains an empty yokai id');
+      }
+    }
+  }
+
+  for (const [assetPath, yokaiIds] of effectUsageByPath) {
+    const metadata = metadataByPath.get(assetPath);
+    if (!metadata) {
+      addWarning(`${DATA_FILES.yokai}: effect asset is not registered in ${filePath}: ${assetPath}`);
+      continue;
+    }
+
+    const usedBy = new Set(metadata.usedBy || []);
+    const actualYokaiIds = [...yokaiIds].sort();
+    const missingFromMetadata = actualYokaiIds.filter((id) => !usedBy.has(id));
+    const extraInMetadata = [...usedBy].filter((id) => !yokaiIds.has(id)).sort();
+
+    if (missingFromMetadata.length > 0) {
+      addWarning(`${filePath} [${metadata.id}]: usedBy is missing yokai.json references: ${missingFromMetadata.join(', ')}`);
+    }
+    if (extraInMetadata.length > 0) {
+      addWarning(`${filePath} [${metadata.id}]: usedBy includes ids not currently referencing this path in yokai.json: ${extraInMetadata.join(', ')}`);
+    }
   }
 }
 
@@ -332,6 +447,10 @@ function checkIdArray(filePath, ownerId, fieldName, value, targetIds, targetLabe
 
 function arraysMatch(left, right) {
   return left.length === right.length && left.every((value, index) => value === right[index]);
+}
+
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function getId(record) {
