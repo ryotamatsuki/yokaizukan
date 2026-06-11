@@ -44,7 +44,7 @@ export function playTapEffect(yokai) {
   }
 
   (profile.effectAssets || []).slice(0, MAX_TAP_ASSETS).forEach((src, index) => {
-    spawnEffect(src, `effect-sprite tap-${profile.tapEffect || 'tap'}`, {
+    spawnEffect(src, `effect-sprite tap-effect-sprite tap-${profile.tapEffect || 'tap'}`, {
       size: index === 0 ? 'min(72vw, 390px)' : 'min(48vw, 260px)',
       x: `${50 + (index - 1) * 18}%`,
       y: `${50 + (index % 2) * 8}%`,
@@ -78,14 +78,7 @@ export function playSpecialMove(yokai) {
   }
 
   (special.assets || []).slice(0, MAX_SPECIAL_ASSETS).forEach((src, index) => {
-    spawnEffect(src, `effect-sprite special-${special.effect || 'special'}`, {
-      size: index === 0 ? 'min(88vw, 520px)' : 'min(62vw, 360px)',
-      x: `${50 + (index - 1.5) * 13}%`,
-      y: `${48 + (index % 2) * 12}%`,
-      delay: `${index * 120}ms`,
-      duration: `${1250 + index * 160}ms`,
-      rotate: `${(index - 1) * 22}deg`
-    });
+    spawnEffect(src, `effect-sprite special-effect-sprite special-${special.effect || 'special'}`, getSpecialEffectOptions(index));
   });
 
   createParticles(profile.stage || 'spark', 12);
@@ -96,6 +89,17 @@ export function playSpecialMove(yokai) {
     stage?.classList.remove('is-special');
     stage?.removeAttribute('data-special-effect');
   }, prefersReducedMotion() ? 260 : 1650);
+}
+
+function getSpecialEffectOptions(index) {
+  const layout = [
+    { size: 'min(92vw, 560px)', x: '50%', y: '48%', delay: '0ms', duration: '1500ms', rotate: '0deg' },
+    { size: 'min(64vw, 380px)', x: '34%', y: '56%', delay: '110ms', duration: '1580ms', rotate: '-18deg' },
+    { size: 'min(64vw, 380px)', x: '66%', y: '56%', delay: '220ms', duration: '1660ms', rotate: '18deg' },
+    { size: 'min(58vw, 340px)', x: '50%', y: '34%', delay: '330ms', duration: '1740ms', rotate: '10deg' }
+  ];
+
+  return layout[index] || layout[layout.length - 1];
 }
 
 export function spawnEffect(src, className, options = {}) {

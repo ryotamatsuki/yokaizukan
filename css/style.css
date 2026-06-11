@@ -3130,6 +3130,19 @@ body.opening-active {
   z-index: 2;
 }
 
+.yokai-stage.is-special .effect-layer {
+  z-index: 5;
+}
+
+.yokai-stage.is-special .yokai-image-button {
+  z-index: 3;
+}
+
+.yokai-stage.is-special .yokai-action-row,
+.yokai-stage.is-special .sound-device-hint {
+  z-index: 6;
+}
+
 .yokai-image-button {
   position: relative;
   z-index: 3;
@@ -3281,6 +3294,7 @@ body.opening-active {
   left: var(--fx-x, 50%);
   top: var(--fx-y, 50%);
   width: var(--fx-size, min(75vw, 440px));
+  max-width: calc(100% - 1rem);
   transform: translate(-50%, -50%) rotate(var(--fx-rotate, 0deg));
   pointer-events: none;
   opacity: 0;
@@ -3289,6 +3303,11 @@ body.opening-active {
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.2, 0.8, 0.25, 1);
   will-change: transform, opacity;
+}
+
+.special-effect-sprite {
+  z-index: 5;
+  filter: drop-shadow(0 0 1rem rgba(255, 240, 160, 0.45));
 }
 
 .enter-splashIn,
@@ -3570,9 +3589,9 @@ body.opening-active {
 }
 
 @keyframes karasuFeatherWhirl {
-  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-80deg) scale(0.42); }
-  42%, 72% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-50%, -50%) rotate(220deg) scale(1.72); }
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-70deg) scale(0.58); }
+  30%, 78% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(210deg) scale(1.86); }
 }
 
 @keyframes bakenekoPawStep {
@@ -3582,9 +3601,9 @@ body.opening-active {
 }
 
 @keyframes bakenekoMoonStep {
-  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-30deg) scale(0.48); }
-  45%, 72% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-50%, -50%) rotate(95deg) scale(1.58); }
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-24deg) scale(0.6); }
+  32%, 80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(88deg) scale(1.68); }
 }
 
 @keyframes foxfireFloatAsset {
@@ -3594,9 +3613,9 @@ body.opening-active {
 }
 
 @keyframes foxfireRingAsset {
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.36) rotate(-28deg); }
-  45%, 78% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.74) rotate(120deg); }
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5) rotate(-24deg); }
+  28%, 84% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.86) rotate(118deg); }
 }
 
 @keyframes azukiScatterAsset {
@@ -3606,9 +3625,9 @@ body.opening-active {
 }
 
 @keyframes azukiShowerAsset {
-  0% { opacity: 0; transform: translate(-50%, -72%) scale(0.54); }
-  32%, 78% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-50%, -34%) scale(1.56); }
+  0% { opacity: 0; transform: translate(-50%, -58%) scale(0.66); }
+  28%, 82% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -44%) scale(1.72); }
 }
 
 @keyframes softWindSlashAsset {
@@ -3618,9 +3637,9 @@ body.opening-active {
 }
 
 @keyframes tripleWhirlwindAsset {
-  0% { opacity: 0; transform: translate(-74%, -50%) rotate(-18deg) scale(0.48); }
-  42%, 78% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-26%, -50%) rotate(34deg) scale(1.62); }
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-32deg) scale(0.58); }
+  30%, 82% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(126deg) scale(1.78); }
 }
 
 @keyframes stageParticlePop {
