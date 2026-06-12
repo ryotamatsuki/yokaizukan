@@ -1719,6 +1719,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "room",
+        "enterEffect": "glowIn",
+        "tapEffect": "hitotsumeEyeBlink",
+        "actionLabel": "ぱちっ！",
+        "sound": "eye_pop.mp3",
+        "effectAssets": [
+          "public/assets/effects/house/hitotsume_eye_blink.webp",
+          "public/assets/effects/house/hitotsume_eye_flash.webp",
+          "public/assets/effects/pop/pop_mark.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "びっくりライト！",
+        "effect": "hitotsumeEyeFlash",
+        "sound": "special_eye_flash.mp3",
+        "assets": [
+          "public/assets/effects/house/hitotsume_eye_flash.webp",
+          "public/assets/effects/house/hitotsume_surprise_ring.webp",
+          "public/assets/effects/house/hitotsume_eye_blink.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -1825,6 +1848,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E5%BA%A7%E6%95%B7%E7%AB%A5%E5%AD%90%20%E9%81%A0%E9%87%8E%E7%89%A9%E8%AA%9E",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "room",
+        "enterEffect": "hopIn",
+        "tapEffect": "zashikiMariRoll",
+        "actionLabel": "ころん♪",
+        "sound": "mari_roll.mp3",
+        "effectAssets": [
+          "public/assets/effects/house/zashiki_mari_roll.webp",
+          "public/assets/effects/house/zashiki_lucky_sparkle.webp",
+          "public/assets/effects/house/zashiki_room_glow.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "福のきらめき！",
+        "effect": "zashikiLuckySparkle",
+        "sound": "special_lucky_sparkle.mp3",
+        "assets": [
+          "public/assets/effects/house/zashiki_lucky_sparkle.webp",
+          "public/assets/effects/house/zashiki_room_glow.webp",
+          "public/assets/effects/house/zashiki_mari_roll.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
         ]
       }
     },
@@ -2347,6 +2393,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E5%9E%A2%E5%98%97%20%E9%B3%A5%E5%B1%B1%E7%9F%B3%E7%87%95",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "room",
+        "enterEffect": "fadeIn",
+        "tapEffect": "akanameSteamPuff",
+        "actionLabel": "ふわっ",
+        "sound": "steam_puff.mp3",
+        "effectAssets": [
+          "public/assets/effects/house/akaname_steam_puff.webp",
+          "public/assets/effects/house/akaname_bath_shine.webp",
+          "public/assets/effects/house/akaname_droplet_swirl.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "おふろスチーム！",
+        "effect": "akanameBathSteam",
+        "sound": "special_bath_steam.mp3",
+        "assets": [
+          "public/assets/effects/house/akaname_bath_shine.webp",
+          "public/assets/effects/house/akaname_steam_puff.webp",
+          "public/assets/effects/house/akaname_droplet_swirl.webp",
+          "public/assets/effects/water/water_drops.webp"
         ]
       }
     },
@@ -4135,6 +4204,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "paper",
+        "enterEffect": "fadeIn",
+        "tapEffect": "mokumokurenEyeBlink",
+        "actionLabel": "じーっ",
+        "sound": "shoji_peek.mp3",
+        "effectAssets": [
+          "public/assets/effects/house/mokumokuren_eye_cluster.webp",
+          "public/assets/effects/house/mokumokuren_shoji_flash.webp",
+          "public/assets/effects/house/mokumokuren_gaze_wave.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "障子の目あつまれ！",
+        "effect": "mokumokurenGazeWave",
+        "sound": "special_gaze_wave.mp3",
+        "assets": [
+          "public/assets/effects/house/mokumokuren_gaze_wave.webp",
+          "public/assets/effects/house/mokumokuren_eye_cluster.webp",
+          "public/assets/effects/house/mokumokuren_shoji_flash.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
       }
     },
     {
@@ -4247,6 +4339,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E5%8C%96%E7%89%A9%E5%B0%BD%E3%81%8F%E3%81%97%20%E3%81%AC%E3%81%A3%E3%81%BA%E3%81%A3%E3%81%BD%E3%81%86",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "walkIn",
+        "tapEffect": "nuppeppoSoftWobble",
+        "actionLabel": "ぷるぷる",
+        "sound": "blob_wobble.mp3",
+        "effectAssets": [
+          "public/assets/effects/presence/nuppeppo_soft_wobble.webp",
+          "public/assets/effects/presence/nuppeppo_blob_bounce.webp",
+          "public/assets/effects/presence/nuppeppo_jelly_pop.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ふにゃっとジャンプ！",
+        "effect": "nuppeppoBlobBounce",
+        "sound": "special_blob_bounce.mp3",
+        "assets": [
+          "public/assets/effects/presence/nuppeppo_blob_bounce.webp",
+          "public/assets/effects/presence/nuppeppo_jelly_pop.webp",
+          "public/assets/effects/presence/nuppeppo_soft_wobble.webp",
+          "public/assets/effects/pop/jump_dust.webp"
         ]
       }
     },
@@ -4927,6 +5042,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E6%B2%B9%E3%81%99%E3%81%BE%E3%81%97%20%E5%A4%A9%E8%8D%89",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "fadeIn",
+        "tapEffect": "aburaOilDrop",
+        "actionLabel": "ぽとり",
+        "sound": "oil_drop.mp3",
+        "effectAssets": [
+          "public/assets/effects/road/abura_oil_drop.webp",
+          "public/assets/effects/road/abura_soft_glow.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "石の道しるべ！",
+        "effect": "aburaStoneMarker",
+        "sound": "special_stone_marker.mp3",
+        "assets": [
+          "public/assets/effects/road/abura_stone_marker.webp",
+          "public/assets/effects/road/abura_soft_glow.webp",
+          "public/assets/effects/road/abura_oil_drop.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
         ]
       }
     },

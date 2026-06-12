@@ -100,6 +100,23 @@
 | べとべとさん | `betobeto_footsteps.webp` / `invisible_presence_lines.webp` / `betobeto_step_wave.webp` | 見えない足音、気配線、足あと行列 |
 
 流用素材として `pop_mark.webp`、`flying_leaves.webp`、`warm_light_orbs.webp`、`pawprints.webp`、`moon_pawprints.webp`、`wind_swirl.webp`、`sparkle_trail.webp` も使用しています。
+# 家・道・気配系 前半6体 エフェクト素材追加メモ
+
+追加日: 2026-06-12
+
+`image_gen` で家・道・気配系エフェクトの6x3シートを生成し、18個のWebP素材に分割して `public/assets/effects/house/`, `public/assets/effects/presence/`, `public/assets/effects/road/` に保存しました。一つ目小僧、座敷童子、垢嘗、目目連、ぬっぺっぽう、油すましの `animationProfile.effectAssets` と `specialMove.assets` から参照しています。
+
+| 妖怪 | 新規素材 |
+|---|---|
+| 一つ目小僧 | `hitotsume_eye_blink.webp`, `hitotsume_eye_flash.webp`, `hitotsume_surprise_ring.webp` |
+| 座敷童子 | `zashiki_mari_roll.webp`, `zashiki_lucky_sparkle.webp`, `zashiki_room_glow.webp` |
+| 垢嘗 | `akaname_steam_puff.webp`, `akaname_bath_shine.webp`, `akaname_droplet_swirl.webp` |
+| 目目連 | `mokumokuren_eye_cluster.webp`, `mokumokuren_shoji_flash.webp`, `mokumokuren_gaze_wave.webp` |
+| ぬっぺっぽう | `nuppeppo_soft_wobble.webp`, `nuppeppo_blob_bounce.webp`, `nuppeppo_jelly_pop.webp` |
+| 油すまし | `abura_oil_drop.webp`, `abura_stone_marker.webp`, `abura_soft_glow.webp` |
+
+流用素材: `pop_mark.webp`, `warm_light_orbs.webp`, `water_drops.webp`, `sparkle_trail.webp`, `jump_dust.webp`
+
 # 道具・付喪神系5体 エフェクト素材追加メモ
 
 追加日: 2026-06-12

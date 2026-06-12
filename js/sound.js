@@ -226,6 +226,48 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('eye') || soundFile.includes('flash')) {
+    return [
+      { from: 620, to: 920, length: 0.09, volume: 0.11, type: 'triangle' },
+      { from: 980, to: 1460, length: 0.16, volume: 0.09, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('mari') || soundFile.includes('lucky')) {
+    return [
+      { from: 420, to: 520, length: 0.08, volume: 0.1, type: 'triangle' },
+      { from: 720, to: 1080, length: 0.18, volume: 0.08, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('steam') || soundFile.includes('bath')) {
+    return [
+      { from: 380, to: 620, length: 0.24, volume: 0.08, type: 'sine' },
+      { from: 520, to: 360, length: 0.26, volume: 0.06, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('shoji') || soundFile.includes('gaze')) {
+    return [
+      { from: 360, to: 520, length: 0.12, volume: 0.08, type: 'triangle' },
+      { from: 540, to: 760, length: 0.14, volume: 0.07, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('blob') || soundFile.includes('wobble')) {
+    return [
+      { from: 220, to: 330, length: 0.14, volume: 0.1, type: 'sine' },
+      { from: 320, to: 210, length: 0.16, volume: 0.08, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('oil') || soundFile.includes('stone_marker')) {
+    return [
+      { from: 280, to: 180, length: 0.1, volume: 0.1, type: 'sine' },
+      { from: 520, to: 780, length: 0.18, volume: 0.07, type: 'triangle' }
+    ];
+  }
+
   if (soundFile.includes('water') || soundFile.includes('wave') || soundFile.includes('sea') || soundFile.includes('river')) {
     return [
       { from: 260, to: 420, length: 0.22, volume: 0.12, type: 'sine' },

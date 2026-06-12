@@ -1,5 +1,88 @@
 [
   {
+    "id": "abura_oil_drop",
+    "path": "public/assets/effects/road/abura_oil_drop.webp",
+    "category": "road",
+    "usedBy": [
+      "abura_sumashi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-abura-oil-drop",
+    "status": "available"
+  },
+  {
+    "id": "abura_soft_glow",
+    "path": "public/assets/effects/road/abura_soft_glow.webp",
+    "category": "road",
+    "usedBy": [
+      "abura_sumashi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-abura-soft-glow",
+    "status": "available"
+  },
+  {
+    "id": "abura_stone_marker",
+    "path": "public/assets/effects/road/abura_stone_marker.webp",
+    "category": "road",
+    "usedBy": [
+      "abura_sumashi"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-abura-stone-marker",
+    "status": "available"
+  },
+  {
+    "id": "akaname_bath_shine",
+    "path": "public/assets/effects/house/akaname_bath_shine.webp",
+    "category": "house",
+    "usedBy": [
+      "akaname"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-akaname-bath-shine",
+    "status": "available"
+  },
+  {
+    "id": "akaname_droplet_swirl",
+    "path": "public/assets/effects/house/akaname_droplet_swirl.webp",
+    "category": "house",
+    "usedBy": [
+      "akaname"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-akaname-droplet-swirl",
+    "status": "available"
+  },
+  {
+    "id": "akaname_steam_puff",
+    "path": "public/assets/effects/house/akaname_steam_puff.webp",
+    "category": "house",
+    "usedBy": [
+      "akaname"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-akaname-steam-puff",
+    "status": "available"
+  },
+  {
     "id": "azuki_grains",
     "path": "public/assets/effects/pop/azuki_grains.webp",
     "category": "pop",
@@ -318,6 +401,47 @@
     "status": "available"
   },
   {
+    "id": "hitotsume_eye_blink",
+    "path": "public/assets/effects/house/hitotsume_eye_blink.webp",
+    "category": "house",
+    "usedBy": [
+      "hitotsume-kozo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hitotsume-eye-blink",
+    "status": "available"
+  },
+  {
+    "id": "hitotsume_eye_flash",
+    "path": "public/assets/effects/house/hitotsume_eye_flash.webp",
+    "category": "house",
+    "usedBy": [
+      "hitotsume-kozo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hitotsume-eye-flash",
+    "status": "available"
+  },
+  {
+    "id": "hitotsume_surprise_ring",
+    "path": "public/assets/effects/house/hitotsume_surprise_ring.webp",
+    "category": "house",
+    "usedBy": [
+      "hitotsume-kozo"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hitotsume-surprise-ring",
+    "status": "available"
+  },
+  {
     "id": "ice_crystals",
     "path": "public/assets/effects/snow/ice_crystals.webp",
     "category": "snow",
@@ -378,6 +502,7 @@
     "usedBy": [
       "hyosube",
       "karakasa-kozo",
+      "nuppeppo",
       "tofu-kozo"
     ],
     "usedFor": [
@@ -539,6 +664,48 @@
     "status": "available"
   },
   {
+    "id": "mokumokuren_eye_cluster",
+    "path": "public/assets/effects/house/mokumokuren_eye_cluster.webp",
+    "category": "house",
+    "usedBy": [
+      "mokumokuren"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-mokumokuren-eye-cluster",
+    "status": "available"
+  },
+  {
+    "id": "mokumokuren_gaze_wave",
+    "path": "public/assets/effects/house/mokumokuren_gaze_wave.webp",
+    "category": "house",
+    "usedBy": [
+      "mokumokuren"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-mokumokuren-gaze-wave",
+    "status": "available"
+  },
+  {
+    "id": "mokumokuren_shoji_flash",
+    "path": "public/assets/effects/house/mokumokuren_shoji_flash.webp",
+    "category": "house",
+    "usedBy": [
+      "mokumokuren"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-mokumokuren-shoji-flash",
+    "status": "available"
+  },
+  {
     "id": "moon_glow",
     "path": "public/assets/effects/bone/moon_glow.webp",
     "category": "bone",
@@ -606,6 +773,48 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-mountain-path-mist",
+    "status": "available"
+  },
+  {
+    "id": "nuppeppo_blob_bounce",
+    "path": "public/assets/effects/presence/nuppeppo_blob_bounce.webp",
+    "category": "presence",
+    "usedBy": [
+      "nuppeppo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-nuppeppo-blob-bounce",
+    "status": "available"
+  },
+  {
+    "id": "nuppeppo_jelly_pop",
+    "path": "public/assets/effects/presence/nuppeppo_jelly_pop.webp",
+    "category": "presence",
+    "usedBy": [
+      "nuppeppo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-nuppeppo-jelly-pop",
+    "status": "available"
+  },
+  {
+    "id": "nuppeppo_soft_wobble",
+    "path": "public/assets/effects/presence/nuppeppo_soft_wobble.webp",
+    "category": "presence",
+    "usedBy": [
+      "nuppeppo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-nuppeppo-soft-wobble",
     "status": "available"
   },
   {
@@ -698,6 +907,7 @@
     "usedBy": [
       "bake-danuki",
       "fumikuruma_yohi",
+      "hitotsume-kozo",
       "hyosube",
       "karakasa-kozo",
       "tofu-kozo"
@@ -892,9 +1102,11 @@
     "path": "public/assets/effects/magic/sparkle_trail.webp",
     "category": "magic",
     "usedBy": [
+      "abura_sumashi",
       "betobeto_san",
       "kodama",
       "koto_furunushi",
+      "mokumokuren",
       "rokurokubi",
       "shiro_uneri"
     ],
@@ -1166,15 +1378,18 @@
     "path": "public/assets/effects/glow/warm_light_orbs.webp",
     "category": "glow",
     "usedBy": [
+      "abura_sumashi",
       "ame_onna",
       "bake-danuki",
       "betobeto_san",
       "chochin-obake",
       "fumikuruma_yohi",
+      "hitotsume-kozo",
       "kitsunebi",
       "kodama",
       "koto_furunushi",
-      "ningyo"
+      "ningyo",
+      "zashiki-warashi"
     ],
     "usedFor": [
       "specialMove",
@@ -1188,11 +1403,12 @@
     "path": "public/assets/effects/water/water_drops.webp",
     "category": "water",
     "usedBy": [
-      "kappa",
+      "akaname",
+      "ame_onna",
       "azuki-arai",
-      "umibozu",
+      "kappa",
       "ningyo",
-      "ame_onna"
+      "umibozu"
     ],
     "usedFor": [
       "tapEffect",
@@ -1272,6 +1488,48 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-wind-tornado",
+    "status": "available"
+  },
+  {
+    "id": "zashiki_lucky_sparkle",
+    "path": "public/assets/effects/house/zashiki_lucky_sparkle.webp",
+    "category": "house",
+    "usedBy": [
+      "zashiki-warashi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-zashiki-lucky-sparkle",
+    "status": "available"
+  },
+  {
+    "id": "zashiki_mari_roll",
+    "path": "public/assets/effects/house/zashiki_mari_roll.webp",
+    "category": "house",
+    "usedBy": [
+      "zashiki-warashi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-zashiki-mari-roll",
+    "status": "available"
+  },
+  {
+    "id": "zashiki_room_glow",
+    "path": "public/assets/effects/house/zashiki_room_glow.webp",
+    "category": "house",
+    "usedBy": [
+      "zashiki-warashi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-zashiki-room-glow",
     "status": "available"
   }
 ]

@@ -1,5 +1,41 @@
 [
   {
+    "id": "abura_oil_drop",
+    "path": "public/assets/effects/road/abura_oil_drop.webp",
+    "promptJa": "透明背景WebP前提。abura_oil_drop の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "abura_soft_glow",
+    "path": "public/assets/effects/road/abura_soft_glow.webp",
+    "promptJa": "透明背景WebP前提。abura_soft_glow の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "abura_stone_marker",
+    "path": "public/assets/effects/road/abura_stone_marker.webp",
+    "promptJa": "透明背景WebP前提。abura_stone_marker の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "akaname_bath_shine",
+    "path": "public/assets/effects/house/akaname_bath_shine.webp",
+    "promptJa": "透明背景WebP前提。akaname_bath_shine の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "akaname_droplet_swirl",
+    "path": "public/assets/effects/house/akaname_droplet_swirl.webp",
+    "promptJa": "透明背景WebP前提。akaname_droplet_swirl の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "akaname_steam_puff",
+    "path": "public/assets/effects/house/akaname_steam_puff.webp",
+    "promptJa": "透明背景WebP前提。akaname_steam_puff の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "azuki_grains",
     "path": "public/assets/effects/pop/azuki_grains.webp",
     "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Cheerful azuki red bean grains for Azuki-arai animation: shiny red beans bouncing and flowing in a playful curved stream with a few tiny water droplets. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no dirt, no scary elements, child-friendly.",
@@ -138,6 +174,24 @@
     "status": "generated"
   },
   {
+    "id": "hitotsume_eye_blink",
+    "path": "public/assets/effects/house/hitotsume_eye_blink.webp",
+    "promptJa": "透明背景WebP前提。hitotsume_eye_blink の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "hitotsume_eye_flash",
+    "path": "public/assets/effects/house/hitotsume_eye_flash.webp",
+    "promptJa": "透明背景WebP前提。hitotsume_eye_flash の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "hitotsume_surprise_ring",
+    "path": "public/assets/effects/house/hitotsume_surprise_ring.webp",
+    "promptJa": "透明背景WebP前提。hitotsume_surprise_ring の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "ice_crystals",
     "path": "public/assets/effects/snow/ice_crystals.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のsnow系エフェクト素材。雪女の雪の結晶、氷、冷気、雪の魔法素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -234,6 +288,24 @@
     "status": "generated"
   },
   {
+    "id": "mokumokuren_eye_cluster",
+    "path": "public/assets/effects/house/mokumokuren_eye_cluster.webp",
+    "promptJa": "透明背景WebP前提。mokumokuren_eye_cluster の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "mokumokuren_gaze_wave",
+    "path": "public/assets/effects/house/mokumokuren_gaze_wave.webp",
+    "promptJa": "透明背景WebP前提。mokumokuren_gaze_wave の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "mokumokuren_shoji_flash",
+    "path": "public/assets/effects/house/mokumokuren_shoji_flash.webp",
+    "promptJa": "透明背景WebP前提。mokumokuren_shoji_flash の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "moon_glow",
     "path": "public/assets/effects/bone/moon_glow.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のbone系エフェクト素材。がしゃどくろの骨片、やわらかな巨大影、月光素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -261,6 +333,24 @@
     "id": "mountain_path_mist",
     "path": "public/assets/effects/wind/mountain_path_mist.webp",
     "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mountain path mist for Yamanba special move: sweeping bands of soft white and pale blue mist flowing along an implied mountain path, gentle curves, a few autumn leaves and small light specks, bigger and wider than a tap effect. No old woman, no face, no chasing, no attack, no eating, no scary elements. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but calm.",
+    "status": "generated"
+  },
+  {
+    "id": "nuppeppo_blob_bounce",
+    "path": "public/assets/effects/presence/nuppeppo_blob_bounce.webp",
+    "promptJa": "透明背景WebP前提。nuppeppo_blob_bounce の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "nuppeppo_jelly_pop",
+    "path": "public/assets/effects/presence/nuppeppo_jelly_pop.webp",
+    "promptJa": "透明背景WebP前提。nuppeppo_jelly_pop の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "nuppeppo_soft_wobble",
+    "path": "public/assets/effects/presence/nuppeppo_soft_wobble.webp",
+    "promptJa": "透明背景WebP前提。nuppeppo_soft_wobble の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   },
   {
@@ -543,6 +633,24 @@
     "id": "wind_tornado",
     "path": "public/assets/effects/wind/wind_tornado.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "zashiki_lucky_sparkle",
+    "path": "public/assets/effects/house/zashiki_lucky_sparkle.webp",
+    "promptJa": "透明背景WebP前提。zashiki_lucky_sparkle の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "zashiki_mari_roll",
+    "path": "public/assets/effects/house/zashiki_mari_roll.webp",
+    "promptJa": "透明背景WebP前提。zashiki_mari_roll の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "zashiki_room_glow",
+    "path": "public/assets/effects/house/zashiki_room_glow.webp",
+    "promptJa": "透明背景WebP前提。zashiki_room_glow の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   }
 ]
