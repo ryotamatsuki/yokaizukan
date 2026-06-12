@@ -90,6 +90,24 @@
     "status": "generated"
   },
   {
+    "id": "daidarabocchi_big_footprint",
+    "path": "public/assets/effects/giant/daidarabocchi_big_footprint.webp",
+    "promptJa": "透明背景WebP前提。daidarabocchi_big_footprint の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "daidarabocchi_ground_quake",
+    "path": "public/assets/effects/giant/daidarabocchi_ground_quake.webp",
+    "promptJa": "透明背景WebP前提。daidarabocchi_ground_quake の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "daidarabocchi_mountain_shadow",
+    "path": "public/assets/effects/giant/daidarabocchi_mountain_shadow.webp",
+    "promptJa": "透明背景WebP前提。daidarabocchi_mountain_shadow の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "dark_wave_shadow",
     "path": "public/assets/effects/water/dark_wave_shadow.webp",
     "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Dark wave shadow for Umibozu tap animation: a friendly deep-blue dark wave silhouette rolling gently, soft rounded wave crests, a little mist and moonlit highlights. No boat, no attack, no scary face, no monster body. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but not frightening.",
@@ -444,6 +462,24 @@
     "status": "generated"
   },
   {
+    "id": "oonyudo_big_presence",
+    "path": "public/assets/effects/giant/oonyudo_big_presence.webp",
+    "promptJa": "透明背景WebP前提。oonyudo_big_presence の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "oonyudo_shadow_grow",
+    "path": "public/assets/effects/giant/oonyudo_shadow_grow.webp",
+    "promptJa": "透明背景WebP前提。oonyudo_shadow_grow の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "oonyudo_size_rise",
+    "path": "public/assets/effects/giant/oonyudo_size_rise.webp",
+    "promptJa": "透明背景WebP前提。oonyudo_size_rise の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "paper_confetti",
     "path": "public/assets/effects/pop/paper_confetti.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のpop系エフェクト素材。からかさ小僧が跳ねるときの砂ぼこり、紙吹雪、星のポップ素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -684,6 +720,24 @@
     "status": "generated"
   },
   {
+    "id": "ushi_oni_big_step",
+    "path": "public/assets/effects/giant/ushi_oni_big_step.webp",
+    "promptJa": "透明背景WebP前提。ushi_oni_big_step の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "ushi_oni_heavy_shadow",
+    "path": "public/assets/effects/giant/ushi_oni_heavy_shadow.webp",
+    "promptJa": "透明背景WebP前提。ushi_oni_heavy_shadow の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "ushi_oni_wave_burst",
+    "path": "public/assets/effects/giant/ushi_oni_wave_burst.webp",
+    "promptJa": "透明背景WebP前提。ushi_oni_wave_burst の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "wall_guard",
     "path": "public/assets/effects/wall/wall_guard.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwall系エフェクト素材。ぬりかべの壁、石ぼこり、守りの波紋を表す素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -693,6 +747,24 @@
     "id": "wall_shadow",
     "path": "public/assets/effects/wall/wall_shadow.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwall系エフェクト素材。ぬりかべの壁、石ぼこり、守りの波紋を表す素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "wanyuudo_fire_wheel",
+    "path": "public/assets/effects/giant/wanyuudo_fire_wheel.webp",
+    "promptJa": "透明背景WebP前提。wanyuudo_fire_wheel の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "wanyuudo_flame_ring",
+    "path": "public/assets/effects/giant/wanyuudo_flame_ring.webp",
+    "promptJa": "透明背景WebP前提。wanyuudo_flame_ring の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "wanyuudo_spark_trail",
+    "path": "public/assets/effects/giant/wanyuudo_spark_trail.webp",
+    "promptJa": "透明背景WebP前提。wanyuudo_spark_trail の大型妖怪向けエフェクト素材。妖怪本体ではなく、強そうで大きそうだが怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   },
   {

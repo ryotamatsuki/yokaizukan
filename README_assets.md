@@ -100,6 +100,21 @@
 | べとべとさん | `betobeto_footsteps.webp` / `invisible_presence_lines.webp` / `betobeto_step_wave.webp` | 見えない足音、気配線、足あと行列 |
 
 流用素材として `pop_mark.webp`、`flying_leaves.webp`、`warm_light_orbs.webp`、`pawprints.webp`、`moon_pawprints.webp`、`wind_swirl.webp`、`sparkle_trail.webp` も使用しています。
+# 大型4体 エフェクト素材追加メモ
+
+追加日: 2026-06-12
+
+`image_gen` で大型妖怪エフェクトの4x3シートを生成し、12個のWebP素材に分割して `public/assets/effects/giant/` に保存しました。輪入道、大入道、牛鬼、だいだらぼっちの `animationProfile.effectAssets` と `specialMove.assets` から参照しています。
+
+| 妖怪 | 新規素材 |
+|---|---|
+| 輪入道 | `wanyuudo_fire_wheel.webp`, `wanyuudo_flame_ring.webp`, `wanyuudo_spark_trail.webp` |
+| 大入道 | `oonyudo_shadow_grow.webp`, `oonyudo_size_rise.webp`, `oonyudo_big_presence.webp` |
+| 牛鬼 | `ushi_oni_heavy_shadow.webp`, `ushi_oni_wave_burst.webp`, `ushi_oni_big_step.webp` |
+| だいだらぼっち | `daidarabocchi_big_footprint.webp`, `daidarabocchi_mountain_shadow.webp`, `daidarabocchi_ground_quake.webp` |
+
+流用素材: `warm_light_orbs.webp`, `impact_ring.webp`, `wall_shadow.webp`, `ripple.webp`, `big_splash.webp`, `shockwave.webp`, `wind_swirl.webp`
+
 # 家・道・気配系 後半6体 エフェクト素材追加メモ
 
 追加日: 2026-06-12

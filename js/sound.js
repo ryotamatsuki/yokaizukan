@@ -297,6 +297,20 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('wheel') || soundFile.includes('fire_spin')) {
+    return [
+      { from: 240, to: 420, length: 0.18, volume: 0.11, type: 'sawtooth' },
+      { from: 520, to: 880, length: 0.16, volume: 0.08, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('giant') || soundFile.includes('big_rise') || soundFile.includes('mountain_shadow')) {
+    return [
+      { from: 150, to: 80, length: 0.22, volume: 0.17, type: 'sine' },
+      { from: 260, to: 420, length: 0.24, volume: 0.08, type: 'triangle' }
+    ];
+  }
+
   if (soundFile.includes('water') || soundFile.includes('wave') || soundFile.includes('sea') || soundFile.includes('river')) {
     return [
       { from: 260, to: 420, length: 0.22, volume: 0.12, type: 'sine' },

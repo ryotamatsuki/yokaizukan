@@ -142,7 +142,8 @@
     "category": "water",
     "usedBy": [
       "kappa",
-      "umibozu"
+      "umibozu",
+      "ushi_oni"
     ],
     "usedFor": [
       "specialMove"
@@ -208,6 +209,47 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-cold-mist",
+    "status": "available"
+  },
+  {
+    "id": "daidarabocchi_big_footprint",
+    "path": "public/assets/effects/giant/daidarabocchi_big_footprint.webp",
+    "category": "giant",
+    "usedBy": [
+      "daidarabotchi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-daidarabocchi-big-footprint",
+    "status": "available"
+  },
+  {
+    "id": "daidarabocchi_ground_quake",
+    "path": "public/assets/effects/giant/daidarabocchi_ground_quake.webp",
+    "category": "giant",
+    "usedBy": [
+      "daidarabotchi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-daidarabocchi-ground-quake",
+    "status": "available"
+  },
+  {
+    "id": "daidarabocchi_mountain_shadow",
+    "path": "public/assets/effects/giant/daidarabocchi_mountain_shadow.webp",
+    "category": "giant",
+    "usedBy": [
+      "daidarabotchi"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-daidarabocchi-mountain-shadow",
     "status": "available"
   },
   {
@@ -519,7 +561,8 @@
     "path": "public/assets/effects/wall/impact_ring.webp",
     "category": "wall",
     "usedBy": [
-      "nurikabe"
+      "nurikabe",
+      "wanyudo"
     ],
     "usedFor": [
       "specialMove"
@@ -1028,6 +1071,47 @@
     "status": "available"
   },
   {
+    "id": "oonyudo_big_presence",
+    "path": "public/assets/effects/giant/oonyudo_big_presence.webp",
+    "category": "giant",
+    "usedBy": [
+      "oonyudo"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-oonyudo-big-presence",
+    "status": "available"
+  },
+  {
+    "id": "oonyudo_shadow_grow",
+    "path": "public/assets/effects/giant/oonyudo_shadow_grow.webp",
+    "category": "giant",
+    "usedBy": [
+      "oonyudo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-oonyudo-shadow-grow",
+    "status": "available"
+  },
+  {
+    "id": "oonyudo_size_rise",
+    "path": "public/assets/effects/giant/oonyudo_size_rise.webp",
+    "category": "giant",
+    "usedBy": [
+      "oonyudo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-oonyudo-size-rise",
+    "status": "available"
+  },
+  {
     "id": "paper_confetti",
     "path": "public/assets/effects/pop/paper_confetti.webp",
     "category": "pop",
@@ -1109,7 +1193,8 @@
       "hyosube",
       "kaichigo",
       "kappa",
-      "ningyo"
+      "ningyo",
+      "ushi_oni"
     ],
     "usedFor": [
       "tapEffect"
@@ -1203,6 +1288,7 @@
     "path": "public/assets/effects/impact/shockwave.webp",
     "category": "impact",
     "usedBy": [
+      "daidarabotchi",
       "konaki_jiji",
       "oni"
     ],
@@ -1588,6 +1674,47 @@
     "status": "available"
   },
   {
+    "id": "ushi_oni_big_step",
+    "path": "public/assets/effects/giant/ushi_oni_big_step.webp",
+    "category": "giant",
+    "usedBy": [
+      "ushi_oni"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ushi-oni-big-step",
+    "status": "available"
+  },
+  {
+    "id": "ushi_oni_heavy_shadow",
+    "path": "public/assets/effects/giant/ushi_oni_heavy_shadow.webp",
+    "category": "giant",
+    "usedBy": [
+      "ushi_oni"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ushi-oni-heavy-shadow",
+    "status": "available"
+  },
+  {
+    "id": "ushi_oni_wave_burst",
+    "path": "public/assets/effects/giant/ushi_oni_wave_burst.webp",
+    "category": "giant",
+    "usedBy": [
+      "ushi_oni"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ushi-oni-wave-burst",
+    "status": "available"
+  },
+  {
     "id": "wall_guard",
     "path": "public/assets/effects/wall/wall_guard.webp",
     "category": "wall",
@@ -1605,12 +1732,54 @@
     "path": "public/assets/effects/wall/wall_shadow.webp",
     "category": "wall",
     "usedBy": [
-      "nurikabe"
+      "nurikabe",
+      "oonyudo"
     ],
     "usedFor": [
       "tapEffect"
     ],
     "fallbackClass": "fallback-wall-shadow",
+    "status": "available"
+  },
+  {
+    "id": "wanyuudo_fire_wheel",
+    "path": "public/assets/effects/giant/wanyuudo_fire_wheel.webp",
+    "category": "giant",
+    "usedBy": [
+      "wanyudo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-wanyuudo-fire-wheel",
+    "status": "available"
+  },
+  {
+    "id": "wanyuudo_flame_ring",
+    "path": "public/assets/effects/giant/wanyuudo_flame_ring.webp",
+    "category": "giant",
+    "usedBy": [
+      "wanyudo"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-wanyuudo-flame-ring",
+    "status": "available"
+  },
+  {
+    "id": "wanyuudo_spark_trail",
+    "path": "public/assets/effects/giant/wanyuudo_spark_trail.webp",
+    "category": "giant",
+    "usedBy": [
+      "wanyudo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-wanyuudo-spark-trail",
     "status": "available"
   },
   {
@@ -1645,6 +1814,8 @@
       "kodama",
       "koto_furunushi",
       "ningyo",
+      "oonyudo",
+      "wanyudo",
       "zashiki-warashi"
     ],
     "usedFor": [
@@ -1719,6 +1890,7 @@
     "path": "public/assets/effects/wind/wind_swirl.webp",
     "category": "wind",
     "usedBy": [
+      "daidarabotchi",
       "ittan_momen",
       "kamaitachi",
       "karasu-tengu",

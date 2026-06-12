@@ -2929,6 +2929,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "rollIn",
+        "tapEffect": "wanyuudoWheelRoll",
+        "actionLabel": "ころり！",
+        "sound": "wheel_roll.mp3",
+        "effectAssets": [
+          "public/assets/effects/giant/wanyuudo_fire_wheel.webp",
+          "public/assets/effects/giant/wanyuudo_spark_trail.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "火の輪スピン！",
+        "effect": "wanyuudoFireSpin",
+        "sound": "special_fire_spin.mp3",
+        "assets": [
+          "public/assets/effects/giant/wanyuudo_flame_ring.webp",
+          "public/assets/effects/giant/wanyuudo_fire_wheel.webp",
+          "public/assets/effects/giant/wanyuudo_spark_trail.webp",
+          "public/assets/effects/wall/impact_ring.webp"
+        ]
       }
     },
     {
@@ -3480,6 +3503,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E8%A6%8B%E8%B6%8A%E5%85%A5%E9%81%93",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "growIn",
+        "tapEffect": "oonyudoShadowGrow",
+        "actionLabel": "ぐーん！",
+        "sound": "giant_rise.mp3",
+        "effectAssets": [
+          "public/assets/effects/giant/oonyudo_shadow_grow.webp",
+          "public/assets/effects/giant/oonyudo_size_rise.webp",
+          "public/assets/effects/wall/wall_shadow.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "大きくなるぞ！",
+        "effect": "oonyudoBigRise",
+        "sound": "special_big_rise.mp3",
+        "assets": [
+          "public/assets/effects/giant/oonyudo_big_presence.webp",
+          "public/assets/effects/giant/oonyudo_size_rise.webp",
+          "public/assets/effects/giant/oonyudo_shadow_grow.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
         ]
       }
     },
@@ -6570,6 +6616,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "stompIn",
+        "tapEffect": "ushiOniHeavyShadow",
+        "actionLabel": "ずしり",
+        "sound": "heavy_step.mp3",
+        "effectAssets": [
+          "public/assets/effects/giant/ushi_oni_heavy_shadow.webp",
+          "public/assets/effects/giant/ushi_oni_big_step.webp",
+          "public/assets/effects/water/ripple.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "海べの大かげ！",
+        "effect": "ushiOniWaveBurst",
+        "sound": "special_wave_burst.mp3",
+        "assets": [
+          "public/assets/effects/giant/ushi_oni_wave_burst.webp",
+          "public/assets/effects/giant/ushi_oni_heavy_shadow.webp",
+          "public/assets/effects/giant/ushi_oni_big_step.webp",
+          "public/assets/effects/water/big_splash.webp"
+        ]
       }
     },
     {
@@ -6818,6 +6887,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E5%A4%A7%E5%A4%AA%E6%B3%95%E5%B8%AB",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "mountain",
+        "enterEffect": "stompIn",
+        "tapEffect": "daidarabocchiBigFootprint",
+        "actionLabel": "どーん！",
+        "sound": "giant_thump.mp3",
+        "effectAssets": [
+          "public/assets/effects/giant/daidarabocchi_big_footprint.webp",
+          "public/assets/effects/giant/daidarabocchi_ground_quake.webp",
+          "public/assets/effects/impact/shockwave.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "山をまたぐぞ！",
+        "effect": "daidarabocchiMountainShadow",
+        "sound": "special_mountain_shadow.mp3",
+        "assets": [
+          "public/assets/effects/giant/daidarabocchi_mountain_shadow.webp",
+          "public/assets/effects/giant/daidarabocchi_big_footprint.webp",
+          "public/assets/effects/giant/daidarabocchi_ground_quake.webp",
+          "public/assets/effects/wind/wind_swirl.webp"
         ]
       }
     }
