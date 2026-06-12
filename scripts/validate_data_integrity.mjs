@@ -176,6 +176,10 @@ function checkYokaiEffectAssetPath(itemId, fieldName, assetPath) {
   }
   if (!fs.existsSync(assetPath)) {
     addError(DATA_FILES.yokai, itemId, `${fieldName} references missing effect asset: ${assetPath}`);
+    return;
+  }
+  if (fs.statSync(assetPath).size === 0) {
+    addError(DATA_FILES.yokai, itemId, `${fieldName} references empty effect asset: ${assetPath}`);
   }
 }
 
@@ -233,6 +237,8 @@ function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
     }
     if (!fs.existsSync(asset.path)) {
       addError(filePath, assetId, `path references missing effect asset: ${asset.path}`);
+    } else if (fs.statSync(asset.path).size === 0) {
+      addError(filePath, assetId, `path references empty effect asset: ${asset.path}`);
     }
     if (metadataByPath.has(asset.path)) {
       addWarning(`${filePath} [${assetId}]: duplicate metadata path also used by ${metadataByPath.get(asset.path).id}: ${asset.path}`);
@@ -268,6 +274,19 @@ function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
     }
     if (extraInMetadata.length > 0) {
       addWarning(`${filePath} [${metadata.id}]: usedBy includes ids not currently referencing this path in yokai.json: ${extraInMetadata.join(', ')}`);
+    }
+  }
+
+  for (const asset of effectAssetsData) {
+    if (!isNonEmptyString(asset?.path) || !Array.isArray(asset?.usedBy)) {
+      continue;
+    }
+
+    const yokaiIds = effectUsageByPath.get(asset.path) || new Set();
+    const unreferencedUsedBy = asset.usedBy.filter((id) => isNonEmptyString(id) && !yokaiIds.has(id)).sort();
+
+    if (unreferencedUsedBy.length > 0) {
+      addWarning(`${filePath} [${getId(asset)}]: usedBy ids do not reference this asset from yokai.json animationProfile.effectAssets or specialMove.assets: ${unreferencedUsedBy.join(', ')}`);
     }
   }
 }

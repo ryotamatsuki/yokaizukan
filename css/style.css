@@ -3310,6 +3310,23 @@ body.opening-active {
   filter: drop-shadow(0 0 1rem rgba(255, 240, 160, 0.45));
 }
 
+.tap-ningyoBubbleFloat,
+.special-ningyoShellSparkle {
+  filter:
+    brightness(1.18)
+    drop-shadow(0 0 0.85rem rgba(160, 230, 255, 0.5))
+    drop-shadow(0 0 1.2rem rgba(255, 245, 190, 0.28));
+}
+
+.tap-umibozuWaveShadow,
+.special-umibozuSeaShadowRise {
+  filter:
+    contrast(1.22)
+    brightness(1.14)
+    drop-shadow(0 0 0.9rem rgba(132, 210, 245, 0.34))
+    drop-shadow(0 0 1.25rem rgba(255, 255, 230, 0.18));
+}
+
 .enter-splashIn,
 .enter-windIn,
 .enter-stompIn,
@@ -3318,9 +3335,18 @@ body.opening-active {
 .enter-hopIn,
 .enter-glowIn,
 .enter-snowFadeIn,
-.enter-wallSlideIn,
-.enter-shadowRise {
+.enter-wallSlideIn {
   animation-name: splashIn;
+}
+
+.enter-shadowRise {
+  animation: none !important;
+  opacity: 0.86 !important;
+  transform: translate(-50%, -48%) scale(1.08, 0.82) !important;
+  filter:
+    contrast(1.16)
+    brightness(1.1)
+    drop-shadow(0 0 0.75rem rgba(160, 220, 245, 0.28));
 }
 
 .tap-waterSplash { animation-name: waterSplash; }
@@ -3667,27 +3693,31 @@ body.opening-active {
 }
 
 @keyframes ningyoBubbleFloat {
-  0% { opacity: 0; transform: translate(-50%, -30%) scale(0.58) rotate(-6deg); }
-  32%, 72% { opacity: 0.96; }
-  100% { opacity: 0; transform: translate(-50%, -72%) scale(1.16) rotate(8deg); }
+  0% { opacity: 0; transform: translate(-54%, -18%) scale(0.74) rotate(-8deg); }
+  24% { opacity: 1; transform: translate(-50%, -42%) scale(1.04) rotate(4deg); }
+  68% { opacity: 0.98; transform: translate(-46%, -58%) scale(1.2) rotate(-5deg); }
+  100% { opacity: 0; transform: translate(-42%, -82%) scale(1.36) rotate(9deg); }
 }
 
 @keyframes ningyoShellSparkle {
-  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-28deg) scale(0.56); }
-  28%, 82% { opacity: 1; }
-  100% { opacity: 0; transform: translate(-50%, -50%) rotate(92deg) scale(1.72); }
+  0% { opacity: 0; transform: translate(-50%, -48%) rotate(-18deg) scale(0.72); }
+  22% { opacity: 1; transform: translate(-50%, -50%) rotate(8deg) scale(1.28); }
+  74% { opacity: 1; transform: translate(-50%, -51%) rotate(46deg) scale(1.92); }
+  100% { opacity: 0; transform: translate(-50%, -52%) rotate(82deg) scale(2.08); }
 }
 
 @keyframes umibozuWaveShadow {
-  0% { opacity: 0; transform: translate(-62%, -46%) scale(0.72) rotate(-4deg); }
-  34%, 74% { opacity: 0.9; }
-  100% { opacity: 0; transform: translate(-38%, -50%) scale(1.16) rotate(5deg); }
+  0% { opacity: 0; transform: translate(-72%, -34%) scale(0.72, 0.58) rotate(-3deg); }
+  26% { opacity: 0.94; transform: translate(-58%, -42%) scale(1.04, 0.76) rotate(1deg); }
+  72% { opacity: 0.9; transform: translate(-42%, -48%) scale(1.32, 0.86) rotate(4deg); }
+  100% { opacity: 0; transform: translate(-28%, -52%) scale(1.52, 0.9) rotate(6deg); }
 }
 
 @keyframes umibozuSeaShadowRise {
-  0% { opacity: 0; transform: translate(-50%, -26%) scale(0.56); }
-  30%, 82% { opacity: 0.96; }
-  100% { opacity: 0; transform: translate(-50%, -56%) scale(1.68); }
+  0% { opacity: 0; transform: translate(-50%, -18%) scale(0.7, 0.52); }
+  24% { opacity: 0.98; transform: translate(-50%, -38%) scale(1.14, 0.9); }
+  74% { opacity: 0.95; transform: translate(-50%, -52%) scale(1.62, 1.28); }
+  100% { opacity: 0; transform: translate(-50%, -60%) scale(1.86, 1.42); }
 }
 
 @keyframes ameonnaRainDrop {
