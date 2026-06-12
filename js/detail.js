@@ -1,5 +1,5 @@
 import { createScaryStars } from './render.js';
-import { clearEffects, playEnterEffect, playSpecialMove, playTapEffect } from './effects.js';
+import { clearEffects, playEnterEffect, playSpecialMove, playTapEffect, preloadEffectAssets } from './effects.js';
 import { getMuted, toggleMuted, unlockAudio } from './sound.js';
 
 let modal;
@@ -129,6 +129,7 @@ export function openDetail(yokai) {
 
   previousFocus = document.activeElement;
   resetDetailAnimation();
+  preloadEffectAssets(yokai);
   content.replaceChildren(createDetailContent(yokai));
   modal.hidden = false;
   document.body.classList.add('modal-open');

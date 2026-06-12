@@ -2212,6 +2212,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "mountain",
+        "enterEffect": "fadeIn",
+        "tapEffect": "bakeDanukiLeafPop",
+        "actionLabel": "ぽんっとへんしん！",
+        "sound": "puff_leaf.mp3",
+        "effectAssets": [
+          "public/assets/effects/animal/tanuki_transform_puff.webp",
+          "public/assets/effects/animal/tanuki_leaf_swirl.webp",
+          "public/assets/effects/pop/pop_mark.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "たぬきへんげ！",
+        "effect": "bakeDanukiTransformPuff",
+        "sound": "special_tanuki_transform.mp3",
+        "assets": [
+          "public/assets/effects/animal/tanuki_magic_ring.webp",
+          "public/assets/effects/animal/tanuki_transform_puff.webp",
+          "public/assets/effects/animal/tanuki_leaf_swirl.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -4903,6 +4926,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "walkIn",
+        "tapEffect": "sunekosuriSoftTrail",
+        "actionLabel": "すりすり！",
+        "sound": "soft_footstep.mp3",
+        "effectAssets": [
+          "public/assets/effects/animal/sunekosuri_soft_trail.webp",
+          "public/assets/effects/animal/sunekosuri_paw_steps.webp",
+          "public/assets/effects/cat/pawprints.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ふわふわ足あと！",
+        "effect": "sunekosuriPawRush",
+        "sound": "special_soft_paw_rush.mp3",
+        "assets": [
+          "public/assets/effects/animal/sunekosuri_fluff_wave.webp",
+          "public/assets/effects/animal/sunekosuri_paw_steps.webp",
+          "public/assets/effects/animal/sunekosuri_soft_trail.webp",
+          "public/assets/effects/cat/moon_pawprints.webp"
+        ]
       }
     },
     {
@@ -5239,6 +5285,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "walkIn",
+        "tapEffect": "betobetoFootstep",
+        "actionLabel": "ぺたぺた！",
+        "sound": "footstep_presence.mp3",
+        "effectAssets": [
+          "public/assets/effects/animal/betobeto_footsteps.webp",
+          "public/assets/effects/animal/invisible_presence_lines.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "見えない足音行列！",
+        "effect": "betobetoInvisibleMarch",
+        "sound": "special_invisible_steps.mp3",
+        "assets": [
+          "public/assets/effects/animal/betobeto_step_wave.webp",
+          "public/assets/effects/animal/betobeto_footsteps.webp",
+          "public/assets/effects/animal/invisible_presence_lines.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -5351,6 +5420,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E9%80%81%E3%82%8A%E7%8B%BC%20%E9%80%81%E3%82%8A%E7%8A%AC",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "shadowRise",
+        "tapEffect": "okuriInuShadowTrail",
+        "actionLabel": "そっとついてくる",
+        "sound": "shadow_step.mp3",
+        "effectAssets": [
+          "public/assets/effects/animal/okuri_inu_shadow_trail.webp",
+          "public/assets/effects/animal/okuri_inu_mountain_trace.webp",
+          "public/assets/effects/wind/wind_swirl.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "山道のみまもり！",
+        "effect": "okuriInuGuardShadow",
+        "sound": "special_guard_shadow.mp3",
+        "assets": [
+          "public/assets/effects/animal/okuri_inu_guard_light.webp",
+          "public/assets/effects/animal/okuri_inu_shadow_trail.webp",
+          "public/assets/effects/animal/okuri_inu_mountain_trace.webp",
+          "public/assets/effects/wind/flying_leaves.webp"
         ]
       }
     },

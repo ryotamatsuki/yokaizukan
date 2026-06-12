@@ -204,6 +204,28 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('puff') || soundFile.includes('transform')) {
+    return [
+      { from: 180, to: 420, length: 0.16, volume: 0.13, type: 'sine' },
+      { from: 520, to: 760, length: 0.12, volume: 0.1, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('footstep') || soundFile.includes('step')) {
+    return [
+      { from: 220, to: 120, length: 0.08, volume: 0.12, type: 'sine' },
+      { from: 280, to: 150, length: 0.08, volume: 0.1, type: 'triangle' },
+      { from: 240, to: 130, length: 0.09, volume: 0.09, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('shadow') || soundFile.includes('presence')) {
+    return [
+      { from: 260, to: 180, length: 0.28, volume: 0.07, type: 'sine' },
+      { from: 380, to: 520, length: 0.18, volume: 0.05, type: 'triangle' }
+    ];
+  }
+
   if (soundFile.includes('mist')) {
     return [
       { from: 420, to: 620, length: 0.28, volume: 0.07, type: 'sine' },

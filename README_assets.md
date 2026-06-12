@@ -88,3 +88,15 @@
 ## 制作方針
 
 全画像で、怖すぎる表現、流血、残酷表現、不気味すぎる暗さを避けました。背景はシンプルにし、妖怪の特徴が一目で分かる中央配置にしています。
+# 動物・気配系4体 エフェクト素材追加メモ
+
+2026-06-12 に、動物・気配系4体のアニメーション用エフェクト素材を追加しました。素材は `image_gen` で生成したシートを分割し、透明背景WebPとして `public/assets/effects/animal/` 配下に保存しています。
+
+| 妖怪 | 新規エフェクト素材 | 主な用途 |
+|---|---|---|
+| 化け狸 | `tanuki_transform_puff.webp` / `tanuki_leaf_swirl.webp` / `tanuki_magic_ring.webp` | 葉っぱ、ぽんっとした変化煙、変化の輪 |
+| すねこすり | `sunekosuri_soft_trail.webp` / `sunekosuri_paw_steps.webp` / `sunekosuri_fluff_wave.webp` | 足もとのふわふわ気配、足あと、毛並みの波 |
+| 送り犬 | `okuri_inu_shadow_trail.webp` / `okuri_inu_guard_light.webp` / `okuri_inu_mountain_trace.webp` | 見守る犬の影、山道の気配、守る光 |
+| べとべとさん | `betobeto_footsteps.webp` / `invisible_presence_lines.webp` / `betobeto_step_wave.webp` | 見えない足音、気配線、足あと行列 |
+
+流用素材として `pop_mark.webp`、`flying_leaves.webp`、`warm_light_orbs.webp`、`pawprints.webp`、`moon_pawprints.webp`、`wind_swirl.webp`、`sparkle_trail.webp` も使用しています。

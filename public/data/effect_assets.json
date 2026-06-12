@@ -1,5 +1,169 @@
 [
   {
+    "id": "betobeto_footsteps",
+    "path": "public/assets/effects/animal/betobeto_footsteps.webp",
+    "category": "animal",
+    "usedBy": [
+      "betobeto_san"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-betobeto-footsteps",
+    "status": "available"
+  },
+  {
+    "id": "betobeto_step_wave",
+    "path": "public/assets/effects/animal/betobeto_step_wave.webp",
+    "category": "animal",
+    "usedBy": [
+      "betobeto_san"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-betobeto-step-wave",
+    "status": "available"
+  },
+  {
+    "id": "invisible_presence_lines",
+    "path": "public/assets/effects/animal/invisible_presence_lines.webp",
+    "category": "animal",
+    "usedBy": [
+      "betobeto_san"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-invisible-presence-lines",
+    "status": "available"
+  },
+  {
+    "id": "okuri_inu_guard_light",
+    "path": "public/assets/effects/animal/okuri_inu_guard_light.webp",
+    "category": "animal",
+    "usedBy": [
+      "okuri_inu"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-okuri-inu-guard-light",
+    "status": "available"
+  },
+  {
+    "id": "okuri_inu_mountain_trace",
+    "path": "public/assets/effects/animal/okuri_inu_mountain_trace.webp",
+    "category": "animal",
+    "usedBy": [
+      "okuri_inu"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-okuri-inu-mountain-trace",
+    "status": "available"
+  },
+  {
+    "id": "okuri_inu_shadow_trail",
+    "path": "public/assets/effects/animal/okuri_inu_shadow_trail.webp",
+    "category": "animal",
+    "usedBy": [
+      "okuri_inu"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-okuri-inu-shadow-trail",
+    "status": "available"
+  },
+  {
+    "id": "sunekosuri_fluff_wave",
+    "path": "public/assets/effects/animal/sunekosuri_fluff_wave.webp",
+    "category": "animal",
+    "usedBy": [
+      "sunekosuri"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-sunekosuri-fluff-wave",
+    "status": "available"
+  },
+  {
+    "id": "sunekosuri_paw_steps",
+    "path": "public/assets/effects/animal/sunekosuri_paw_steps.webp",
+    "category": "animal",
+    "usedBy": [
+      "sunekosuri"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-sunekosuri-paw-steps",
+    "status": "available"
+  },
+  {
+    "id": "sunekosuri_soft_trail",
+    "path": "public/assets/effects/animal/sunekosuri_soft_trail.webp",
+    "category": "animal",
+    "usedBy": [
+      "sunekosuri"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-sunekosuri-soft-trail",
+    "status": "available"
+  },
+  {
+    "id": "tanuki_leaf_swirl",
+    "path": "public/assets/effects/animal/tanuki_leaf_swirl.webp",
+    "category": "animal",
+    "usedBy": [
+      "bake-danuki"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-tanuki-leaf-swirl",
+    "status": "available"
+  },
+  {
+    "id": "tanuki_magic_ring",
+    "path": "public/assets/effects/animal/tanuki_magic_ring.webp",
+    "category": "animal",
+    "usedBy": [
+      "bake-danuki"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-tanuki-magic-ring",
+    "status": "available"
+  },
+  {
+    "id": "tanuki_transform_puff",
+    "path": "public/assets/effects/animal/tanuki_transform_puff.webp",
+    "category": "animal",
+    "usedBy": [
+      "bake-danuki"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-tanuki-transform-puff",
+    "status": "available"
+  },
+  {
     "id": "bone_fragments",
     "path": "public/assets/effects/bone/bone_fragments.webp",
     "category": "bone",
@@ -42,6 +206,21 @@
     "status": "available"
   },
   {
+    "id": "moon_pawprints",
+    "path": "public/assets/effects/cat/moon_pawprints.webp",
+    "category": "cat",
+    "usedBy": [
+      "bakeneko",
+      "sunekosuri"
+    ],
+    "usedFor": [
+      "specialMove",
+      "tapEffect"
+    ],
+    "fallbackClass": "fallback-moon-pawprints",
+    "status": "available"
+  },
+  {
     "id": "moon_sparkle",
     "path": "public/assets/effects/cat/moon_sparkle.webp",
     "category": "cat",
@@ -74,8 +253,9 @@
     "path": "public/assets/effects/cat/pawprints.webp",
     "category": "cat",
     "usedBy": [
+      "bakeneko",
       "nekomata",
-      "bakeneko"
+      "sunekosuri"
     ],
     "usedFor": [
       "tapEffect"
@@ -96,6 +276,46 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-tail-trail",
+    "status": "available"
+  },
+  {
+    "id": "blue_foxfire",
+    "path": "public/assets/effects/glow/blue_foxfire.webp",
+    "category": "glow",
+    "usedBy": [
+      "kitsunebi"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-blue-foxfire",
+    "status": "available"
+  },
+  {
+    "id": "foxfire_ring",
+    "path": "public/assets/effects/glow/foxfire_ring.webp",
+    "category": "glow",
+    "usedBy": [
+      "kitsunebi"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-foxfire-ring",
+    "status": "available"
+  },
+  {
+    "id": "kodama_echo_light",
+    "path": "public/assets/effects/glow/kodama_echo_light.webp",
+    "category": "glow",
+    "usedBy": [
+      "kodama"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-kodama-echo-light",
     "status": "available"
   },
   {
@@ -125,6 +345,26 @@
     "status": "available"
   },
   {
+    "id": "warm_light_orbs",
+    "path": "public/assets/effects/glow/warm_light_orbs.webp",
+    "category": "glow",
+    "usedBy": [
+      "ame_onna",
+      "bake-danuki",
+      "betobeto_san",
+      "chochin-obake",
+      "kitsunebi",
+      "kodama",
+      "ningyo"
+    ],
+    "usedFor": [
+      "specialMove",
+      "tapEffect"
+    ],
+    "fallbackClass": "fallback-warm-light-orbs",
+    "status": "available"
+  },
+  {
     "id": "warm_light",
     "path": "public/assets/effects/glow/warm_light.webp",
     "category": "glow",
@@ -139,21 +379,16 @@
     "status": "available"
   },
   {
-    "id": "warm_light_orbs",
-    "path": "public/assets/effects/glow/warm_light_orbs.webp",
-    "category": "glow",
+    "id": "dust_cloud",
+    "path": "public/assets/effects/impact/dust_cloud.webp",
+    "category": "impact",
     "usedBy": [
-      "chochin-obake",
-      "kitsunebi",
-      "ningyo",
-      "ame_onna",
-      "kodama"
+      "oni"
     ],
     "usedFor": [
-      "tapEffect",
       "specialMove"
     ],
-    "fallbackClass": "fallback-warm-light-orbs",
+    "fallbackClass": "fallback-dust-cloud",
     "status": "available"
   },
   {
@@ -167,19 +402,6 @@
       "tapEffect"
     ],
     "fallbackClass": "fallback-dust",
-    "status": "available"
-  },
-  {
-    "id": "dust_cloud",
-    "path": "public/assets/effects/impact/dust_cloud.webp",
-    "category": "impact",
-    "usedBy": [
-      "oni"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-dust-cloud",
     "status": "available"
   },
   {
@@ -215,11 +437,13 @@
     "path": "public/assets/effects/magic/sparkle_trail.webp",
     "category": "magic",
     "usedBy": [
-      "rokurokubi",
-      "kodama"
+      "betobeto_san",
+      "kodama",
+      "rokurokubi"
     ],
     "usedFor": [
-      "specialMove"
+      "specialMove",
+      "tapEffect"
     ],
     "fallbackClass": "fallback-sparkle-trail",
     "status": "available"
@@ -264,6 +488,33 @@
     "status": "available"
   },
   {
+    "id": "azuki_grains",
+    "path": "public/assets/effects/pop/azuki_grains.webp",
+    "category": "pop",
+    "usedBy": [
+      "azuki-arai"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-azuki-grains",
+    "status": "available"
+  },
+  {
+    "id": "azuki_shower",
+    "path": "public/assets/effects/pop/azuki_shower.webp",
+    "category": "pop",
+    "usedBy": [
+      "azuki-arai"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-azuki-shower",
+    "status": "available"
+  },
+  {
     "id": "jump_dust",
     "path": "public/assets/effects/pop/jump_dust.webp",
     "category": "pop",
@@ -296,8 +547,9 @@
     "path": "public/assets/effects/pop/pop_mark.webp",
     "category": "pop",
     "usedBy": [
-      "karakasa-kozo",
-      "hyosube"
+      "bake-danuki",
+      "hyosube",
+      "karakasa-kozo"
     ],
     "usedFor": [
       "tapEffect"
@@ -316,6 +568,19 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-star-pop",
+    "status": "available"
+  },
+  {
+    "id": "water_jump_pop",
+    "path": "public/assets/effects/pop/water_jump_pop.webp",
+    "category": "pop",
+    "usedBy": [
+      "hyosube"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-water-jump-pop",
     "status": "available"
   },
   {
@@ -345,6 +610,20 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-ice-crystals",
+    "status": "available"
+  },
+  {
+    "id": "mountain_mist_soft",
+    "path": "public/assets/effects/snow/mountain_mist_soft.webp",
+    "category": "snow",
+    "usedBy": [
+      "yamanba"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-mountain-mist-soft",
     "status": "available"
   },
   {
@@ -453,6 +732,47 @@
     "status": "available"
   },
   {
+    "id": "dark_wave_shadow",
+    "path": "public/assets/effects/water/dark_wave_shadow.webp",
+    "category": "water",
+    "usedBy": [
+      "umibozu"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-dark-wave-shadow",
+    "status": "available"
+  },
+  {
+    "id": "mermaid_bubbles",
+    "path": "public/assets/effects/water/mermaid_bubbles.webp",
+    "category": "water",
+    "usedBy": [
+      "ningyo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-mermaid-bubbles",
+    "status": "available"
+  },
+  {
+    "id": "rain_cloud_curtain",
+    "path": "public/assets/effects/water/rain_cloud_curtain.webp",
+    "category": "water",
+    "usedBy": [
+      "ame_onna"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-rain-cloud-curtain",
+    "status": "available"
+  },
+  {
     "id": "ripple",
     "path": "public/assets/effects/water/ripple.webp",
     "category": "water",
@@ -466,6 +786,60 @@
       "tapEffect"
     ],
     "fallbackClass": "fallback-ripple",
+    "status": "available"
+  },
+  {
+    "id": "river_hop_splash",
+    "path": "public/assets/effects/water/river_hop_splash.webp",
+    "category": "water",
+    "usedBy": [
+      "hyosube"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-river-hop-splash",
+    "status": "available"
+  },
+  {
+    "id": "sea_shadow_rise",
+    "path": "public/assets/effects/water/sea_shadow_rise.webp",
+    "category": "water",
+    "usedBy": [
+      "umibozu"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-sea-shadow-rise",
+    "status": "available"
+  },
+  {
+    "id": "shell_sparkle_wave",
+    "path": "public/assets/effects/water/shell_sparkle_wave.webp",
+    "category": "water",
+    "usedBy": [
+      "ningyo"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-shell-sparkle-wave",
+    "status": "available"
+  },
+  {
+    "id": "soft_raindrops",
+    "path": "public/assets/effects/water/soft_raindrops.webp",
+    "category": "water",
+    "usedBy": [
+      "ame_onna"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-soft-raindrops",
     "status": "available"
   },
   {
@@ -515,6 +889,33 @@
     "status": "available"
   },
   {
+    "id": "black_feathers",
+    "path": "public/assets/effects/wind/black_feathers.webp",
+    "category": "wind",
+    "usedBy": [
+      "karasu-tengu"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-black-feathers",
+    "status": "available"
+  },
+  {
+    "id": "feather_whirl",
+    "path": "public/assets/effects/wind/feather_whirl.webp",
+    "category": "wind",
+    "usedBy": [
+      "karasu-tengu"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-feather-whirl",
+    "status": "available"
+  },
+  {
     "id": "feather",
     "path": "public/assets/effects/wind/feather.webp",
     "category": "wind",
@@ -547,8 +948,9 @@
     "path": "public/assets/effects/wind/flying_leaves.webp",
     "category": "wind",
     "usedBy": [
-      "tengu",
       "kodama",
+      "okuri_inu",
+      "tengu",
       "yamanba"
     ],
     "usedFor": [
@@ -558,13 +960,27 @@
     "status": "available"
   },
   {
+    "id": "forest_leaves_soft",
+    "path": "public/assets/effects/wind/forest_leaves_soft.webp",
+    "category": "wind",
+    "usedBy": [
+      "kodama"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-forest-leaves-soft",
+    "status": "available"
+  },
+  {
     "id": "leaves",
     "path": "public/assets/effects/wind/leaves.webp",
     "category": "wind",
     "usedBy": [
-      "tengu",
       "kamaitachi",
-      "kodama"
+      "kodama",
+      "tengu"
     ],
     "usedFor": [
       "tapEffect"
@@ -573,128 +989,16 @@
     "status": "available"
   },
   {
-    "id": "wind_swirl",
-    "path": "public/assets/effects/wind/wind_swirl.webp",
+    "id": "mountain_path_mist",
+    "path": "public/assets/effects/wind/mountain_path_mist.webp",
     "category": "wind",
     "usedBy": [
-      "tengu",
-      "karasu-tengu",
-      "kamaitachi",
       "yamanba"
     ],
     "usedFor": [
-      "tapEffect"
-    ],
-    "fallbackClass": "fallback-wind-swirl",
-    "status": "available"
-  },
-  {
-    "id": "wind_tornado",
-    "path": "public/assets/effects/wind/wind_tornado.webp",
-    "category": "wind",
-    "usedBy": [
-      "tengu",
-      "kamaitachi"
-    ],
-    "usedFor": [
       "specialMove"
     ],
-    "fallbackClass": "fallback-wind-tornado",
-    "status": "available"
-  },
-  {
-    "id": "moon_pawprints",
-    "path": "public/assets/effects/cat/moon_pawprints.webp",
-    "category": "cat",
-    "usedBy": [
-      "bakeneko"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-moon-pawprints",
-    "status": "available"
-  },
-  {
-    "id": "blue_foxfire",
-    "path": "public/assets/effects/glow/blue_foxfire.webp",
-    "category": "glow",
-    "usedBy": [
-      "kitsunebi"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-blue-foxfire",
-    "status": "available"
-  },
-  {
-    "id": "foxfire_ring",
-    "path": "public/assets/effects/glow/foxfire_ring.webp",
-    "category": "glow",
-    "usedBy": [
-      "kitsunebi"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-foxfire-ring",
-    "status": "available"
-  },
-  {
-    "id": "azuki_grains",
-    "path": "public/assets/effects/pop/azuki_grains.webp",
-    "category": "pop",
-    "usedBy": [
-      "azuki-arai"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-azuki-grains",
-    "status": "available"
-  },
-  {
-    "id": "azuki_shower",
-    "path": "public/assets/effects/pop/azuki_shower.webp",
-    "category": "pop",
-    "usedBy": [
-      "azuki-arai"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-azuki-shower",
-    "status": "available"
-  },
-  {
-    "id": "black_feathers",
-    "path": "public/assets/effects/wind/black_feathers.webp",
-    "category": "wind",
-    "usedBy": [
-      "karasu-tengu"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-black-feathers",
-    "status": "available"
-  },
-  {
-    "id": "feather_whirl",
-    "path": "public/assets/effects/wind/feather_whirl.webp",
-    "category": "wind",
-    "usedBy": [
-      "karasu-tengu"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-feather-whirl",
+    "fallbackClass": "fallback-mountain-path-mist",
     "status": "available"
   },
   {
@@ -725,165 +1029,34 @@
     "status": "available"
   },
   {
-    "id": "mermaid_bubbles",
-    "path": "public/assets/effects/water/mermaid_bubbles.webp",
-    "category": "water",
-    "usedBy": [
-      "ningyo"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-mermaid-bubbles",
-    "status": "available"
-  },
-  {
-    "id": "shell_sparkle_wave",
-    "path": "public/assets/effects/water/shell_sparkle_wave.webp",
-    "category": "water",
-    "usedBy": [
-      "ningyo"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-shell-sparkle-wave",
-    "status": "available"
-  },
-  {
-    "id": "dark_wave_shadow",
-    "path": "public/assets/effects/water/dark_wave_shadow.webp",
-    "category": "water",
-    "usedBy": [
-      "umibozu"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-dark-wave-shadow",
-    "status": "available"
-  },
-  {
-    "id": "sea_shadow_rise",
-    "path": "public/assets/effects/water/sea_shadow_rise.webp",
-    "category": "water",
-    "usedBy": [
-      "umibozu"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-sea-shadow-rise",
-    "status": "available"
-  },
-  {
-    "id": "soft_raindrops",
-    "path": "public/assets/effects/water/soft_raindrops.webp",
-    "category": "water",
-    "usedBy": [
-      "ame_onna"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-soft-raindrops",
-    "status": "available"
-  },
-  {
-    "id": "rain_cloud_curtain",
-    "path": "public/assets/effects/water/rain_cloud_curtain.webp",
-    "category": "water",
-    "usedBy": [
-      "ame_onna"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-rain-cloud-curtain",
-    "status": "available"
-  },
-  {
-    "id": "river_hop_splash",
-    "path": "public/assets/effects/water/river_hop_splash.webp",
-    "category": "water",
-    "usedBy": [
-      "hyosube"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-river-hop-splash",
-    "status": "available"
-  },
-  {
-    "id": "water_jump_pop",
-    "path": "public/assets/effects/pop/water_jump_pop.webp",
-    "category": "pop",
-    "usedBy": [
-      "hyosube"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-water-jump-pop",
-    "status": "available"
-  },
-  {
-    "id": "forest_leaves_soft",
-    "path": "public/assets/effects/wind/forest_leaves_soft.webp",
+    "id": "wind_swirl",
+    "path": "public/assets/effects/wind/wind_swirl.webp",
     "category": "wind",
     "usedBy": [
-      "kodama"
-    ],
-    "usedFor": [
-      "tapEffect",
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-forest-leaves-soft",
-    "status": "available"
-  },
-  {
-    "id": "kodama_echo_light",
-    "path": "public/assets/effects/glow/kodama_echo_light.webp",
-    "category": "glow",
-    "usedBy": [
-      "kodama"
-    ],
-    "usedFor": [
-      "specialMove"
-    ],
-    "fallbackClass": "fallback-kodama-echo-light",
-    "status": "available"
-  },
-  {
-    "id": "mountain_mist_soft",
-    "path": "public/assets/effects/snow/mountain_mist_soft.webp",
-    "category": "snow",
-    "usedBy": [
+      "kamaitachi",
+      "karasu-tengu",
+      "okuri_inu",
+      "tengu",
       "yamanba"
     ],
     "usedFor": [
-      "tapEffect",
-      "specialMove"
+      "tapEffect"
     ],
-    "fallbackClass": "fallback-mountain-mist-soft",
+    "fallbackClass": "fallback-wind-swirl",
     "status": "available"
   },
   {
-    "id": "mountain_path_mist",
-    "path": "public/assets/effects/wind/mountain_path_mist.webp",
+    "id": "wind_tornado",
+    "path": "public/assets/effects/wind/wind_tornado.webp",
     "category": "wind",
     "usedBy": [
-      "yamanba"
+      "tengu",
+      "kamaitachi"
     ],
     "usedFor": [
       "specialMove"
     ],
-    "fallbackClass": "fallback-mountain-path-mist",
+    "fallbackClass": "fallback-wind-tornado",
     "status": "available"
   }
 ]

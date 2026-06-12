@@ -1,5 +1,77 @@
 [
   {
+    "id": "betobeto_footsteps",
+    "path": "public/assets/effects/animal/betobeto_footsteps.webp",
+    "promptJa": "Transparent WebP effect sprite for betobeto-san: mysterious dotted footsteps, soft charcoal and warm beige, invisible walker feeling, playful not scary, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "betobeto_step_wave",
+    "path": "public/assets/effects/animal/betobeto_step_wave.webp",
+    "promptJa": "Transparent WebP effect sprite for betobeto-san special move: rhythmic wave of footsteps and small puffs, playful invisible procession, non-scary, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "invisible_presence_lines",
+    "path": "public/assets/effects/animal/invisible_presence_lines.webp",
+    "promptJa": "Transparent WebP effect sprite for betobeto-san: soft curved presence lines and tiny sparkles suggesting something unseen passing by, no character body, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "okuri_inu_guard_light",
+    "path": "public/assets/effects/animal/okuri_inu_guard_light.webp",
+    "promptJa": "Transparent WebP effect sprite for okuri-inu special move: warm guardian light behind a soft dog silhouette, protective and calm, no aggression, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "okuri_inu_mountain_trace",
+    "path": "public/assets/effects/animal/okuri_inu_mountain_trace.webp",
+    "promptJa": "Transparent WebP effect sprite for okuri-inu: misty mountain path trace with leaves and a following friendly shadow curve, child-safe, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "okuri_inu_shadow_trail",
+    "path": "public/assets/effects/animal/okuri_inu_shadow_trail.webp",
+    "promptJa": "Transparent WebP effect sprite for okuri-inu: gentle protective dog-like shadow trail, dark blue-gray but friendly, no teeth, no attack, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "sunekosuri_fluff_wave",
+    "path": "public/assets/effects/animal/sunekosuri_fluff_wave.webp",
+    "promptJa": "Transparent WebP effect sprite for sunekosuri special move: airy wave of cream fluff and small warm sparkles, soft and ticklish feeling, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "sunekosuri_paw_steps",
+    "path": "public/assets/effects/animal/sunekosuri_paw_steps.webp",
+    "promptJa": "Transparent WebP effect sprite for sunekosuri: cute tiny soft paw steps with fluffy glow, rhythmic motion implied, child-safe, no text, no logo.",
+    "status": "generated"
+  },
+  {
+    "id": "sunekosuri_soft_trail",
+    "path": "public/assets/effects/animal/sunekosuri_soft_trail.webp",
+    "promptJa": "Transparent WebP effect sprite for sunekosuri: soft fluffy low trail like a small furry presence brushing near feet, beige and cream, gentle and cute, no text.",
+    "status": "generated"
+  },
+  {
+    "id": "tanuki_leaf_swirl",
+    "path": "public/assets/effects/animal/tanuki_leaf_swirl.webp",
+    "promptJa": "Transparent WebP effect sprite for bake-danuki: friendly green and golden leaves swirling in a loose spiral, children picture-book game VFX, no text, no logo, non-aggressive.",
+    "status": "generated"
+  },
+  {
+    "id": "tanuki_magic_ring",
+    "path": "public/assets/effects/animal/tanuki_magic_ring.webp",
+    "promptJa": "Transparent WebP effect sprite for bake-danuki special move: warm magical ring with leaf motifs and amber sparkles, cheerful transformation feeling, no text, no logo, non-scary.",
+    "status": "generated"
+  },
+  {
+    "id": "tanuki_transform_puff",
+    "path": "public/assets/effects/animal/tanuki_transform_puff.webp",
+    "promptJa": "Transparent WebP effect sprite for a children-friendly bake-danuki yokai: round playful transformation smoke puff with small tanuki-brown curls and cream smoke rings, no text, no logo, non-scary, lightweight game VFX asset.",
+    "status": "generated"
+  },
+  {
     "id": "bone_fragments",
     "path": "public/assets/effects/bone/bone_fragments.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のbone系エフェクト素材。がしゃどくろの骨片、やわらかな巨大影、月光素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -15,6 +87,12 @@
     "id": "moon_glow",
     "path": "public/assets/effects/bone/moon_glow.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のbone系エフェクト素材。がしゃどくろの骨片、やわらかな巨大影、月光素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "moon_pawprints",
+    "path": "public/assets/effects/cat/moon_pawprints.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Moonlit pawprints for Bakeneko animation: a curved trail of cute cat pawprints glowing softly in moonlight with tiny crescent moon sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, generous padding, no text, no logo, no watermark, no scary face, child-friendly.",
     "status": "generated"
   },
   {
@@ -42,6 +120,24 @@
     "status": "generated"
   },
   {
+    "id": "blue_foxfire",
+    "path": "public/assets/effects/glow/blue_foxfire.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Soft blue foxfire wisps for Kitsunebi animation: several small rounded floating magical flame wisps, mysterious but friendly. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no burning objects, no scary face, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "foxfire_ring",
+    "path": "public/assets/effects/glow/foxfire_ring.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. A ring of soft blue foxfire for Kitsunebi special move: rounded blue magical wisps forming a gentle circular ring with tiny sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no scary fire, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "kodama_echo_light",
+    "path": "public/assets/effects/glow/kodama_echo_light.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Kodama echo light for special move: concentric soft rings of pale green and warm gold light, tiny leaf sparkles and small glowing orbs spreading from the center like a forest echo. No ghost, no face, no creature. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mystical but gentle.",
+    "status": "generated"
+  },
+  {
     "id": "lantern_glow",
     "path": "public/assets/effects/glow/lantern_glow.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -54,26 +150,26 @@
     "status": "generated"
   },
   {
-    "id": "warm_light",
-    "path": "public/assets/effects/glow/warm_light.webp",
-    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
-    "status": "generated"
-  },
-  {
     "id": "warm_light_orbs",
     "path": "public/assets/effects/glow/warm_light_orbs.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
     "status": "generated"
   },
   {
-    "id": "dust",
-    "path": "public/assets/effects/impact/dust.webp",
-    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のimpact系エフェクト素材。鬼がどんっと登場したときの丸い衝撃、土ぼこり、衝撃波素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "id": "warm_light",
+    "path": "public/assets/effects/glow/warm_light.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のglow系エフェクト素材。提灯お化けのあたたかい光、発光、光の玉の素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
     "status": "generated"
   },
   {
     "id": "dust_cloud",
     "path": "public/assets/effects/impact/dust_cloud.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のimpact系エフェクト素材。鬼がどんっと登場したときの丸い衝撃、土ぼこり、衝撃波素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "dust",
+    "path": "public/assets/effects/impact/dust.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のimpact系エフェクト素材。鬼がどんっと登場したときの丸い衝撃、土ぼこり、衝撃波素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
     "status": "generated"
   },
@@ -114,6 +210,18 @@
     "status": "generated"
   },
   {
+    "id": "azuki_grains",
+    "path": "public/assets/effects/pop/azuki_grains.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Cheerful azuki red bean grains for Azuki-arai animation: shiny red beans bouncing and flowing in a playful curved stream with a few tiny water droplets. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no dirt, no scary elements, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "azuki_shower",
+    "path": "public/assets/effects/pop/azuki_shower.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Azuki red bean shower for Azuki-arai special move: shiny azuki beans and small clear blue water droplets falling in gentle curved streams. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Clean isolated elements only, no white blocks, no checkerboard, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
     "id": "jump_dust",
     "path": "public/assets/effects/pop/jump_dust.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のpop系エフェクト素材。からかさ小僧が跳ねるときの砂ぼこり、紙吹雪、星のポップ素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -138,6 +246,12 @@
     "status": "generated"
   },
   {
+    "id": "water_jump_pop",
+    "path": "public/assets/effects/pop/water_jump_pop.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Water jump pop for Hyosube special move: a larger playful riverbank jump effect, bright blue splash arc, ripple rings, tiny rounded pop marks and soft droplets spreading outward. Include a small patch of reeds and stones, but no creature and no kappa. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly and energetic.",
+    "status": "generated"
+  },
+  {
     "id": "cold_mist",
     "path": "public/assets/effects/snow/cold_mist.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のsnow系エフェクト素材。雪女の雪の結晶、氷、冷気、雪の魔法素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -147,6 +261,12 @@
     "id": "ice_crystals",
     "path": "public/assets/effects/snow/ice_crystals.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のsnow系エフェクト素材。雪女の雪の結晶、氷、冷気、雪の魔法素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "mountain_mist_soft",
+    "path": "public/assets/effects/snow/mountain_mist_soft.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mountain mist soft for Yamanba tap animation: gentle white and pale blue mountain mist curls drifting sideways, a few soft leaf silhouettes and tiny dewdrop sparkles. No old woman, no face, no chasing, no scary elements. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but calm.",
     "status": "generated"
   },
   {
@@ -198,9 +318,51 @@
     "status": "generated"
   },
   {
+    "id": "dark_wave_shadow",
+    "path": "public/assets/effects/water/dark_wave_shadow.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Dark wave shadow for Umibozu tap animation: a friendly deep-blue dark wave silhouette rolling gently, soft rounded wave crests, a little mist and moonlit highlights. No boat, no attack, no scary face, no monster body. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but not frightening.",
+    "status": "generated"
+  },
+  {
+    "id": "mermaid_bubbles",
+    "path": "public/assets/effects/water/mermaid_bubbles.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mermaid bubbles for Ningyo tap animation: clusters of rounded translucent sea bubbles rising upward with tiny aqua sparkles and a gentle wave curve, no mermaid body or character, no face. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, bright and magical.",
+    "status": "generated"
+  },
+  {
+    "id": "rain_cloud_curtain",
+    "path": "public/assets/effects/water/rain_cloud_curtain.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Rain cloud curtain for Ame-onna special move: a soft pale gray-blue cloud ribbon across the top with gentle blue raindrops falling like a curtain, small warm sparkles between drops so it feels kind. Not dark or sad. No woman, no face, no character. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly.",
+    "status": "generated"
+  },
+  {
     "id": "ripple",
     "path": "public/assets/effects/water/ripple.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwater系エフェクト素材。水しぶき、波紋、水滴、水のうずまきなどの水系エフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
+    "status": "generated"
+  },
+  {
+    "id": "river_hop_splash",
+    "path": "public/assets/effects/water/river_hop_splash.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. River hop splash for Hyosube tap animation: a small playful splash beside a riverbank, rounded blue water droplets popping upward with two tiny clean ripple rings, a small patch of reeds and stones, cheerful white motion lines. No creature, no kappa, no face. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, playful and light.",
+    "status": "generated"
+  },
+  {
+    "id": "sea_shadow_rise",
+    "path": "public/assets/effects/water/sea_shadow_rise.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Sea shadow rise for Umibozu special move: a large rounded dark ocean shadow rising from soft waves like a mysterious mound, with moonlit blue rim light and gentle spray. No boat, no people, no attack, no scary face, no eyes, no teeth. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but safe.",
+    "status": "generated"
+  },
+  {
+    "id": "shell_sparkle_wave",
+    "path": "public/assets/effects/water/shell_sparkle_wave.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Shell sparkle wave for Ningyo special move: two pretty seashells, pearly highlights, a soft curling blue wave ribbon, and warm gold sparkles spreading outward. No mermaid body or character. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, bright and magical.",
+    "status": "generated"
+  },
+  {
+    "id": "soft_raindrops",
+    "path": "public/assets/effects/water/soft_raindrops.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Soft raindrops for Ame-onna tap animation: many gentle rounded blue raindrops falling in short vertical trails, with a few tiny bright highlights and small puddle ripples. Light and calm, not gloomy. No woman, no face, no character. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly.",
     "status": "generated"
   },
   {
@@ -222,6 +384,18 @@
     "status": "generated"
   },
   {
+    "id": "black_feathers",
+    "path": "public/assets/effects/wind/black_feathers.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Black feathers drifting in a friendly wind for Karasu-tengu animation: soft black crow feathers with gentle curved wind motion and light playful trails. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no weapons, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "feather_whirl",
+    "path": "public/assets/effects/wind/feather_whirl.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. A playful feather whirlwind for Karasu-tengu special move: a spiral of soft black crow feathers and pale wind ribbons forming a friendly small whirlwind. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no weapons, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
     "id": "feather",
     "path": "public/assets/effects/wind/feather.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -240,63 +414,21 @@
     "status": "generated"
   },
   {
+    "id": "forest_leaves_soft",
+    "path": "public/assets/effects/wind/forest_leaves_soft.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Forest leaves soft for Kodama tap animation: soft green and yellow leaves drifting in a gentle breeze with small wood-grain swirl lines and tiny sunlight sparkles, like a friendly forest whisper. No ghost, no face, no creature. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, calm and bright.",
+    "status": "generated"
+  },
+  {
     "id": "leaves",
     "path": "public/assets/effects/wind/leaves.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
     "status": "generated"
   },
   {
-    "id": "wind_swirl",
-    "path": "public/assets/effects/wind/wind_swirl.webp",
-    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
-    "status": "generated"
-  },
-  {
-    "id": "wind_tornado",
-    "path": "public/assets/effects/wind/wind_tornado.webp",
-    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
-    "status": "generated"
-  },
-  {
-    "id": "moon_pawprints",
-    "path": "public/assets/effects/cat/moon_pawprints.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Moonlit pawprints for Bakeneko animation: a curved trail of cute cat pawprints glowing softly in moonlight with tiny crescent moon sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, generous padding, no text, no logo, no watermark, no scary face, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "blue_foxfire",
-    "path": "public/assets/effects/glow/blue_foxfire.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Soft blue foxfire wisps for Kitsunebi animation: several small rounded floating magical flame wisps, mysterious but friendly. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no burning objects, no scary face, no text, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "foxfire_ring",
-    "path": "public/assets/effects/glow/foxfire_ring.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. A ring of soft blue foxfire for Kitsunebi special move: rounded blue magical wisps forming a gentle circular ring with tiny sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no scary fire, no text, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "azuki_grains",
-    "path": "public/assets/effects/pop/azuki_grains.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Cheerful azuki red bean grains for Azuki-arai animation: shiny red beans bouncing and flowing in a playful curved stream with a few tiny water droplets. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no dirt, no scary elements, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "azuki_shower",
-    "path": "public/assets/effects/pop/azuki_shower.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Azuki red bean shower for Azuki-arai special move: shiny azuki beans and small clear blue water droplets falling in gentle curved streams. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Clean isolated elements only, no white blocks, no checkerboard, no text, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "black_feathers",
-    "path": "public/assets/effects/wind/black_feathers.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Black feathers drifting in a friendly wind for Karasu-tengu animation: soft black crow feathers with gentle curved wind motion and light playful trails. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no weapons, no text, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "feather_whirl",
-    "path": "public/assets/effects/wind/feather_whirl.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. A playful feather whirlwind for Karasu-tengu special move: a spiral of soft black crow feathers and pale wind ribbons forming a friendly small whirlwind. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. Japanese picture-book style, centered square sprite, no weapons, no text, child-friendly.",
+    "id": "mountain_path_mist",
+    "path": "public/assets/effects/wind/mountain_path_mist.webp",
+    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mountain path mist for Yamanba special move: sweeping bands of soft white and pale blue mist flowing along an implied mountain path, gentle curves, a few autumn leaves and small light specks, bigger and wider than a tap effect. No old woman, no face, no chasing, no attack, no eating, no scary elements. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but calm.",
     "status": "generated"
   },
   {
@@ -312,75 +444,15 @@
     "status": "generated"
   },
   {
-    "id": "mermaid_bubbles",
-    "path": "public/assets/effects/water/mermaid_bubbles.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mermaid bubbles for Ningyo tap animation: clusters of rounded translucent sea bubbles rising upward with tiny aqua sparkles and a gentle wave curve, no mermaid body or character, no face. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, bright and magical.",
+    "id": "wind_swirl",
+    "path": "public/assets/effects/wind/wind_swirl.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
     "status": "generated"
   },
   {
-    "id": "shell_sparkle_wave",
-    "path": "public/assets/effects/water/shell_sparkle_wave.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Shell sparkle wave for Ningyo special move: two pretty seashells, pearly highlights, a soft curling blue wave ribbon, and warm gold sparkles spreading outward. No mermaid body or character. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, bright and magical.",
-    "status": "generated"
-  },
-  {
-    "id": "dark_wave_shadow",
-    "path": "public/assets/effects/water/dark_wave_shadow.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Dark wave shadow for Umibozu tap animation: a friendly deep-blue dark wave silhouette rolling gently, soft rounded wave crests, a little mist and moonlit highlights. No boat, no attack, no scary face, no monster body. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but not frightening.",
-    "status": "generated"
-  },
-  {
-    "id": "sea_shadow_rise",
-    "path": "public/assets/effects/water/sea_shadow_rise.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Sea shadow rise for Umibozu special move: a large rounded dark ocean shadow rising from soft waves like a mysterious mound, with moonlit blue rim light and gentle spray. No boat, no people, no attack, no scary face, no eyes, no teeth. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but safe.",
-    "status": "generated"
-  },
-  {
-    "id": "soft_raindrops",
-    "path": "public/assets/effects/water/soft_raindrops.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Soft raindrops for Ame-onna tap animation: many gentle rounded blue raindrops falling in short vertical trails, with a few tiny bright highlights and small puddle ripples. Light and calm, not gloomy. No woman, no face, no character. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "rain_cloud_curtain",
-    "path": "public/assets/effects/water/rain_cloud_curtain.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Rain cloud curtain for Ame-onna special move: a soft pale gray-blue cloud ribbon across the top with gentle blue raindrops falling like a curtain, small warm sparkles between drops so it feels kind. Not dark or sad. No woman, no face, no character. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly.",
-    "status": "generated"
-  },
-  {
-    "id": "river_hop_splash",
-    "path": "public/assets/effects/water/river_hop_splash.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. River hop splash for Hyosube tap animation: a small playful splash beside a riverbank, rounded blue water droplets popping upward with two tiny clean ripple rings, a small patch of reeds and stones, cheerful white motion lines. No creature, no kappa, no face. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, playful and light.",
-    "status": "generated"
-  },
-  {
-    "id": "water_jump_pop",
-    "path": "public/assets/effects/pop/water_jump_pop.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Water jump pop for Hyosube special move: a larger playful riverbank jump effect, bright blue splash arc, ripple rings, tiny rounded pop marks and soft droplets spreading outward. Include a small patch of reeds and stones, but no creature and no kappa. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly and energetic.",
-    "status": "generated"
-  },
-  {
-    "id": "forest_leaves_soft",
-    "path": "public/assets/effects/wind/forest_leaves_soft.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Forest leaves soft for Kodama tap animation: soft green and yellow leaves drifting in a gentle breeze with small wood-grain swirl lines and tiny sunlight sparkles, like a friendly forest whisper. No ghost, no face, no creature. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, calm and bright.",
-    "status": "generated"
-  },
-  {
-    "id": "kodama_echo_light",
-    "path": "public/assets/effects/glow/kodama_echo_light.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Kodama echo light for special move: concentric soft rings of pale green and warm gold light, tiny leaf sparkles and small glowing orbs spreading from the center like a forest echo. No ghost, no face, no creature. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mystical but gentle.",
-    "status": "generated"
-  },
-  {
-    "id": "mountain_mist_soft",
-    "path": "public/assets/effects/snow/mountain_mist_soft.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mountain mist soft for Yamanba tap animation: gentle white and pale blue mountain mist curls drifting sideways, a few soft leaf silhouettes and tiny dewdrop sparkles. No old woman, no face, no chasing, no scary elements. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but calm.",
-    "status": "generated"
-  },
-  {
-    "id": "mountain_path_mist",
-    "path": "public/assets/effects/wind/mountain_path_mist.webp",
-    "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mountain path mist for Yamanba special move: sweeping bands of soft white and pale blue mist flowing along an implied mountain path, gentle curves, a few autumn leaves and small light specks, bigger and wider than a tap effect. No old woman, no face, no chasing, no attack, no eating, no scary elements. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but calm.",
+    "id": "wind_tornado",
+    "path": "public/assets/effects/wind/wind_tornado.webp",
+    "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
     "status": "generated"
   }
 ]

@@ -3327,6 +3327,26 @@ body.opening-active {
     drop-shadow(0 0 1.25rem rgba(255, 255, 230, 0.18));
 }
 
+.tap-bakeDanukiLeafPop,
+.special-bakeDanukiTransformPuff,
+.tap-sunekosuriSoftTrail,
+.special-sunekosuriPawRush {
+  filter:
+    brightness(1.12)
+    drop-shadow(0 0 0.8rem rgba(255, 238, 170, 0.42));
+}
+
+.tap-okuriInuShadowTrail,
+.special-okuriInuGuardShadow,
+.tap-betobetoFootstep,
+.special-betobetoInvisibleMarch {
+  filter:
+    contrast(1.16)
+    brightness(1.1)
+    drop-shadow(0 0 0.85rem rgba(255, 235, 170, 0.34))
+    drop-shadow(0 0 1rem rgba(140, 190, 235, 0.22));
+}
+
 .enter-splashIn,
 .enter-windIn,
 .enter-stompIn,
@@ -3370,6 +3390,10 @@ body.opening-active {
 .tap-hyosubeRiverHop { animation-name: hyosubeRiverHop; }
 .tap-kodamaLeafWhisper { animation-name: kodamaLeafWhisper; }
 .tap-yamanbaMountainMist { animation-name: yamanbaMountainMist; }
+.tap-bakeDanukiLeafPop { animation-name: bakeDanukiLeafPop; }
+.tap-sunekosuriSoftTrail { animation-name: sunekosuriSoftTrail; }
+.tap-okuriInuShadowTrail { animation-name: okuriInuShadowTrail; }
+.tap-betobetoFootstep { animation-name: betobetoFootstep; }
 
 .special-kappaWaterSpiral { animation-name: kappaWaterSpiral; }
 .special-tenguGreatWind { animation-name: tenguGreatWind; }
@@ -3392,6 +3416,10 @@ body.opening-active {
 .special-hyosubeWaterJump { animation-name: hyosubeWaterJump; }
 .special-kodamaEchoLight { animation-name: kodamaEchoLight; }
 .special-yamanbaMistPath { animation-name: yamanbaMistPath; }
+.special-bakeDanukiTransformPuff { animation-name: bakeDanukiTransformPuff; }
+.special-sunekosuriPawRush { animation-name: sunekosuriPawRush; }
+.special-okuriInuGuardShadow { animation-name: okuriInuGuardShadow; }
+.special-betobetoInvisibleMarch { animation-name: betobetoInvisibleMarch; }
 
 .stage-particle {
   position: absolute;
@@ -3466,6 +3494,10 @@ body.opening-active {
 .motion-walkIn,
 .motion-bakenekoPawStep,
 .motion-bakenekoMoonStep,
+.motion-sunekosuriSoftTrail,
+.motion-sunekosuriPawRush,
+.motion-betobetoFootstep,
+.motion-betobetoInvisibleMarch,
 .motion-nekomataDance {
   animation: yokaiStageDance 1100ms ease-in-out both;
 }
@@ -3475,6 +3507,8 @@ body.opening-active {
 .motion-foxfireFloat,
 .motion-foxfireRing,
 .motion-kodamaEchoLight,
+.motion-bakeDanukiLeafPop,
+.motion-bakeDanukiTransformPuff,
 .motion-chochinLightBurst {
   animation: yokaiStageGlow 1200ms ease-out both;
 }
@@ -3488,6 +3522,8 @@ body.opening-active {
 }
 
 .motion-shadowRise,
+.motion-okuriInuShadowTrail,
+.motion-okuriInuGuardShadow,
 .motion-boneRattle,
 .motion-gashadokuroBoneParade {
   animation: yokaiStageRattle 1100ms ease-in-out both;
@@ -3766,6 +3802,62 @@ body.opening-active {
   0% { opacity: 0; transform: translate(-50%, -44%) scale(0.62); }
   30%, 82% { opacity: 0.96; }
   100% { opacity: 0; transform: translate(-50%, -58%) scale(1.7); }
+}
+
+@keyframes bakeDanukiLeafPop {
+  0% { opacity: 0; transform: translate(-50%, -44%) rotate(-10deg) scale(0.58); }
+  24% { opacity: 1; transform: translate(-50%, -50%) rotate(4deg) scale(1.06); }
+  72% { opacity: 0.98; transform: translate(-44%, -56%) rotate(18deg) scale(1.22); }
+  100% { opacity: 0; transform: translate(-36%, -62%) rotate(34deg) scale(1.34); }
+}
+
+@keyframes bakeDanukiTransformPuff {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-22deg) scale(0.62); }
+  22% { opacity: 1; transform: translate(-50%, -50%) rotate(8deg) scale(1.28); }
+  78% { opacity: 1; transform: translate(-50%, -50%) rotate(74deg) scale(1.9); }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(112deg) scale(2.08); }
+}
+
+@keyframes sunekosuriSoftTrail {
+  0% { opacity: 0; transform: translate(-78%, -40%) rotate(-4deg) scale(0.66); }
+  28% { opacity: 0.96; transform: translate(-58%, -46%) rotate(2deg) scale(1.02); }
+  76% { opacity: 0.92; transform: translate(-38%, -52%) rotate(7deg) scale(1.18); }
+  100% { opacity: 0; transform: translate(-18%, -56%) rotate(10deg) scale(1.24); }
+}
+
+@keyframes sunekosuriPawRush {
+  0% { opacity: 0; transform: translate(-68%, -32%) rotate(-12deg) scale(0.58); }
+  24% { opacity: 1; transform: translate(-54%, -42%) rotate(4deg) scale(1.14); }
+  78% { opacity: 1; transform: translate(-40%, -56%) rotate(28deg) scale(1.76); }
+  100% { opacity: 0; transform: translate(-28%, -66%) rotate(42deg) scale(1.96); }
+}
+
+@keyframes okuriInuShadowTrail {
+  0% { opacity: 0; transform: translate(-74%, -34%) scale(0.62, 0.5) rotate(-5deg); }
+  30% { opacity: 0.9; transform: translate(-58%, -42%) scale(0.96, 0.76) rotate(1deg); }
+  76% { opacity: 0.86; transform: translate(-42%, -50%) scale(1.22, 0.92) rotate(4deg); }
+  100% { opacity: 0; transform: translate(-28%, -58%) scale(1.42, 1.02) rotate(8deg); }
+}
+
+@keyframes okuriInuGuardShadow {
+  0% { opacity: 0; transform: translate(-50%, -34%) scale(0.66); }
+  24% { opacity: 0.96; transform: translate(-50%, -44%) scale(1.12); }
+  78% { opacity: 0.98; transform: translate(-50%, -52%) scale(1.68); }
+  100% { opacity: 0; transform: translate(-50%, -58%) scale(1.92); }
+}
+
+@keyframes betobetoFootstep {
+  0% { opacity: 0; transform: translate(-70%, -36%) rotate(-8deg) scale(0.62); }
+  26% { opacity: 0.96; transform: translate(-56%, -44%) rotate(2deg) scale(0.96); }
+  72% { opacity: 0.9; transform: translate(-40%, -54%) rotate(8deg) scale(1.12); }
+  100% { opacity: 0; transform: translate(-24%, -62%) rotate(14deg) scale(1.22); }
+}
+
+@keyframes betobetoInvisibleMarch {
+  0% { opacity: 0; transform: translate(-78%, -34%) rotate(-10deg) scale(0.64); }
+  24% { opacity: 0.95; transform: translate(-62%, -42%) rotate(2deg) scale(1.1); }
+  78% { opacity: 0.96; transform: translate(-40%, -54%) rotate(18deg) scale(1.72); }
+  100% { opacity: 0; transform: translate(-22%, -62%) rotate(28deg) scale(1.92); }
 }
 
 @keyframes stageParticlePop {

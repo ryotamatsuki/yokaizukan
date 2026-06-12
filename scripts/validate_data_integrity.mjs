@@ -12,6 +12,8 @@ const DATA_FILES = {
   evidence: 'public/data/evidence_check_table.json'
 };
 const STYLE_FILE = 'css/style.css';
+const EFFECT_ASSET_WARNING_BYTES = 150 * 1024;
+const EFFECT_ASSET_REVIEW_BYTES = 250 * 1024;
 
 const errors = [];
 const warnings = [];
@@ -237,8 +239,15 @@ function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
     }
     if (!fs.existsSync(asset.path)) {
       addError(filePath, assetId, `path references missing effect asset: ${asset.path}`);
-    } else if (fs.statSync(asset.path).size === 0) {
-      addError(filePath, assetId, `path references empty effect asset: ${asset.path}`);
+    } else {
+      const assetSize = fs.statSync(asset.path).size;
+      if (assetSize === 0) {
+        addError(filePath, assetId, `path references empty effect asset: ${asset.path}`);
+      } else if (asset.path.endsWith('.webp') && assetSize > EFFECT_ASSET_REVIEW_BYTES) {
+        addWarning(`${filePath} [${assetId}]: WebP effect asset is over 250KB and should be reviewed: ${asset.path} (${formatBytes(assetSize)})`);
+      } else if (asset.path.endsWith('.webp') && assetSize > EFFECT_ASSET_WARNING_BYTES) {
+        addWarning(`${filePath} [${assetId}]: WebP effect asset is over 150KB: ${asset.path} (${formatBytes(assetSize)})`);
+      }
     }
     if (metadataByPath.has(asset.path)) {
       addWarning(`${filePath} [${assetId}]: duplicate metadata path also used by ${metadataByPath.get(asset.path).id}: ${asset.path}`);
@@ -466,6 +475,10 @@ function checkIdArray(filePath, ownerId, fieldName, value, targetIds, targetLabe
 
 function arraysMatch(left, right) {
   return left.length === right.length && left.every((value, index) => value === right[index]);
+}
+
+function formatBytes(bytes) {
+  return `${Math.round(bytes / 1024)}KB`;
 }
 
 function escapeRegExp(value) {

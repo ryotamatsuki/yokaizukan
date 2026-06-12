@@ -6,6 +6,33 @@ const SPECIAL_STATE_MIN_MS = 2300;
 const SPECIAL_STATE_BUFFER_MS = 420;
 const SPECIAL_REDUCED_MOTION_MS = 260;
 let specialTimer;
+const preloadedEffectAssets = new Map();
+
+export function preloadEffectAssets(yokai) {
+  const profile = yokai?.animationProfile || {};
+  const special = yokai?.specialMove || {};
+  const sources = [
+    ...(profile.effectAssets || []),
+    ...(special.assets || [])
+  ].filter(Boolean);
+
+  sources.forEach((src) => {
+    if (preloadedEffectAssets.has(src)) {
+      return;
+    }
+
+    const image = new Image();
+    image.decoding = 'async';
+    image.src = src;
+    const ready = image.decode?.()
+      .catch(() => waitForImageLoad(image))
+      || waitForImageLoad(image);
+    preloadedEffectAssets.set(src, ready.catch((error) => {
+      console.warn(`Effect asset preload failed: ${src}`, error);
+      return null;
+    }));
+  });
+}
 
 export function playEnterEffect(yokai) {
   const profile = yokai?.animationProfile || {};
@@ -145,6 +172,8 @@ export function spawnEffect(src, className, options = {}) {
   image.alt = '';
   image.setAttribute('aria-hidden', 'true');
   image.className = className;
+  image.style.animationPlayState = 'paused';
+  image.style.opacity = '0';
   image.style.setProperty('--fx-size', options.size || 'min(75vw, 440px)');
   image.style.setProperty('--fx-x', options.x || '50%');
   image.style.setProperty('--fx-y', options.y || '50%');
@@ -163,8 +192,40 @@ export function spawnEffect(src, className, options = {}) {
   }, { once: true });
 
   layer.append(image);
+  startEffectWhenReady(image, src);
   window.setTimeout(() => image.remove(), 2400);
   return image;
+}
+
+function startEffectWhenReady(image, src) {
+  const ready = preloadedEffectAssets.get(src)
+    || image.decode?.().catch(() => waitForImageLoad(image))
+    || waitForImageLoad(image);
+
+  ready
+    .catch((error) => {
+      console.warn(`Effect asset could not be decoded before animation: ${src}`, error);
+    })
+    .finally(() => {
+      if (!image.isConnected) {
+        return;
+      }
+      requestAnimationFrame(() => {
+        image.style.removeProperty('animation-play-state');
+        image.style.removeProperty('opacity');
+      });
+    });
+}
+
+function waitForImageLoad(image) {
+  if (image.complete && image.naturalWidth > 0) {
+    return Promise.resolve(image);
+  }
+
+  return new Promise((resolve, reject) => {
+    image.addEventListener('load', () => resolve(image), { once: true });
+    image.addEventListener('error', reject, { once: true });
+  });
 }
 
 export function clearEffects() {
