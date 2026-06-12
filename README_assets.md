@@ -100,6 +100,23 @@
 | べとべとさん | `betobeto_footsteps.webp` / `invisible_presence_lines.webp` / `betobeto_step_wave.webp` | 見えない足音、気配線、足あと行列 |
 
 流用素材として `pop_mark.webp`、`flying_leaves.webp`、`warm_light_orbs.webp`、`pawprints.webp`、`moon_pawprints.webp`、`wind_swirl.webp`、`sparkle_trail.webp` も使用しています。
+# 家・道・気配系 後半6体 エフェクト素材追加メモ
+
+追加日: 2026-06-12
+
+`image_gen` で家・道・気配系後半エフェクトの6x3シートを生成し、18個のWebP素材に分割して `public/assets/effects/road/`, `public/assets/effects/presence/`, `public/assets/effects/house/` に保存しました。砂かけ婆、子泣き爺、煙々羅、髪切り、一反木綿、うぶめの `animationProfile.effectAssets` と `specialMove.assets` から参照しています。
+
+| 妖怪 | 新規素材 |
+|---|---|
+| 砂かけ婆 | `sunakake_sand_scatter.webp`, `sunakake_sand_curtain.webp`, `sunakake_sand_puff.webp` |
+| 子泣き爺 | `konaki_weight_drop.webp`, `konaki_stone_bump.webp`, `konaki_ground_ring.webp` |
+| 煙々羅 | `enenra_smoke_puff.webp`, `enenra_smoke_face.webp`, `enenra_smoke_column.webp` |
+| 髪切り | `kamikiri_scissor_shadow.webp`, `kamikiri_hair_spark.webp`, `kamikiri_snip_line.webp` |
+| 一反木綿 | `ittanmomen_cloth_glide.webp`, `ittanmomen_white_stream.webp`, `ittanmomen_air_wave.webp` |
+| うぶめ | `ubume_soft_mist.webp`, `ubume_rain_veil.webp`, `ubume_night_glow.webp` |
+
+流用素材: `wind_swirl.webp`, `dust_cloud.webp`, `shockwave.webp`, `cold_mist.webp`, `warm_light_orbs.webp`, `sparkle_trail.webp`, `flying_leaves.webp`, `soft_raindrops.webp`
+
 # 家・道・気配系 前半6体 エフェクト素材追加メモ
 
 追加日: 2026-06-12

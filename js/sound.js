@@ -268,6 +268,35 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('sand')) {
+    return [
+      { from: 520, to: 420, length: 0.08, volume: 0.08, type: 'triangle' },
+      { from: 620, to: 460, length: 0.09, volume: 0.07, type: 'sine' },
+      { from: 480, to: 360, length: 0.1, volume: 0.06, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('heavy') || soundFile.includes('thump')) {
+    return [
+      { from: 140, to: 70, length: 0.2, volume: 0.18, type: 'sine' },
+      { from: 220, to: 120, length: 0.18, volume: 0.1, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('smoke')) {
+    return [
+      { from: 360, to: 540, length: 0.24, volume: 0.07, type: 'sine' },
+      { from: 500, to: 320, length: 0.28, volume: 0.05, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('snip') || soundFile.includes('scissors') || soundFile.includes('hair_spark')) {
+    return [
+      { from: 880, to: 520, length: 0.06, volume: 0.11, type: 'triangle' },
+      { from: 1160, to: 1500, length: 0.12, volume: 0.08, type: 'sine' }
+    ];
+  }
+
   if (soundFile.includes('water') || soundFile.includes('wave') || soundFile.includes('sea') || soundFile.includes('river')) {
     return [
       { from: 260, to: 420, length: 0.22, volume: 0.12, type: 'sine' },

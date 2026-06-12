@@ -5313,6 +5313,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "walkIn",
+        "tapEffect": "sunakakeSandScatter",
+        "actionLabel": "さらさら！",
+        "sound": "sand_scatter.mp3",
+        "effectAssets": [
+          "public/assets/effects/road/sunakake_sand_scatter.webp",
+          "public/assets/effects/road/sunakake_sand_puff.webp",
+          "public/assets/effects/wind/wind_swirl.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "砂けむりカーテン！",
+        "effect": "sunakakeSandCurtain",
+        "sound": "special_sand_curtain.mp3",
+        "assets": [
+          "public/assets/effects/road/sunakake_sand_curtain.webp",
+          "public/assets/effects/road/sunakake_sand_scatter.webp",
+          "public/assets/effects/road/sunakake_sand_puff.webp",
+          "public/assets/effects/impact/dust_cloud.webp"
+        ]
       }
     },
     {
@@ -5424,6 +5447,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E5%AD%90%E6%B3%A3%E3%81%8D%E7%88%BA%20%E4%BC%9D%E6%89%BF",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "road",
+        "enterEffect": "stompIn",
+        "tapEffect": "konakiWeightDrop",
+        "actionLabel": "ずしん",
+        "sound": "heavy_thump.mp3",
+        "effectAssets": [
+          "public/assets/effects/road/konaki_weight_drop.webp",
+          "public/assets/effects/road/konaki_ground_ring.webp",
+          "public/assets/effects/impact/shockwave.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "重たいどーん！",
+        "effect": "konakiHeavyBump",
+        "sound": "special_heavy_bump.mp3",
+        "assets": [
+          "public/assets/effects/road/konaki_stone_bump.webp",
+          "public/assets/effects/road/konaki_weight_drop.webp",
+          "public/assets/effects/road/konaki_ground_ring.webp",
+          "public/assets/effects/impact/dust_cloud.webp"
         ]
       }
     },
@@ -5810,6 +5856,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "fadeIn",
+        "tapEffect": "enenraSmokePuff",
+        "actionLabel": "もくもく",
+        "sound": "smoke_soft.mp3",
+        "effectAssets": [
+          "public/assets/effects/presence/enenra_smoke_puff.webp",
+          "public/assets/effects/presence/enenra_smoke_column.webp",
+          "public/assets/effects/snow/cold_mist.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "煙のかお！",
+        "effect": "enenraSmokeFace",
+        "sound": "special_smoke_face.mp3",
+        "assets": [
+          "public/assets/effects/presence/enenra_smoke_face.webp",
+          "public/assets/effects/presence/enenra_smoke_column.webp",
+          "public/assets/effects/presence/enenra_smoke_puff.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -6075,6 +6144,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "room",
+        "enterEffect": "fadeIn",
+        "tapEffect": "kamikiriScissorShadow",
+        "actionLabel": "チョキッ",
+        "sound": "scissors_snip.mp3",
+        "effectAssets": [
+          "public/assets/effects/house/kamikiri_scissor_shadow.webp",
+          "public/assets/effects/house/kamikiri_snip_line.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "髪すじきらり！",
+        "effect": "kamikiriHairSpark",
+        "sound": "special_hair_spark.mp3",
+        "assets": [
+          "public/assets/effects/house/kamikiri_hair_spark.webp",
+          "public/assets/effects/house/kamikiri_snip_line.webp",
+          "public/assets/effects/house/kamikiri_scissor_shadow.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -6194,6 +6286,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "wind",
+        "enterEffect": "windIn",
+        "tapEffect": "ittanMomenClothGlide",
+        "actionLabel": "ひゅーん！",
+        "sound": "cloth_glide.mp3",
+        "effectAssets": [
+          "public/assets/effects/presence/ittanmomen_cloth_glide.webp",
+          "public/assets/effects/presence/ittanmomen_air_wave.webp",
+          "public/assets/effects/wind/wind_swirl.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "空飛ぶ白布！",
+        "effect": "ittanMomenWhiteStream",
+        "sound": "special_white_stream.mp3",
+        "assets": [
+          "public/assets/effects/presence/ittanmomen_white_stream.webp",
+          "public/assets/effects/presence/ittanmomen_cloth_glide.webp",
+          "public/assets/effects/presence/ittanmomen_air_wave.webp",
+          "public/assets/effects/wind/flying_leaves.webp"
+        ]
       }
     },
     {
@@ -6312,6 +6427,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E3%81%86%E3%81%B6%E3%82%81%20%E5%A7%91%E7%8D%B2%E9%B3%A5",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "snowFadeIn",
+        "tapEffect": "ubumeSoftMist",
+        "actionLabel": "すうっ…",
+        "sound": "soft_mist.mp3",
+        "effectAssets": [
+          "public/assets/effects/presence/ubume_soft_mist.webp",
+          "public/assets/effects/presence/ubume_night_glow.webp",
+          "public/assets/effects/snow/cold_mist.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "やさしい雨霧！",
+        "effect": "ubumeRainVeil",
+        "sound": "special_rain_veil.mp3",
+        "assets": [
+          "public/assets/effects/presence/ubume_rain_veil.webp",
+          "public/assets/effects/presence/ubume_soft_mist.webp",
+          "public/assets/effects/presence/ubume_night_glow.webp",
+          "public/assets/effects/water/soft_raindrops.webp"
         ]
       }
     },

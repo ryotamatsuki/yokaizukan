@@ -114,6 +114,24 @@
     "status": "generated"
   },
   {
+    "id": "enenra_smoke_column",
+    "path": "public/assets/effects/presence/enenra_smoke_column.webp",
+    "promptJa": "透明背景WebP前提。enenra_smoke_column の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "enenra_smoke_face",
+    "path": "public/assets/effects/presence/enenra_smoke_face.webp",
+    "promptJa": "透明背景WebP前提。enenra_smoke_face の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "enenra_smoke_puff",
+    "path": "public/assets/effects/presence/enenra_smoke_puff.webp",
+    "promptJa": "透明背景WebP前提。enenra_smoke_puff の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "feather",
     "path": "public/assets/effects/wind/feather.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のwind系エフェクト素材。天狗の団扇から出るような風、葉っぱ、羽根のエフェクト素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -216,6 +234,24 @@
     "status": "generated"
   },
   {
+    "id": "ittanmomen_air_wave",
+    "path": "public/assets/effects/presence/ittanmomen_air_wave.webp",
+    "promptJa": "透明背景WebP前提。ittanmomen_air_wave の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "ittanmomen_cloth_glide",
+    "path": "public/assets/effects/presence/ittanmomen_cloth_glide.webp",
+    "promptJa": "透明背景WebP前提。ittanmomen_cloth_glide の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "ittanmomen_white_stream",
+    "path": "public/assets/effects/presence/ittanmomen_white_stream.webp",
+    "promptJa": "透明背景WebP前提。ittanmomen_white_stream の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "jump_dust",
     "path": "public/assets/effects/pop/jump_dust.webp",
     "promptJa": "子ども向け妖怪図鑑アプリで使う、透明背景のpop系エフェクト素材。からかさ小僧が跳ねるときの砂ぼこり、紙吹雪、星のポップ素材。和風絵本調。怖すぎない。背景なし。余白あり。文字なし。ロゴなし。UIなし。",
@@ -240,9 +276,45 @@
     "status": "generated"
   },
   {
+    "id": "kamikiri_hair_spark",
+    "path": "public/assets/effects/house/kamikiri_hair_spark.webp",
+    "promptJa": "透明背景WebP前提。kamikiri_hair_spark の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "kamikiri_scissor_shadow",
+    "path": "public/assets/effects/house/kamikiri_scissor_shadow.webp",
+    "promptJa": "透明背景WebP前提。kamikiri_scissor_shadow の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "kamikiri_snip_line",
+    "path": "public/assets/effects/house/kamikiri_snip_line.webp",
+    "promptJa": "透明背景WebP前提。kamikiri_snip_line の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "kodama_echo_light",
     "path": "public/assets/effects/glow/kodama_echo_light.webp",
     "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Kodama echo light for special move: concentric soft rings of pale green and warm gold light, tiny leaf sparkles and small glowing orbs spreading from the center like a forest echo. No ghost, no face, no creature. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #ff00ff chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mystical but gentle.",
+    "status": "generated"
+  },
+  {
+    "id": "konaki_ground_ring",
+    "path": "public/assets/effects/road/konaki_ground_ring.webp",
+    "promptJa": "透明背景WebP前提。konaki_ground_ring の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "konaki_stone_bump",
+    "path": "public/assets/effects/road/konaki_stone_bump.webp",
+    "promptJa": "透明背景WebP前提。konaki_stone_bump の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "konaki_weight_drop",
+    "path": "public/assets/effects/road/konaki_weight_drop.webp",
+    "promptJa": "透明背景WebP前提。konaki_weight_drop の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   },
   {
@@ -510,6 +582,24 @@
     "status": "generated"
   },
   {
+    "id": "sunakake_sand_curtain",
+    "path": "public/assets/effects/road/sunakake_sand_curtain.webp",
+    "promptJa": "透明背景WebP前提。sunakake_sand_curtain の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "sunakake_sand_puff",
+    "path": "public/assets/effects/road/sunakake_sand_puff.webp",
+    "promptJa": "透明背景WebP前提。sunakake_sand_puff の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "sunakake_sand_scatter",
+    "path": "public/assets/effects/road/sunakake_sand_scatter.webp",
+    "promptJa": "透明背景WebP前提。sunakake_sand_scatter の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "sunekosuri_fluff_wave",
     "path": "public/assets/effects/animal/sunekosuri_fluff_wave.webp",
     "promptJa": "Transparent WebP effect sprite for sunekosuri special move: airy wave of cream fluff and small warm sparkles, soft and ticklish feeling, no text.",
@@ -573,6 +663,24 @@
     "id": "triple_whirlwind",
     "path": "public/assets/effects/wind/triple_whirlwind.webp",
     "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Triple whirlwind for Kamaitachi special move: three small friendly white whirlwinds made of ribbon-like wind trails with tiny sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. No blades, no cuts, no weapons, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "ubume_night_glow",
+    "path": "public/assets/effects/presence/ubume_night_glow.webp",
+    "promptJa": "透明背景WebP前提。ubume_night_glow の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "ubume_rain_veil",
+    "path": "public/assets/effects/presence/ubume_rain_veil.webp",
+    "promptJa": "透明背景WebP前提。ubume_rain_veil の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "ubume_soft_mist",
+    "path": "public/assets/effects/presence/ubume_soft_mist.webp",
+    "promptJa": "透明背景WebP前提。ubume_soft_mist の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   },
   {

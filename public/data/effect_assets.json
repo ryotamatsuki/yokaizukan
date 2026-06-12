@@ -197,9 +197,11 @@
     "path": "public/assets/effects/snow/cold_mist.webp",
     "category": "snow",
     "usedBy": [
-      "yuki-onna",
       "ame_onna",
-      "yamanba"
+      "enenra",
+      "ubume",
+      "yamanba",
+      "yuki-onna"
     ],
     "usedFor": [
       "tapEffect",
@@ -240,7 +242,9 @@
     "path": "public/assets/effects/impact/dust_cloud.webp",
     "category": "impact",
     "usedBy": [
-      "oni"
+      "konaki_jiji",
+      "oni",
+      "sunakake_baba"
     ],
     "usedFor": [
       "specialMove"
@@ -259,6 +263,47 @@
       "tapEffect"
     ],
     "fallbackClass": "fallback-dust-slide",
+    "status": "available"
+  },
+  {
+    "id": "enenra_smoke_column",
+    "path": "public/assets/effects/presence/enenra_smoke_column.webp",
+    "category": "presence",
+    "usedBy": [
+      "enenra"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-enenra-smoke-column",
+    "status": "available"
+  },
+  {
+    "id": "enenra_smoke_face",
+    "path": "public/assets/effects/presence/enenra_smoke_face.webp",
+    "category": "presence",
+    "usedBy": [
+      "enenra"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-enenra-smoke-face",
+    "status": "available"
+  },
+  {
+    "id": "enenra_smoke_puff",
+    "path": "public/assets/effects/presence/enenra_smoke_puff.webp",
+    "category": "presence",
+    "usedBy": [
+      "enenra"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-enenra-smoke-puff",
     "status": "available"
   },
   {
@@ -307,6 +352,7 @@
     "path": "public/assets/effects/wind/flying_leaves.webp",
     "category": "wind",
     "usedBy": [
+      "ittan_momen",
       "kodama",
       "okuri_inu",
       "tengu",
@@ -496,6 +542,47 @@
     "status": "available"
   },
   {
+    "id": "ittanmomen_air_wave",
+    "path": "public/assets/effects/presence/ittanmomen_air_wave.webp",
+    "category": "presence",
+    "usedBy": [
+      "ittan_momen"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ittanmomen-air-wave",
+    "status": "available"
+  },
+  {
+    "id": "ittanmomen_cloth_glide",
+    "path": "public/assets/effects/presence/ittanmomen_cloth_glide.webp",
+    "category": "presence",
+    "usedBy": [
+      "ittan_momen"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ittanmomen-cloth-glide",
+    "status": "available"
+  },
+  {
+    "id": "ittanmomen_white_stream",
+    "path": "public/assets/effects/presence/ittanmomen_white_stream.webp",
+    "category": "presence",
+    "usedBy": [
+      "ittan_momen"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ittanmomen-white-stream",
+    "status": "available"
+  },
+  {
     "id": "jump_dust",
     "path": "public/assets/effects/pop/jump_dust.webp",
     "category": "pop",
@@ -554,6 +641,47 @@
     "status": "available"
   },
   {
+    "id": "kamikiri_hair_spark",
+    "path": "public/assets/effects/house/kamikiri_hair_spark.webp",
+    "category": "house",
+    "usedBy": [
+      "kamikiri"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-kamikiri-hair-spark",
+    "status": "available"
+  },
+  {
+    "id": "kamikiri_scissor_shadow",
+    "path": "public/assets/effects/house/kamikiri_scissor_shadow.webp",
+    "category": "house",
+    "usedBy": [
+      "kamikiri"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-kamikiri-scissor-shadow",
+    "status": "available"
+  },
+  {
+    "id": "kamikiri_snip_line",
+    "path": "public/assets/effects/house/kamikiri_snip_line.webp",
+    "category": "house",
+    "usedBy": [
+      "kamikiri"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-kamikiri-snip-line",
+    "status": "available"
+  },
+  {
     "id": "kodama_echo_light",
     "path": "public/assets/effects/glow/kodama_echo_light.webp",
     "category": "glow",
@@ -564,6 +692,47 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-kodama-echo-light",
+    "status": "available"
+  },
+  {
+    "id": "konaki_ground_ring",
+    "path": "public/assets/effects/road/konaki_ground_ring.webp",
+    "category": "road",
+    "usedBy": [
+      "konaki_jiji"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-konaki-ground-ring",
+    "status": "available"
+  },
+  {
+    "id": "konaki_stone_bump",
+    "path": "public/assets/effects/road/konaki_stone_bump.webp",
+    "category": "road",
+    "usedBy": [
+      "konaki_jiji"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-konaki-stone-bump",
+    "status": "available"
+  },
+  {
+    "id": "konaki_weight_drop",
+    "path": "public/assets/effects/road/konaki_weight_drop.webp",
+    "category": "road",
+    "usedBy": [
+      "konaki_jiji"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-konaki-weight-drop",
     "status": "available"
   },
   {
@@ -1034,6 +1203,7 @@
     "path": "public/assets/effects/impact/shockwave.webp",
     "category": "impact",
     "usedBy": [
+      "konaki_jiji",
       "oni"
     ],
     "usedFor": [
@@ -1074,7 +1244,8 @@
     "path": "public/assets/effects/water/soft_raindrops.webp",
     "category": "water",
     "usedBy": [
-      "ame_onna"
+      "ame_onna",
+      "ubume"
     ],
     "usedFor": [
       "tapEffect",
@@ -1104,6 +1275,7 @@
     "usedBy": [
       "abura_sumashi",
       "betobeto_san",
+      "kamikiri",
       "kodama",
       "koto_furunushi",
       "mokumokuren",
@@ -1180,6 +1352,47 @@
       "tapEffect"
     ],
     "fallbackClass": "fallback-stretch-shadow",
+    "status": "available"
+  },
+  {
+    "id": "sunakake_sand_curtain",
+    "path": "public/assets/effects/road/sunakake_sand_curtain.webp",
+    "category": "road",
+    "usedBy": [
+      "sunakake_baba"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-sunakake-sand-curtain",
+    "status": "available"
+  },
+  {
+    "id": "sunakake_sand_puff",
+    "path": "public/assets/effects/road/sunakake_sand_puff.webp",
+    "category": "road",
+    "usedBy": [
+      "sunakake_baba"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-sunakake-sand-puff",
+    "status": "available"
+  },
+  {
+    "id": "sunakake_sand_scatter",
+    "path": "public/assets/effects/road/sunakake_sand_scatter.webp",
+    "category": "road",
+    "usedBy": [
+      "sunakake_baba"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-sunakake-sand-scatter",
     "status": "available"
   },
   {
@@ -1334,6 +1547,47 @@
     "status": "available"
   },
   {
+    "id": "ubume_night_glow",
+    "path": "public/assets/effects/presence/ubume_night_glow.webp",
+    "category": "presence",
+    "usedBy": [
+      "ubume"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ubume-night-glow",
+    "status": "available"
+  },
+  {
+    "id": "ubume_rain_veil",
+    "path": "public/assets/effects/presence/ubume_rain_veil.webp",
+    "category": "presence",
+    "usedBy": [
+      "ubume"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ubume-rain-veil",
+    "status": "available"
+  },
+  {
+    "id": "ubume_soft_mist",
+    "path": "public/assets/effects/presence/ubume_soft_mist.webp",
+    "category": "presence",
+    "usedBy": [
+      "ubume"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-ubume-soft-mist",
+    "status": "available"
+  },
+  {
     "id": "wall_guard",
     "path": "public/assets/effects/wall/wall_guard.webp",
     "category": "wall",
@@ -1383,8 +1637,10 @@
       "bake-danuki",
       "betobeto_san",
       "chochin-obake",
+      "enenra",
       "fumikuruma_yohi",
       "hitotsume-kozo",
+      "kamikiri",
       "kitsunebi",
       "kodama",
       "koto_furunushi",
@@ -1463,10 +1719,12 @@
     "path": "public/assets/effects/wind/wind_swirl.webp",
     "category": "wind",
     "usedBy": [
+      "ittan_momen",
       "kamaitachi",
       "karasu-tengu",
       "okuri_inu",
       "shiro_uneri",
+      "sunakake_baba",
       "tengu",
       "yamanba"
     ],
