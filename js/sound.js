@@ -190,6 +190,42 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('cloth') || soundFile.includes('white_wave')) {
+    return [
+      { from: 320, to: 560, length: 0.24, volume: 0.09, type: 'sine' },
+      { from: 460, to: 300, length: 0.28, volume: 0.07, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('paper') || soundFile.includes('letter')) {
+    return [
+      { from: 620, to: 740, length: 0.07, volume: 0.08, type: 'triangle' },
+      { from: 760, to: 620, length: 0.08, volume: 0.07, type: 'sine' },
+      { from: 680, to: 860, length: 0.08, volume: 0.07, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('koto')) {
+    return [
+      { from: 520, to: 1040, length: 0.24, volume: 0.1, type: 'triangle' },
+      { from: 780, to: 1320, length: 0.22, volume: 0.08, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('tofu') || soundFile.includes('wobble')) {
+    return [
+      { from: 240, to: 340, length: 0.12, volume: 0.11, type: 'sine' },
+      { from: 360, to: 260, length: 0.14, volume: 0.09, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('shell')) {
+    return [
+      { from: 760, to: 1120, length: 0.16, volume: 0.1, type: 'sine' },
+      { from: 980, to: 1460, length: 0.16, volume: 0.08, type: 'triangle' }
+    ];
+  }
+
   if (soundFile.includes('water') || soundFile.includes('wave') || soundFile.includes('sea') || soundFile.includes('river')) {
     return [
       { from: 260, to: 420, length: 0.22, volume: 0.12, type: 'sine' },

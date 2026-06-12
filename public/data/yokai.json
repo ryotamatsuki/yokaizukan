@@ -3881,6 +3881,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "paper",
+        "enterEffect": "hopIn",
+        "tapEffect": "tofuKozoTofuWobble",
+        "actionLabel": "ぷるん！",
+        "sound": "tofu_bounce.mp3",
+        "effectAssets": [
+          "public/assets/effects/tsukumogami/tofukozo_tofu_wobble.webp",
+          "public/assets/effects/tsukumogami/tofukozo_soft_bounce.webp",
+          "public/assets/effects/pop/pop_mark.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "豆腐おぼんショー！",
+        "effect": "tofuKozoTrayBalance",
+        "sound": "special_tofu_balance.mp3",
+        "assets": [
+          "public/assets/effects/tsukumogami/tofukozo_tray_balance.webp",
+          "public/assets/effects/tsukumogami/tofukozo_tofu_wobble.webp",
+          "public/assets/effects/tsukumogami/tofukozo_soft_bounce.webp",
+          "public/assets/effects/pop/jump_dust.webp"
+        ]
       }
     },
     {
@@ -4344,6 +4367,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "paper",
+        "enterEffect": "windIn",
+        "tapEffect": "shiroUneriClothFlutter",
+        "actionLabel": "ひらり…",
+        "sound": "cloth_swish.mp3",
+        "effectAssets": [
+          "public/assets/effects/tsukumogami/shirouneri_cloth_flutter.webp",
+          "public/assets/effects/tsukumogami/shirouneri_white_wave.webp",
+          "public/assets/effects/wind/wind_swirl.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "白布ウェーブ！",
+        "effect": "shiroUneriWhiteWave",
+        "sound": "special_white_wave.mp3",
+        "assets": [
+          "public/assets/effects/tsukumogami/shirouneri_white_wave.webp",
+          "public/assets/effects/tsukumogami/shirouneri_fabric_spiral.webp",
+          "public/assets/effects/tsukumogami/shirouneri_cloth_flutter.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
       }
     },
     {
@@ -4463,6 +4509,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "paper",
+        "enterEffect": "fadeIn",
+        "tapEffect": "fumikurumaPaperScatter",
+        "actionLabel": "ひらひら！",
+        "sound": "paper_flitter.mp3",
+        "effectAssets": [
+          "public/assets/effects/tsukumogami/fumikuruma_paper_scatter.webp",
+          "public/assets/effects/tsukumogami/fumikuruma_letter_whirl.webp",
+          "public/assets/effects/pop/pop_mark.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "文のうずまき！",
+        "effect": "fumikurumaLetterWhirl",
+        "sound": "special_letter_whirl.mp3",
+        "assets": [
+          "public/assets/effects/tsukumogami/fumikuruma_letter_whirl.webp",
+          "public/assets/effects/tsukumogami/fumikuruma_scroll_burst.webp",
+          "public/assets/effects/tsukumogami/fumikuruma_paper_scatter.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -4580,6 +4649,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E4%BB%98%E5%96%AA%E7%A5%9E%20%E7%90%B4",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "paper",
+        "enterEffect": "glowIn",
+        "tapEffect": "kotoFurunushiNoteSparkle",
+        "actionLabel": "ぽろん♪",
+        "sound": "koto_note.mp3",
+        "effectAssets": [
+          "public/assets/effects/tsukumogami/kotofurunushi_note_sparkle.webp",
+          "public/assets/effects/tsukumogami/kotofurunushi_sound_wave.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "琴のひびき！",
+        "effect": "kotoFurunushiSoundWave",
+        "sound": "special_koto_wave.mp3",
+        "assets": [
+          "public/assets/effects/tsukumogami/kotofurunushi_music_ring.webp",
+          "public/assets/effects/tsukumogami/kotofurunushi_sound_wave.webp",
+          "public/assets/effects/tsukumogami/kotofurunushi_note_sparkle.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
         ]
       }
     },
@@ -4699,6 +4791,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E8%B2%9D%E5%90%88%E3%82%8F%E3%81%9B%20%E5%A6%96%E6%80%AA",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "splashIn",
+        "tapEffect": "kaichigoShellOpen",
+        "actionLabel": "ぱかっ！",
+        "sound": "shell_open.mp3",
+        "effectAssets": [
+          "public/assets/effects/tsukumogami/kaichigo_shell_open.webp",
+          "public/assets/effects/tsukumogami/kaichigo_bubble_cluster.webp",
+          "public/assets/effects/water/mermaid_bubbles.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "貝がらきらめき！",
+        "effect": "kaichigoShellSparkle",
+        "sound": "special_shell_sparkle.mp3",
+        "assets": [
+          "public/assets/effects/tsukumogami/kaichigo_shell_sparkle.webp",
+          "public/assets/effects/tsukumogami/kaichigo_shell_open.webp",
+          "public/assets/effects/tsukumogami/kaichigo_bubble_cluster.webp",
+          "public/assets/effects/water/ripple.webp"
         ]
       }
     },

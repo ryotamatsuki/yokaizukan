@@ -100,3 +100,18 @@
 | べとべとさん | `betobeto_footsteps.webp` / `invisible_presence_lines.webp` / `betobeto_step_wave.webp` | 見えない足音、気配線、足あと行列 |
 
 流用素材として `pop_mark.webp`、`flying_leaves.webp`、`warm_light_orbs.webp`、`pawprints.webp`、`moon_pawprints.webp`、`wind_swirl.webp`、`sparkle_trail.webp` も使用しています。
+# 道具・付喪神系5体 エフェクト素材追加メモ
+
+追加日: 2026-06-12
+
+`image_gen` で道具・付喪神系エフェクトの5x3シートを生成し、15個のWebP素材に分割して `public/assets/effects/tsukumogami/` に保存しました。白うねり、文車妖妃、琴古主、豆腐小僧、貝児の `animationProfile.effectAssets` と `specialMove.assets` から参照しています。
+
+| 妖怪 | 新規素材 |
+|---|---|
+| 白うねり | `shirouneri_cloth_flutter.webp`, `shirouneri_white_wave.webp`, `shirouneri_fabric_spiral.webp` |
+| 文車妖妃 | `fumikuruma_paper_scatter.webp`, `fumikuruma_letter_whirl.webp`, `fumikuruma_scroll_burst.webp` |
+| 琴古主 | `kotofurunushi_note_sparkle.webp`, `kotofurunushi_sound_wave.webp`, `kotofurunushi_music_ring.webp` |
+| 豆腐小僧 | `tofukozo_tofu_wobble.webp`, `tofukozo_tray_balance.webp`, `tofukozo_soft_bounce.webp` |
+| 貝児 | `kaichigo_shell_open.webp`, `kaichigo_shell_sparkle.webp`, `kaichigo_bubble_cluster.webp` |
+
+流用素材: `wind_swirl.webp`, `sparkle_trail.webp`, `pop_mark.webp`, `warm_light_orbs.webp`, `jump_dust.webp`, `mermaid_bubbles.webp`, `ripple.webp`

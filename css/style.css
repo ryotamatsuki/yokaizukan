@@ -3347,6 +3347,33 @@ body.opening-active {
     drop-shadow(0 0 1rem rgba(140, 190, 235, 0.22));
 }
 
+.tap-shiroUneriClothFlutter,
+.special-shiroUneriWhiteWave,
+.tap-fumikurumaPaperScatter,
+.special-fumikurumaLetterWhirl {
+  filter:
+    brightness(1.1)
+    drop-shadow(0 0 0.75rem rgba(255, 244, 214, 0.44))
+    drop-shadow(0 0 0.9rem rgba(170, 230, 210, 0.2));
+}
+
+.tap-kotoFurunushiNoteSparkle,
+.special-kotoFurunushiSoundWave,
+.tap-tofuKozoTofuWobble,
+.special-tofuKozoTrayBalance {
+  filter:
+    brightness(1.14)
+    drop-shadow(0 0 0.8rem rgba(255, 230, 150, 0.42));
+}
+
+.tap-kaichigoShellOpen,
+.special-kaichigoShellSparkle {
+  filter:
+    brightness(1.15)
+    drop-shadow(0 0 0.85rem rgba(130, 225, 255, 0.48))
+    drop-shadow(0 0 1.05rem rgba(255, 245, 190, 0.24));
+}
+
 .enter-splashIn,
 .enter-windIn,
 .enter-stompIn,
@@ -3394,6 +3421,11 @@ body.opening-active {
 .tap-sunekosuriSoftTrail { animation-name: sunekosuriSoftTrail; }
 .tap-okuriInuShadowTrail { animation-name: okuriInuShadowTrail; }
 .tap-betobetoFootstep { animation-name: betobetoFootstep; }
+.tap-shiroUneriClothFlutter { animation-name: shiroUneriClothFlutter; }
+.tap-fumikurumaPaperScatter { animation-name: fumikurumaPaperScatter; }
+.tap-kotoFurunushiNoteSparkle { animation-name: kotoFurunushiNoteSparkle; }
+.tap-tofuKozoTofuWobble { animation-name: tofuKozoTofuWobble; }
+.tap-kaichigoShellOpen { animation-name: kaichigoShellOpen; }
 
 .special-kappaWaterSpiral { animation-name: kappaWaterSpiral; }
 .special-tenguGreatWind { animation-name: tenguGreatWind; }
@@ -3420,6 +3452,11 @@ body.opening-active {
 .special-sunekosuriPawRush { animation-name: sunekosuriPawRush; }
 .special-okuriInuGuardShadow { animation-name: okuriInuGuardShadow; }
 .special-betobetoInvisibleMarch { animation-name: betobetoInvisibleMarch; }
+.special-shiroUneriWhiteWave { animation-name: shiroUneriWhiteWave; }
+.special-fumikurumaLetterWhirl { animation-name: fumikurumaLetterWhirl; }
+.special-kotoFurunushiSoundWave { animation-name: kotoFurunushiSoundWave; }
+.special-tofuKozoTrayBalance { animation-name: tofuKozoTrayBalance; }
+.special-kaichigoShellSparkle { animation-name: kaichigoShellSparkle; }
 
 .stage-particle {
   position: absolute;
@@ -3473,6 +3510,8 @@ body.opening-active {
 .motion-kodamaLeafWhisper,
 .motion-yamanbaMountainMist,
 .motion-yamanbaMistPath,
+.motion-shiroUneriClothFlutter,
+.motion-shiroUneriWhiteWave,
 .motion-tenguGreatWind {
   animation: yokaiStageFloat 980ms ease-in-out both;
 }
@@ -3498,6 +3537,8 @@ body.opening-active {
 .motion-sunekosuriPawRush,
 .motion-betobetoFootstep,
 .motion-betobetoInvisibleMarch,
+.motion-fumikurumaPaperScatter,
+.motion-fumikurumaLetterWhirl,
 .motion-nekomataDance {
   animation: yokaiStageDance 1100ms ease-in-out both;
 }
@@ -3509,6 +3550,8 @@ body.opening-active {
 .motion-kodamaEchoLight,
 .motion-bakeDanukiLeafPop,
 .motion-bakeDanukiTransformPuff,
+.motion-kotoFurunushiNoteSparkle,
+.motion-kotoFurunushiSoundWave,
 .motion-chochinLightBurst {
   animation: yokaiStageGlow 1200ms ease-out both;
 }
@@ -3529,7 +3572,11 @@ body.opening-active {
   animation: yokaiStageRattle 1100ms ease-in-out both;
 }
 
-.motion-karakasaBigJump {
+.motion-karakasaBigJump,
+.motion-tofuKozoTofuWobble,
+.motion-tofuKozoTrayBalance,
+.motion-kaichigoShellOpen,
+.motion-kaichigoShellSparkle {
   animation: yokaiStageBigJump 1300ms cubic-bezier(0.16, 0.84, 0.24, 1) both;
 }
 
@@ -3858,6 +3905,78 @@ body.opening-active {
   24% { opacity: 0.95; transform: translate(-62%, -42%) rotate(2deg) scale(1.1); }
   78% { opacity: 0.96; transform: translate(-40%, -54%) rotate(18deg) scale(1.72); }
   100% { opacity: 0; transform: translate(-22%, -62%) rotate(28deg) scale(1.92); }
+}
+
+@keyframes shiroUneriClothFlutter {
+  0% { opacity: 0; transform: translate(-64%, -44%) rotate(-12deg) scale(0.68); }
+  26% { opacity: 0.96; transform: translate(-56%, -50%) rotate(4deg) scale(1.06); }
+  72% { opacity: 0.92; transform: translate(-42%, -54%) rotate(18deg) scale(1.24); }
+  100% { opacity: 0; transform: translate(-30%, -58%) rotate(30deg) scale(1.34); }
+}
+
+@keyframes shiroUneriWhiteWave {
+  0% { opacity: 0; transform: translate(-50%, -48%) rotate(-16deg) scale(0.66, 0.82); }
+  24% { opacity: 1; transform: translate(-50%, -50%) rotate(4deg) scale(1.18, 1.06); }
+  78% { opacity: 0.98; transform: translate(-50%, -52%) rotate(34deg) scale(1.86, 1.46); }
+  100% { opacity: 0; transform: translate(-50%, -54%) rotate(54deg) scale(2.08, 1.58); }
+}
+
+@keyframes fumikurumaPaperScatter {
+  0% { opacity: 0; transform: translate(-58%, -42%) rotate(-18deg) scale(0.62); }
+  28% { opacity: 0.96; transform: translate(-52%, -48%) rotate(8deg) scale(1.04); }
+  72% { opacity: 0.94; transform: translate(-42%, -56%) rotate(28deg) scale(1.22); }
+  100% { opacity: 0; transform: translate(-34%, -64%) rotate(44deg) scale(1.34); }
+}
+
+@keyframes fumikurumaLetterWhirl {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-28deg) scale(0.58); }
+  22% { opacity: 1; transform: translate(-50%, -50%) rotate(10deg) scale(1.18); }
+  78% { opacity: 1; transform: translate(-50%, -50%) rotate(112deg) scale(1.84); }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(158deg) scale(2.02); }
+}
+
+@keyframes kotoFurunushiNoteSparkle {
+  0% { opacity: 0; transform: translate(-50%, -46%) scale(0.56) rotate(-8deg); }
+  24% { opacity: 1; transform: translate(-50%, -52%) scale(1.02) rotate(2deg); }
+  74% { opacity: 0.96; transform: translate(-46%, -60%) scale(1.24) rotate(10deg); }
+  100% { opacity: 0; transform: translate(-42%, -66%) scale(1.34) rotate(16deg); }
+}
+
+@keyframes kotoFurunushiSoundWave {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.54, 0.7) rotate(-10deg); }
+  24% { opacity: 1; transform: translate(-50%, -50%) scale(1.08, 1.0) rotate(4deg); }
+  80% { opacity: 0.98; transform: translate(-50%, -50%) scale(1.84, 1.42) rotate(18deg); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(2.06, 1.56) rotate(24deg); }
+}
+
+@keyframes tofuKozoTofuWobble {
+  0% { opacity: 0; transform: translate(-50%, -42%) rotate(-8deg) scale(0.64); }
+  24% { opacity: 1; transform: translate(-50%, -50%) rotate(5deg) scale(1.08, 0.94); }
+  54% { opacity: 1; transform: translate(-50%, -48%) rotate(-4deg) scale(0.96, 1.08); }
+  82% { opacity: 0.94; transform: translate(-50%, -52%) rotate(3deg) scale(1.14, 0.98); }
+  100% { opacity: 0; transform: translate(-50%, -58%) rotate(0deg) scale(1.22); }
+}
+
+@keyframes tofuKozoTrayBalance {
+  0% { opacity: 0; transform: translate(-50%, -44%) rotate(-12deg) scale(0.62); }
+  24% { opacity: 1; transform: translate(-50%, -54%) rotate(8deg) scale(1.18); }
+  50% { opacity: 1; transform: translate(-50%, -48%) rotate(-7deg) scale(1.42); }
+  80% { opacity: 1; transform: translate(-50%, -56%) rotate(5deg) scale(1.72); }
+  100% { opacity: 0; transform: translate(-50%, -64%) rotate(0deg) scale(1.92); }
+}
+
+@keyframes kaichigoShellOpen {
+  0% { opacity: 0; transform: translate(-50%, -46%) scale(0.58); }
+  28% { opacity: 1; transform: translate(-50%, -52%) scale(1.02); }
+  74% { opacity: 0.98; transform: translate(-46%, -58%) scale(1.22) rotate(8deg); }
+  100% { opacity: 0; transform: translate(-42%, -64%) scale(1.34) rotate(14deg); }
+}
+
+@keyframes kaichigoShellSparkle {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-12deg) scale(0.58); }
+  24% { opacity: 1; transform: translate(-50%, -50%) rotate(4deg) scale(1.14); }
+  78% { opacity: 1; transform: translate(-50%, -54%) rotate(26deg) scale(1.76); }
+  100% { opacity: 0; transform: translate(-50%, -60%) rotate(38deg) scale(1.94); }
 }
 
 @keyframes stageParticlePop {
