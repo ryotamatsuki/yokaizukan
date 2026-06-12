@@ -170,6 +170,7 @@
     "path": "public/assets/effects/glow/blue_foxfire.webp",
     "category": "glow",
     "usedBy": [
+      "hitodama",
       "kitsunebi"
     ],
     "usedFor": [
@@ -200,6 +201,7 @@
     "usedBy": [
       "ame_onna",
       "enenra",
+      "nue",
       "ubume",
       "yamanba",
       "yuki-onna"
@@ -489,6 +491,47 @@
     "status": "available"
   },
   {
+    "id": "hitodama_blue_flame",
+    "path": "public/assets/effects/night/hitodama_blue_flame.webp",
+    "category": "night",
+    "usedBy": [
+      "hitodama"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hitodama-blue-flame",
+    "status": "available"
+  },
+  {
+    "id": "hitodama_flame_chain",
+    "path": "public/assets/effects/night/hitodama_flame_chain.webp",
+    "category": "night",
+    "usedBy": [
+      "hitodama"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hitodama-flame-chain",
+    "status": "available"
+  },
+  {
+    "id": "hitodama_ghost_glow",
+    "path": "public/assets/effects/night/hitodama_ghost_glow.webp",
+    "category": "night",
+    "usedBy": [
+      "hitodama"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hitodama-ghost-glow",
+    "status": "available"
+  },
+  {
     "id": "hitotsume_eye_blink",
     "path": "public/assets/effects/house/hitotsume_eye_blink.webp",
     "category": "house",
@@ -527,6 +570,47 @@
       "specialMove"
     ],
     "fallbackClass": "fallback-hitotsume-surprise-ring",
+    "status": "available"
+  },
+  {
+    "id": "hyakki_night_lanterns",
+    "path": "public/assets/effects/night/hyakki_night_lanterns.webp",
+    "category": "night",
+    "usedBy": [
+      "hyakki-yagyo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hyakki-night-lanterns",
+    "status": "available"
+  },
+  {
+    "id": "hyakki_parade_wave",
+    "path": "public/assets/effects/night/hyakki_parade_wave.webp",
+    "category": "night",
+    "usedBy": [
+      "hyakki-yagyo"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hyakki-parade-wave",
+    "status": "available"
+  },
+  {
+    "id": "hyakki_shadow_parade",
+    "path": "public/assets/effects/night/hyakki_shadow_parade.webp",
+    "category": "night",
+    "usedBy": [
+      "hyakki-yagyo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-hyakki-shadow-parade",
     "status": "available"
   },
   {
@@ -988,6 +1072,47 @@
     "status": "available"
   },
   {
+    "id": "nue_dark_cloud",
+    "path": "public/assets/effects/night/nue_dark_cloud.webp",
+    "category": "night",
+    "usedBy": [
+      "nue"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-nue-dark-cloud",
+    "status": "available"
+  },
+  {
+    "id": "nue_storm_ring",
+    "path": "public/assets/effects/night/nue_storm_ring.webp",
+    "category": "night",
+    "usedBy": [
+      "nue"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-nue-storm-ring",
+    "status": "available"
+  },
+  {
+    "id": "nue_thunder_flash",
+    "path": "public/assets/effects/night/nue_thunder_flash.webp",
+    "category": "night",
+    "usedBy": [
+      "nue"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-nue-thunder-flash",
+    "status": "available"
+  },
+  {
     "id": "nuppeppo_blob_bounce",
     "path": "public/assets/effects/presence/nuppeppo_blob_bounce.webp",
     "category": "presence",
@@ -1161,6 +1286,7 @@
       "bake-danuki",
       "fumikuruma_yohi",
       "hitotsume-kozo",
+      "hyakki-yagyo",
       "hyosube",
       "karakasa-kozo",
       "tofu-kozo"
@@ -1361,12 +1487,14 @@
     "usedBy": [
       "abura_sumashi",
       "betobeto_san",
+      "hitodama",
       "kamikiri",
       "kodama",
       "koto_furunushi",
       "mokumokuren",
       "rokurokubi",
-      "shiro_uneri"
+      "shiro_uneri",
+      "tsuchigumo"
     ],
     "usedFor": [
       "specialMove",
@@ -1633,6 +1761,47 @@
     "status": "available"
   },
   {
+    "id": "tsuchigumo_silk_swirl",
+    "path": "public/assets/effects/night/tsuchigumo_silk_swirl.webp",
+    "category": "night",
+    "usedBy": [
+      "tsuchigumo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-tsuchigumo-silk-swirl",
+    "status": "available"
+  },
+  {
+    "id": "tsuchigumo_thread_line",
+    "path": "public/assets/effects/night/tsuchigumo_thread_line.webp",
+    "category": "night",
+    "usedBy": [
+      "tsuchigumo"
+    ],
+    "usedFor": [
+      "tapEffect",
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-tsuchigumo-thread-line",
+    "status": "available"
+  },
+  {
+    "id": "tsuchigumo_web_spread",
+    "path": "public/assets/effects/night/tsuchigumo_web_spread.webp",
+    "category": "night",
+    "usedBy": [
+      "tsuchigumo"
+    ],
+    "usedFor": [
+      "specialMove"
+    ],
+    "fallbackClass": "fallback-tsuchigumo-web-spread",
+    "status": "available"
+  },
+  {
     "id": "ubume_night_glow",
     "path": "public/assets/effects/presence/ubume_night_glow.webp",
     "category": "presence",
@@ -1809,11 +1978,13 @@
       "enenra",
       "fumikuruma_yohi",
       "hitotsume-kozo",
+      "hyakki-yagyo",
       "kamikiri",
       "kitsunebi",
       "kodama",
       "koto_furunushi",
       "ningyo",
+      "nue",
       "oonyudo",
       "wanyudo",
       "zashiki-warashi"
@@ -1898,6 +2069,7 @@
       "shiro_uneri",
       "sunakake_baba",
       "tengu",
+      "tsuchigumo",
       "yamanba"
     ],
     "usedFor": [

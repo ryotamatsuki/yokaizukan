@@ -210,6 +210,24 @@
     "status": "generated"
   },
   {
+    "id": "hitodama_blue_flame",
+    "path": "public/assets/effects/night/hitodama_blue_flame.webp",
+    "promptJa": "透明背景WebP前提。hitodama_blue_flame の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "hitodama_flame_chain",
+    "path": "public/assets/effects/night/hitodama_flame_chain.webp",
+    "promptJa": "透明背景WebP前提。hitodama_flame_chain の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "hitodama_ghost_glow",
+    "path": "public/assets/effects/night/hitodama_ghost_glow.webp",
+    "promptJa": "透明背景WebP前提。hitodama_ghost_glow の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
     "id": "hitotsume_eye_blink",
     "path": "public/assets/effects/house/hitotsume_eye_blink.webp",
     "promptJa": "透明背景WebP前提。hitotsume_eye_blink の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
@@ -225,6 +243,24 @@
     "id": "hitotsume_surprise_ring",
     "path": "public/assets/effects/house/hitotsume_surprise_ring.webp",
     "promptJa": "透明背景WebP前提。hitotsume_surprise_ring の子ども向けエフェクト素材。妖怪本体ではなく、非攻撃的で怖すぎない視認性の高い軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "hyakki_night_lanterns",
+    "path": "public/assets/effects/night/hyakki_night_lanterns.webp",
+    "promptJa": "透明背景WebP前提。hyakki_night_lanterns の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "hyakki_parade_wave",
+    "path": "public/assets/effects/night/hyakki_parade_wave.webp",
+    "promptJa": "透明背景WebP前提。hyakki_parade_wave の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "hyakki_shadow_parade",
+    "path": "public/assets/effects/night/hyakki_shadow_parade.webp",
+    "promptJa": "透明背景WebP前提。hyakki_shadow_parade の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   },
   {
@@ -423,6 +459,24 @@
     "id": "mountain_path_mist",
     "path": "public/assets/effects/wind/mountain_path_mist.webp",
     "promptJa": "Use case: stylized-concept. Asset type: isolated overlay effect sprite for a children's yokai encyclopedia app. Mountain path mist for Yamanba special move: sweeping bands of soft white and pale blue mist flowing along an implied mountain path, gentle curves, a few autumn leaves and small light specks, bigger and wider than a tap effect. No old woman, no face, no chasing, no attack, no eating, no scary elements. Japanese picture-book style, centered square sprite with generous padding. Generate on a perfectly flat solid #00ff00 chroma-key background for local background removal. No text, no logo, no watermark, no checkerboard, child-friendly, mysterious but calm.",
+    "status": "generated"
+  },
+  {
+    "id": "nue_dark_cloud",
+    "path": "public/assets/effects/night/nue_dark_cloud.webp",
+    "promptJa": "透明背景WebP前提。nue_dark_cloud の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "nue_storm_ring",
+    "path": "public/assets/effects/night/nue_storm_ring.webp",
+    "promptJa": "透明背景WebP前提。nue_storm_ring の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "nue_thunder_flash",
+    "path": "public/assets/effects/night/nue_thunder_flash.webp",
+    "promptJa": "透明背景WebP前提。nue_thunder_flash の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   },
   {
@@ -699,6 +753,24 @@
     "id": "triple_whirlwind",
     "path": "public/assets/effects/wind/triple_whirlwind.webp",
     "promptJa": "Use case: stylized-concept. Asset type: transparent overlay effect sprite for a children's yokai encyclopedia app. Triple whirlwind for Kamaitachi special move: three small friendly white whirlwinds made of ribbon-like wind trails with tiny sparkles. Generate on a perfectly flat solid #00ff00 chroma-key background for background removal. No blades, no cuts, no weapons, no text, child-friendly.",
+    "status": "generated"
+  },
+  {
+    "id": "tsuchigumo_silk_swirl",
+    "path": "public/assets/effects/night/tsuchigumo_silk_swirl.webp",
+    "promptJa": "透明背景WebP前提。tsuchigumo_silk_swirl の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "tsuchigumo_thread_line",
+    "path": "public/assets/effects/night/tsuchigumo_thread_line.webp",
+    "promptJa": "透明背景WebP前提。tsuchigumo_thread_line の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
+    "status": "generated"
+  },
+  {
+    "id": "tsuchigumo_web_spread",
+    "path": "public/assets/effects/night/tsuchigumo_web_spread.webp",
+    "promptJa": "透明背景WebP前提。tsuchigumo_web_spread の夜・怪異系妖怪向けエフェクト素材。妖怪本体ではなく、夜らしさと不思議さを出しつつ怖すぎない、子ども向けで非攻撃的な軽量スプライト。余白を広くしすぎず、残酷・流血・ホラー表現なし。",
     "status": "generated"
   },
   {

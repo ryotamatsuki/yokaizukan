@@ -3450,6 +3450,20 @@ body.opening-active {
     drop-shadow(0 0 1rem rgba(255, 226, 150, 0.22));
 }
 
+.tap-tsuchigumoThreadLine,
+.special-tsuchigumoWebSpread,
+.tap-nueDarkCloud,
+.special-nueThunderFlash,
+.tap-hitodamaBlueFlame,
+.special-hitodamaFlameChain,
+.tap-hyakkiShadowParade,
+.special-hyakkiParadeWave {
+  filter:
+    brightness(1.15)
+    drop-shadow(0 0 0.9rem rgba(135, 210, 255, 0.38))
+    drop-shadow(0 0 1rem rgba(255, 235, 170, 0.18));
+}
+
 .enter-splashIn,
 .enter-windIn,
 .enter-stompIn,
@@ -3464,6 +3478,7 @@ body.opening-active {
 
 .enter-rollIn { animation-name: rollIn; }
 .enter-growIn { animation-name: growIn; }
+.enter-stormIn { animation-name: stormIn; }
 
 .enter-shadowRise {
   animation: none !important;
@@ -3521,6 +3536,10 @@ body.opening-active {
 .tap-oonyudoShadowGrow { animation-name: oonyudoShadowGrow; }
 .tap-ushiOniHeavyShadow { animation-name: ushiOniHeavyShadow; }
 .tap-daidarabocchiBigFootprint { animation-name: daidarabocchiBigFootprint; }
+.tap-tsuchigumoThreadLine { animation-name: tsuchigumoThreadLine; }
+.tap-nueDarkCloud { animation-name: nueDarkCloud; }
+.tap-hitodamaBlueFlame { animation-name: hitodamaBlueFlame; }
+.tap-hyakkiShadowParade { animation-name: hyakkiShadowParade; }
 
 .special-kappaWaterSpiral { animation-name: kappaWaterSpiral; }
 .special-tenguGreatWind { animation-name: tenguGreatWind; }
@@ -3568,6 +3587,10 @@ body.opening-active {
 .special-oonyudoBigRise { animation-name: oonyudoBigRise; }
 .special-ushiOniWaveBurst { animation-name: ushiOniWaveBurst; }
 .special-daidarabocchiMountainShadow { animation-name: daidarabocchiMountainShadow; }
+.special-tsuchigumoWebSpread { animation-name: tsuchigumoWebSpread; }
+.special-nueThunderFlash { animation-name: nueThunderFlash; }
+.special-hitodamaFlameChain { animation-name: hitodamaFlameChain; }
+.special-hyakkiParadeWave { animation-name: hyakkiParadeWave; }
 
 .stage-particle {
   position: absolute;
@@ -3627,6 +3650,10 @@ body.opening-active {
 .motion-enenraSmokeFace,
 .motion-ittanMomenClothGlide,
 .motion-ittanMomenWhiteStream,
+.motion-tsuchigumoThreadLine,
+.motion-tsuchigumoWebSpread,
+.motion-nueDarkCloud,
+.motion-nueThunderFlash,
 .motion-tenguGreatWind {
   animation: yokaiStageFloat 980ms ease-in-out both;
 }
@@ -3654,6 +3681,8 @@ body.opening-active {
 .motion-betobetoInvisibleMarch,
 .motion-fumikurumaPaperScatter,
 .motion-fumikurumaLetterWhirl,
+.motion-hyakkiShadowParade,
+.motion-hyakkiParadeWave,
 .motion-nekomataDance {
   animation: yokaiStageDance 1100ms ease-in-out both;
 }
@@ -3672,6 +3701,8 @@ body.opening-active {
 .motion-zashikiLuckySparkle,
 .motion-wanyuudoWheelRoll,
 .motion-wanyuudoFireSpin,
+.motion-hitodamaBlueFlame,
+.motion-hitodamaFlameChain,
 .motion-chochinLightBurst {
   animation: yokaiStageGlow 1200ms ease-out both;
 }
@@ -4374,6 +4405,69 @@ body.opening-active {
   24% { opacity: 0.98; transform: translate(-50%, -44%) scale(1.12, 1.12); }
   82% { opacity: 0.96; transform: translate(-50%, -62%) scale(1.82, 1.86); }
   100% { opacity: 0; transform: translate(-50%, -70%) scale(2.08, 2.06); }
+}
+
+@keyframes stormIn {
+  0% { opacity: 0; transform: translate(-50%, -42%) scale(0.62) rotate(-8deg); }
+  68% { opacity: 0.96; transform: translate(-50%, -50%) scale(1.08) rotate(4deg); }
+  100% { opacity: 0; transform: translate(-50%, -54%) scale(1.22) rotate(12deg); }
+}
+
+@keyframes tsuchigumoThreadLine {
+  0% { opacity: 0; transform: translate(-74%, -48%) rotate(-12deg) scale(0.58); }
+  28% { opacity: 0.96; transform: translate(-58%, -50%) rotate(2deg) scale(1.02); }
+  76% { opacity: 0.92; transform: translate(-38%, -54%) rotate(14deg) scale(1.2); }
+  100% { opacity: 0; transform: translate(-24%, -58%) rotate(22deg) scale(1.32); }
+}
+
+@keyframes tsuchigumoWebSpread {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-18deg) scale(0.48); }
+  24% { opacity: 1; transform: translate(-50%, -50%) rotate(4deg) scale(1.12); }
+  78% { opacity: 0.96; transform: translate(-50%, -50%) rotate(28deg) scale(1.82); }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(40deg) scale(2.04); }
+}
+
+@keyframes nueDarkCloud {
+  0% { opacity: 0; transform: translate(-58%, -42%) scale(0.58); }
+  30% { opacity: 0.92; transform: translate(-52%, -48%) scale(1.06); }
+  76% { opacity: 0.88; transform: translate(-44%, -54%) scale(1.24); }
+  100% { opacity: 0; transform: translate(-36%, -60%) scale(1.38); }
+}
+
+@keyframes nueThunderFlash {
+  0% { opacity: 0; transform: translate(-50%, -48%) scale(0.54) rotate(-10deg); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scale(1.18) rotate(4deg); }
+  52% { opacity: 0.84; transform: translate(-50%, -52%) scale(1.62) rotate(18deg); }
+  82% { opacity: 1; transform: translate(-50%, -54%) scale(1.86) rotate(28deg); }
+  100% { opacity: 0; transform: translate(-50%, -58%) scale(2.08) rotate(36deg); }
+}
+
+@keyframes hitodamaBlueFlame {
+  0% { opacity: 0; transform: translate(-48%, -38%) scale(0.58); }
+  26% { opacity: 1; transform: translate(-52%, -50%) scale(1.08); }
+  76% { opacity: 0.96; transform: translate(-46%, -62%) scale(1.22); }
+  100% { opacity: 0; transform: translate(-42%, -70%) scale(1.36); }
+}
+
+@keyframes hitodamaFlameChain {
+  0% { opacity: 0; transform: translate(-72%, -40%) rotate(-10deg) scale(0.58); }
+  24% { opacity: 1; transform: translate(-58%, -48%) rotate(2deg) scale(1.12); }
+  78% { opacity: 1; transform: translate(-36%, -58%) rotate(18deg) scale(1.72); }
+  100% { opacity: 0; transform: translate(-22%, -66%) rotate(28deg) scale(1.92); }
+}
+
+@keyframes hyakkiShadowParade {
+  0% { opacity: 0; transform: translate(-82%, -46%) scale(0.62); }
+  26% { opacity: 0.95; transform: translate(-64%, -50%) scale(1.02); }
+  76% { opacity: 0.9; transform: translate(-38%, -54%) scale(1.18); }
+  100% { opacity: 0; transform: translate(-20%, -58%) scale(1.28); }
+}
+
+@keyframes hyakkiParadeWave {
+  0% { opacity: 0; transform: translate(-82%, -42%) rotate(-6deg) scale(0.58); }
+  24% { opacity: 1; transform: translate(-64%, -48%) rotate(2deg) scale(1.12); }
+  78% { opacity: 1; transform: translate(-36%, -56%) rotate(12deg) scale(1.76); }
+  100% { opacity: 0; transform: translate(-18%, -62%) rotate(18deg) scale(1.96); }
 }
 
 @keyframes stageParticlePop {

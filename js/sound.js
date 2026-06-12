@@ -290,6 +290,38 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('silk') || soundFile.includes('web')) {
+    return [
+      { from: 720, to: 540, length: 0.1, volume: 0.07, type: 'triangle' },
+      { from: 560, to: 880, length: 0.18, volume: 0.06, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('thunder') || soundFile.includes('cloud')) {
+    return [
+      { from: 170, to: 85, length: 0.22, volume: 0.15, type: 'sawtooth' },
+      { from: 860, to: 1320, length: 0.08, volume: 0.1, type: 'triangle' },
+      { from: 280, to: 160, length: 0.24, volume: 0.08, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('ghost_flame') || soundFile.includes('flame_chain')) {
+    return [
+      { from: 520, to: 860, length: 0.22, volume: 0.1, type: 'sine' },
+      { from: 720, to: 1120, length: 0.22, volume: 0.08, type: 'triangle' },
+      { from: 620, to: 940, length: 0.2, volume: 0.07, type: 'sine' }
+    ];
+  }
+
+  if (soundFile.includes('parade')) {
+    return [
+      { from: 220, to: 160, length: 0.08, volume: 0.09, type: 'sine' },
+      { from: 300, to: 210, length: 0.08, volume: 0.08, type: 'triangle' },
+      { from: 260, to: 190, length: 0.08, volume: 0.08, type: 'sine' },
+      { from: 520, to: 760, length: 0.14, volume: 0.06, type: 'triangle' }
+    ];
+  }
+
   if (soundFile.includes('snip') || soundFile.includes('scissors') || soundFile.includes('hair_spark')) {
     return [
       { from: 880, to: 520, length: 0.06, volume: 0.11, type: 'triangle' },

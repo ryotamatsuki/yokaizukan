@@ -1,3 +1,18 @@
+## 夜・怪異4体 エフェクト素材追加メモ
+
+追加日: 2026-06-12
+
+`image_gen` で夜・怪異系エフェクトの4x3シートを生成し、12個のWebP素材に分割して `public/assets/effects/night/` に保存しました。土蜘蛛、鵺、人魂、百鬼夜行の `animationProfile.effectAssets` と `specialMove.assets` から参照しています。
+
+| 妖怪 | 新規素材 |
+|---|---|
+| 土蜘蛛 | `tsuchigumo_thread_line.webp`, `tsuchigumo_web_spread.webp`, `tsuchigumo_silk_swirl.webp` |
+| 鵺 | `nue_dark_cloud.webp`, `nue_thunder_flash.webp`, `nue_storm_ring.webp` |
+| 人魂 | `hitodama_blue_flame.webp`, `hitodama_flame_chain.webp`, `hitodama_ghost_glow.webp` |
+| 百鬼夜行 | `hyakki_shadow_parade.webp`, `hyakki_night_lanterns.webp`, `hyakki_parade_wave.webp` |
+
+流用素材: `sparkle_trail.webp`, `wind_swirl.webp`, `cold_mist.webp`, `warm_light_orbs.webp`, `blue_foxfire.webp`, `pop_mark.webp`
+
 # 子ども向け妖怪図鑑 画像アセット
 
 生成日: 2026-05-23 / 2026-05-24

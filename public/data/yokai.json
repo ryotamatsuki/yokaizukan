@@ -3651,6 +3651,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "fadeIn",
+        "tapEffect": "tsuchigumoThreadLine",
+        "actionLabel": "すいっ！",
+        "sound": "silk_line.mp3",
+        "effectAssets": [
+          "public/assets/effects/night/tsuchigumo_thread_line.webp",
+          "public/assets/effects/night/tsuchigumo_silk_swirl.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "くもの巣ひろがり！",
+        "effect": "tsuchigumoWebSpread",
+        "sound": "special_web_spread.mp3",
+        "assets": [
+          "public/assets/effects/night/tsuchigumo_web_spread.webp",
+          "public/assets/effects/night/tsuchigumo_silk_swirl.webp",
+          "public/assets/effects/night/tsuchigumo_thread_line.webp",
+          "public/assets/effects/wind/wind_swirl.webp"
+        ]
       }
     },
     {
@@ -3770,6 +3793,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "stormIn",
+        "tapEffect": "nueDarkCloud",
+        "actionLabel": "もくもく",
+        "sound": "dark_cloud.mp3",
+        "effectAssets": [
+          "public/assets/effects/night/nue_dark_cloud.webp",
+          "public/assets/effects/night/nue_storm_ring.webp",
+          "public/assets/effects/snow/cold_mist.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "夜のらいうん！",
+        "effect": "nueThunderFlash",
+        "sound": "special_thunder_flash.mp3",
+        "assets": [
+          "public/assets/effects/night/nue_thunder_flash.webp",
+          "public/assets/effects/night/nue_storm_ring.webp",
+          "public/assets/effects/night/nue_dark_cloud.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -3877,6 +3923,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E9%AC%BC%E7%81%AB%20%E4%BA%BA%E9%AD%82",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "glowIn",
+        "tapEffect": "hitodamaBlueFlame",
+        "actionLabel": "ふわり",
+        "sound": "ghost_flame.mp3",
+        "effectAssets": [
+          "public/assets/effects/night/hitodama_blue_flame.webp",
+          "public/assets/effects/night/hitodama_ghost_glow.webp",
+          "public/assets/effects/glow/blue_foxfire.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "人魂れっしゃ！",
+        "effect": "hitodamaFlameChain",
+        "sound": "special_flame_chain.mp3",
+        "assets": [
+          "public/assets/effects/night/hitodama_flame_chain.webp",
+          "public/assets/effects/night/hitodama_blue_flame.webp",
+          "public/assets/effects/night/hitodama_ghost_glow.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
         ]
       }
     },
@@ -4137,6 +4206,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E7%99%BE%E9%AC%BC%E5%A4%9C%E8%A1%8C%E7%B5%B5%E5%B7%BB",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "night",
+        "enterEffect": "walkIn",
+        "tapEffect": "hyakkiShadowParade",
+        "actionLabel": "ぞろぞろ",
+        "sound": "shadow_parade.mp3",
+        "effectAssets": [
+          "public/assets/effects/night/hyakki_shadow_parade.webp",
+          "public/assets/effects/night/hyakki_night_lanterns.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "ようかい行列！",
+        "effect": "hyakkiParadeWave",
+        "sound": "special_parade_wave.mp3",
+        "assets": [
+          "public/assets/effects/night/hyakki_parade_wave.webp",
+          "public/assets/effects/night/hyakki_shadow_parade.webp",
+          "public/assets/effects/night/hyakki_night_lanterns.webp",
+          "public/assets/effects/pop/pop_mark.webp"
         ]
       }
     },
