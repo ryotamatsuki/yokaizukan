@@ -174,6 +174,43 @@ function getPattern(soundFile) {
     ];
   }
 
+  if (soundFile.includes('bubble')) {
+    return [
+      { from: 720, to: 1040, length: 0.09, volume: 0.11, type: 'sine' },
+      { from: 860, to: 1260, length: 0.1, volume: 0.09, type: 'sine' },
+      { from: 980, to: 1460, length: 0.11, volume: 0.08, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('rain')) {
+    return [
+      { from: 760, to: 620, length: 0.08, volume: 0.08, type: 'triangle' },
+      { from: 840, to: 680, length: 0.08, volume: 0.07, type: 'sine' },
+      { from: 700, to: 560, length: 0.1, volume: 0.07, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('water') || soundFile.includes('wave') || soundFile.includes('sea') || soundFile.includes('river')) {
+    return [
+      { from: 260, to: 420, length: 0.22, volume: 0.12, type: 'sine' },
+      { from: 360, to: 240, length: 0.24, volume: 0.09, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('forest') || soundFile.includes('kodama') || soundFile.includes('leaf')) {
+    return [
+      { from: 520, to: 740, length: 0.18, volume: 0.09, type: 'sine' },
+      { from: 680, to: 920, length: 0.2, volume: 0.08, type: 'triangle' }
+    ];
+  }
+
+  if (soundFile.includes('mist')) {
+    return [
+      { from: 420, to: 620, length: 0.28, volume: 0.07, type: 'sine' },
+      { from: 520, to: 390, length: 0.3, volume: 0.06, type: 'triangle' }
+    ];
+  }
+
   if (soundFile.includes('fire') || soundFile.includes('foxfire')) {
     return [
       { from: 520, to: 860, length: 0.2, volume: 0.12, type: 'sine' },

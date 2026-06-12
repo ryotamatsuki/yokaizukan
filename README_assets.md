@@ -59,6 +59,21 @@
 | ひょうすべ | `public/assets/yokai/hyosube.png` | 河童に近いとされる水辺の小さな妖怪。 | 水辺、川、小さな体、河童に近い姿。 |
 | だいだらぼっち | `public/assets/yokai/daidarabotchi.png` | 山や湖より大きく見えるやさしい巨人。 | 巨大、山、湖、大きな足あと。 |
 
+## エフェクト素材追加メモ
+
+2026-06-12 に、自然・水辺系6体のアニメーション用エフェクト素材を追加しました。各素材はクロマキー背景で生成後、透明背景WebPとして `public/assets/effects/` 配下に保存しています。
+
+| 妖怪 | 新規エフェクト素材 | 主な用途 |
+|---|---|---|
+| 人魚 | `public/assets/effects/water/mermaid_bubbles.webp` / `public/assets/effects/water/shell_sparkle_wave.webp` | 通常リアクションの泡、ひっさつわざの貝と波のきらめき |
+| 海坊主 | `public/assets/effects/water/dark_wave_shadow.webp` / `public/assets/effects/water/sea_shadow_rise.webp` | 通常リアクションの波影、ひっさつわざの海の影 |
+| 雨女 | `public/assets/effects/water/soft_raindrops.webp` / `public/assets/effects/water/rain_cloud_curtain.webp` | 通常リアクションの雨粒、ひっさつわざの雨雲カーテン |
+| ひょうすべ | `public/assets/effects/water/river_hop_splash.webp` / `public/assets/effects/pop/water_jump_pop.webp` | 通常リアクションの水跳ね、ひっさつわざの川べりジャンプ |
+| 木霊 | `public/assets/effects/wind/forest_leaves_soft.webp` / `public/assets/effects/glow/kodama_echo_light.webp` | 通常リアクションの葉、ひっさつわざの森のこだま光 |
+| 山姥 | `public/assets/effects/snow/mountain_mist_soft.webp` / `public/assets/effects/wind/mountain_path_mist.webp` | 通常リアクションの山霧、ひっさつわざの山道ミスト |
+
+流用素材として、`water_drops.webp`、`ripple.webp`、`warm_light_orbs.webp`、`water_spiral.webp`、`big_splash.webp`、`cold_mist.webp`、`water_splash.webp`、`jump_dust.webp`、`pop_mark.webp`、`leaves.webp`、`flying_leaves.webp`、`sparkle_trail.webp`、`wind_swirl.webp` も使用しています。
+
 ## 参照した主な資料
 
 - NDLイメージバンク「妖怪」: https://www.ndl.go.jp/imagebank/yokai

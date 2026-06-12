@@ -2,6 +2,9 @@ import { playSound } from './sound.js';
 
 const MAX_TAP_ASSETS = 3;
 const MAX_SPECIAL_ASSETS = 4;
+const SPECIAL_STATE_MIN_MS = 2300;
+const SPECIAL_STATE_BUFFER_MS = 420;
+const SPECIAL_REDUCED_MOTION_MS = 260;
 let specialTimer;
 
 export function playEnterEffect(yokai) {
@@ -77,7 +80,8 @@ export function playSpecialMove(yokai) {
     replayMotion(image, `motion-${special.effect || 'special'}`, 1300);
   }
 
-  (special.assets || []).slice(0, MAX_SPECIAL_ASSETS).forEach((src, index) => {
+  const specialAssets = (special.assets || []).slice(0, MAX_SPECIAL_ASSETS);
+  specialAssets.forEach((src, index) => {
     spawnEffect(src, `effect-sprite special-effect-sprite special-${special.effect || 'special'}`, getSpecialEffectOptions(index));
   });
 
@@ -88,7 +92,7 @@ export function playSpecialMove(yokai) {
     button?.classList.remove('is-playing');
     stage?.classList.remove('is-special');
     stage?.removeAttribute('data-special-effect');
-  }, prefersReducedMotion() ? 260 : 1650);
+  }, prefersReducedMotion() ? SPECIAL_REDUCED_MOTION_MS : getSpecialStateDuration(specialAssets.length));
 }
 
 function getSpecialEffectOptions(index) {
@@ -100,6 +104,34 @@ function getSpecialEffectOptions(index) {
   ];
 
   return layout[index] || layout[layout.length - 1];
+}
+
+function getSpecialStateDuration(assetCount) {
+  const count = Math.max(1, Math.min(assetCount, MAX_SPECIAL_ASSETS));
+  let latestEnd = 0;
+
+  for (let index = 0; index < count; index += 1) {
+    const options = getSpecialEffectOptions(index);
+    latestEnd = Math.max(latestEnd, readMilliseconds(options.delay) + readMilliseconds(options.duration));
+  }
+
+  return Math.max(SPECIAL_STATE_MIN_MS, latestEnd + SPECIAL_STATE_BUFFER_MS);
+}
+
+function readMilliseconds(value) {
+  if (typeof value === 'number') {
+    return value;
+  }
+  if (typeof value !== 'string') {
+    return 0;
+  }
+  if (value.endsWith('ms')) {
+    return Number.parseFloat(value) || 0;
+  }
+  if (value.endsWith('s')) {
+    return (Number.parseFloat(value) || 0) * 1000;
+  }
+  return Number.parseFloat(value) || 0;
 }
 
 export function spawnEffect(src, className, options = {}) {

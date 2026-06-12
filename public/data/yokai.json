@@ -2563,6 +2563,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "shadowRise",
+        "tapEffect": "umibozuWaveShadow",
+        "actionLabel": "ざぶん…",
+        "sound": "wave_shadow.mp3",
+        "effectAssets": [
+          "public/assets/effects/water/dark_wave_shadow.webp",
+          "public/assets/effects/water/water_spiral.webp",
+          "public/assets/effects/water/water_drops.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "海の影むくり！",
+        "effect": "umibozuSeaShadowRise",
+        "sound": "special_sea_shadow.mp3",
+        "assets": [
+          "public/assets/effects/water/sea_shadow_rise.webp",
+          "public/assets/effects/water/dark_wave_shadow.webp",
+          "public/assets/effects/water/big_splash.webp",
+          "public/assets/effects/water/water_spiral.webp"
+        ]
       }
     },
     {
@@ -2676,6 +2699,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E4%BA%BA%E9%AD%9A%20%E6%97%A5%E6%9C%AC%20%E4%BC%9D%E6%89%BF",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "splashIn",
+        "tapEffect": "ningyoBubbleFloat",
+        "actionLabel": "ぷくぷく！",
+        "sound": "bubble.mp3",
+        "effectAssets": [
+          "public/assets/effects/water/mermaid_bubbles.webp",
+          "public/assets/effects/water/water_drops.webp",
+          "public/assets/effects/water/ripple.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "貝のきらめき波！",
+        "effect": "ningyoShellSparkle",
+        "sound": "special_shell_wave.mp3",
+        "assets": [
+          "public/assets/effects/water/shell_sparkle_wave.webp",
+          "public/assets/effects/water/mermaid_bubbles.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp",
+          "public/assets/effects/water/ripple.webp"
         ]
       }
     },
@@ -3034,6 +3080,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "mountain",
+        "enterEffect": "glowIn",
+        "tapEffect": "kodamaLeafWhisper",
+        "actionLabel": "さわさわ！",
+        "sound": "forest_leaves.mp3",
+        "effectAssets": [
+          "public/assets/effects/wind/forest_leaves_soft.webp",
+          "public/assets/effects/wind/leaves.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "森のこだま光！",
+        "effect": "kodamaEchoLight",
+        "sound": "special_kodama_echo.mp3",
+        "assets": [
+          "public/assets/effects/glow/kodama_echo_light.webp",
+          "public/assets/effects/wind/forest_leaves_soft.webp",
+          "public/assets/effects/wind/flying_leaves.webp",
+          "public/assets/effects/magic/sparkle_trail.webp"
+        ]
       }
     },
     {
@@ -3182,6 +3251,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E5%B1%B1%E5%A7%A5%20%E9%87%91%E5%A4%AA%E9%83%8E",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "mountain",
+        "enterEffect": "windIn",
+        "tapEffect": "yamanbaMountainMist",
+        "actionLabel": "ふわり…",
+        "sound": "mountain_mist.mp3",
+        "effectAssets": [
+          "public/assets/effects/snow/mountain_mist_soft.webp",
+          "public/assets/effects/snow/cold_mist.webp",
+          "public/assets/effects/wind/wind_swirl.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "山道ミスト！",
+        "effect": "yamanbaMistPath",
+        "sound": "special_mist_path.mp3",
+        "assets": [
+          "public/assets/effects/wind/mountain_path_mist.webp",
+          "public/assets/effects/snow/mountain_mist_soft.webp",
+          "public/assets/effects/snow/cold_mist.webp",
+          "public/assets/effects/wind/flying_leaves.webp"
         ]
       }
     },
@@ -5497,6 +5589,29 @@
             "note": "関連する昔話・古典資料を探す入口"
           }
         ]
+      },
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "snowFadeIn",
+        "tapEffect": "ameonnaRainDrop",
+        "actionLabel": "ぽつぽつ！",
+        "sound": "rain_drop.mp3",
+        "effectAssets": [
+          "public/assets/effects/water/soft_raindrops.webp",
+          "public/assets/effects/water/water_drops.webp",
+          "public/assets/effects/snow/cold_mist.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "雨雲カーテン！",
+        "effect": "ameonnaRainCurtain",
+        "sound": "special_rain_curtain.mp3",
+        "assets": [
+          "public/assets/effects/water/rain_cloud_curtain.webp",
+          "public/assets/effects/water/soft_raindrops.webp",
+          "public/assets/effects/snow/cold_mist.webp",
+          "public/assets/effects/glow/warm_light_orbs.webp"
+        ]
       }
     },
     {
@@ -6084,6 +6199,29 @@
             "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E3%81%B2%E3%82%87%E3%81%86%E3%81%99%E3%81%B9%20%E6%B2%B3%E7%AB%A5",
             "note": "関連する昔話・古典資料を探す入口"
           }
+        ]
+      },
+      "animationProfile": {
+        "stage": "water",
+        "enterEffect": "hopIn",
+        "tapEffect": "hyosubeRiverHop",
+        "actionLabel": "ぴょこ！",
+        "sound": "river_hop.mp3",
+        "effectAssets": [
+          "public/assets/effects/water/river_hop_splash.webp",
+          "public/assets/effects/water/ripple.webp",
+          "public/assets/effects/pop/pop_mark.webp"
+        ]
+      },
+      "specialMove": {
+        "label": "川べりジャンプ！",
+        "effect": "hyosubeWaterJump",
+        "sound": "special_water_jump.mp3",
+        "assets": [
+          "public/assets/effects/pop/water_jump_pop.webp",
+          "public/assets/effects/water/river_hop_splash.webp",
+          "public/assets/effects/water/water_splash.webp",
+          "public/assets/effects/pop/jump_dust.webp"
         ]
       }
     },

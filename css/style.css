@@ -3338,6 +3338,12 @@ body.opening-active {
 .tap-foxfireFloat { animation-name: foxfireFloatAsset; }
 .tap-azukiScatter { animation-name: azukiScatterAsset; }
 .tap-softWindSlash { animation-name: softWindSlashAsset; }
+.tap-ningyoBubbleFloat { animation-name: ningyoBubbleFloat; }
+.tap-umibozuWaveShadow { animation-name: umibozuWaveShadow; }
+.tap-ameonnaRainDrop { animation-name: ameonnaRainDrop; }
+.tap-hyosubeRiverHop { animation-name: hyosubeRiverHop; }
+.tap-kodamaLeafWhisper { animation-name: kodamaLeafWhisper; }
+.tap-yamanbaMountainMist { animation-name: yamanbaMountainMist; }
 
 .special-kappaWaterSpiral { animation-name: kappaWaterSpiral; }
 .special-tenguGreatWind { animation-name: tenguGreatWind; }
@@ -3354,6 +3360,12 @@ body.opening-active {
 .special-foxfireRing { animation-name: foxfireRingAsset; }
 .special-azukiShower { animation-name: azukiShowerAsset; }
 .special-tripleWhirlwind { animation-name: tripleWhirlwindAsset; }
+.special-ningyoShellSparkle { animation-name: ningyoShellSparkle; }
+.special-umibozuSeaShadowRise { animation-name: umibozuSeaShadowRise; }
+.special-ameonnaRainCurtain { animation-name: ameonnaRainCurtain; }
+.special-hyosubeWaterJump { animation-name: hyosubeWaterJump; }
+.special-kodamaEchoLight { animation-name: kodamaEchoLight; }
+.special-yamanbaMistPath { animation-name: yamanbaMistPath; }
 
 .stage-particle {
   position: absolute;
@@ -3388,6 +3400,10 @@ body.opening-active {
 .motion-hopIn,
 .motion-azukiScatter,
 .motion-azukiShower,
+.motion-ningyoBubbleFloat,
+.motion-ningyoShellSparkle,
+.motion-hyosubeRiverHop,
+.motion-hyosubeWaterJump,
 .motion-umbrellaJump {
   animation: yokaiStageBounce 760ms cubic-bezier(0.18, 0.8, 0.24, 1) both;
 }
@@ -3398,6 +3414,11 @@ body.opening-active {
 .motion-karasuFeatherWhirl,
 .motion-softWindSlash,
 .motion-tripleWhirlwind,
+.motion-umibozuWaveShadow,
+.motion-umibozuSeaShadowRise,
+.motion-kodamaLeafWhisper,
+.motion-yamanbaMountainMist,
+.motion-yamanbaMistPath,
 .motion-tenguGreatWind {
   animation: yokaiStageFloat 980ms ease-in-out both;
 }
@@ -3427,12 +3448,15 @@ body.opening-active {
 .motion-lanternGlow,
 .motion-foxfireFloat,
 .motion-foxfireRing,
+.motion-kodamaEchoLight,
 .motion-chochinLightBurst {
   animation: yokaiStageGlow 1200ms ease-out both;
 }
 
 .motion-snowFadeIn,
 .motion-snowBreath,
+.motion-ameonnaRainDrop,
+.motion-ameonnaRainCurtain,
 .motion-yukiOnnaSnowMagic {
   animation: yokaiStageSnow 1200ms ease-out both;
 }
@@ -3640,6 +3664,78 @@ body.opening-active {
   0% { opacity: 0; transform: translate(-50%, -50%) rotate(-32deg) scale(0.58); }
   30%, 82% { opacity: 1; }
   100% { opacity: 0; transform: translate(-50%, -50%) rotate(126deg) scale(1.78); }
+}
+
+@keyframes ningyoBubbleFloat {
+  0% { opacity: 0; transform: translate(-50%, -30%) scale(0.58) rotate(-6deg); }
+  32%, 72% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-50%, -72%) scale(1.16) rotate(8deg); }
+}
+
+@keyframes ningyoShellSparkle {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-28deg) scale(0.56); }
+  28%, 82% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(92deg) scale(1.72); }
+}
+
+@keyframes umibozuWaveShadow {
+  0% { opacity: 0; transform: translate(-62%, -46%) scale(0.72) rotate(-4deg); }
+  34%, 74% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(-38%, -50%) scale(1.16) rotate(5deg); }
+}
+
+@keyframes umibozuSeaShadowRise {
+  0% { opacity: 0; transform: translate(-50%, -26%) scale(0.56); }
+  30%, 82% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-50%, -56%) scale(1.68); }
+}
+
+@keyframes ameonnaRainDrop {
+  0% { opacity: 0; transform: translate(-50%, -70%) scale(0.68); }
+  24%, 78% { opacity: 0.94; }
+  100% { opacity: 0; transform: translate(-50%, -34%) scale(1.04); }
+}
+
+@keyframes ameonnaRainCurtain {
+  0% { opacity: 0; transform: translate(-50%, -64%) scale(0.66); }
+  28%, 84% { opacity: 0.98; }
+  100% { opacity: 0; transform: translate(-50%, -40%) scale(1.58); }
+}
+
+@keyframes hyosubeRiverHop {
+  0% { opacity: 0; transform: translate(-50%, -48%) scale(0.48); }
+  34%, 70% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -62%) scale(1.22); }
+}
+
+@keyframes hyosubeWaterJump {
+  0% { opacity: 0; transform: translate(-50%, -44%) scale(0.58); }
+  26%, 80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -58%) scale(1.72); }
+}
+
+@keyframes kodamaLeafWhisper {
+  0% { opacity: 0; transform: translate(-72%, -46%) rotate(-14deg) scale(0.68); }
+  34%, 72% { opacity: 0.92; }
+  100% { opacity: 0; transform: translate(-28%, -58%) rotate(18deg) scale(1.12); }
+}
+
+@keyframes kodamaEchoLight {
+  0% { opacity: 0; transform: translate(-50%, -50%) rotate(-18deg) scale(0.52); }
+  28%, 82% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -50%) rotate(70deg) scale(1.84); }
+}
+
+@keyframes yamanbaMountainMist {
+  0% { opacity: 0; transform: translate(-62%, -46%) scale(0.7) rotate(-5deg); }
+  36%, 76% { opacity: 0.88; }
+  100% { opacity: 0; transform: translate(-38%, -54%) scale(1.2) rotate(5deg); }
+}
+
+@keyframes yamanbaMistPath {
+  0% { opacity: 0; transform: translate(-50%, -44%) scale(0.62); }
+  30%, 82% { opacity: 0.96; }
+  100% { opacity: 0; transform: translate(-50%, -58%) scale(1.7); }
 }
 
 @keyframes stageParticlePop {
