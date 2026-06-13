@@ -72,6 +72,10 @@ function validateYokai(yokaiData, cssText, effectAssetsData) {
     return;
   }
 
+  if (items.length !== 50) {
+    addError(filePath, '(root)', `expected 50 yokai items, found ${items.length}`);
+  }
+
   checkUniqueIds(filePath, 'items', items);
   validateYokaiSoundReferences(items);
   const effectUsageByPath = validateYokaiEffectReferences(items, cssText);
@@ -85,6 +89,8 @@ function validateYokai(yokaiData, cssText, effectAssetsData) {
       }
     }
 
+    validateYokaiAnimationProfile(item, itemId);
+
     if (item?.detailedArticle !== undefined) {
       const article = item.detailedArticle;
       if (!isPlainObject(article)) {
@@ -97,6 +103,37 @@ function validateYokai(yokaiData, cssText, effectAssetsData) {
       if (!Array.isArray(article.body) || article.body.length === 0) {
         addError(filePath, itemId, 'detailedArticle.body must be a non-empty array');
       }
+    }
+  }
+}
+
+function validateYokaiAnimationProfile(item, itemId) {
+  const profile = item?.animationProfile;
+  const specialMove = item?.specialMove;
+
+  if (!isPlainObject(profile)) {
+    addError(DATA_FILES.yokai, itemId, 'animationProfile is missing or must be an object');
+  } else {
+    for (const field of ['stage', 'enterEffect', 'tapEffect', 'actionLabel', 'sound']) {
+      if (!isNonEmptyString(profile[field])) {
+        addError(DATA_FILES.yokai, itemId, `animationProfile.${field} is missing or empty`);
+      }
+    }
+    if (!Array.isArray(profile.effectAssets) || profile.effectAssets.length === 0) {
+      addError(DATA_FILES.yokai, itemId, 'animationProfile.effectAssets is missing or empty');
+    }
+  }
+
+  if (!isPlainObject(specialMove)) {
+    addError(DATA_FILES.yokai, itemId, 'specialMove is missing or must be an object');
+  } else {
+    for (const field of ['label', 'effect', 'sound']) {
+      if (!isNonEmptyString(specialMove[field])) {
+        addError(DATA_FILES.yokai, itemId, `specialMove.${field} is missing or empty`);
+      }
+    }
+    if (!Array.isArray(specialMove.assets) || specialMove.assets.length === 0) {
+      addError(DATA_FILES.yokai, itemId, 'specialMove.assets is missing or empty');
     }
   }
 }
@@ -144,8 +181,8 @@ function validateYokaiEffectReferences(items, cssText) {
     const tapAssets = getArrayFromValue(item?.animationProfile?.effectAssets, DATA_FILES.yokai, itemId, 'animationProfile.effectAssets');
     const specialAssets = getArrayFromValue(item?.specialMove?.assets, DATA_FILES.yokai, itemId, 'specialMove.assets');
 
-    checkEffectCssClass(itemId, 'animationProfile.tapEffect', item?.animationProfile?.tapEffect, 'tap', cssText);
-    checkEffectCssClass(itemId, 'specialMove.effect', item?.specialMove?.effect, 'special', cssText);
+    checkEffectCssAnimation(itemId, 'animationProfile.tapEffect', item?.animationProfile?.tapEffect, 'tap', cssText);
+    checkEffectCssAnimation(itemId, 'specialMove.effect', item?.specialMove?.effect, 'special', cssText);
 
     if (tapAssets.length > 3) {
       addError(DATA_FILES.yokai, itemId, 'animationProfile.effectAssets must contain at most 3 assets');
@@ -156,11 +193,11 @@ function validateYokaiEffectReferences(items, cssText) {
 
     for (const assetPath of tapAssets) {
       checkYokaiEffectAssetPath(itemId, 'animationProfile.effectAssets', assetPath);
-      registerEffectAssetUsage(effectUsageByPath, assetPath, itemId);
+      registerEffectAssetUsage(effectUsageByPath, assetPath, itemId, 'tapEffect');
     }
     for (const assetPath of specialAssets) {
       checkYokaiEffectAssetPath(itemId, 'specialMove.assets', assetPath);
-      registerEffectAssetUsage(effectUsageByPath, assetPath, itemId);
+      registerEffectAssetUsage(effectUsageByPath, assetPath, itemId, 'specialMove');
     }
   }
 
@@ -185,7 +222,7 @@ function checkYokaiEffectAssetPath(itemId, fieldName, assetPath) {
   }
 }
 
-function checkEffectCssClass(itemId, fieldName, effectName, classPrefix, cssText) {
+function checkEffectCssAnimation(itemId, fieldName, effectName, classPrefix, cssText) {
   if (effectName === undefined || effectName === null || effectName === '') {
     return;
   }
@@ -197,6 +234,17 @@ function checkEffectCssClass(itemId, fieldName, effectName, classPrefix, cssText
   const className = `${classPrefix}-${effectName}`;
   if (!cssHasClass(cssText, className)) {
     addError(DATA_FILES.yokai, itemId, `${fieldName} references missing CSS class .${className} in ${STYLE_FILE}`);
+    return;
+  }
+
+  const animationName = getCssAnimationName(cssText, className);
+  if (!animationName) {
+    addError(DATA_FILES.yokai, itemId, `.${className} is missing animation-name in ${STYLE_FILE}`);
+    return;
+  }
+
+  if (!cssHasKeyframes(cssText, animationName)) {
+    addError(DATA_FILES.yokai, itemId, `.${className} uses missing @keyframes ${animationName} in ${STYLE_FILE}`);
   }
 }
 
@@ -205,14 +253,36 @@ function cssHasClass(cssText, className) {
   return classPattern.test(cssText);
 }
 
-function registerEffectAssetUsage(effectUsageByPath, assetPath, itemId) {
+function getCssAnimationName(cssText, className) {
+  const blockPattern = /([^{}]+)\{([^{}]*)\}/g;
+  for (const block of cssText.matchAll(blockPattern)) {
+    const selector = block[1];
+    if (!cssHasClass(selector, className)) {
+      continue;
+    }
+    const animationName = block[2].match(/animation-name\s*:\s*([A-Za-z0-9_-]+)/);
+    if (animationName?.[1]) {
+      return animationName[1];
+    }
+  }
+  return '';
+}
+
+function cssHasKeyframes(cssText, animationName) {
+  const keyframesPattern = new RegExp(`@keyframes\\s+${escapeRegExp(animationName)}\\b`);
+  return keyframesPattern.test(cssText);
+}
+
+function registerEffectAssetUsage(effectUsageByPath, assetPath, itemId, usedFor) {
   if (!isNonEmptyString(assetPath)) {
     return;
   }
   if (!effectUsageByPath.has(assetPath)) {
-    effectUsageByPath.set(assetPath, new Set());
+    effectUsageByPath.set(assetPath, { yokaiIds: new Set(), usedFor: new Set() });
   }
-  effectUsageByPath.get(assetPath).add(itemId);
+  const usage = effectUsageByPath.get(assetPath);
+  usage.yokaiIds.add(itemId);
+  usage.usedFor.add(usedFor);
 }
 
 function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
@@ -250,9 +320,19 @@ function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
       }
     }
     if (metadataByPath.has(asset.path)) {
-      addWarning(`${filePath} [${assetId}]: duplicate metadata path also used by ${metadataByPath.get(asset.path).id}: ${asset.path}`);
+      addError(filePath, assetId, `duplicate metadata path also used by ${metadataByPath.get(asset.path).id}: ${asset.path}`);
     } else {
       metadataByPath.set(asset.path, asset);
+    }
+
+    if (!Array.isArray(asset?.usedFor) || asset.usedFor.length === 0) {
+      addError(filePath, assetId, 'usedFor must be a non-empty array');
+    }
+    if (!isNonEmptyString(asset?.fallbackClass)) {
+      addError(filePath, assetId, 'fallbackClass is missing or empty');
+    }
+    if (asset?.status !== 'available') {
+      addError(filePath, assetId, 'status must be available');
     }
 
     if (!Array.isArray(asset?.usedBy)) {
@@ -266,23 +346,28 @@ function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
     }
   }
 
-  for (const [assetPath, yokaiIds] of effectUsageByPath) {
+  for (const [assetPath, usage] of effectUsageByPath) {
     const metadata = metadataByPath.get(assetPath);
     if (!metadata) {
-      addWarning(`${DATA_FILES.yokai}: effect asset is not registered in ${filePath}: ${assetPath}`);
+      addError(DATA_FILES.yokai, '(effect asset)', `effect asset is not registered in ${filePath}: ${assetPath}`);
       continue;
     }
 
     const usedBy = new Set(metadata.usedBy || []);
-    const actualYokaiIds = [...yokaiIds].sort();
+    const actualYokaiIds = [...usage.yokaiIds].sort();
     const missingFromMetadata = actualYokaiIds.filter((id) => !usedBy.has(id));
-    const extraInMetadata = [...usedBy].filter((id) => !yokaiIds.has(id)).sort();
+    const extraInMetadata = [...usedBy].filter((id) => !usage.yokaiIds.has(id)).sort();
+    const metadataUsedFor = new Set(metadata.usedFor || []);
+    const missingUsedFor = [...usage.usedFor].filter((usedFor) => !metadataUsedFor.has(usedFor)).sort();
 
     if (missingFromMetadata.length > 0) {
       addWarning(`${filePath} [${metadata.id}]: usedBy is missing yokai.json references: ${missingFromMetadata.join(', ')}`);
     }
     if (extraInMetadata.length > 0) {
       addWarning(`${filePath} [${metadata.id}]: usedBy includes ids not currently referencing this path in yokai.json: ${extraInMetadata.join(', ')}`);
+    }
+    if (missingUsedFor.length > 0) {
+      addWarning(`${filePath} [${metadata.id}]: usedFor is missing yokai.json reference types: ${missingUsedFor.join(', ')}`);
     }
   }
 
@@ -291,8 +376,12 @@ function validateEffectAssetsMetadata(effectAssetsData, effectUsageByPath) {
       continue;
     }
 
-    const yokaiIds = effectUsageByPath.get(asset.path) || new Set();
-    const unreferencedUsedBy = asset.usedBy.filter((id) => isNonEmptyString(id) && !yokaiIds.has(id)).sort();
+    const usage = effectUsageByPath.get(asset.path);
+    if (!usage || usage.yokaiIds.size === 0) {
+      addWarning(`${filePath} [${getId(asset)}]: asset is registered but is not referenced from yokai.json: ${asset.path}`);
+    }
+
+    const unreferencedUsedBy = asset.usedBy.filter((id) => isNonEmptyString(id) && !usage?.yokaiIds.has(id)).sort();
 
     if (unreferencedUsedBy.length > 0) {
       addWarning(`${filePath} [${getId(asset)}]: usedBy ids do not reference this asset from yokai.json animationProfile.effectAssets or specialMove.assets: ${unreferencedUsedBy.join(', ')}`);

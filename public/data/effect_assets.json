@@ -1292,7 +1292,8 @@
       "tofu-kozo"
     ],
     "usedFor": [
-      "tapEffect"
+      "tapEffect",
+      "specialMove"
     ],
     "fallbackClass": "fallback-pop-mark",
     "status": "available"
@@ -1323,7 +1324,8 @@
       "ushi_oni"
     ],
     "usedFor": [
-      "tapEffect"
+      "tapEffect",
+      "specialMove"
     ],
     "fallbackClass": "fallback-ripple",
     "status": "available"
@@ -2037,6 +2039,7 @@
       "umibozu"
     ],
     "usedFor": [
+      "tapEffect",
       "specialMove"
     ],
     "fallbackClass": "fallback-water-spiral",
@@ -2051,7 +2054,8 @@
       "hyosube"
     ],
     "usedFor": [
-      "tapEffect"
+      "tapEffect",
+      "specialMove"
     ],
     "fallbackClass": "fallback-water-splash",
     "status": "available"
@@ -2073,7 +2077,8 @@
       "yamanba"
     ],
     "usedFor": [
-      "tapEffect"
+      "tapEffect",
+      "specialMove"
     ],
     "fallbackClass": "fallback-wind-swirl",
     "status": "available"

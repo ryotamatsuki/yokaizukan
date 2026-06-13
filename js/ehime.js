@@ -10,6 +10,25 @@
   };
 
   const STORAGE_KEY = "ehimeLegendNotebook";
+  const GENERATED_MAP_IMAGE = "public/assets/ehime/generated/ehime_generated_map.png";
+  const MAP_BOUNDS = {
+    west: 132.0,
+    east: 133.35,
+    north: 34.35,
+    south: 32.85
+  };
+  const MARKER_LABEL_OFFSETS = {
+    setouchi_murakami_kaizoku_cluster: { x: 14, y: -18 },
+    matsuyama_tanuki_cluster: { x: -116, y: -76 },
+    dogo_myth_cluster: { x: 134, y: -96 },
+    ishiteji_emon_saburo_cluster: { x: -120, y: 108 },
+    iyo_basan_cluster: { x: -292, y: -34 },
+    ehime_night_road_mysteries_cluster: { x: 146, y: 92 },
+    ishizuchi_tengu_cluster: { x: 132, y: -28 },
+    uwajima_ushioni_cluster: { x: 126, y: -64 },
+    kihoku_oni_cluster: { x: -154, y: -150 },
+    uwakai_sea_mystery_cluster: { x: -76, y: 82 }
+  };
 
   const state = {
     legends: [],
@@ -82,6 +101,11 @@
     $("#ehimeRegion")?.addEventListener("change", applyFilters);
     $("#ehimeEvidence")?.addEventListener("change", applyFilters);
     $("#ehimeReset")?.addEventListener("click", resetFilters);
+    window.addEventListener("resize", () => {
+      if (state.currentView === "map") {
+        renderMap();
+      }
+    });
 
     $$("[data-close-detail]").forEach((button) => {
       button.addEventListener("click", closeDetail);
@@ -146,17 +170,20 @@
 
     map.innerHTML = "";
     list.innerHTML = "";
+    map.setAttribute("aria-label", "生成背景地図で見る愛媛県のふしぎマップ");
+    const markerLayer = renderGeneratedMap(map);
+
+    const placements = getMapMarkerPlacements(state.legends);
 
     state.legends.forEach((legend) => {
       const location = findLocation(legend.locationId);
       const marker = document.createElement("button");
       marker.type = "button";
       marker.className = "map-marker";
-      marker.style.left = `${location?.mapPosition?.x ?? 50}%`;
-      marker.style.top = `${location?.mapPosition?.y ?? 50}%`;
+      positionMapMarker(marker, location, placements.get(legend.id));
       marker.textContent = legend.name.replace("と", "と ");
       marker.addEventListener("click", () => openDetail(legend.id));
-      map.appendChild(marker);
+      markerLayer.appendChild(marker);
 
       const item = document.createElement("button");
       item.type = "button";
@@ -164,6 +191,73 @@
       item.addEventListener("click", () => openDetail(legend.id));
       list.appendChild(item);
     });
+  }
+
+  function renderGeneratedMap(map) {
+    const image = document.createElement("img");
+    image.className = "generated-map-image";
+    image.src = GENERATED_MAP_IMAGE;
+    image.alt = "";
+    image.decoding = "async";
+    image.setAttribute("aria-hidden", "true");
+
+    const markerLayer = document.createElement("div");
+    markerLayer.className = "generated-map-marker-layer";
+
+    const note = document.createElement("p");
+    note.className = "generated-map-note";
+    note.textContent = "AI生成背景地図";
+
+    map.append(image, markerLayer, note);
+    return markerLayer;
+  }
+
+  function positionMapMarker(marker, location, placement) {
+    if (placement) {
+      marker.style.left = `${placement.x}%`;
+      marker.style.top = `${placement.y}%`;
+      marker.style.setProperty("--marker-label-x", `${placement.labelX}px`);
+      marker.style.setProperty("--marker-label-y", `${placement.labelY}px`);
+      return;
+    }
+
+    marker.style.left = `${location?.mapPosition?.x ?? 50}%`;
+    marker.style.top = `${location?.mapPosition?.y ?? 50}%`;
+  }
+
+  function getMapMarkerPlacements(legends) {
+    const placements = new Map();
+
+    legends.forEach((legend) => {
+      const location = findLocation(legend.locationId);
+      if (!Number.isFinite(location?.lat) || !Number.isFinite(location?.lng)) {
+        return;
+      }
+
+      const point = projectMapPosition(location.lng, location.lat);
+      const offset = MARKER_LABEL_OFFSETS[legend.id] || { x: 0, y: 0 };
+      placements.set(legend.id, {
+        x: point.x,
+        y: point.y,
+        labelX: offset.x,
+        labelY: offset.y
+      });
+    });
+
+    return placements;
+  }
+
+  function projectMapPosition(lng, lat) {
+    const x = (lng - MAP_BOUNDS.west) / (MAP_BOUNDS.east - MAP_BOUNDS.west) * 100;
+    const y = (MAP_BOUNDS.north - lat) / (MAP_BOUNDS.north - MAP_BOUNDS.south) * 100;
+    return {
+      x: clamp(x, 2, 98),
+      y: clamp(y, 4, 96)
+    };
+  }
+
+  function clamp(value, min, max) {
+    return Math.max(min, Math.min(max, value));
   }
 
   function renderLegendGrid() {
@@ -723,6 +817,10 @@
     $$(".ehime-tabs [data-target-view]").forEach((button) => {
       button.classList.toggle("is-active", button.dataset.targetView === state.currentView);
     });
+
+    if (state.currentView === "map") {
+      requestAnimationFrame(renderMap);
+    }
 
     $("#ehimeMain")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
