@@ -52,7 +52,7 @@
 
 - 愛媛県内の地域伝承アーカイブとして、地名・伝承地・祭礼・神社仏閣・山・海・島・集落との関係を重視する。
 - 妖怪・怪異・神話・祭礼・霊地をすべて「妖怪」として単純化しない。
-- 親クラスターと派生項目の関係を壊さない。
+- 旧親クラスターと派生項目のID関係は監査用データで保存し、現行UIの関連記事として復活させない。
 - childItemIds と childItems の対応を維持する。
 - childItems.id と child_articles.json の対応を確認する。
 - articleId は articles.json のIDと整合させる。
@@ -87,7 +87,8 @@
 - legends.json 側の articleId は "ehime_night_mystery_cluster" だが、articles.json 側の実IDは "ehime_night_road_mysteries_cluster"。
 - この不整合は、AGENTS.md作成後に別タスクとして修正する。
 - こども妖怪図鑑では yokai_detailed_articles.md が50件揃っているため、詳細記事改善はまずMarkdown原稿を編集する。
-- 愛媛版では派生記事46件の定型化が大きな課題であり、child_articles.json と scripts/build_ehime_child_articles.mjs の両方を確認する。
+- 愛媛版の旧派生記事46件は掲載終了済み。`child_articles.json` と旧生成スクリプトから再生成しない。
+- 2026-07-20以降、愛媛版は11の独立記事へ再編済み。旧46派生記事は表示・再生成せず、`child_articles.json` は互換用の空データとして維持する。
 
 # 6. 検証ルール
 
@@ -109,4 +110,4 @@
 - generatedImagePath、imagePath の文字列が空でないことを確認すること
 - こども妖怪図鑑と愛媛ふしぎ伝承図鑑の両方をローカルサーバーで表示確認すること
 - 「もっと詳しく読む」が両パートで動くこと
-- 愛媛版では親クラスターから派生項目を開けること
+- 愛媛版では11の独立記事をすべて開け、旧派生項目が表示されないこと

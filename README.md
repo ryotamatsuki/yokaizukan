@@ -25,7 +25,7 @@ public/data/yokai.json  # 妖怪データ
 public/data/generation_prompts.json # 生成プロンプト管理
 public/data/legends.json # 愛媛版の伝承クラスター
 public/data/articles.json # 愛媛版の詳しい記事
-public/data/child_articles.json # 愛媛版の派生項目ごとの詳しい記事
+public/data/child_articles.json # 愛媛版の旧派生記事互換用（現在は0件）
 public/data/locations.json # 愛媛版の場所データ
 public/data/courses.json # 愛媛版の探検コース
 public/data/sources.json # 愛媛版の出典データ
@@ -127,37 +127,34 @@ node scripts/build_detailed_articles.mjs
 
 ## 愛媛ふしぎ伝承図鑑
 
-`ehime.html` は、愛媛県の妖怪・怪異・神話・祭礼・霊地を10大クラスターとして整理した地域版です。`public/data/legends.json`、`articles.json`、`locations.json`、`courses.json`、`sources.json`、`evidence_check_table.json` を読み込みます。
+`ehime.html` は、愛媛県の特定の場所や資料と結びつきを確認できる11の伝承・神話・祭礼・寺院縁起を扱う地域版です。`public/data/legends.json`、`articles.json`、`locations.json`、`courses.json`、`sources.json`、`evidence_check_table.json` を読み込みます。
 
-初期実装の10大クラスター:
+現在の11項目:
 
-- 南予・宇和島の牛鬼
-- 松山の八百八狸と隠神刑部
-- 伊予の怪鳥・波山
-- 石鎚山の天狗と山岳信仰
-- 道後温泉の神話と白鷺伝説
-- 石手寺と衛門三郎
-- 宇和海の海の怪異
-- 瀬戸内・村上海賊の海の怪異
-- 鬼北の鬼と鬼ヶ城山
-- 愛媛の夜道の怪異
+- 宇和島・南予の牛鬼
+- 松山騒動八百八狸
+- 『絵本百物語』の伊予の怪鳥・波山
+- 石鎚山をすみかとする天狗
+- 道後温泉の白鷺と玉の石
+- 石手寺の衛門三郎
+- 宇和海と日振島の船幽霊
+- 鬼王段三郎と鬼ヶ城
+- 南宇和の夜雀
+- 北宇和の伸上り
+- 怒和島・大みそかの氏神の火
 
-愛媛版では、親項目を一覧・地図・コースに表示し、派生伝承は詳細画面の「関連する伝承」に格納しています。画像は `public/assets/ehime/generated/` に保存し、各クラスターの `imagePath` から参照します。出典リンクは `public/data/sources.json` に集約し、詳細画面と出典タブで確認できます。
-
-親クラスターの下には、46件の派生項目を置いています。各派生項目には `id`、説明文、見た目の手がかり、出典ID、個別画像パスを持たせ、親クラスター詳細内の小カードからクリックして読めるようにしています。派生画像は、クラスターごとの生成パネル画像を新規生成し、`public/assets/ehime/generated/children/` に個別PNGとして切り出しています。元の生成パネルは `public/assets/ehime/generated/children/_sheets/` に残しています。
-
-派生項目にも「もっと詳しく読む」記事を追加しています。本文は `public/data/child_articles.json` に分離し、各派生項目の詳細画面でボタンを押したときだけ開く構造です。記事には、伝承の型、資料上の扱い、場所との関係、図鑑での再解釈、参考リンクを入れています。
+愛媛版では11項目だけを一覧・地図・検索・今日の伝承・手帳・クイズ・コースに表示します。旧46派生項目は表示せず、`public/data/child_articles.json` は互換用の空データです。出典と記録情報は監査DBから変換した `public/data/sources.json` に集約しています。
 
 新しい愛媛の伝承を追加する場合は、次の順に更新します。
 
-1. `public/data/legends.json` に親項目または派生項目を追加する
+1. 掲載方針と典拠を確認して `public/data/legends.json` を更新する
 2. 詳しい本文を `public/data/articles.json` に追加する
 3. 場所が増える場合は `locations.json`、コースに入れる場合は `courses.json` を更新する
 4. 参考資料を `sources.json` に追加し、`sourceIds` で伝承にひも付ける
 5. 確認度や追加調査メモを `evidence_check_table.json` に記録する
 6. 生成画像を `public/assets/ehime/generated/` に置き、`imagePath` を合わせる
 
-派生項目を追加する場合は、親項目の `childItemIds` と `childItems` の両方に追加し、画像を `public/assets/ehime/generated/children/` に保存します。派生項目はトップの一覧には出さず、親クラスターの詳細からたどる構造にしています。
+固定本文は `scripts/fixtures/ehime_11_articles.json` と完全一致させ、`node scripts/validate_ehime_11_traditions.mjs` で検証します。旧派生生成スクリプトは廃止済みで、実行すると明確なエラーを返します。
 
 ## オープニングアニメーション
 
