@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-26",
+  "updatedAt": "2026-07-20",
   "courses": [
     {
       "id": "nanyo_ushioni_course",
@@ -57,19 +57,13 @@
       "forKids": "音や光から生まれる怪異を比べます。",
       "summary": "波山と夜道の怪異をつなぎ、姿の見えにくいふしぎを読みます。",
       "legendIds": [
-        "iyo_basan_cluster",
-        "ehime_night_road_mysteries_cluster"
+        "iyo_basan_cluster"
       ],
       "stops": [
         {
           "legendId": "iyo_basan_cluster",
           "title": "伊予の怪鳥・波山",
           "note": "羽音と怪火を読みます。"
-        },
-        {
-          "legendId": "ehime_night_road_mysteries_cluster",
-          "title": "愛媛の夜道の怪異",
-          "note": "音と影の怪異を読みます。"
         }
       ]
     },
@@ -112,42 +106,6 @@
           "legendId": "ishiteji_emon_saburo_cluster",
           "title": "石手寺と衛門三郎",
           "note": "反省と巡礼の物語を読みます。"
-        }
-      ]
-    },
-    {
-      "id": "setouchi_mystery_ship_course",
-      "title": "瀬戸内の船と海の記憶コース",
-      "region": "東予・島しょ部",
-      "time": "1日",
-      "forKids": "村上海賊の歴史と海の怪異を分けて読みます。",
-      "summary": "能島、来島海峡、村上海賊の歴史に重なる海のふしぎを読むコースです。",
-      "legendIds": [
-        "setouchi_murakami_kaizoku_cluster"
-      ],
-      "stops": [
-        {
-          "legendId": "setouchi_murakami_kaizoku_cluster",
-          "title": "村上海賊の海の怪異",
-          "note": "歴史と怪異を分けて考えます。"
-        }
-      ]
-    },
-    {
-      "id": "night_road_mystery_course",
-      "title": "愛媛の夜道の怪異コース",
-      "region": "愛媛県内各地",
-      "time": "夜は読書で",
-      "forKids": "夜道を実際に歩くのではなく、図鑑で安全に読みます。",
-      "summary": "夜雀、伸上り、雪婆、怪火を通して、暗い道の不安と知恵を読みます。",
-      "legendIds": [
-        "ehime_night_road_mysteries_cluster"
-      ],
-      "stops": [
-        {
-          "legendId": "ehime_night_road_mysteries_cluster",
-          "title": "夜道の怪異",
-          "note": "音、影、光のふしぎを読みます。"
         }
       ]
     }

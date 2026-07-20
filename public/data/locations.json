@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-26",
+  "updatedAt": "2026-07-20",
   "locations": [
     {
       "id": "uwajima",
@@ -93,19 +93,6 @@
       "lng": 132.4225
     },
     {
-      "id": "noshima",
-      "name": "能島・来島海峡周辺",
-      "region": "東予",
-      "municipality": "今治市",
-      "summary": "村上海賊の歴史と、潮流の激しい瀬戸内の記憶が重なる海域。",
-      "mapPosition": {
-        "x": 72,
-        "y": 18
-      },
-      "lat": 34.1896,
-      "lng": 133.0705
-    },
-    {
       "id": "kihoku",
       "name": "鬼北町・鬼ヶ城山系",
       "region": "南予",
@@ -119,17 +106,40 @@
       "lng": 132.703
     },
     {
-      "id": "ehime_general",
-      "name": "愛媛県内の山道・夜道",
-      "region": "県内各地",
-      "municipality": "県内各地",
-      "summary": "夜雀、伸上り、怪火など、暗い道の不安から生まれた怪異をまとめる入口。",
+      "id": "minamiuwa_ainan",
+      "name": "南宇和・愛南町周辺",
+      "region": "南予",
+      "municipality": "愛南町周辺",
+      "summary": "夜雀が記録された旧南宇和郡の地域。",
+      "locationPrecision": "regional",
       "mapPosition": {
-        "x": 56,
-        "y": 58
-      },
-      "lat": 33.73,
-      "lng": 132.82
+        "x": 20,
+        "y": 91
+      }
+    },
+    {
+      "id": "kitauwa_nanyo",
+      "name": "北宇和・南予",
+      "region": "南予",
+      "municipality": "宇和島市下波・西予市城川町",
+      "summary": "伸上りの複数の記録が残る地域。",
+      "locationPrecision": "regional",
+      "mapPosition": {
+        "x": 34,
+        "y": 73
+      }
+    },
+    {
+      "id": "nuwa_island",
+      "name": "怒和島",
+      "region": "中予・島しょ部",
+      "municipality": "松山市",
+      "summary": "大みそかの氏神の火が記録された島。",
+      "locationPrecision": "regional",
+      "mapPosition": {
+        "x": 39,
+        "y": 25
+      }
     }
   ]
 }
