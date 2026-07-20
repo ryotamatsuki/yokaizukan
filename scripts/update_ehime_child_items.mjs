@@ -1,3 +1,5 @@
+throw new Error("deprecated: 愛媛版は11の独立記事へ再編済みです。旧46派生項目は復元できません。");
+/*
 import fs from "node:fs";
 import path from "node:path";
 
@@ -732,5 +734,6 @@ coursesData.courses = [
   }
 ];
 writeJson("public/data/courses.json", coursesData);
+*/
 
 console.log("Updated Ehime child item data.");

@@ -1,3 +1,5 @@
+throw new Error("deprecated: 愛媛版は11の独立記事へ再編済みです。旧46派生記事は生成できません。");
+/*
 import fs from "node:fs";
 import path from "node:path";
 
@@ -502,5 +504,6 @@ writeJson("public/data/child_articles.json", {
   articlePolicy: "派生項目ごとの詳細記事。公的資料・地域資料・妖怪研究の入口を確認し、出典が薄い項目は調査中であることを本文に明記する。",
   articles
 });
+*/
 
 console.log(`Wrote ${articles.length} child articles.`);
