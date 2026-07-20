@@ -29,16 +29,15 @@
     },
     {
       "id": "iyo_general",
-      "name": "伊予地方の山里・竹藪",
-      "region": "中予",
-      "municipality": "愛媛県内各地",
-      "summary": "波山の羽音や怪火が想像された、山と里の境目。",
+      "name": "『絵本百物語』に記された伊予の山中",
+      "region": "伊予",
+      "municipality": "特定の市町村は記録されていない",
+      "summary": "波山は、江戸時代の『絵本百物語』で伊予の山中にいる怪鳥として描かれています。",
+      "locationPrecision": "historical_broad_area",
       "mapPosition": {
         "x": 42,
         "y": 50
-      },
-      "lat": 33.7906,
-      "lng": 132.8948
+      }
     },
     {
       "id": "ishizuchi",
@@ -81,10 +80,10 @@
     },
     {
       "id": "uwakai",
-      "name": "宇和海沿岸",
+      "name": "宇和海沿岸・日振島方面",
       "region": "南予",
-      "municipality": "宇和島市・愛南町ほか",
-      "summary": "海坊主、船幽霊、怪火など海の民俗が豊かに残る沿岸部。",
+      "municipality": "大洲市・宇和島市・日振島方面",
+      "summary": "柄杓を求める船幽霊と、日振島へ帰る船を止めた陰火が記録された海域です。",
       "mapPosition": {
         "x": 24,
         "y": 82
@@ -94,10 +93,10 @@
     },
     {
       "id": "kihoku",
-      "name": "鬼北町・鬼ヶ城山系",
+      "name": "鬼北町等妙寺旧境内・松野町古鬼ヶ城山周辺",
       "region": "南予",
-      "municipality": "鬼北町・松野町周辺",
-      "summary": "山の神としての鬼、鬼王丸、柚鬼媛などが語られる山あい。",
+      "municipality": "鬼北町・松野町",
+      "summary": "等妙寺縁起に残る鬼王段三郎、鬼ヶ城、タモト岩、鼓岩に関係する地域です。",
       "mapPosition": {
         "x": 35,
         "y": 72
@@ -109,8 +108,8 @@
       "id": "minamiuwa_ainan",
       "name": "南宇和・愛南町周辺",
       "region": "南予",
-      "municipality": "愛南町周辺",
-      "summary": "夜雀が記録された旧南宇和郡の地域。",
+      "municipality": "愛南町周辺・旧南宇和郡",
+      "summary": "夜雀と山犬を結びつける話が記録された地域。",
       "locationPrecision": "regional",
       "mapPosition": {
         "x": 20,
@@ -119,11 +118,11 @@
     },
     {
       "id": "kitauwa_nanyo",
-      "name": "北宇和・南予",
+      "name": "北宇和・南予の伸上り伝承地",
       "region": "南予",
       "municipality": "宇和島市下波・西予市城川町",
-      "summary": "伸上りの複数の記録が残る地域。",
-      "locationPrecision": "regional",
+      "summary": "伸上りの姿と対処法が異なる複数の記録が残る地域。",
+      "locationPrecision": "multiple_regional_records",
       "mapPosition": {
         "x": 34,
         "y": 73
@@ -134,8 +133,8 @@
       "name": "怒和島",
       "region": "中予・島しょ部",
       "municipality": "松山市",
-      "summary": "大みそかの氏神の火が記録された島。",
-      "locationPrecision": "regional",
+      "summary": "大みそかの夜、氏神の後ろに現れる火を歳徳神の来訪とした話が記録された島。",
+      "locationPrecision": "island",
       "mapPosition": {
         "x": 39,
         "y": 25

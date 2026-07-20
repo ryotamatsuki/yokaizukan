@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-07-21",
   "courses": [
     {
       "id": "nanyo_ushioni_course",
-      "title": "南予の大きな妖怪コース",
+      "title": "南予の牛鬼・船幽霊・鬼王段三郎コース",
       "region": "南予",
       "time": "1日",
-      "forKids": "牛鬼、宇和海、鬼北の鬼をつなぎ、南予の山と海の力を読みます。",
-      "summary": "宇和島の牛鬼、宇和海の怪異、鬼北の鬼をめぐる、南予らしい力強い伝承コースです。",
+      "forKids": "南予に残る祭礼、海の怪異、寺院縁起を比べて読みます。",
+      "summary": "宇和島・南予の牛鬼、宇和海と日振島の船幽霊、鬼王段三郎と鬼ヶ城をつなぐコースです。",
       "legendIds": [
         "uwajima_ushioni_cluster",
         "uwakai_sea_mystery_cluster",
@@ -16,82 +16,82 @@
       "stops": [
         {
           "legendId": "uwajima_ushioni_cluster",
-          "title": "宇和島の牛鬼",
-          "note": "祭りに現れる牛鬼を読みます。"
+          "title": "宇和島・南予の牛鬼",
+          "note": "祭礼で受け継がれる牛鬼を読みます。"
         },
         {
           "legendId": "uwakai_sea_mystery_cluster",
-          "title": "宇和海の海の怪異",
-          "note": "船幽霊や海坊主を読みます。"
+          "title": "宇和海と日振島の船幽霊",
+          "note": "柄杓を求める船幽霊と、船を止める陰火を読みます。"
         },
         {
           "legendId": "kihoku_oni_cluster",
-          "title": "鬼北の鬼",
-          "note": "山の鬼と地名を読みます。"
+          "title": "鬼王段三郎と鬼ヶ城",
+          "note": "等妙寺縁起に残る鬼王段三郎の話を読みます。"
         }
       ]
     },
     {
       "id": "matsuyama_tanuki_course",
-      "title": "松山の狸と城下町コース",
+      "title": "松山騒動八百八狸コース",
       "region": "中予",
       "time": "半日",
-      "forKids": "城下町を舞台に、狸のユーモアと怪談を読みます。",
-      "summary": "松山の八百八狸と隠神刑部を中心に、城下町の物語をたどります。",
+      "forKids": "歴史上の騒動と、読み物・講談としての狸物語を分けて読みます。",
+      "summary": "松山騒動八百八狸を中心に、城下町で広まった狸の物語を読みます。",
       "legendIds": [
         "matsuyama_tanuki_cluster"
       ],
       "stops": [
         {
           "legendId": "matsuyama_tanuki_cluster",
-          "title": "松山の八百八狸",
-          "note": "狸伝説の広がりを読みます。"
+          "title": "松山騒動八百八狸",
+          "note": "刑部狸と八百八狸の物語を読みます。"
         }
       ]
     },
     {
       "id": "iyo_mystery_course",
-      "title": "伊予の怪鳥と夜道コース",
-      "region": "愛媛県全域",
-      "time": "半日",
-      "forKids": "音や光から生まれる怪異を比べます。",
-      "summary": "波山と夜道の怪異をつなぎ、姿の見えにくいふしぎを読みます。",
+      "title": "『絵本百物語』の波山コース",
+      "region": "伊予",
+      "time": "読書で30分",
+      "forKids": "江戸時代の妖怪本で、伊予がどのように描かれたかを読みます。",
+      "summary": "『絵本百物語』に伊予の怪鳥として登場する波山を、羽音、火、図像から読みます。",
       "legendIds": [
         "iyo_basan_cluster"
       ],
       "stops": [
         {
           "legendId": "iyo_basan_cluster",
-          "title": "伊予の怪鳥・波山",
-          "note": "羽音と怪火を読みます。"
+          "title": "『絵本百物語』の伊予の怪鳥・波山",
+          "note": "江戸時代の妖怪本に描かれた伊予の怪鳥を読みます。"
         }
       ]
     },
     {
       "id": "ishizuchi_tengu_course",
-      "title": "石鎚山と天狗の山コース",
+      "title": "石鎚山をすみかとする天狗コース",
       "region": "東予・山間部",
       "time": "1日以上",
-      "forKids": "実際の登山は大人と安全確認をしてから。図鑑では山の信仰を学びます。",
-      "summary": "石鎚山、天狗岳、修験、山神をつなぐ山岳伝承コースです。",
+      "forKids": "実際に山へ行く場合は、大人と安全を確認してください。図鑑では山麓に記録された天狗の話を読みます。",
+      "summary": "石鎚山麓で採集された烏天狗、白装束の天狗、小さな火の話を読みます。",
       "legendIds": [
         "ishizuchi_tengu_cluster"
       ],
       "stops": [
         {
           "legendId": "ishizuchi_tengu_cluster",
-          "title": "石鎚山の天狗",
-          "note": "山と信仰の関係を読みます。"
+          "title": "石鎚山をすみかとする天狗",
+          "note": "石鎚山麓で記録された具体的な天狗の話を読みます。"
         }
       ]
     },
     {
       "id": "dogo_mystery_course",
-      "title": "道後温泉と石手寺コース",
+      "title": "道後温泉と石手寺の由来を読むコース",
       "region": "中予",
       "time": "半日",
-      "forKids": "温泉神話と遍路伝承を、やさしい物語として読みます。",
-      "summary": "道後温泉の白鷺伝説と、石手寺の衛門三郎伝説をつなぐコースです。",
+      "forKids": "温泉の由来と寺院縁起を、歴史的事実と分けて読みます。",
+      "summary": "道後温泉の白鷺と玉の石、石手寺の衛門三郎をつなぐコースです。",
       "legendIds": [
         "dogo_myth_cluster",
         "ishiteji_emon_saburo_cluster"
@@ -99,13 +99,13 @@
       "stops": [
         {
           "legendId": "dogo_myth_cluster",
-          "title": "道後温泉の神話",
-          "note": "白鷺と神さまの話を読みます。"
+          "title": "道後温泉の白鷺と玉の石",
+          "note": "異なる二つの温泉由来譚を読みます。"
         },
         {
           "legendId": "ishiteji_emon_saburo_cluster",
-          "title": "石手寺と衛門三郎",
-          "note": "反省と巡礼の物語を読みます。"
+          "title": "石手寺の衛門三郎",
+          "note": "遍路と寺名の由来に結びつく伝説を読みます。"
         }
       ]
     }
