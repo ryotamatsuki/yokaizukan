@@ -5,11 +5,20 @@
     locations: "public/data/locations.json",
     courses: "public/data/courses.json",
     sources: "public/data/sources.json",
-    evidence: "public/data/evidence_check_table.json",
-    childArticles: "public/data/child_articles.json"
+    evidence: "public/data/evidence_check_table.json"
   };
 
   const STORAGE_KEY = "ehimeLegendNotebook";
+  const IMAGE_NOTE = "この画像は伝承資料に残る原画ではありません。確認できる記録をもとに制作した図鑑用イメージです。";
+  const TRADITION_LABELS = {
+    festival_tradition: "祭礼に受け継がれた伝承",
+    literary_legend: "読み物・講談として広まった伝説",
+    early_modern_yokai_book: "江戸時代の妖怪本",
+    folklore_collection: "地域で採集された伝承",
+    myth_or_local_text: "古い地誌・神話に残る話",
+    temple_legend: "寺院縁起に残る伝説",
+    calendar_custom: "年中行事と神の来訪"
+  };
   const GENERATED_MAP_IMAGE = "public/assets/ehime/generated/ehime_generated_map.png";
   const MAP_BOUNDS = {
     west: 132.0,
@@ -18,12 +27,10 @@
     south: 32.85
   };
   const MARKER_LABEL_OFFSETS = {
-    setouchi_murakami_kaizoku_cluster: { x: 14, y: -18 },
     matsuyama_tanuki_cluster: { x: -116, y: -76 },
     dogo_myth_cluster: { x: 134, y: -96 },
     ishiteji_emon_saburo_cluster: { x: -120, y: 108 },
     iyo_basan_cluster: { x: -292, y: -34 },
-    ehime_night_road_mysteries_cluster: { x: 146, y: 92 },
     ishizuchi_tengu_cluster: { x: 132, y: -28 },
     uwajima_ushioni_cluster: { x: 126, y: -64 },
     kihoku_oni_cluster: { x: -154, y: -150 },
@@ -37,7 +44,6 @@
     courses: [],
     sources: [],
     evidence: [],
-    childArticles: [],
     currentView: "home",
     filteredLegends: []
   };
@@ -69,14 +75,13 @@
   }
 
   async function loadAllData() {
-    const [legendsData, articlesData, locationsData, coursesData, sourcesData, evidenceData, childArticlesData] = await Promise.all([
+    const [legendsData, articlesData, locationsData, coursesData, sourcesData, evidenceData] = await Promise.all([
       loadJson(DATA_PATHS.legends),
       loadJson(DATA_PATHS.articles),
       loadJson(DATA_PATHS.locations),
       loadJson(DATA_PATHS.courses),
       loadJson(DATA_PATHS.sources),
-      loadJson(DATA_PATHS.evidence),
-      loadJson(DATA_PATHS.childArticles)
+      loadJson(DATA_PATHS.evidence)
     ]);
 
     state.legends = normalizeArray(legendsData.legends).filter((legend) => legend.displayInList !== false);
@@ -85,7 +90,6 @@
     state.courses = normalizeArray(coursesData.courses);
     state.sources = normalizeArray(sourcesData.sources);
     state.evidence = normalizeArray(evidenceData.legendEvidence);
-    state.childArticles = normalizeArray(childArticlesData.articles);
   }
 
   function normalizeArray(value) {
@@ -426,8 +430,10 @@
       <div class="detail-layout">
         <aside class="detail-media">
           ${imageHtml(legend.imagePath, `${legend.name}の図鑑イラスト`)}
+          <p class="generated-image-note">${escapeHtml(IMAGE_NOTE)}</p>
           <div class="badge-row">
             ${badge(legend.region, "green")}
+            ${badge(TRADITION_LABELS[legend.traditionLayer] || legend.traditionLayer, "rust")}
             ${badge(legend.evidenceLabel || `確認度 ${legend.evidenceLevel}`, "rust")}
             ${badge(legend.scaryLabel || "")}
           </div>
@@ -443,20 +449,10 @@
           </header>
           <section class="detail-section">
             <h3>ひとことで</h3>
-            <p>${escapeHtml(legend.shortDescription || "")}</p>
+            <p>${escapeHtml(article?.lead || legend.shortDescription || "")}</p>
           </section>
-          <section class="detail-section">
-            <h3>どんな伝承？</h3>
-            <p>${escapeHtml(legend.childDescription || "")}</p>
-          </section>
-          <section class="detail-section">
-            <h3>出る場所</h3>
-            <p>${escapeHtml(location?.name || legend.municipality || "")}</p>
-          </section>
-          ${relatedItemsHtml(legend)}
           ${articleHtml(article)}
-          ${missionsHtml(legend)}
-          ${detailQuizHtml(legend)}
+          ${recordInfoHtml(legend, location, article)}
           ${detailSourcesHtml(legend)}
         </article>
       </div>
@@ -555,41 +551,34 @@
   }
 
   function articleHtml(article) {
-    const articleId = `ehime-detailed-article-${escapeAttribute(article?.id || "pending")}`;
-
     if (!article) {
-      return `
-        <section class="detail-section detail-more-controls">
-          <h3>もっと詳しく</h3>
-          <p>詳しい記事は準備中です。</p>
-          <button type="button" class="inline-action" disabled>もっと詳しく読む</button>
-        </section>
-      `;
+      return `<section class="detail-section"><p>詳しい記事は準備中です。</p></section>`;
     }
 
     return `
-      <section class="detail-section detail-more-controls">
-        <h3>もっと詳しく</h3>
-        <p>伝承の背景、昔の語られ方、絵や現代図鑑での見え方をもう少し深く読めます。</p>
-        <button
-          type="button"
-          class="inline-action"
-          data-toggle-article="${articleId}"
-          aria-expanded="false"
-          aria-controls="${articleId}"
-        >もっと詳しく読む</button>
-      </section>
-      <section id="${articleId}" class="detail-section detailed-article" tabindex="-1" hidden>
-        <h3>${escapeHtml(article.title || "もっと詳しく")}</h3>
-        <p class="detailed-article-lead">${escapeHtml(article.lead || "")}</p>
-        ${normalizeArray(article.sections).map((section) => `
-          <section class="detail-section">
-            <h3>${escapeHtml(section.heading || "")}</h3>
-            ${normalizeArray(section.body).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-          </section>
-        `).join("")}
-      </section>
+      ${normalizeArray(article.sections).map((section) => `
+        <section class="detail-section">
+          <h3>${escapeHtml(section.heading || "")}</h3>
+          ${normalizeArray(section.body).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+        </section>
+      `).join("")}
     `;
+  }
+
+  function recordInfoHtml(legend, location, article) {
+    const sources = [...new Set([...normalizeArray(legend.sourceIds), ...normalizeArray(article?.sourceIds)])]
+      .map(findSource).filter(Boolean);
+    const rows = [
+      ["伝承地・関係地", location?.name],
+      ["記録者または編者", sources.map((s) => s.authorOrEditor).filter(Boolean).join("、")],
+      ["資料に記載された話者", sources.map((s) => s.informant).filter(Boolean).join("、")],
+      ["資料名", sources.map((s) => s.title).filter(Boolean).join("、")],
+      ["刊行年", sources.map((s) => s.publicationYear).filter(Boolean).join("、")],
+      ["巻号・ページ", sources.map((s) => [s.volumeIssue, s.pages].filter(Boolean).join(" ")).filter(Boolean).join("、")],
+      ["個別記録ID", sources.map((s) => s.recordId).filter(Boolean).join("、")],
+      ["資料種別", sources.map((s) => s.type).filter(Boolean).join("、")]
+    ].filter(([, value]) => value);
+    return `<section class="detail-section"><h3>記録情報</h3><dl class="record-info">${rows.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(String(value))}</dd>`).join("")}</dl></section>`;
   }
 
   function childArticleHtml(article, child) {
