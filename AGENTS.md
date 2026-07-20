@@ -46,23 +46,22 @@
 - public/data/sources.json
 - public/data/evidence_check_table.json
 - js/ehime.js
-- scripts/build_ehime_child_articles.mjs
+- scripts/validate_ehime_11_traditions.mjs
+- ehime_tradition_evidence_database.json
 
 編集方針：
 
 - 愛媛県内の地域伝承アーカイブとして、地名・伝承地・祭礼・神社仏閣・山・海・島・集落との関係を重視する。
 - 妖怪・怪異・神話・祭礼・霊地をすべて「妖怪」として単純化しない。
-- 旧親クラスターと派生項目のID関係は監査用データで保存し、現行UIの関連記事として復活させない。
-- childItemIds と childItems の対応を維持する。
-- childItems.id と child_articles.json の対応を確認する。
-- articleId は articles.json のIDと整合させる。
-- sourceIds は sources.json のIDと整合させる。
-- locationId は locations.json のIDと整合させる。
-- courseIds は courses.json のIDと整合させる。
-- 伝承の確認度や追加調査メモがある場合は evidence_check_table.json と矛盾させない。
-- 愛媛版の親記事では、伝承群の全体像、地域的背景、場所との関係を説明する。
-- 愛媛版の派生記事では、親クラスターよりも具体的な地名、話型、見た目、役割、資料上の扱いを書く。
-- 派生記事で「単独の珍しい話として切り離すのではなく」「本当にいたかどうか」「物語の古さだけで価値を決めない」などの定型段落を全件に繰り返さない。
+- 愛媛版は11の独立記事で構成する。
+- 愛媛版では childItems、childItemIds、child_articles.json を表示機能に使用しない。
+- 旧46派生項目の監査結果は ehime_tradition_evidence_database.json に保存する。
+- articles.json の本文は scripts/fixtures/ehime_11_articles.json と完全一致させる。
+- legends.json、articles.json、sources.json、locations.json、evidence_check_table.json の参照を一致させる。
+- legends.json の evidenceLevel と evidence_check_table.json の level を一致させる。
+- 記録情報は資料単位で表示し、記録者・資料名・刊行年・巻頁の対応を崩さない。
+- 11件以外を一覧、地図、今日の伝承、コース、クイズ、手帳へ表示しない。
+- 内部監査DBの verification_status 等を公開UIや evidence_check_table.json へ直接表示しない。
 - 地域伝承を面白くするために、未確認の逸話や地名を創作しない。
 - 説明文は、観光PR調ではなく、伝承・場所・資料を結びつける図鑑調にする。
 
@@ -75,20 +74,15 @@
 - locationId
 - courseIds
 - sourceIds
-- childItemIds
-- childItems.id
-- parentId
 - generatedImagePath
 - imagePath
 
 # 5. 既知の注意事項
 
-- legends.json の夜道クラスター articleId に不整合がある。
-- legends.json 側の articleId は "ehime_night_mystery_cluster" だが、articles.json 側の実IDは "ehime_night_road_mysteries_cluster"。
-- この不整合は、AGENTS.md作成後に別タスクとして修正する。
 - こども妖怪図鑑では yokai_detailed_articles.md が50件揃っているため、詳細記事改善はまずMarkdown原稿を編集する。
 - 愛媛版の旧派生記事46件は掲載終了済み。`child_articles.json` と旧生成スクリプトから再生成しない。
 - 2026-07-20以降、愛媛版は11の独立記事へ再編済み。旧46派生記事は表示・再生成せず、`child_articles.json` は互換用の空データとして維持する。
+- `scripts/migrate_ehime_11_traditions.mjs` は移行完了済みの廃止スクリプトであり、現在のJSON生成には使用しない。
 
 # 6. 検証ルール
 
@@ -97,6 +91,8 @@
 - node --check scripts/build_detailed_articles.mjs
 - node --check scripts/enrich_tradition_history.mjs
 - node --check js/ehime.js
+- node --check scripts/validate_ehime_11_traditions.mjs
+- node scripts/validate_ehime_11_traditions.mjs
 - public/data/yokai.json を JSON.parse できること
 - public/data/legends.json を JSON.parse できること
 - public/data/articles.json を JSON.parse できること
@@ -105,9 +101,10 @@
 - public/data/courses.json を JSON.parse できること
 - public/data/sources.json を JSON.parse できること
 - public/data/evidence_check_table.json を JSON.parse できること
-- articleId、locationId、courseIds、sourceIds、parentId の参照整合性を確認すること
-- childItemIds と childItems の一致を確認すること
-- generatedImagePath、imagePath の文字列が空でないことを確認すること
+- articleId、locationId、courseIds、sourceIds の参照整合性を確認すること
+- 愛媛版のIDが固定11件と完全一致し、childItems と childItemIds が空であることを確認すること
+- legends.json と evidence_check_table.json の確認度が一致することを確認すること
+- generatedImagePath、imagePath の文字列が空でなく、愛媛版の画像ファイルが実在することを確認すること
 - こども妖怪図鑑と愛媛ふしぎ伝承図鑑の両方をローカルサーバーで表示確認すること
-- 「もっと詳しく読む」が両パートで動くこと
+- 全国版の「もっと詳しく読む」が動くこと
 - 愛媛版では11の独立記事をすべて開け、旧派生項目が表示されないこと

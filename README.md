@@ -23,13 +23,16 @@ js/opening.js           # 絵本を開くオープニング
 js/ehime.js             # 愛媛版の描画・検索・詳細・手帳・クイズ
 public/data/yokai.json  # 妖怪データ
 public/data/generation_prompts.json # 生成プロンプト管理
-public/data/legends.json # 愛媛版の伝承クラスター
+public/data/legends.json # 愛媛版11独立記事の一覧メタデータ
 public/data/articles.json # 愛媛版の詳しい記事
 public/data/child_articles.json # 愛媛版の旧派生記事互換用（現在は0件）
 public/data/locations.json # 愛媛版の場所データ
 public/data/courses.json # 愛媛版の探検コース
 public/data/sources.json # 愛媛版の出典データ
 public/data/evidence_check_table.json # 愛媛版の確認度メモ
+scripts/fixtures/ehime_11_articles.json # 愛媛版11記事の固定本文fixture
+scripts/validate_ehime_11_traditions.mjs # 愛媛版11記事の専用検証
+ehime_tradition_evidence_database.json # 旧46派生項目を含む内部監査DB
 public/assets/yokai/generated/ # 生成イラスト
 public/assets/opening/ # オープニング用の生成背景・ForgeCADレンダー
 public/assets/ehime/generated/ # 愛媛版の生成イラスト
@@ -143,18 +146,13 @@ node scripts/build_detailed_articles.mjs
 - 北宇和の伸上り
 - 怒和島・大みそかの氏神の火
 
-愛媛版では11項目だけを一覧・地図・検索・今日の伝承・手帳・クイズ・コースに表示します。旧46派生項目は表示せず、`public/data/child_articles.json` は互換用の空データです。出典と記録情報は監査DBから変換した `public/data/sources.json` に集約しています。
+愛媛版では11項目だけを一覧・地図・検索・今日の伝承・手帳・クイズ・コースに表示します。`childItems`、`childItemIds`、`public/data/child_articles.json` は表示機能に使用せず、同ファイルは互換用の空データです。
 
-新しい愛媛の伝承を追加する場合は、次の順に更新します。
+旧46派生項目の典拠と親子関係は内部監査用の `ehime_tradition_evidence_database.json` に保存します。この監査DBの内部確認区分を公開画面へ直接表示せず、公開用の確認事項は最終11件だけを `public/data/evidence_check_table.json` で管理します。詳細画面の記録情報は資料単位で表示し、資料名、記録者、刊行年、巻頁を混線させません。
 
-1. 掲載方針と典拠を確認して `public/data/legends.json` を更新する
-2. 詳しい本文を `public/data/articles.json` に追加する
-3. 場所が増える場合は `locations.json`、コースに入れる場合は `courses.json` を更新する
-4. 参考資料を `sources.json` に追加し、`sourceIds` で伝承にひも付ける
-5. 確認度や追加調査メモを `evidence_check_table.json` に記録する
-6. 生成画像を `public/assets/ehime/generated/` に置き、`imagePath` を合わせる
+愛媛版の構成は固定11件です。項目追加や入れ替えが必要な場合は、通常のデータ追加として扱わず、選定方針と典拠を再監査した別タスクとして実施してください。既存11件を編集するときは、`articleId`、`sourceIds`、`locationId`、`courseIds`、確認度の参照をすべて同期します。
 
-固定本文は `scripts/fixtures/ehime_11_articles.json` と完全一致させ、`node scripts/validate_ehime_11_traditions.mjs` で検証します。旧派生生成スクリプトは廃止済みで、実行すると明確なエラーを返します。
+固定本文は `scripts/fixtures/ehime_11_articles.json` と完全一致させ、`node scripts/validate_ehime_11_traditions.mjs` で検証します。この検証は固定11 ID、確認度同期、昇格3項目のメタデータとクイズ、コースタイトル、画像実在、禁止語、旧派生JavaScriptも確認します。旧派生生成スクリプトと `scripts/migrate_ehime_11_traditions.mjs` は廃止済みで、現在のJSON生成には使用できません。
 
 ## オープニングアニメーション
 
