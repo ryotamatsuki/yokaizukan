@@ -59,14 +59,7 @@
       ],
       "notes": "姿や物語には地域差があるため、説明では一つの形に限定しすぎない。",
       "childItemIds": [],
-      "traditionLayer": "festival_tradition",
-      "legacyChildItemIds": [
-        "uwajima_ushioni",
-        "ushioni_matsuri",
-        "ushioni_buchi",
-        "warei_jinja_ushioni",
-        "yamabushi_ushioni"
-      ]
+      "traditionLayer": "festival_tradition"
     },
     {
       "id": "matsuyama_tanuki_cluster",
@@ -118,15 +111,7 @@
       ],
       "notes": "講談・物語として広まった部分と、地域伝承としての部分を分けて読む。",
       "childItemIds": [],
-      "traditionLayer": "literary_legend",
-      "legacyChildItemIds": [
-        "inugami_gyobu",
-        "matsuyama_sodo_tanuki",
-        "happyakuya_tanuki",
-        "matsuyama_castle_tanuki",
-        "tanuki_bayashi",
-        "tanuki_bi"
-      ]
+      "traditionLayer": "literary_legend"
     },
     {
       "id": "iyo_basan_cluster",
@@ -177,13 +162,7 @@
       ],
       "notes": "古典妖怪画の図像と、地域伝承としての伊予表記をあわせて扱う。",
       "childItemIds": [],
-      "traditionLayer": "early_modern_yokai_book",
-      "legacyChildItemIds": [
-        "basan",
-        "basabasa",
-        "inuhoo",
-        "fire_breathing_bird"
-      ]
+      "traditionLayer": "early_modern_yokai_book"
     },
     {
       "id": "ishizuchi_tengu_cluster",
@@ -235,15 +214,7 @@
       ],
       "notes": "実在の山岳信仰と妖怪イメージを混同しすぎず、学習用に整理する。",
       "childItemIds": [],
-      "traditionLayer": "folklore_collection",
-      "legacyChildItemIds": [
-        "ishizuchi_tengu",
-        "tengudake_tengu",
-        "ishizuchi_yamagami",
-        "ishizuchi_shugen",
-        "ishizuchi_kaika",
-        "horagai_sound"
-      ]
+      "traditionLayer": "folklore_collection"
     },
     {
       "id": "dogo_myth_cluster",
@@ -296,14 +267,7 @@
       ],
       "notes": "神話・伝説として紹介し、歴史事実と断定しない。",
       "childItemIds": [],
-      "traditionLayer": "myth_or_local_text",
-      "legacyChildItemIds": [
-        "dogo_shirasagi",
-        "sukunahikona_toji",
-        "okuninushi_dogo",
-        "tama_no_ishi",
-        "dogo_yugami"
-      ]
+      "traditionLayer": "myth_or_local_text"
     },
     {
       "id": "ishiteji_emon_saburo_cluster",
@@ -354,13 +318,7 @@
       ],
       "notes": "宗教的伝承のため、敬意を持って事実確認と伝承表現を分ける。",
       "childItemIds": [],
-      "traditionLayer": "temple_legend",
-      "legacyChildItemIds": [
-        "emon_saburo",
-        "emon_saburo_rebirth",
-        "kobodaishi_legend",
-        "ishiteji_reiseki"
-      ]
+      "traditionLayer": "temple_legend"
     },
     {
       "id": "uwakai_sea_mystery_cluster",
@@ -412,14 +370,7 @@
       ],
       "notes": "個別の島の話は追加調査で出典を増やす。",
       "childItemIds": [],
-      "traditionLayer": "folklore_collection",
-      "legacyChildItemIds": [
-        "uwakai_funayurei",
-        "uwakai_umibozu",
-        "hiburijima_kairei",
-        "kushima_yobi",
-        "toshima_kairei"
-      ]
+      "traditionLayer": "folklore_collection"
     },
     {
       "id": "kihoku_oni_cluster",
@@ -470,13 +421,7 @@
       ],
       "notes": "現代の地域PRと、古くからの山の伝承を区別して扱う。",
       "childItemIds": [],
-      "traditionLayer": "temple_legend",
-      "legacyChildItemIds": [
-        "kihoku_oni",
-        "onigajo_oni",
-        "onio_maru",
-        "yukihime"
-      ]
+      "traditionLayer": "temple_legend"
     },
     {
       "id": "yosuzume",
@@ -484,17 +429,19 @@
       "kana": "よすずめ",
       "isCluster": true,
       "displayInList": true,
-      "region": "愛媛県内各地",
-      "municipality": "要確認",
+      "region": "南予",
+      "municipality": "愛南町周辺・旧南宇和郡",
       "areaTags": [
+        "南宇和",
+        "愛南町",
         "夜道",
-        "怪火",
-        "道"
+        "山犬",
+        "鳥の怪異"
       ],
-      "type": "夜道の怪異・怪火・鳥の怪異",
-      "traditionType": "調査中",
-      "evidenceLevel": "C",
-      "evidenceLabel": "民俗データベースで確認継続",
+      "type": "鳥の怪異・夜道の怪異",
+      "traditionType": "地域で採集された",
+      "evidenceLevel": "A",
+      "evidenceLabel": "南宇和郡の民俗採集記録で確認",
       "scaryLevel": 3,
       "scaryLabel": "少しこわい",
       "shortDescription": "夜の山道を「ちっちっ」と鳴きながらついてきて、山犬が近づくことを知らせるとされた怪異です。",
@@ -508,22 +455,21 @@
       "courseIds": [],
       "childItems": [],
       "missions": [
-        "暗い道で見え方が変わる理由を考えてみよう",
-        "音だけで現れる妖怪を全国図鑑から探してみよう"
+        "夜雀が姿ではなく音で語られる理由を考えてみよう",
+        "夜雀と山犬がどのように結びつけられているか記事から探してみよう"
       ],
       "quiz": [
         {
-          "question": "夜道の怪異で、見上げるほど大きくなるものとして語られる名前はどれですか？",
+          "question": "南宇和の夜雀は、何が近づく前触れと考えられていましたか？",
           "choices": [
-            "伸上り",
-            "白鷺",
-            "玉の石"
+            "山犬",
+            "牛鬼",
+            "白鷺"
           ],
-          "answer": "伸上り",
-          "explanation": "伸上りは、見るほど高く伸びるように感じられる怪異として各地に伝わります。"
+          "answer": "山犬",
+          "explanation": "南宇和では、夜雀の声の後に山犬が現れると語られていました。"
         }
       ],
-      "notes": "個別名の地域出典は調査継続。初期版では夜道の怪異クラスターとして扱う。",
       "childItemIds": [],
       "visualFeatures": [
         "小さな鳥",
@@ -531,12 +477,7 @@
         "羽音",
         "灯り"
       ],
-      "traditionLayer": "folklore_collection",
-      "legacyChildItemIds": [
-        "nobiagari",
-        "yukibaba",
-        "kane_no_kami_no_hi"
-      ]
+      "traditionLayer": "folklore_collection"
     },
     {
       "id": "nobiagari",
@@ -544,17 +485,19 @@
       "kana": "のびあがり",
       "isCluster": true,
       "displayInList": true,
-      "region": "愛媛県内各地",
-      "municipality": "要確認",
+      "region": "南予",
+      "municipality": "宇和島市下波・西予市城川町",
       "areaTags": [
+        "北宇和",
+        "宇和島市下波",
+        "西予市城川町",
         "夜道",
-        "怪火",
-        "道"
+        "伸上り"
       ],
-      "type": "夜道の怪異・怪火・鳥の怪異",
-      "traditionType": "調査中",
-      "evidenceLevel": "C",
-      "evidenceLabel": "民俗データベースで確認継続",
+      "type": "夜道の怪異",
+      "traditionType": "地域で採集された",
+      "evidenceLevel": "A",
+      "evidenceLabel": "南予の複数の民俗記録で確認",
       "scaryLevel": 3,
       "scaryLabel": "少しこわい",
       "shortDescription": "夜道などに現れ、見上げるほど高く伸びていくとされた、愛媛県南予の怪異です。",
@@ -569,22 +512,21 @@
       "courseIds": [],
       "childItems": [],
       "missions": [
-        "暗い道で見え方が変わる理由を考えてみよう",
-        "音だけで現れる妖怪を全国図鑑から探してみよう"
+        "下波と城川町で伝えられた伸上りの違いを探してみよう",
+        "伸上りへの対処法が地域によって違う理由を考えてみよう"
       ],
       "quiz": [
         {
-          "question": "夜道の怪異で、見上げるほど大きくなるものとして語られる名前はどれですか？",
+          "question": "旧下波村では、伸上りに出会ったとき、どうするとよいと語られていましたか？",
           "choices": [
-            "伸上り",
-            "白鷺",
-            "玉の石"
+            "地面から一尺ほど上を蹴る",
+            "柄杓を渡す",
+            "鳥の声をまねる"
           ],
-          "answer": "伸上り",
-          "explanation": "伸上りは、見るほど高く伸びるように感じられる怪異として各地に伝わります。"
+          "answer": "地面から一尺ほど上を蹴る",
+          "explanation": "旧下波村では、伸上りに出会ったとき、地面から一尺ほど上を蹴るとよいと語られていました。"
         }
       ],
-      "notes": "個別名の地域出典は調査継続。初期版では夜道の怪異クラスターとして扱う。",
       "childItemIds": [],
       "visualFeatures": [
         "長い影",
@@ -592,32 +534,30 @@
         "木立",
         "丸い目"
       ],
-      "traditionLayer": "folklore_collection",
-      "legacyChildItemIds": [
-        "yosuzume",
-        "yukibaba",
-        "kane_no_kami_no_hi"
-      ]
+      "traditionLayer": "folklore_collection"
     },
     {
       "id": "kane_no_kami_no_hi",
       "name": "怒和島・大みそかの氏神の火",
-      "kana": "かねのかみのひ",
+      "kana": "ぬわじま・おおみそかのうじがみのひ",
       "isCluster": true,
       "displayInList": true,
-      "region": "愛媛県内各地",
-      "municipality": "要確認",
+      "region": "中予・島しょ部",
+      "municipality": "松山市怒和島",
       "areaTags": [
-        "夜道",
-        "怪火",
-        "道"
+        "怒和島",
+        "松山市",
+        "大みそか",
+        "氏神",
+        "歳徳神",
+        "神の火"
       ],
-      "type": "夜道の怪異・怪火・鳥の怪異",
-      "traditionType": "調査中",
-      "evidenceLevel": "C",
-      "evidenceLabel": "民俗データベースで確認継続",
-      "scaryLevel": 3,
-      "scaryLabel": "少しこわい",
+      "type": "年中行事・神の来訪・神の火",
+      "traditionType": "年中行事に伝わる",
+      "evidenceLevel": "B",
+      "evidenceLabel": "民俗語彙集で確認・原資料は追加確認中",
+      "scaryLevel": 2,
+      "scaryLabel": "ちょっとふしぎ",
       "shortDescription": "怒和島では、大みそかの夜に氏神の後ろへ提灯のような火が現れ、歳徳神の来訪を知らせると語られました。",
       "childDescription": "怒和島では、大みそかの夜に氏神の後ろへ提灯のような火が現れ、歳徳神の来訪を知らせると語られました。",
       "locationId": "nuwa_island",
@@ -629,22 +569,21 @@
       "courseIds": [],
       "childItems": [],
       "missions": [
-        "暗い道で見え方が変わる理由を考えてみよう",
-        "音だけで現れる妖怪を全国図鑑から探してみよう"
+        "この火が妖怪の怪火ではなく神の来訪と考えられた理由を探してみよう",
+        "大みそかと新しい年の神さまの関係を考えてみよう"
       ],
       "quiz": [
         {
-          "question": "夜道の怪異で、見上げるほど大きくなるものとして語られる名前はどれですか？",
+          "question": "怒和島では、大みそかの火は何の知らせだと説明されましたか？",
           "choices": [
-            "伸上り",
-            "白鷺",
-            "玉の石"
+            "歳徳神が現れた知らせ",
+            "船幽霊が近づく知らせ",
+            "牛鬼まつりが始まる知らせ"
           ],
-          "answer": "伸上り",
-          "explanation": "伸上りは、見るほど高く伸びるように感じられる怪異として各地に伝わります。"
+          "answer": "歳徳神が現れた知らせ",
+          "explanation": "島の老人たちは、この火を新しい年の福をもたらす歳徳神の来訪を知らせるものだと説明しました。"
         }
       ],
-      "notes": "個別名の地域出典は調査継続。初期版では夜道の怪異クラスターとして扱う。",
       "childItemIds": [],
       "visualFeatures": [
         "金色の火",
@@ -652,12 +591,7 @@
         "夜道",
         "静かな光"
       ],
-      "traditionLayer": "calendar_custom",
-      "legacyChildItemIds": [
-        "yosuzume",
-        "nobiagari",
-        "yukibaba"
-      ]
+      "traditionLayer": "calendar_custom"
     }
   ]
 }
