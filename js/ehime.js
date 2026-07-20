@@ -58,6 +58,7 @@
 
     try {
       await loadAllData();
+      cleanNotebookIds();
       state.filteredLegends = [...state.legends];
       populateFilters();
       renderAll();
@@ -136,7 +137,7 @@
   function renderDashboard() {
     setText("#legendCount", state.legends.length);
     setText("#sourceCount", state.sources.length);
-    setText("#readCount", getNotebook().length);
+    setText("#readCount", getValidNotebookIds().length);
   }
 
   function renderHome() {
@@ -332,7 +333,7 @@
     const list = $("#notebookList");
     if (!list) return;
 
-    const ids = getNotebook();
+    const ids = getValidNotebookIds();
     const legends = ids.map((id) => findLegend(id)).filter(Boolean);
 
     if (legends.length === 0) {
@@ -478,78 +479,6 @@
     }
   }
 
-  function openChildDetail(childId) {
-    const match = findChildItem(childId);
-    if (!match) return;
-
-    const { parent, child } = match;
-    const article = findChildArticle(child.id);
-    const content = $("#detailContent");
-    const modal = $("#legendModal");
-    if (!content || !modal) return;
-
-    const childSourceIds = new Set([...normalizeArray(child.sourceIds), ...normalizeArray(article?.sourceIds)]);
-    const sources = Array.from(childSourceIds).map((sourceId) => findSource(sourceId)).filter(Boolean);
-    const features = normalizeArray(child.visualFeatures);
-
-    content.innerHTML = `
-      <div class="detail-layout child-detail-layout">
-        <aside class="detail-media">
-          ${imageHtml(child.imagePath, `${child.name}の図鑑イラスト`)}
-          <div class="badge-row">
-            ${badge(parent.name, "green")}
-            ${badge(parent.region)}
-            ${badge(parent.evidenceLabel || `確認度 ${parent.evidenceLevel}`, "rust")}
-          </div>
-          <p>${escapeHtml(parent.name)}の下にある派生伝承です。</p>
-          <div class="card-actions">
-            <button type="button" data-open-detail="${escapeHtml(parent.id)}">親クラスターへ戻る</button>
-          </div>
-        </aside>
-        <article>
-          <header class="detail-title">
-            <p>${escapeHtml(child.kana || "")}</p>
-            <h2 id="detailTitle">${escapeHtml(child.name)}</h2>
-          </header>
-          <section class="detail-section">
-            <h3>ひとことで</h3>
-            <p>${escapeHtml(child.shortDescription || child.summary || "")}</p>
-          </section>
-          <section class="detail-section">
-            <h3>どんな伝承？</h3>
-            <p>${escapeHtml(child.childDescription || child.description || "")}</p>
-          </section>
-          ${features.length ? `
-            <section class="detail-section">
-              <h3>見た目・手がかり</h3>
-              <ul>${features.map((feature) => `<li>${escapeHtml(feature)}</li>`).join("")}</ul>
-            </section>
-          ` : ""}
-          <section class="detail-section">
-            <h3>親クラスター</h3>
-            <p>${escapeHtml(parent.name)} / ${escapeHtml(parent.type || "")}</p>
-          </section>
-          ${childArticleHtml(article, child)}
-          <section class="detail-section">
-            <h3>出典・確認リンク</h3>
-            <div class="detail-sources">
-              ${sources.length ? sources.map((source) => `
-                <a href="${escapeAttribute(source.url || "#")}" target="_blank" rel="noopener">
-                  ${escapeHtml(source.title)}（${escapeHtml(source.organization || "")}）
-                </a>
-              `).join("") : "<p>出典は親クラスターの確認リンクを参照してください。</p>"}
-            </div>
-          </section>
-        </article>
-      </div>
-    `;
-
-    bindDynamicActions(content);
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    $(".legend-modal__close")?.focus();
-  }
-
   function articleHtml(article) {
     if (!article) {
       return `<section class="detail-section"><p>詳しい記事は準備中です。</p></section>`;
@@ -566,147 +495,63 @@
   }
 
   function recordInfoHtml(legend, location, article) {
-    const sources = [...new Set([...normalizeArray(legend.sourceIds), ...normalizeArray(article?.sourceIds)])]
-      .map(findSource).filter(Boolean);
+    const sourceIds = [...new Set([
+      ...normalizeArray(legend.sourceIds),
+      ...normalizeArray(article?.sourceIds)
+    ])];
+    const sources = sourceIds.map(findSource).filter(Boolean);
+
+    return `
+      <section class="detail-section">
+        <h3>記録情報</h3>
+        ${location?.name ? `
+          <dl class="record-location">
+            <dt>伝承地・関係地</dt>
+            <dd>${escapeHtml(location.name)}</dd>
+          </dl>
+        ` : ""}
+        <div class="record-source-list">
+          ${sources.map((source) => sourceRecordHtml(source)).join("")}
+        </div>
+      </section>
+    `;
+  }
+
+  function sourceRecordHtml(source) {
     const rows = [
-      ["伝承地・関係地", location?.name],
-      ["記録者または編者", sources.map((s) => s.authorOrEditor).filter(Boolean).join("、")],
-      ["資料に記載された話者", sources.map((s) => s.informant).filter(Boolean).join("、")],
-      ["資料名", sources.map((s) => s.title).filter(Boolean).join("、")],
-      ["刊行年", sources.map((s) => s.publicationYear).filter(Boolean).join("、")],
-      ["巻号・ページ", sources.map((s) => [s.volumeIssue, s.pages].filter(Boolean).join(" ")).filter(Boolean).join("、")],
-      ["個別記録ID", sources.map((s) => s.recordId).filter(Boolean).join("、")],
-      ["資料種別", sources.map((s) => s.type).filter(Boolean).join("、")]
-    ].filter(([, value]) => value);
-    return `<section class="detail-section"><h3>記録情報</h3><dl class="record-info">${rows.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(String(value))}</dd>`).join("")}</dl></section>`;
-  }
-
-  function childArticleHtml(article, child) {
-    const articleId = `ehime-child-detailed-article-${escapeAttribute(child.id || "pending")}`;
-
-    if (!article) {
-      return `
-        <section class="detail-section detail-more-controls">
-          <h3>もっと詳しく</h3>
-          <p>詳しい記事は準備中です。</p>
-          <button type="button" class="inline-action" disabled>もっと詳しく読む</button>
-        </section>
-      `;
-    }
+      ["資料名", source.title],
+      ["記録者または編者", source.authorOrEditor],
+      ["資料に記載された話者", source.informant],
+      ["刊行年", source.publicationYear],
+      ["刊行日", source.publicationDate],
+      ["巻号", source.volumeIssue],
+      ["ページ", source.pages],
+      ["個別記録ID", source.recordId],
+      ["資料種別", source.type],
+      ["発行・公開機関", source.organization]
+    ].filter(([, value]) => value !== null && value !== undefined && value !== "" && (!Array.isArray(value) || value.length));
 
     return `
-      <section class="detail-section detail-more-controls">
-        <h3>もっと詳しく</h3>
-        <p>${escapeHtml(article.summary || "伝承の背景をさらに詳しく読めます。")}</p>
-        <button
-          type="button"
-          class="inline-action"
-          data-toggle-article="${articleId}"
-          aria-expanded="false"
-          aria-controls="${articleId}"
-        >もっと詳しく読む</button>
-      </section>
-      <section id="${articleId}" class="detail-section detailed-article" tabindex="-1" hidden>
-        <h3>${escapeHtml(article.title || child.name)}</h3>
-        ${article.subtitle ? `<p class="detailed-article-lead">${escapeHtml(article.subtitle)}</p>` : ""}
-        ${normalizeArray(article.body).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-        ${childArticleReferencesHtml(article)}
-      </section>
-    `;
-  }
-
-  function childArticleReferencesHtml(article) {
-    const sources = normalizeArray(article.sourceIds).map((sourceId) => findSource(sourceId)).filter(Boolean);
-    const referenceLinks = normalizeArray(article.referenceLinks);
-
-    if (sources.length === 0 && referenceLinks.length === 0) {
-      return "";
-    }
-
-    return `
-      <section class="detail-section">
-        <h3>参考リンク</h3>
-        <div class="detail-sources">
-          ${sources.map((source) => `
-            <a href="${escapeAttribute(source.url || "#")}" target="_blank" rel="noopener">
-              ${escapeHtml(source.title)}（${escapeHtml(source.organization || "")}）
-            </a>
-          `).join("")}
-          ${referenceLinks.map((link) => `
-            <a href="${escapeAttribute(link.url || "#")}" target="_blank" rel="noopener">
-              ${escapeHtml(link.title || link.url || "")}
-            </a>
-          `).join("")}
-        </div>
-      </section>
-    `;
-  }
-
-  function relatedItemsHtml(legend) {
-    const items = normalizeArray(legend.childItems);
-    if (items.length === 0) return "";
-
-    return `
-      <section class="detail-section related-children-section">
-        <h3>関連する伝承</h3>
-        <div class="related-grid">
-          ${items.map((item) => `
-            <article class="related-child-card">
-              ${imageHtml(item.imagePath, `${item.name}の図鑑イラスト`)}
-              <strong>${escapeHtml(item.name || "")}</strong>
-              <p>${escapeHtml(item.shortDescription || item.summary || "")}</p>
-              <button type="button" data-open-child-detail="${escapeHtml(item.id)}">詳しく見る</button>
-            </article>
-          `).join("")}
-        </div>
-      </section>
-    `;
-  }
-
-  function missionsHtml(legend) {
-    const missions = normalizeArray(legend.missions);
-    if (missions.length === 0) return "";
-
-    return `
-      <section class="detail-section">
-        <h3>探検ミッション</h3>
-        <ul>${missions.map((mission) => `<li>${escapeHtml(mission)}</li>`).join("")}</ul>
-      </section>
-    `;
-  }
-
-  function detailQuizHtml(legend) {
-    const quiz = normalizeArray(legend.quiz)[0];
-    if (!quiz) return "";
-
-    return `
-      <section class="detail-section">
-        <h3>ミニクイズ</h3>
-        <p>${escapeHtml(quiz.question || "")}</p>
-        <p><strong>答え:</strong> ${escapeHtml(quiz.answer || "")}</p>
-        <p>${escapeHtml(quiz.explanation || "")}</p>
-      </section>
+      <article class="record-source-card">
+        <h4>${escapeHtml(source.title || "記録資料")}</h4>
+        <dl>
+          ${rows.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(Array.isArray(value) ? value.join("、") : String(value))}</dd>`).join("")}
+        </dl>
+        ${source.url ? `<a href="${escapeAttribute(source.url)}" target="_blank" rel="noopener">資料を開く</a>` : ""}
+      </article>
     `;
   }
 
   function detailSourcesHtml(legend) {
     const article = findArticle(legend.articleId || legend.id);
-    const ids = new Set([...normalizeArray(legend.sourceIds), ...normalizeArray(article?.sourceIds)]);
-    const sources = Array.from(ids).map((sourceId) => findSource(sourceId)).filter(Boolean);
     const evidence = state.evidence.find((item) => item.legendId === legend.id);
 
     return `
       <section class="detail-section">
-        <h3>出典・確認メモ</h3>
-        ${evidence ? `<p>確認度 ${escapeHtml(evidence.level)}: ${escapeHtml(normalizeArray(evidence.checked).join("、"))}</p>` : ""}
-        ${evidence?.needsFollowUp?.length ? `<p>追加確認: ${escapeHtml(evidence.needsFollowUp.join("、"))}</p>` : ""}
-        <div class="detail-sources">
-          ${sources.length ? sources.map((source) => `
-            <a href="${escapeAttribute(source.url || "#")}" target="_blank" rel="noopener">
-              ${escapeHtml(source.title)}（${escapeHtml(source.organization || "")}）
-            </a>
-          `).join("") : "<p>出典は整理中です。</p>"}
-        </div>
+        <h3>確認メモ</h3>
+        ${evidence ? `<p>確認度 ${escapeHtml(evidence.level)}</p>` : ""}
+        ${evidence?.checked?.length ? `<h4>確認できたこと</h4><ul>${evidence.checked.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}
+        ${evidence?.needsFollowUp?.length ? `<h4>追加確認事項</h4><ul>${evidence.needsFollowUp.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}
       </section>
     `;
   }
@@ -714,10 +559,6 @@
   function bindDynamicActions(root) {
     $$("[data-open-detail]", root).forEach((button) => {
       button.addEventListener("click", () => openDetail(button.dataset.openDetail));
-    });
-
-    $$("[data-open-child-detail]", root).forEach((button) => {
-      button.addEventListener("click", () => openChildDetail(button.dataset.openChildDetail));
     });
 
     $$("[data-notebook]", root).forEach((button) => {
@@ -732,23 +573,6 @@
       });
     });
 
-    $$("[data-toggle-article]", root).forEach((button) => {
-      button.addEventListener("click", () => {
-        const target = document.getElementById(button.dataset.toggleArticle || "");
-        if (!target) return;
-
-        const nextExpanded = target.hidden;
-        target.hidden = !nextExpanded;
-        button.setAttribute("aria-expanded", String(nextExpanded));
-        button.textContent = nextExpanded ? "詳しい記事を閉じる" : "もっと詳しく読む";
-
-        if (nextExpanded) {
-          target.focus({ preventScroll: true });
-          const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-          target.scrollIntoView({ block: "nearest", behavior: prefersReducedMotion ? "auto" : "smooth" });
-        }
-      });
-    });
   }
 
   function populateFilters() {
@@ -774,8 +598,7 @@
         legend.traditionType,
         legend.shortDescription,
         legend.childDescription,
-        ...normalizeArray(legend.areaTags),
-        ...normalizeArray(legend.childItems).flatMap((item) => [item.name, item.summary])
+        ...normalizeArray(legend.areaTags)
       ].filter(Boolean).join(" ").toLowerCase();
 
       const matchesKeyword = keyword ? haystack.includes(keyword) : true;
@@ -832,9 +655,23 @@
     }
   }
 
+  function getValidNotebookIds() {
+    const validIds = new Set(state.legends.map((legend) => legend.id));
+    return getNotebook().filter((id) => validIds.has(id));
+  }
+
+  function cleanNotebookIds() {
+    const original = getNotebook();
+    const cleaned = getValidNotebookIds();
+
+    if (JSON.stringify(original) !== JSON.stringify(cleaned)) {
+      writeNotebook(cleaned);
+    }
+  }
+
   function addNotebook(id, showMessage) {
     if (!id) return;
-    const ids = getNotebook();
+    const ids = getValidNotebookIds();
     if (!ids.includes(id)) {
       ids.unshift(id);
       writeNotebook(ids);
@@ -848,7 +685,7 @@
   }
 
   function removeNotebook(id) {
-    const ids = getNotebook().filter((item) => item !== id);
+    const ids = getValidNotebookIds().filter((item) => item !== id);
     writeNotebook(ids);
     renderDashboard();
     renderNotebook();
@@ -881,20 +718,6 @@
 
   function findSource(id) {
     return state.sources.find((source) => source.id === id);
-  }
-
-  function findChildArticle(id) {
-    return state.childArticles.find((article) => article.id === id);
-  }
-
-  function findChildItem(id) {
-    for (const parent of state.legends) {
-      const child = normalizeArray(parent.childItems).find((item) => item.id === id);
-      if (child) {
-        return { parent, child };
-      }
-    }
-    return null;
   }
 
   function setText(selector, value) {
