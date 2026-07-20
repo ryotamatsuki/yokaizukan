@@ -1,0 +1,1813 @@
+{
+  "metadata": {
+    "title": "愛媛ふしぎ伝承図鑑 46派生項目 典拠データベース",
+    "schema_version": "1.0.0",
+    "created_at": "2026-07-20",
+    "record_count": 46,
+    "language": "ja",
+    "scope": "現行legends.jsonの46派生項目を、場所・記録者・話者・記録資料・根拠区分・編集方針で再構成したもの",
+    "classification": {
+      "A": "項目の名称・内容・愛媛との結びつきが具体的資料で確認できる",
+      "B": "伝承または対象は確認できるが、題名・範囲・細部・原典の精密化が必要",
+      "C": "別名、登場人物、地名、信仰背景、話の一場面などで、独立項目ではない",
+      "D": "現行題名に対応する愛媛固有の記録を確認できない"
+    },
+    "important_caveat": "Aは超自然現象の実在を示す区分ではなく、伝承・祭礼・地名・造形が資料上確認できることを示す。個人話者が資料に記載されていない場合はnullまたは空配列とし、推測で補っていない。",
+    "recommended_primary_key": "id",
+    "recommended_foreign_keys": {
+      "records.source_ids": "sources.source_id",
+      "records.parent_cluster_id": "public/data/legends.json legends.id"
+    }
+  },
+  "sources": [
+    {
+      "source_id": "SRC_UWAJIMA_CITY_2026",
+      "source_type": "official_webpage",
+      "title": "60年目のうわじま牛鬼まつり",
+      "article_or_section": "牛鬼の形態、祭礼での役割、市民祭りの開始年",
+      "author_or_editor": null,
+      "informant": null,
+      "publishing_body": "宇和島市",
+      "publication_year": 2026,
+      "publication_date": "2026-06-19",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "2026061803",
+      "url": "https://www.city.uwajima.ehime.jp/soshiki/3/mirai-kiji2026-6-12.html",
+      "source_quality": "official",
+      "notes": "現在のうわじま牛鬼まつりは1967年に和霊大祭に合わせた市民イベントとして開始したと説明する。"
+    },
+    {
+      "source_id": "SRC_IYO_MINZOKU_0200004",
+      "source_type": "folklore_article",
+      "title": "牛鬼",
+      "article_or_section": "牛鬼",
+      "author_or_editor": "執筆者不明",
+      "informant": null,
+      "publishing_body": "伊予民俗の会",
+      "publication_year": 1975,
+      "publication_date": "1975-01-25",
+      "volume_issue": "『伊予の民俗』通巻4号",
+      "pages": "52-53",
+      "record_id": "0200004",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0200004",
+      "source_quality": "folklore_publication",
+      "notes": "宇和島市吉田町。泉ヶ森の牛鬼塚と大国主命による牛鬼退治を記録。"
+    },
+    {
+      "source_id": "SRC_IYO_MINZOKU_0200265",
+      "source_type": "folklore_article",
+      "title": "祭り盛り上げ牛鬼",
+      "article_or_section": "南予の祭りの牛鬼",
+      "author_or_editor": "秋田忠俊",
+      "informant": "『愛媛新聞』昭和34年10月9日以降の記事を引用",
+      "publishing_body": "伊予民俗の会",
+      "publication_year": 1975,
+      "publication_date": "1975-03-10",
+      "volume_issue": "『伊予の民俗』通巻5号",
+      "pages": "20",
+      "record_id": "0200265",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0200265",
+      "source_quality": "folklore_publication",
+      "notes": "南予の祭りに登場する牛鬼の練り物を記録。"
+    },
+    {
+      "source_id": "SRC_NDL_TANUKI_REFERENCE",
+      "source_type": "library_reference_record",
+      "title": "八百八狸について知りたい。",
+      "article_or_section": "愛媛県立図書館レファレンス事例",
+      "author_or_editor": "愛媛県立図書館",
+      "informant": null,
+      "publishing_body": "国立国会図書館 レファレンス協同データベース",
+      "publication_year": 2012,
+      "publication_date": "2012-02-15",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "1000101469",
+      "url": "https://crd.ndl.go.jp/reference/entry/reference/show?id=1000101469&page=ref_view",
+      "source_quality": "public_library_reference",
+      "notes": "『愛媛県百科大事典』、『久谷村史』、『拾録味酒史』などを案内し、刑部狸、松山騒動、八百八狸を整理する。"
+    },
+    {
+      "source_id": "SRC_MATSUYAMA_TANUKI_OFFICIAL",
+      "source_type": "official_webpage",
+      "title": "たぬき伝説について教えてください",
+      "article_or_section": "お袖狸、毘沙門狸、金平狸、刑部狸",
+      "author_or_editor": null,
+      "informant": null,
+      "publishing_body": "松山市 産業経済部 観光・国際交流課",
+      "publication_year": 2022,
+      "publication_date": "2022-03-15",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "FAQ-595",
+      "url": "https://info-faq.city.matsuyama.ehime.jp/faq/show/595",
+      "source_quality": "official",
+      "notes": "松山市内の具体的な狸伝承と所在地を列挙する。"
+    },
+    {
+      "source_id": "SRC_EHON_HYAKU_MONOGATARI_1841",
+      "source_type": "early_modern_book",
+      "title": "絵本百物語（桃山人夜話）",
+      "article_or_section": "波山",
+      "author_or_editor": "桃花園三千麿（桃山人）",
+      "illustrator": "竹原春泉斎",
+      "informant": null,
+      "publishing_body": "江戸後期刊本",
+      "publication_year": 1841,
+      "publication_date": null,
+      "volume_issue": "巻三",
+      "pages": null,
+      "record_id": "DOI:10.20730/300103733",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000136-I1460024478581640320",
+      "source_quality": "historical_primary_text",
+      "notes": "波山を伊予の怪鳥として記し、婆娑婆娑を呼称、犬鳳凰を関連名として扱う。"
+    },
+    {
+      "source_id": "SRC_ASHINAKA_116_TENGU",
+      "source_type": "folklore_article",
+      "title": "伊予路の天狗噺",
+      "article_or_section": "石鎚山の天狗",
+      "author_or_editor": "末広昌雄",
+      "informant": null,
+      "publishing_body": "山村民俗の会",
+      "publication_year": 1969,
+      "publication_date": "1969-06",
+      "volume_issue": "『あしなか』通巻116号",
+      "pages": "5-7",
+      "record_id": "0030258 / 0030259",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030258",
+      "source_quality": "folklore_publication",
+      "notes": "西条市小松町・丹原町。石鎚山を天狗の巣とする話、烏天狗、枝間の小さな火、白装束の天狗を記録。"
+    },
+    {
+      "source_id": "SRC_ISHIZUCHI_OFFICIAL",
+      "source_type": "official_webpage",
+      "title": "石鎚山について",
+      "article_or_section": "天狗岳、山岳信仰、修験道",
+      "author_or_editor": null,
+      "informant": null,
+      "publishing_body": "石鎚神社",
+      "publication_year": null,
+      "publication_date": null,
+      "volume_issue": null,
+      "pages": null,
+      "record_id": null,
+      "url": "https://ishizuchisan.jp/mountain/about/",
+      "source_quality": "official",
+      "notes": "天狗岳の実在地名、石鎚山の山岳信仰と修験道の背景を確認する資料。"
+    },
+    {
+      "source_id": "SRC_YOYOGUN_GORIGENSHU_1710",
+      "source_type": "local_topography",
+      "title": "予陽郡郷俚諺集",
+      "article_or_section": "道後温泉・白鷺伝説",
+      "author_or_editor": "奥平貞虎編とする書誌があるが、著者不詳説もある",
+      "informant": null,
+      "publishing_body": "松山藩領の地誌",
+      "publication_year": 1710,
+      "publication_date": null,
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "CiNii BA34165774",
+      "url": "https://ci.nii.ac.jp/ncid/BA34165774",
+      "source_quality": "historical_local_text",
+      "notes": "白鷺が湯で足の傷を癒したという道後温泉発見譚の記録。編者帰属には書誌上の揺れがある。"
+    },
+    {
+      "source_id": "SRC_IYOKOKU_FUDOKI_DOGO",
+      "source_type": "ancient_text_fragment",
+      "title": "伊予国風土記逸文",
+      "article_or_section": "道後温泉・少彦名命と大国主命",
+      "author_or_editor": "原編者不明",
+      "preserved_in": "『釈日本紀』巻十四など",
+      "informant": null,
+      "publishing_body": "古代伊予国の風土記逸文",
+      "publication_year": null,
+      "publication_date": "奈良時代成立とされる",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "文化遺産オンライン 421806",
+      "url": "https://online.bunka.go.jp/heritages/detail/421806",
+      "source_quality": "historical_primary_fragment",
+      "notes": "少彦名命を大国主命が道後の湯で温め、玉の石の上で踊った説話を伝える。"
+    },
+    {
+      "source_id": "SRC_DOGO_OFFICIAL",
+      "source_type": "official_webpage",
+      "title": "道後温泉の歴史・泉質・風情",
+      "article_or_section": "白鷺伝説、玉の石説話",
+      "author_or_editor": null,
+      "informant": null,
+      "publishing_body": "道後温泉公式サイト",
+      "publication_year": null,
+      "publication_date": null,
+      "volume_issue": null,
+      "pages": null,
+      "record_id": null,
+      "url": "https://dogo.jp/about",
+      "source_quality": "official_secondary_summary",
+      "notes": "『予陽郡郷俚諺集』と『伊予国風土記逸文』に基づく公式解説。"
+    },
+    {
+      "source_id": "SRC_DOGO_YUJINJA_CONTEXT",
+      "source_type": "official_cultural_property_page",
+      "title": "道後温泉絵図",
+      "article_or_section": "湯神社の位置と道後温泉の歴史景観",
+      "author_or_editor": null,
+      "informant": null,
+      "publishing_body": "松山市",
+      "publication_year": 2012,
+      "publication_date": "2012-03-01",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": null,
+      "url": "https://www.city.matsuyama.ehime.jp/kanko/kankoguide/rekishibunka/bunkazai/shi/dougoonsen_ezu.html",
+      "source_quality": "official",
+      "notes": "湯神社という実在の信仰施設を確認する背景資料。独立した『湯神』妖怪の記録ではない。"
+    },
+    {
+      "source_id": "SRC_EMON_SABURO_REFERENCE",
+      "source_type": "library_reference_record",
+      "title": "衛門三郎伝説の成立はどこまで遡れるか。",
+      "article_or_section": "石手寺刻板と衛門三郎伝説",
+      "author_or_editor": "愛媛県立図書館",
+      "informant": null,
+      "publishing_body": "国立国会図書館 レファレンス協同データベース",
+      "publication_year": 2006,
+      "publication_date": "2006-07-15",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "1000061903",
+      "url": "https://crd.ndl.go.jp/reference/entry/reference/show?id=1000061903&page=ref_view",
+      "source_quality": "public_library_reference",
+      "notes": "衛門三郎伝説の初見として、河野通宣による永禄10年（1567）の石手寺刻板を挙げる。"
+    },
+    {
+      "source_id": "SRC_EHIME_PREF_FOLKLORE_1983",
+      "source_type": "prefectural_history",
+      "title": "愛媛県史 民俗 上",
+      "article_or_section": "第五章 第三節 二 憑きもの・妖怪伝承",
+      "author_or_editor": "佐々木正興",
+      "informant": null,
+      "publishing_body": "愛媛県",
+      "publication_year": 1983,
+      "publication_date": "1983-03-31",
+      "volume_issue": "民俗上巻",
+      "pages": "812-834",
+      "record_id": "C3820084ほか",
+      "url": "https://www.i-manabi.jp/system/regionals/regionals/ecode%3A2/49/view/6556",
+      "source_quality": "prefectural_history",
+      "notes": "宇和海の船幽霊、海坊主、日振島へ帰る船の陰火、神吉丸、伸上り等を収録。"
+    },
+    {
+      "source_id": "SRC_IYO_MINZOKU_0200237",
+      "source_type": "folklore_article",
+      "title": "怪談ばなし",
+      "article_or_section": "船幽霊",
+      "author_or_editor": "橋村寿",
+      "informant": null,
+      "publishing_body": "伊予民俗の会",
+      "publication_year": 1985,
+      "publication_date": "1985-11-30",
+      "volume_issue": "『伊予の民俗』通巻39号",
+      "pages": "21-24（該当23頁）",
+      "record_id": "0200237",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0200237",
+      "source_quality": "folklore_publication",
+      "notes": "大洲市・宇和島市の船幽霊。柄杓を求める話を記録。"
+    },
+    {
+      "source_id": "SRC_JOMIN_1070653",
+      "source_type": "fieldwork_report",
+      "title": "愛媛県南宇和郡城辺町 調査報告書",
+      "article_or_section": "海坊主",
+      "author_or_editor": "中央大学民俗研究会",
+      "informant": "久徳義明",
+      "publishing_body": "中央大学民俗研究会",
+      "publication_year": 1991,
+      "publication_date": "1991-11-01",
+      "volume_issue": "『常民』28号",
+      "pages": "102",
+      "record_id": "1070653",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1070653",
+      "source_quality": "fieldwork_report",
+      "notes": "愛南町。海坊主が柄杓を求め、船に水を入れる話。"
+    },
+    {
+      "source_id": "SRC_IYOJI_0190010",
+      "source_type": "folklore_article",
+      "title": "探訪記 越智郡吉海町津島",
+      "article_or_section": "神吉丸の船幽霊",
+      "author_or_editor": "森正史",
+      "informant": null,
+      "publishing_body": "愛媛民俗学会",
+      "publication_year": 1958,
+      "publication_date": "1958-02-01",
+      "volume_issue": "『伊予路』1号",
+      "pages": "18-27（該当26頁）",
+      "record_id": "0190010",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0190010",
+      "source_quality": "folklore_publication",
+      "notes": "今治市吉海町津島。神吉丸の船子の霊が夜中に浜へ帰る話。"
+    },
+    {
+      "source_id": "SRC_MURAKAMI_OFFICIAL",
+      "source_type": "official_webpage",
+      "title": "村上海賊ミュージアム 施設について",
+      "article_or_section": "能島村上氏・村上海賊の歴史",
+      "author_or_editor": null,
+      "informant": null,
+      "publishing_body": "今治市 文化振興課",
+      "publication_year": null,
+      "publication_date": null,
+      "volume_issue": null,
+      "pages": null,
+      "record_id": null,
+      "url": "https://www.city.imabari.ehime.jp/museum/suigun/about/",
+      "source_quality": "official",
+      "notes": "歴史的背景の資料。村上海賊の亡霊、能島城の夜火、来島海峡の船幽霊を確認する資料ではない。"
+    },
+    {
+      "source_id": "SRC_KIHOKU_ONI_LEGEND",
+      "source_type": "official_webpage",
+      "title": "等妙寺旧境内と鬼北の鬼伝説",
+      "article_or_section": "等妙寺縁起、鬼王段三郎、鬼ヶ城",
+      "author_or_editor": "鬼北町教育委員会",
+      "informant": null,
+      "publishing_body": "鬼北町",
+      "publication_year": 2024,
+      "publication_date": "2024-06-27",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "0027320",
+      "url": "https://www.town.kihoku.ehime.jp/site/toumyo-jitemple/27320.html",
+      "source_quality": "official_secondary_summary",
+      "notes": "江戸初期成立の等妙寺縁起に基づき、鬼王段三郎、鬼ヶ城、タモト岩、鼓岩の伝承を紹介。"
+    },
+    {
+      "source_id": "SRC_KIHOKU_MONUMENTS",
+      "source_type": "official_webpage",
+      "title": "鬼のモニュメント",
+      "article_or_section": "鬼王丸・柚鬼媛",
+      "author_or_editor": null,
+      "informant": null,
+      "publishing_body": "鬼北町",
+      "publication_year": 2024,
+      "publication_date": "2024-10-25",
+      "volume_issue": null,
+      "pages": null,
+      "record_id": "0013845",
+      "url": "https://www.town.kihoku.ehime.jp/site/kihokukanko/11317.html",
+      "source_quality": "official",
+      "notes": "現代の地域モニュメント。デザインは竹谷隆之。古い伝承そのものではない。"
+    },
+    {
+      "source_id": "SRC_YOSUZUME_1100055",
+      "source_type": "folklore_article",
+      "title": "伊予の怪異談",
+      "article_or_section": "山犬・夜雀",
+      "author_or_editor": "和田正洲",
+      "informant": "婆さん（資料表記）",
+      "publishing_body": "女性民俗研究会",
+      "publication_year": 1957,
+      "publication_date": "1957-08-15",
+      "volume_issue": "『女性と経験』2巻2号",
+      "pages": "10-12（該当11頁）",
+      "record_id": "1100055",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1100055",
+      "source_quality": "folklore_publication",
+      "notes": "南宇和郡。夜雀の音と山犬の出現を結びつける話。"
+    },
+    {
+      "source_id": "SRC_NOBIAGARI_0200015",
+      "source_type": "folklore_article",
+      "title": "北宇和郡下波村聞書",
+      "article_or_section": "伸び上り",
+      "author_or_editor": "山口常助",
+      "informant": null,
+      "publishing_body": "伊予民俗の会",
+      "publication_year": 1975,
+      "publication_date": "1975-10-25",
+      "volume_issue": "『伊予の民俗』通巻11号",
+      "pages": "23-30",
+      "record_id": "0200015",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0200015",
+      "source_quality": "folklore_publication",
+      "notes": "宇和島市下波。伸び上りへの対処法を記録。"
+    },
+    {
+      "source_id": "SRC_NOBIAGARI_0200232",
+      "source_type": "folklore_article",
+      "title": "怪談ばなし",
+      "article_or_section": "のびあがり",
+      "author_or_editor": "橋村寿",
+      "informant": null,
+      "publishing_body": "伊予民俗の会",
+      "publication_year": 1985,
+      "publication_date": "1985-11-30",
+      "volume_issue": "『伊予の民俗』通巻39号",
+      "pages": "21-24",
+      "record_id": "0200232",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0200232",
+      "source_quality": "folklore_publication",
+      "notes": "西予市。下池の水の落ち口に現れ、見上げると伸びる話。"
+    },
+    {
+      "source_id": "SRC_YUKIBABA_1231381",
+      "source_type": "folklore_article",
+      "title": "スキーと雪と雪の怪",
+      "article_or_section": "伊予の雪婆",
+      "author_or_editor": "藤澤衛彦",
+      "informant": null,
+      "publishing_body": "三元社",
+      "publication_year": 1928,
+      "publication_date": "1928-01-01",
+      "volume_issue": "『旅と伝説』1巻1号",
+      "pages": "38-43（該当41-42頁）",
+      "record_id": "1231381",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231381",
+      "source_quality": "folklore_publication",
+      "notes": "伊予。雪塊のくぼみを一本足の雪婆の足跡とする話。県内の詳細地点は未記載。"
+    },
+    {
+      "source_id": "SRC_SOGO_NIHON_MINZOKU_GOI_1955",
+      "source_type": "folklore_dictionary",
+      "title": "綜合日本民俗語彙",
+      "article_or_section": "カネノカミノヒ",
+      "author_or_editor": "民俗学研究所 編",
+      "informant": null,
+      "publishing_body": "平凡社",
+      "publication_year": 1955,
+      "publication_date": "1955-1956",
+      "volume_issue": "全4巻",
+      "pages": null,
+      "record_id": "CiNii BN05729787",
+      "url": "https://ci.nii.ac.jp/ncid/BN05729787/",
+      "source_quality": "folklore_dictionary",
+      "notes": "怒和島で大晦日の夜、氏神の後ろに提灯状の火が現れ、歳徳神の来訪とされる項目を収録。原資料・採集者は辞典記載の再確認が必要。"
+    }
+  ],
+  "records": [
+    {
+      "id": "uwajima_ushioni",
+      "name": "宇和島の牛鬼",
+      "parent_cluster_id": "uwajima_ushioni_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "festival_tradition",
+        "folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "宇和島・南予の牛鬼",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市・南予各地",
+        "locality": null,
+        "historical_name": "伊予国宇和郡",
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "秋田忠俊",
+        "『伊予の民俗』執筆者不明の記事"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_UWAJIMA_CITY_2026",
+        "SRC_IYO_MINZOKU_0200004",
+        "SRC_IYO_MINZOKU_0200265"
+      ],
+      "evidence_summary": "祭礼の練り物としての牛鬼と、宇和島周辺の牛鬼説話を確認できる。",
+      "editorial_note": "祭礼の牛鬼と、海・山に現れる怪物としての牛鬼を区別して説明する。"
+    },
+    {
+      "id": "ushioni_matsuri",
+      "name": "うわじま牛鬼まつり",
+      "parent_cluster_id": "uwajima_ushioni_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "modern_festival"
+      ],
+      "independent_entry": true,
+      "recommended_action": "revise",
+      "proposed_title": "1967年に始まったうわじま牛鬼まつり",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市",
+        "locality": "市街地・和霊神社周辺",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "宇和島市"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_UWAJIMA_CITY_2026"
+      ],
+      "evidence_summary": "現在の市民祭りは1967年に和霊大祭に合わせて始まったことを公式資料で確認。",
+      "editorial_note": "和霊大祭の歴史と、市民イベントとしての牛鬼まつりの開始年を混同しない。"
+    },
+    {
+      "id": "ushioni_buchi",
+      "name": "牛鬼淵",
+      "parent_cluster_id": "uwajima_ushioni_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "place_name",
+        "folklore_motif"
+      ],
+      "independent_entry": false,
+      "recommended_action": "revise_or_merge",
+      "proposed_title": "牛鬼淵という地名と水辺の牛鬼",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市周辺",
+        "locality": null,
+        "historical_name": "宇和島",
+        "precision": "regional_unresolved"
+      },
+      "recorded_by": [
+        "宮城縣史の編纂資料に引用された事例"
+      ],
+      "informants": [],
+      "source_ids": [],
+      "evidence_summary": "宇和島に『牛鬼渕』の名称が残るというデータベース記録はあるが、現行記事が示す具体地点と物語は未特定。",
+      "editorial_note": "地点、旧村名、出典頁を確定するまで親記事内のコラム扱いとする。"
+    },
+    {
+      "id": "warei_jinja_ushioni",
+      "name": "和霊神社と牛鬼",
+      "parent_cluster_id": "uwajima_ushioni_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "festival_context",
+        "religious_context"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "和霊大祭で神輿を先導する牛鬼",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市",
+        "locality": "和霊神社周辺",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "宇和島市"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_UWAJIMA_CITY_2026"
+      ],
+      "evidence_summary": "牛鬼が祭礼で神輿の露払いをすることは確認できるが、独立した説話ではない。",
+      "editorial_note": "宇和島の牛鬼または祭りの記事に統合する。"
+    },
+    {
+      "id": "yamabushi_ushioni",
+      "name": "山伏退治譚",
+      "parent_cluster_id": "uwajima_ushioni_cluster",
+      "evidence_grade": "D",
+      "verification_status": "unsupported",
+      "content_type": [
+        "editorial_motif"
+      ],
+      "independent_entry": false,
+      "recommended_action": "replace",
+      "proposed_title": "泉ヶ森の牛鬼塚と大国主命",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市",
+        "locality": "泉ヶ森",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "『伊予の民俗』執筆者不明の記事"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_IYO_MINZOKU_0200004"
+      ],
+      "evidence_summary": "山伏退治という現行題名の地域資料は確認できない。代わりに泉ヶ森の牛鬼塚と大国主命の退治説話が記録されている。",
+      "editorial_note": "現行項目を確認済みの退治説話へ置換する。"
+    },
+    {
+      "id": "inugami_gyobu",
+      "name": "隠神刑部",
+      "parent_cluster_id": "matsuyama_tanuki_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "literary_legend",
+        "tanuki_tradition"
+      ],
+      "independent_entry": true,
+      "recommended_action": "revise",
+      "proposed_title": "刑部狸（通称・隠神刑部）",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "久谷町・久万山周辺",
+        "historical_name": null,
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "愛媛新聞社愛媛県百科大事典編集委員室",
+        "久谷村史編纂委員会"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_NDL_TANUKI_REFERENCE",
+        "SRC_MATSUYAMA_TANUKI_OFFICIAL"
+      ],
+      "evidence_summary": "刑部狸は八百八狸の首領として文献・地域資料に記録される。『隠神刑部』表記は後世の一般化を含む。",
+      "editorial_note": "講談・読み物としての成立と地域信仰を分けて記載する。"
+    },
+    {
+      "id": "matsuyama_sodo_tanuki",
+      "name": "松山騒動八百八狸",
+      "parent_cluster_id": "matsuyama_tanuki_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "literary_legend",
+        "oral_performance"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "講談・松山騒動八百八狸",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "松山城下・久谷周辺",
+        "historical_name": "伊予松山藩",
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "『伊予名草』の刊行者・編者は要原本確認",
+        "講談師 田辺南龍",
+        "愛媛県立図書館による書誌整理"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_NDL_TANUKI_REFERENCE"
+      ],
+      "evidence_summary": "1805年刊行とされる『伊予名草』、講談『松山騒動八百八狸』、郷土資料の存在を確認。",
+      "editorial_note": "史実の松山藩騒動と、狸物語としての脚色を明確に分ける。"
+    },
+    {
+      "id": "happyakuya_tanuki",
+      "name": "八百八狸",
+      "parent_cluster_id": "matsuyama_tanuki_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "legend_group_name"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "松山に伝わる八百八狸",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "市内各所・久谷町",
+        "historical_name": null,
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "愛媛県百科大事典編集委員室",
+        "久谷村史編纂委員会"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_NDL_TANUKI_REFERENCE"
+      ],
+      "evidence_summary": "八百八狸は松山の狸伝承群・物語の総称として確認できる。",
+      "editorial_note": "独立した一話ではないため親クラスターの総論にする。"
+    },
+    {
+      "id": "matsuyama_castle_tanuki",
+      "name": "松山城の狸伝承",
+      "parent_cluster_id": "matsuyama_tanuki_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "editorial_container"
+      ],
+      "independent_entry": false,
+      "recommended_action": "replace",
+      "proposed_title": "毘沙門狸、または具体的な松山の狸伝承",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "松山城・城下町",
+        "historical_name": null,
+        "precision": "broad"
+      },
+      "recorded_by": [],
+      "informants": [],
+      "source_ids": [
+        "SRC_MATSUYAMA_TANUKI_OFFICIAL"
+      ],
+      "evidence_summary": "『松山城の狸伝承』という単独説話ではなく、複数の狸伝承をまとめた編集上の題名。",
+      "editorial_note": "お袖狸、毘沙門狸、金平狸など、所在地と物語が明確な項目へ置換する。"
+    },
+    {
+      "id": "tanuki_bayashi",
+      "name": "狸囃子",
+      "parent_cluster_id": "matsuyama_tanuki_cluster",
+      "evidence_grade": "D",
+      "verification_status": "unsupported",
+      "content_type": [
+        "generic_folklore_motif"
+      ],
+      "independent_entry": false,
+      "recommended_action": "replace",
+      "proposed_title": "お袖狸",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": null,
+        "historical_name": null,
+        "precision": "unresolved"
+      },
+      "recorded_by": [],
+      "informants": [],
+      "source_ids": [],
+      "evidence_summary": "狸囃子一般は全国にあるが、現行題名を松山固有の派生伝承とする資料を確認できない。",
+      "editorial_note": "松山市公式資料にある具体的な狸伝承へ置換する。"
+    },
+    {
+      "id": "tanuki_bi",
+      "name": "狸火",
+      "parent_cluster_id": "matsuyama_tanuki_cluster",
+      "evidence_grade": "D",
+      "verification_status": "unsupported",
+      "content_type": [
+        "generic_folklore_motif"
+      ],
+      "independent_entry": false,
+      "recommended_action": "replace",
+      "proposed_title": "金平狸",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": null,
+        "historical_name": null,
+        "precision": "unresolved"
+      },
+      "recorded_by": [],
+      "informants": [],
+      "source_ids": [],
+      "evidence_summary": "狸火一般は確認できるが、松山固有の独立項目としての資料は確認できない。",
+      "editorial_note": "松山市公式資料にある具体的な狸伝承へ置換する。"
+    },
+    {
+      "id": "basan",
+      "name": "波山",
+      "parent_cluster_id": "iyo_basan_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "early_modern_literary_yokai"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "『絵本百物語』の伊予の怪鳥・波山",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": null,
+        "locality": "伊予の山中",
+        "historical_name": "伊予国",
+        "precision": "historical_region"
+      },
+      "recorded_by": [
+        "桃花園三千麿（桃山人）"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EHON_HYAKU_MONOGATARI_1841"
+      ],
+      "evidence_summary": "1841年の『絵本百物語』に伊予の怪鳥として記録される。",
+      "editorial_note": "県内採集口承ではなく、近世妖怪本に伊予と記された妖怪であることを明示する。"
+    },
+    {
+      "id": "basabasa",
+      "name": "婆娑婆娑",
+      "parent_cluster_id": "iyo_basan_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "alternate_name"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "波山の別名・婆娑婆娑",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": null,
+        "locality": "伊予の山中",
+        "historical_name": "伊予国",
+        "precision": "historical_region"
+      },
+      "recorded_by": [
+        "桃花園三千麿（桃山人）"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EHON_HYAKU_MONOGATARI_1841"
+      ],
+      "evidence_summary": "波山の別称・羽音に由来する呼称として記録される。",
+      "editorial_note": "独立カードではなく波山の名称欄へ統合する。"
+    },
+    {
+      "id": "inuhoo",
+      "name": "犬鳳凰",
+      "parent_cluster_id": "iyo_basan_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "related_name"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "波山と犬鳳凰",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": null,
+        "locality": "伊予の山中",
+        "historical_name": "伊予国",
+        "precision": "historical_region"
+      },
+      "recorded_by": [
+        "桃花園三千麿（桃山人）"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EHON_HYAKU_MONOGATARI_1841"
+      ],
+      "evidence_summary": "波山と同類ではないかと記述される関連名で、独立した愛媛伝承ではない。",
+      "editorial_note": "波山の別名・比較欄へ統合する。"
+    },
+    {
+      "id": "fire_breathing_bird",
+      "name": "竹林にすむ火を吐く鳥",
+      "parent_cluster_id": "iyo_basan_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "description_component"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "波山の姿と行動",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": null,
+        "locality": "伊予の深い藪・竹藪",
+        "historical_name": "伊予国",
+        "precision": "historical_region"
+      },
+      "recorded_by": [
+        "桃花園三千麿（桃山人）"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EHON_HYAKU_MONOGATARI_1841"
+      ],
+      "evidence_summary": "独立名ではなく波山の生息場所と能力の説明。",
+      "editorial_note": "波山の特徴欄へ統合する。"
+    },
+    {
+      "id": "ishizuchi_tengu",
+      "name": "石鎚山の天狗",
+      "parent_cluster_id": "ishizuchi_tengu_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "石鎚山をすみかとする天狗",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "西条市",
+        "locality": "小松町・丹原町、石鎚山麓",
+        "historical_name": null,
+        "precision": "exact_region"
+      },
+      "recorded_by": [
+        "末広昌雄"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_ASHINAKA_116_TENGU"
+      ],
+      "evidence_summary": "石鎚山を天狗の巣とする具体的な民俗記事がある。",
+      "editorial_note": "公式の山岳信仰解説だけでなく、民俗記事を主出典にする。"
+    },
+    {
+      "id": "tengudake_tengu",
+      "name": "天狗岳",
+      "parent_cluster_id": "ishizuchi_tengu_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "place_name"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "天狗岳という峰名",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "西条市・久万高原町",
+        "locality": "石鎚山頂部",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "石鎚神社"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_ISHIZUCHI_OFFICIAL"
+      ],
+      "evidence_summary": "実在する峰名として確認できるが、独立した怪異・説話ではない。",
+      "editorial_note": "石鎚山の天狗記事の舞台欄へ統合する。"
+    },
+    {
+      "id": "ishizuchi_yamagami",
+      "name": "山神",
+      "parent_cluster_id": "ishizuchi_tengu_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "religious_concept"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "石鎚山の山岳信仰",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "西条市・久万高原町",
+        "locality": "石鎚山",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "石鎚神社"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_ISHIZUCHI_OFFICIAL",
+        "SRC_ASHINAKA_116_TENGU"
+      ],
+      "evidence_summary": "山神は伝承背景として確認できるが、現行題名では独立した一話ではない。",
+      "editorial_note": "信仰背景の解説へ統合する。"
+    },
+    {
+      "id": "ishizuchi_shugen",
+      "name": "修験",
+      "parent_cluster_id": "ishizuchi_tengu_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "religious_practice"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "石鎚山の修験道",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "西条市・久万高原町",
+        "locality": "石鎚山",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "石鎚神社"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_ISHIZUCHI_OFFICIAL"
+      ],
+      "evidence_summary": "石鎚山の修験道は公式資料で確認できるが妖怪伝承ではない。",
+      "editorial_note": "背景解説として残す。"
+    },
+    {
+      "id": "ishizuchi_kaika",
+      "name": "怪火",
+      "parent_cluster_id": "ishizuchi_tengu_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "folklore_detail"
+      ],
+      "independent_entry": false,
+      "recommended_action": "revise_or_merge",
+      "proposed_title": "天狗が休む木に見える小さな火",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "西条市",
+        "locality": "小松町・丹原町の石鎚山麓",
+        "historical_name": null,
+        "precision": "exact_region"
+      },
+      "recorded_by": [
+        "末広昌雄"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_ASHINAKA_116_TENGU"
+      ],
+      "evidence_summary": "天狗が休む木の枝間に小さな火が見えるという具体的記録がある。",
+      "editorial_note": "一般的な山の怪火ではなく、天狗伝承の一場面として記述する。"
+    },
+    {
+      "id": "horagai_sound",
+      "name": "法螺貝の音",
+      "parent_cluster_id": "ishizuchi_tengu_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "religious_practice_component"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "登拝と法螺貝",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "西条市・久万高原町",
+        "locality": "石鎚山",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "石鎚神社"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_ISHIZUCHI_OFFICIAL"
+      ],
+      "evidence_summary": "修験・登拝文化の説明要素であり、独立した怪異記録ではない。",
+      "editorial_note": "修験道の背景欄へ統合する。"
+    },
+    {
+      "id": "dogo_shirasagi",
+      "name": "白鷺伝説",
+      "parent_cluster_id": "dogo_myth_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "local_legend"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "白鷺が見つけた道後の湯",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "道後温泉・鷺谷",
+        "historical_name": "伊予国温泉郡",
+        "precision": "exact_region"
+      },
+      "recorded_by": [
+        "『予陽郡郷俚諺集』編者"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_YOYOGUN_GORIGENSHU_1710",
+        "SRC_DOGO_OFFICIAL"
+      ],
+      "evidence_summary": "1710年成立の地誌に、傷ついた白鷺が湯で回復した説話が記録される。",
+      "editorial_note": "公式サイトだけでなく原地誌名と成立年を表示する。"
+    },
+    {
+      "id": "sukunahikona_toji",
+      "name": "少彦名命",
+      "parent_cluster_id": "dogo_myth_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "myth_character"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "少彦名命が道後の湯で回復する説話",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "道後温泉",
+        "historical_name": "伊予国湯郡",
+        "precision": "historical_region"
+      },
+      "recorded_by": [
+        "『伊予国風土記』原編者不明"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_IYOKOKU_FUDOKI_DOGO",
+        "SRC_DOGO_OFFICIAL"
+      ],
+      "evidence_summary": "道後温泉説話の登場神であり、単独伝承ではない。",
+      "editorial_note": "玉の石説話へ統合する。"
+    },
+    {
+      "id": "okuninushi_dogo",
+      "name": "大国主命",
+      "parent_cluster_id": "dogo_myth_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "myth_character"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "大国主命が少彦名命を助ける説話",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "道後温泉",
+        "historical_name": "伊予国湯郡",
+        "precision": "historical_region"
+      },
+      "recorded_by": [
+        "『伊予国風土記』原編者不明"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_IYOKOKU_FUDOKI_DOGO",
+        "SRC_DOGO_OFFICIAL"
+      ],
+      "evidence_summary": "玉の石説話の登場神であり、単独伝承ではない。",
+      "editorial_note": "玉の石説話へ統合する。"
+    },
+    {
+      "id": "tama_no_ishi",
+      "name": "玉の石",
+      "parent_cluster_id": "dogo_myth_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "myth",
+        "sacred_place"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "玉の石と二柱の神",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "道後温泉本館北側",
+        "historical_name": "伊予国湯郡",
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "『伊予国風土記』原編者不明",
+        "『釈日本紀』編纂者"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_IYOKOKU_FUDOKI_DOGO",
+        "SRC_DOGO_OFFICIAL"
+      ],
+      "evidence_summary": "少彦名命の回復と、石の上で踊った説話が風土記逸文に残る。",
+      "editorial_note": "少彦名命・大国主命を同じ物語内で説明する。"
+    },
+    {
+      "id": "dogo_yugami",
+      "name": "湯神",
+      "parent_cluster_id": "dogo_myth_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "religious_context"
+      ],
+      "independent_entry": false,
+      "recommended_action": "revise",
+      "proposed_title": "湯神社と道後の湯の信仰",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "湯神社・道後温泉",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "松山市による文化財解説"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_DOGO_YUJINJA_CONTEXT"
+      ],
+      "evidence_summary": "湯神社の存在は確認できるが、現行の抽象的な『湯神』を独立した妖怪・伝承とする根拠はない。",
+      "editorial_note": "神社・温泉信仰の解説へ改題する。"
+    },
+    {
+      "id": "emon_saburo",
+      "name": "衛門三郎",
+      "parent_cluster_id": "ishiteji_emon_saburo_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "temple_legend",
+        "pilgrimage_legend"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "衛門三郎と四国遍路",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "石手寺・河野郷周辺",
+        "historical_name": "伊予国",
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "河野通宣による石手寺刻板",
+        "後世の石手寺縁起編者"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EMON_SABURO_REFERENCE"
+      ],
+      "evidence_summary": "遅くとも1567年の石手寺刻板に伝説が確認できる。",
+      "editorial_note": "史実の人物として断定せず、寺院縁起・遍路起源伝承として扱う。"
+    },
+    {
+      "id": "emon_saburo_rebirth",
+      "name": "再来譚",
+      "parent_cluster_id": "ishiteji_emon_saburo_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "story_episode"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "衛門三郎が石を握って生まれ変わる話",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "石手寺",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "石手寺縁起・刻板の伝承系統"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EMON_SABURO_REFERENCE"
+      ],
+      "evidence_summary": "衛門三郎物語の後半にあたる再生・寺名由来のエピソード。",
+      "editorial_note": "衛門三郎または霊石記事へ統合する。"
+    },
+    {
+      "id": "kobodaishi_legend",
+      "name": "弘法大師伝説",
+      "parent_cluster_id": "ishiteji_emon_saburo_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "broad_legend_category"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "四国に広がる弘法大師伝説",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": null,
+        "locality": "四国各地",
+        "historical_name": null,
+        "precision": "broad"
+      },
+      "recorded_by": [],
+      "informants": [],
+      "source_ids": [
+        "SRC_EMON_SABURO_REFERENCE"
+      ],
+      "evidence_summary": "四国全域の広い伝説群で、石手寺固有の一派生項目ではない。",
+      "editorial_note": "背景コラムにする。"
+    },
+    {
+      "id": "ishiteji_reiseki",
+      "name": "石手寺の霊石",
+      "parent_cluster_id": "ishiteji_emon_saburo_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "temple_legend",
+        "sacred_object"
+      ],
+      "independent_entry": true,
+      "recommended_action": "revise",
+      "proposed_title": "衛門三郎再来の石",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "石手寺",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "河野通宣による石手寺刻板",
+        "後世の石手寺縁起編者"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EMON_SABURO_REFERENCE"
+      ],
+      "evidence_summary": "石を握って生まれた子と、安養寺から石手寺への寺名由来を結ぶ伝承。",
+      "editorial_note": "『霊石』という一般名より物語との関係が分かる題名にする。"
+    },
+    {
+      "id": "uwakai_funayurei",
+      "name": "宇和海の船幽霊",
+      "parent_cluster_id": "uwakai_sea_mystery_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "maritime_folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "宇和海で柄杓を求める船幽霊",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市・大洲市",
+        "locality": "宇和海沿岸",
+        "historical_name": null,
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "佐々木正興",
+        "橋村寿"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EHIME_PREF_FOLKLORE_1983",
+        "SRC_IYO_MINZOKU_0200237"
+      ],
+      "evidence_summary": "宇和海沿岸の船幽霊、柄杓を求める型、難破船との関係が複数資料にある。",
+      "editorial_note": "具体的な採集地と対処法を紹介できる。"
+    },
+    {
+      "id": "uwakai_umibozu",
+      "name": "海坊主",
+      "parent_cluster_id": "uwakai_sea_mystery_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "maritime_folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "宇和海・南宇和の海坊主",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市・愛南町",
+        "locality": "宇和海",
+        "historical_name": null,
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "佐々木正興",
+        "中央大学民俗研究会"
+      ],
+      "informants": [
+        "久徳義明"
+      ],
+      "source_ids": [
+        "SRC_EHIME_PREF_FOLKLORE_1983",
+        "SRC_JOMIN_1070653"
+      ],
+      "evidence_summary": "宇和島市および愛南町で、柄杓、火の玉、女の姿等を伴う海坊主伝承が記録される。",
+      "editorial_note": "全国一般の海坊主像ではなく愛媛の具体的話型を中心にする。"
+    },
+    {
+      "id": "hiburijima_kairei",
+      "name": "日振島の海の怪異",
+      "parent_cluster_id": "uwakai_sea_mystery_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "maritime_folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "revise",
+      "proposed_title": "日振島へ帰る船を止めた船幽霊の陰火",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市",
+        "locality": "蒋淵と戸島の間から日振島への航路",
+        "historical_name": null,
+        "precision": "exact_route"
+      },
+      "recorded_by": [
+        "佐々木正興"
+      ],
+      "informants": [
+        "日振島出身の下女お万と迎えの若者たちをめぐる伝承"
+      ],
+      "source_ids": [
+        "SRC_EHIME_PREF_FOLKLORE_1983"
+      ],
+      "evidence_summary": "日振島へ帰る船が蒋淵と戸島の間で船幽霊の陰火に妨げられた具体的説話がある。",
+      "editorial_note": "曖昧な『島の怪異』から、確認できる船幽霊説話へ改題する。"
+    },
+    {
+      "id": "kushima_yobi",
+      "name": "九島の海の怪異",
+      "parent_cluster_id": "uwakai_sea_mystery_cluster",
+      "evidence_grade": "D",
+      "verification_status": "unsupported",
+      "content_type": [
+        "editorial_inference"
+      ],
+      "independent_entry": false,
+      "recommended_action": "remove_or_research",
+      "proposed_title": null,
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市",
+        "locality": "九島",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [],
+      "informants": [],
+      "source_ids": [],
+      "evidence_summary": "九島固有の怪異名、採集記録、話者、資料を確認できない。",
+      "editorial_note": "郷土誌・聞き取り調査で出典が見つかるまで通常カードから外す。"
+    },
+    {
+      "id": "toshima_kairei",
+      "name": "戸島の海の怪異",
+      "parent_cluster_id": "uwakai_sea_mystery_cluster",
+      "evidence_grade": "C",
+      "verification_status": "contextual",
+      "content_type": [
+        "place_in_story"
+      ],
+      "independent_entry": false,
+      "recommended_action": "merge",
+      "proposed_title": "日振島へ帰る船幽霊の航路・戸島沖",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市",
+        "locality": "戸島沖",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "佐々木正興"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_EHIME_PREF_FOLKLORE_1983"
+      ],
+      "evidence_summary": "戸島は日振島の船幽霊説話の通過海域として確認できるが、戸島独立の怪異ではない。",
+      "editorial_note": "日振島の船幽霊記事へ統合する。"
+    },
+    {
+      "id": "murakami_kaizoku_ghost",
+      "name": "村上海賊の亡霊",
+      "parent_cluster_id": "setouchi_murakami_kaizoku_cluster",
+      "evidence_grade": "D",
+      "verification_status": "unsupported",
+      "content_type": [
+        "editorial_inference"
+      ],
+      "independent_entry": false,
+      "recommended_action": "replace",
+      "proposed_title": "神吉丸の船幽霊",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "今治市",
+        "locality": "吉海町津島",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "森正史"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_MURAKAMI_OFFICIAL",
+        "SRC_IYOJI_0190010"
+      ],
+      "evidence_summary": "村上海賊の亡霊という話は確認できない。代替として今治市吉海町の神吉丸の船幽霊が具体的に記録される。",
+      "editorial_note": "歴史上の村上海賊と無根拠な亡霊表現を結びつけない。"
+    },
+    {
+      "id": "noshima_yobi",
+      "name": "能島城の夜火",
+      "parent_cluster_id": "setouchi_murakami_kaizoku_cluster",
+      "evidence_grade": "D",
+      "verification_status": "unsupported",
+      "content_type": [
+        "editorial_inference"
+      ],
+      "independent_entry": false,
+      "recommended_action": "remove_or_research",
+      "proposed_title": null,
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "今治市",
+        "locality": "能島城跡",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [],
+      "informants": [],
+      "source_ids": [
+        "SRC_MURAKAMI_OFFICIAL"
+      ],
+      "evidence_summary": "能島城跡と村上海賊の歴史は確認できるが、夜火の伝承資料を確認できない。",
+      "editorial_note": "通常カードから外し、郷土誌・博物館紀要で追加調査する。"
+    },
+    {
+      "id": "kurushima_funayurei",
+      "name": "来島海峡の船幽霊",
+      "parent_cluster_id": "setouchi_murakami_kaizoku_cluster",
+      "evidence_grade": "D",
+      "verification_status": "unsupported",
+      "content_type": [
+        "editorial_inference"
+      ],
+      "independent_entry": false,
+      "recommended_action": "replace",
+      "proposed_title": "吉海町津島・神吉丸の船幽霊",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "今治市",
+        "locality": "来島海峡",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [],
+      "informants": [],
+      "source_ids": [
+        "SRC_IYOJI_0190010"
+      ],
+      "evidence_summary": "来島海峡固有の船幽霊は確認できない。今治市内では吉海町津島の神吉丸伝承が確認できる。",
+      "editorial_note": "確認できる今治市の船幽霊へ置換する。"
+    },
+    {
+      "id": "kihoku_oni",
+      "name": "鬼北の鬼",
+      "parent_cluster_id": "kihoku_oni_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "legend_group",
+        "modern_regional_identity"
+      ],
+      "independent_entry": true,
+      "recommended_action": "split",
+      "proposed_title": "鬼北の古い鬼伝承／現代の鬼のまちづくり",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "鬼北町・松野町",
+        "locality": "鬼ヶ城山系・等妙寺周辺",
+        "historical_name": null,
+        "precision": "regional"
+      },
+      "recorded_by": [
+        "等妙寺縁起の編者",
+        "鬼北町教育委員会"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_KIHOKU_ONI_LEGEND",
+        "SRC_KIHOKU_MONUMENTS"
+      ],
+      "evidence_summary": "鬼王段三郎等の古い伝承と、現在の鬼のまちづくりが双方確認できる。",
+      "editorial_note": "古い縁起・山岳信仰と現代観光表現を別項目に分ける。"
+    },
+    {
+      "id": "onigajo_oni",
+      "name": "鬼ヶ城山の鬼",
+      "parent_cluster_id": "kihoku_oni_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "temple_legend",
+        "place_legend"
+      ],
+      "independent_entry": true,
+      "recommended_action": "revise",
+      "proposed_title": "鬼王段三郎と鬼ヶ城",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松野町・鬼北町",
+        "locality": "古鬼ヶ城山・等妙寺旧境内周辺",
+        "historical_name": null,
+        "precision": "exact_region"
+      },
+      "recorded_by": [
+        "江戸時代初期成立の等妙寺縁起の編者",
+        "鬼北町教育委員会"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_KIHOKU_ONI_LEGEND"
+      ],
+      "evidence_summary": "鬼王段三郎が大岩を引き寄せて鬼ヶ城を造った等の伝承を公式資料が縁起に基づき紹介。",
+      "editorial_note": "抽象的な山の鬼ではなく、固有名と具体的説話を前面に出す。"
+    },
+    {
+      "id": "onio_maru",
+      "name": "鬼王丸",
+      "parent_cluster_id": "kihoku_oni_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "modern_monument"
+      ],
+      "independent_entry": true,
+      "recommended_action": "move_to_modern_culture",
+      "proposed_title": "現代の鬼モニュメント・鬼王丸",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "鬼北町",
+        "locality": "道の駅広見森の三角ぼうし",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "鬼北町",
+        "造形作家 竹谷隆之"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_KIHOKU_MONUMENTS"
+      ],
+      "evidence_summary": "現代に設置された地域モニュメントとして公式確認できる。",
+      "editorial_note": "古い伝承ではなく現代の地域文化として表示する。"
+    },
+    {
+      "id": "yukihime",
+      "name": "柚鬼媛",
+      "parent_cluster_id": "kihoku_oni_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "modern_monument"
+      ],
+      "independent_entry": true,
+      "recommended_action": "move_to_modern_culture",
+      "proposed_title": "現代の鬼モニュメント・柚鬼媛",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "鬼北町",
+        "locality": "道の駅日吉夢産地",
+        "historical_name": null,
+        "precision": "exact"
+      },
+      "recorded_by": [
+        "鬼北町",
+        "造形作家 竹谷隆之"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_KIHOKU_MONUMENTS"
+      ],
+      "evidence_summary": "現代に設置された地域モニュメントとして公式確認できる。",
+      "editorial_note": "古い伝承ではなく現代の地域文化として表示する。"
+    },
+    {
+      "id": "yosuzume",
+      "name": "夜雀",
+      "parent_cluster_id": "ehime_night_road_mysteries_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "南宇和の夜雀と山犬",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "旧南宇和郡",
+        "locality": "岩松からの夜道など",
+        "historical_name": null,
+        "precision": "exact_region"
+      },
+      "recorded_by": [
+        "和田正洲"
+      ],
+      "informants": [
+        "婆さん（資料表記）"
+      ],
+      "source_ids": [
+        "SRC_YOSUZUME_1100055"
+      ],
+      "evidence_summary": "夜雀の音に続いて山犬が現れるという南宇和郡の具体的記録がある。",
+      "editorial_note": "一般的な夜道の鳥ではなく、山犬との関係を含む地域話型を示す。"
+    },
+    {
+      "id": "nobiagari",
+      "name": "伸上り",
+      "parent_cluster_id": "ehime_night_road_mysteries_cluster",
+      "evidence_grade": "A",
+      "verification_status": "confirmed",
+      "content_type": [
+        "folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "keep",
+      "proposed_title": "北宇和・西予の伸上り",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "宇和島市・西予市・愛南町",
+        "locality": "下波、城川町土居ほか",
+        "historical_name": null,
+        "precision": "multiple_exact"
+      },
+      "recorded_by": [
+        "山口常助",
+        "橋村寿",
+        "柳田國男ほか"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_NOBIAGARI_0200015",
+        "SRC_NOBIAGARI_0200232"
+      ],
+      "evidence_summary": "見上げるほど高くなる、足元を蹴る・見下ろすと退く等の複数の愛媛県内記録がある。",
+      "editorial_note": "採集地ごとの差異を比較できる項目にする。"
+    },
+    {
+      "id": "yukibaba",
+      "name": "雪婆",
+      "parent_cluster_id": "ehime_night_road_mysteries_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "revise",
+      "proposed_title": "伊予の雪婆の足跡",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": null,
+        "locality": null,
+        "historical_name": "伊予",
+        "precision": "historical_region_only"
+      },
+      "recorded_by": [
+        "藤澤衛彦"
+      ],
+      "informants": [],
+      "source_ids": [
+        "SRC_YUKIBABA_1231381"
+      ],
+      "evidence_summary": "伊予の話として1928年に記録されるが、市町村・話者は不明。",
+      "editorial_note": "『夜道の老婆』ではなく、雪塊のくぼみを一本足の雪婆の足跡とする記録に合わせる。"
+    },
+    {
+      "id": "kane_no_kami_no_hi",
+      "name": "金の神の火",
+      "parent_cluster_id": "ehime_night_road_mysteries_cluster",
+      "evidence_grade": "B",
+      "verification_status": "partial",
+      "content_type": [
+        "calendar_custom",
+        "sacred_fire_folklore"
+      ],
+      "independent_entry": true,
+      "recommended_action": "revise",
+      "proposed_title": "怒和島・大晦日の金の神の火",
+      "place": {
+        "prefecture": "愛媛県",
+        "municipality": "松山市",
+        "locality": "怒和島の氏神社付近",
+        "historical_name": "伊予怒和島",
+        "precision": "exact_island"
+      },
+      "recorded_by": [
+        "民俗学研究所による語彙集編纂"
+      ],
+      "informants": [
+        "原採集者・話者は要原典確認"
+      ],
+      "source_ids": [
+        "SRC_SOGO_NIHON_MINZOKU_GOI_1955"
+      ],
+      "evidence_summary": "大晦日の夜、氏神の後ろに提灯状の火が現れ、歳徳神の来訪とされる記述が民俗語彙集にある。",
+      "editorial_note": "原資料・採集者・巻頁を再確認し、現在の一般的な怪火説明を具体的な年中行事の話へ修正する。"
+    }
+  ]
+}
