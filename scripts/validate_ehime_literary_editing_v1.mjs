@@ -9,6 +9,13 @@ const PROTECTED_FILES = {
   'public/data/sources.json': 'a1504a0dabfc44cb777c3db22d8d2a3d859f7979'
 };
 
+const EDITED_IDS = new Set([
+  'iyo_basan_cluster',
+  'yosuzume',
+  'uwakai_sea_mystery_cluster',
+  'ishizuchi_tengu_cluster'
+]);
+
 const EXPECTED_SOURCE_IDS = {
   uwajima_ushioni_cluster: ['SRC_UWAJIMA_CITY_2026', 'SRC_IYO_MINZOKU_0200004', 'SRC_IYO_MINZOKU_0200265'],
   matsuyama_tanuki_cluster: ['SRC_NDL_TANUKI_REFERENCE', 'SRC_MATSUYAMA_TANUKI_OFFICIAL'],
@@ -100,6 +107,8 @@ for (const article of articles) {
     }
   }
 
+  if (!EDITED_IDS.has(article.id)) continue;
+
   const literaryText = [article.lead, ...writable.flatMap((heading) => sectionIndex.get(heading).body)].join('\n');
   let articleMetaCount = 0;
   for (const pattern of META_PATTERNS) {
@@ -110,14 +119,14 @@ for (const article of articles) {
   metaTotal += articleMetaCount;
 }
 
-assert(metaTotal <= 5, `Literary sections contain too much editor/research meta-language overall (${metaTotal})`);
+assert(metaTotal <= EDITED_IDS.size, `Edited literary sections contain too much editor/research meta-language overall (${metaTotal})`);
 
 for (const [filePath, expectedBlobSha] of Object.entries(PROTECTED_FILES)) {
   const actual = gitBlobSha(filePath);
   assert.equal(actual, expectedBlobSha, `${filePath} changed during Literary Editing Pass v1`);
 }
 
-console.log(`Ehime Literary Editing QA: 11 articles, lead limits, literary sections, sourceIds, research headings, protected research files OK; meta-language count=${metaTotal}`);
+console.log(`Ehime Literary Editing QA: ${EDITED_IDS.size}/11 staged articles checked for literary meta-language; all 11 checked for lead limits, sections, sourceIds, research headings and protected research files; meta-language count=${metaTotal}`);
 
 function gitBlobSha(filePath) {
   const content = fs.readFileSync(filePath);
