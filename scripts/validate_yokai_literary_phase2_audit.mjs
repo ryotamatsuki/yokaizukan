@@ -106,6 +106,9 @@ for (const item of auditItems) {
   if (item.classification === 'C') assert.equal(item.roadmapLane, 'Hold / Insufficient', `${item.id}: C items must use Hold / Insufficient lane`);
 
   assert(Array.isArray(item.sceneAnchors), `${item.id}: sceneAnchors must be an array`);
+  if (item.classification === 'A') {
+    assert(item.sceneAnchors.length >= 1, `${item.id}: class A requires at least one sceneAnchor`);
+  }
   assert(Array.isArray(item.sourceIds) && item.sourceIds.length >= 1, `${item.id}: sourceIds must contain at least one source`);
   assert(Array.isArray(item.risks), `${item.id}: risks must be an array`);
   assert(Array.isArray(item.researchGaps), `${item.id}: researchGaps must be an array`);
@@ -132,7 +135,7 @@ assert.deepEqual(audit.classificationCounts, actualClassCounts, 'classificationC
 assert(recommendedIds.length >= 8 && recommendedIds.length <= 12, `Phase 2 recommended count must be 8-12, found ${recommendedIds.length}`);
 assert.deepEqual([...audit.phase2RecommendedIds].sort(), [...recommendedIds].sort(), 'phase2RecommendedIds must mirror item flags');
 
-console.log(`National Yokai Phase 2 Audit QA: base=50; phase1=15; remaining=35; A=${actualClassCounts.A}; B=${actualClassCounts.B}; C=${actualClassCounts.C}; Phase2 recommended=${recommendedIds.length}; Research source/coverage/evidence contracts unchanged.`);
+console.log(`National Yokai Phase 2 Audit QA: base=50; phase1=15; remaining=35; A=${actualClassCounts.A}; B=${actualClassCounts.B}; C=${actualClassCounts.C}; Phase2 recommended=${recommendedIds.length}; Research source/coverage/evidence contracts unchanged; A sceneAnchors required; recommended Memory Hooks required.`);
 
 function toBaseId(id) {
   return BASE_ID_ALIASES[id] || id;
