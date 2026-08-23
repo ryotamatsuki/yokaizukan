@@ -55,7 +55,7 @@
       "abilities":[{"name":"水へ引きこむ","description":"九州の記録には、人や馬を水へ引く河童の話がある。","evidenceLevel":"A","sourceIds":["kappa-kyushu-C0411013"]},{"name":"相撲を取る","description":"人に相撲を挑む型が記録されている。","evidenceLevel":"A","sourceIds":["kappa-kyushu-C0411013"]},{"name":"山と川を行き来する","description":"季節によって山童と河童が入れ替わるように語る地域例がある。","evidenceLevel":"A","sourceIds":["kappa-kyushu-C0411013"]}],
       "countermeasures":[],
       "regionalVariants":[{"region":"九州の地域記録","localNames":["河童","山童系呼称"],"summary":"水難や相撲、季節移動など、川だけに固定されない話がある。","sourceIds":["kappa-kyushu-C0411013"]},{"region":"佐賀県の記録","localNames":["カワソウ"],"summary":"現代の標準的な河童像とは異なる具体的な姿の記録が残る。","sourceIds":["kappa-saga-0820001"]}],
-      "glossaryTerms":["採録"],"evidenceNote":"河童は地域差が大きいため、検索結果を一括根拠にせず、個別記録で確認できたことだけを表示します。","sourceIds":["ndl-sekien-theme","kappa-saga-0820001","kappa-kyushu-C0411013"],
+      "glossaryTerms":[],"evidenceNote":"河童は地域差が大きいため、検索結果を一括根拠にせず、個別記録で確認できたことだけを表示します。","sourceIds":["ndl-sekien-theme","kappa-saga-0820001","kappa-kyushu-C0411013"],
       "article":{"title":"河童―水辺ごとに姿を変える妖怪","subtitle":"皿と甲羅だけでは分からない各地の記録","body":["河童というと皿と甲羅の姿が有名ですが、民俗記録では姿も呼び名も一つではありません。","九州の記録には、人や馬を水へ引く話や、人と相撲を取る話があります。水辺の危険と遊びの両方が河童の話に重なっています。","地域によっては、季節が変わると山へ移り山童になるように語られます。河童を『川だけの妖怪』と決めつけることもできません。","江戸の妖怪画と各地の民俗記録を分けて読むと、いまの分かりやすい河童像と、土地ごとの多様な河童像の違いが見えてきます。"],"sourceNote":"図像はNDL、地域伝承は日文研の個別カードで確認しています。"}
     },
     {
@@ -67,7 +67,7 @@
       "abilities":[{"name":"高木や火で存在を示す","description":"石鎚山麓では、高木の烏天狗や枝の間の小さな火が語られる。","evidenceLevel":"A","sourceIds":["tengu-ishizuchi-0030258"]},{"name":"翼を持つ","description":"篠山の話では、天狗の翼が射落とされる。","evidenceLevel":"A","sourceIds":["tengu-ainan-C3820112"]},{"name":"約束して家を守る","description":"翼を返してもらう代わりに家を盗難から守ると約束する。","evidenceLevel":"A","sourceIds":["tengu-ainan-C3820112"]}],
       "countermeasures":[],
       "regionalVariants":[{"region":"愛媛・石鎚山麓","localNames":["天狗","烏天狗"],"summary":"石鎚山を天狗の巣とし、高い木や枝間の小火で語る。","sourceIds":["tengu-ishizuchi-0030258"]},{"region":"愛媛・篠山周辺","localNames":["天狗"],"summary":"翼を返すことと引き換えに家を守る、人と交渉する型が残る。","sourceIds":["tengu-ainan-C3820112"]}],
-      "glossaryTerms":["山岳信仰"],"evidenceNote":"『人を転ばせる』『不浄を嫌う』など、今回の個別カードが直接支えない説明は能力・対処から外しました。","sourceIds":["ndl-sekien-theme","tengu-ishizuchi-0030258","tengu-ainan-C3820112"],
+      "glossaryTerms":[],"evidenceNote":"『人を転ばせる』『不浄を嫌う』など、今回の個別カードが直接支えない説明は能力・対処から外しました。","sourceIds":["ndl-sekien-theme","tengu-ishizuchi-0030258","tengu-ainan-C3820112"],
       "article":{"title":"天狗―同じ山の妖怪でも話は一つではない","subtitle":"石鎚山麓と篠山の具体的な記録から読む","body":["天狗は鼻の長い山伏姿で有名ですが、地域の伝承では姿がはっきりしない場合もあります。","石鎚山麓の記録には、石鎚山を天狗の巣とし、高い木に烏天狗が来ることや、枝の間に小さな火が見えることが記されています。","篠山では、翼を射落とされた天狗が、その翼を返してもらう代わりに家を盗難から守ると約束します。ここでは天狗は人と取り決めのできる相手です。","この二つだけでも、天狗を全国共通の性格や弱点で説明できないことが分かります。広い天狗史と、個別の土地の話は分けて読むのが大切です。"],"sourceNote":"石鎚山麓・篠山の個別カードが直接支える範囲に記述を限定しています。"}
     },
     {
@@ -91,7 +91,7 @@
       "abilities":[{"name":"雪の中に姿を見せる","description":"越後の記録では、白い単衣の背の高い女性が現れ、見ているうちに消えたとされる。","evidenceLevel":"A","sourceIds":["yukionna-sogi-1230004"]}],
       "countermeasures":[{"name":"声を出さず、道を譲らず逃れる","description":"宮城・作並の記録では、声を出さず道を譲らず、目をつぶるようにして逃げる型が語られる。","evidenceLevel":"A","sourceIds":["yukionna-miyagi-C0411196"]}],
       "regionalVariants":[{"region":"新潟県・越後","localNames":["雪女"],"summary":"宗祇が白く透けるような女性を見たとする目撃説話。","sourceIds":["yukionna-sogi-1230004"]},{"region":"宮城県・作並周辺","localNames":["雪女"],"summary":"遭遇時の行動が具体的に語られる。","sourceIds":["yukionna-miyagi-C0411196"]}],
-      "glossaryTerms":["採録"],"evidenceNote":"『全国共通の対処はない』は対処法そのものではないためcountermeasuresから外し、確認できた宮城の地域例を掲載します。","sourceIds":["yukionna-sogi-1230004","yukionna-miyagi-C0411196"],
+      "glossaryTerms":[],"evidenceNote":"『全国共通の対処はない』は対処法そのものではないためcountermeasuresから外し、確認できた宮城の地域例を掲載します。","sourceIds":["yukionna-sogi-1230004","yukionna-miyagi-C0411196"],
       "article":{"title":"雪女―雪国ごとに違う白い怪異","subtitle":"越後の目撃説話と宮城の対処伝承","body":["雪女は白い着物の美しい女性としてよく描かれますが、昔の記録を読むと土地ごとの違いがあります。","越後に関する記録では、宗祇が大雪の中で背が高く白く透けるような女性を見たとされます。見ているうちにその姿は消えました。","宮城の作並周辺では、雪女に会った時は声を出さず、道を譲らず、目をつぶるようにして逃げるという具体的な話があります。これは宮城の一例で、全国共通の弱点ではありません。","雪という同じ自然現象から生まれた怪異でも、見た姿や危険の感じ方、逃れ方は土地によって変わります。雪女は『一つの設定』より地域差を比べると面白い妖怪です。"],"sourceNote":"越後と宮城の個別カードを直接参照しています。"}
     },
     {
@@ -103,7 +103,7 @@
       "abilities":[{"name":"家の守り・家運と結びつく","description":"青森県五戸町の記録では、家の守り神とされ、来た家が栄えると語られる。","evidenceLevel":"A","sourceIds":["zashiki-aomori-C0220116"]}],
       "countermeasures":[],
       "regionalVariants":[{"region":"岩手県岩泉町","localNames":["ザシキワラシ"],"summary":"新築時に童形の人形を床下へ埋めるという大工に関する説明型が記録される。","sourceIds":["zashiki-sasaki-0690189"]},{"region":"青森県五戸町","localNames":["座敷童子"],"summary":"古い家の守りと家の繁栄に結びつく型が記録される。","sourceIds":["zashiki-aomori-C0220116"]}],
-      "glossaryTerms":["採録"],"evidenceNote":"東北全体を検索結果だけで一括説明せず、直接確認できる岩手・青森のカードに限定しました。","sourceIds":["zashiki-sasaki-0690189","zashiki-aomori-C0220116"],
+      "glossaryTerms":[],"evidenceNote":"東北全体を検索結果だけで一括説明せず、直接確認できる岩手・青森のカードに限定しました。","sourceIds":["zashiki-sasaki-0690189","zashiki-aomori-C0220116"],
       "article":{"title":"座敷童子―家に住む小さな怪異","subtitle":"幸運だけではない、家と一緒に語られる存在","body":["座敷童子は、東北の家にいる子どもの怪異として知られます。現代では幸運を呼ぶ存在として紹介されることが多い妖怪です。","佐々木喜善が1924年に記した岩泉町の例には、家を建てる時に童形の人形を床下へ埋め、それが座敷童子になるという不思議な説明があります。","青森県五戸町の記録では、座敷童子は家の守り神とされ、来た家が栄えると語られます。岩手の話と同じではありません。","座敷童子の面白さは『会えばラッキー』だけではなく、古い家には人間以外の住人がいるかもしれない、という少し不気味な感覚にもあります。"],"sourceNote":"岩手県岩泉町と青森県五戸町の個別記録を使用しています。"}
     },
     {
@@ -115,7 +115,7 @@
       "abilities":[{"name":"夜道を進めなくする","description":"進行方向が壁のようになり、どこへも進めなくなる。","evidenceLevel":"A","sourceIds":["nurikabe-2180774"]}],
       "countermeasures":[{"name":"下を棒で払う","description":"上を叩いてもだめだが、下の方を棒で払うと消えると記録される。","evidenceLevel":"A","sourceIds":["nurikabe-2180774"]}],
       "regionalVariants":[{"region":"福岡県遠賀郡","localNames":["塗り壁"],"summary":"夜道の前が壁のようになって進めなくなる。","sourceIds":["nurikabe-2180774"]},{"region":"長崎県壱岐島","localNames":["ヌリボウ"],"summary":"夜、道沿いの山から出るとされ、柳田は塗り壁と似たものとして挙げている。","sourceIds":["nuribou-2180775"]}],
-      "glossaryTerms":["採録"],"evidenceNote":"1938年資料が証明しない『戦後にキャラクター化』というtimelineは削除しました。","sourceIds":["nurikabe-2180774","nuribou-2180775"],
+      "glossaryTerms":[],"evidenceNote":"1938年資料が証明しない『戦後にキャラクター化』というtimelineは削除しました。","sourceIds":["nurikabe-2180774","nuribou-2180775"],
       "article":{"title":"塗壁―壁の妖怪より『進めない夜道』","subtitle":"1938年の記録をそのまま出発点にする","body":["塗壁はいまでは大きな壁の体を持つ妖怪として有名です。しかし1938年の記録で中心なのは姿ではなく、夜道で起きる現象です。","福岡県遠賀郡では、夜道を歩くと急に行く先が壁のようになり、前へ進めなくなるとされました。","対処も具体的で、上を叩いてもだめですが、棒で下の方を払うと消えると記されています。長崎県壱岐島には似た『ヌリボウ』の記録があります。","後世のキャラクター像がどう広まったかは別の資料が必要です。この図鑑では、1938年の資料だけで戦後の受容史まで説明しないようにします。"],"sourceNote":"柳田國男『妖怪名彙（四）』の塗り壁・ヌリボウ個別カードに限定しています。"}
     },
     {
@@ -127,7 +127,7 @@
       "abilities":[{"name":"夜にひらひら現れる","description":"一反ほどの木綿、または白い反物のようなものとして夜に現れる。","evidenceLevel":"A","sourceIds":["ittan-2180776","ittan-takayama-C0410990"]},{"name":"人を襲う・目をくらませる","description":"1938年の記録では人を襲い、1956年の記録では目をくらませるような型が確認できる。","evidenceLevel":"A","sourceIds":["ittan-2180776","ittan-takayama-C0410990"]}],
       "countermeasures":[],
       "regionalVariants":[{"region":"鹿児島県肝属郡","localNames":["一反木綿"],"summary":"1938年の中心記録。夜に反物状のものが人を襲う。","sourceIds":["ittan-2180776"]},{"region":"鹿児島県高山地方","localNames":["一反木綿"],"summary":"1956年の別カードに白い反物状の怪異が記録される。","sourceIds":["ittan-takayama-C0410990"]}],
-      "glossaryTerms":["採録"],"evidenceNote":"戦後〜現代の全国化は今回の資料では証明しないため削除し、1956年記録は専用sourceIdへ分離しました。","sourceIds":["ittan-2180776","ittan-takayama-C0410990"],
+      "glossaryTerms":[],"evidenceNote":"戦後〜現代の全国化は今回の資料では証明しないため削除し、1956年記録は専用sourceIdへ分離しました。","sourceIds":["ittan-2180776","ittan-takayama-C0410990"],
       "article":{"title":"一反木綿―鹿児島の夜に飛ぶ白い怪異","subtitle":"1938年と1956年の記録を分けて読む","body":["一反木綿は全国的に有名ですが、確認できる古い記録は鹿児島の具体的な土地と結びついています。","1938年の柳田國男の記録では、一反ほどの木綿のようなものが夜ひらひらして人を襲うとされています。","1956年の高山地方のカードにも、白い反物のようなものが現れる別の記録があります。この二つは同じ出典としてまとめず、それぞれのカードへリンクします。","漫画や図鑑で全国に知られるようになった歴史は、それを調べた別資料が必要です。分からない受容史を古いカードで埋めないことも、この図鑑のルールです。"],"sourceNote":"1938年と1956年の鹿児島の個別カードを分離して参照しています。"}
     },
     {
@@ -139,7 +139,7 @@
       "abilities":[{"name":"害をなす怪物として語られる","description":"地域資料には、人や作物へ害をなす恐ろしい牛鬼として語る型がある。","evidenceLevel":"A","sourceIds":["ushi-kikuma-0200001","ushi-uwajima-0200004"]}],
       "countermeasures":[{"name":"牛鬼を作り疫神退散を願う","description":"菊間の1973年資料では、疫病の際に牛鬼を作って疫病の神が退くよう願った話が確認できる。","evidenceLevel":"A","sourceIds":["ushi-kikuma-0200001"]}],
       "regionalVariants":[{"region":"愛媛・菊間","localNames":["牛鬼"],"summary":"疫病退散を願う祭礼の由来として牛鬼が語られる。","sourceIds":["ushi-kikuma-0200001"]},{"region":"愛媛・宇和島／吉田","localNames":["牛鬼"],"summary":"怪物・土地の伝説としての牛鬼が記録される。","sourceIds":["ushi-uwajima-0200004"]},{"region":"愛媛・愛南","localNames":["牛鬼"],"summary":"約13人の若者が中に入り町を動き回る祭りの造り物として記録される。","sourceIds":["ushi-festival-0200265"]}],
-      "glossaryTerms":["採録","禁忌"],"evidenceNote":"『厄払い』は1975年愛南カードではなく、疫神退散を明記する1973年菊間カードへ根拠を付け直しました。","sourceIds":["ushi-uwajima-0200004","ushi-kikuma-0200001","ushi-festival-0200265"],
+      "glossaryTerms":[],"evidenceNote":"『厄払い』は1975年愛南カードではなく、疫神退散を明記する1973年菊間カードへ根拠を付け直しました。","sourceIds":["ushi-uwajima-0200004","ushi-kikuma-0200001","ushi-festival-0200265"],
       "article":{"title":"牛鬼―怪物の話と祭りの牛鬼を分ける","subtitle":"愛媛の土地ごとに役割が変わる","body":["牛鬼という名前は、恐ろしい怪物の伝説にも、祭りで大勢の人が動かす造り物にも現れます。二つを同じ生き物の説明として混ぜないことが大切です。","宇和島・吉田には牛鬼にまつわる土地の伝説があります。一方、菊間の1973年資料では、疫病が流行した時に牛鬼を作り、疫病の神が退くよう願った話が記録されています。","愛南の1975年資料では、約13人の若者が牛鬼の中に入って町を動き回る祭礼の姿が記録されています。このカード自体には疫病退散の説明を背負わせません。","同じ牛鬼でも、怪物、厄を遠ざける祭礼、町を盛り上げる造り物という役割が重なります。地域資料を分けることで、その変化が見えるようになります。"],"sourceNote":"宇和島・菊間・愛南の個別カードを用途別に参照しています。"}
     },
     {
@@ -163,7 +163,7 @@
       "abilities":[{"name":"人を襲う","description":"『徒然草』の噂や石川県の昔話で、人を害する猫又が語られる。","evidenceLevel":"B","sourceIds":["aozora-tsurezuregusa-89","nekomata-ishikawa-2460015"]},{"name":"人に化ける","description":"石川県の昔話では、老婆を食べてその姿に化けた猫又が語られる。","evidenceLevel":"A","sourceIds":["nekomata-ishikawa-2460015"]}],
       "countermeasures":[],
       "regionalVariants":[{"region":"中世京都の説話世界","localNames":["猫また"],"summary":"山の人食い怪物と年老いた飼い猫の変化という噂が並ぶ。","sourceIds":["aozora-tsurezuregusa-89"]},{"region":"石川県白山市周辺","localNames":["猫又"],"summary":"人を食べ、老婆に化ける昔話が記録される。","sourceIds":["nekomata-ishikawa-2460015"]}],
-      "glossaryTerms":["採録"],"evidenceNote":"『噂を事実と決めつけない』はcountermeasureから外し、editorial.interpretationへ移しました。青空文庫は佐藤春夫の現代語訳と明示します。","sourceIds":["aozora-tsurezuregusa-89","ndl-sekien-theme","nekomata-ishikawa-2460015"],
+      "glossaryTerms":[],"evidenceNote":"『噂を事実と決めつけない』はcountermeasureから外し、editorial.interpretationへ移しました。青空文庫は佐藤春夫の現代語訳と明示します。","sourceIds":["aozora-tsurezuregusa-89","ndl-sekien-theme","nekomata-ishikawa-2460015"],
       "article":{"title":"猫又―山の怪物と老猫の噂が出会う","subtitle":"『徒然草』から近代の昔話まで","body":["猫又はかなり古くから名前が見える猫の怪異です。『徒然草』第89段には、山で人を食う猫又の噂と、年老いた飼い猫が猫又になるという噂が続けて出ます。","ただしこの図鑑がリンクする青空文庫のページは佐藤春夫の現代語訳です。原文そのものではないことを資料表示で区別します。","物語では、猫又を恐れた人が夜道で何かに飛びつかれて大騒ぎしますが、正体は飼い犬でした。怖い噂に人間が振り回される様子まで描かれています。","1936年の石川県の昔話には、人を食べて老婆に化ける猫又が記録されています。文学、妖怪画、地域の昔話を重ねると、猫又にも一つではない姿があると分かります。"],"sourceNote":"現代語訳・歴史図像・個別昔話カードの違いを明示しています。"}
     }
   ]
