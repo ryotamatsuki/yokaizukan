@@ -63,6 +63,21 @@ test('Phase 2 Batch A keeps betobeto-san Memory Hook grounded in sound and respo
   await expect(article).toContainText('道をよけ');
 });
 
+test('Phase 2 Batch B keeps Ishigaki mermaid story out of Western standard imagery', async ({ page }) => {
+  await openYokai(page, 'ningyo');
+  await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
+  const article = page.locator('#detailed-article-ningyo');
+  await expect(article).toBeVisible();
+  await expect(article).toContainText('石垣島');
+  await expect(article).toContainText('津波');
+  await expect(article).toContainText('若狭');
+  await expect(article).not.toContainText(/美しい女性|マーメイド|人魚姫|歌声/);
+
+  const research = page.locator('[data-research-overview]');
+  await expect(research).toBeVisible();
+  await expect(research.locator('.research-source-list a').first()).toHaveAttribute('href', /nichibun\.ac\.jp/);
+});
+
 test('insufficient countermeasure stays explicit instead of inventing a weakness', async ({ page }) => {
   await openYokai(page, 'zashiki-warashi');
 
