@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-08-24",
+  "phase": 4,
+  "overlayMode": "research_deepening",
+  "sources": [
+    {
+      "id": "sekien-zoku-hyakki-1779",
+      "title": "今昔画図続百鬼 刊本",
+      "provider": "龍谷大学図書館（NDLサーチ連携）",
+      "year": "1779年",
+      "region": "江戸出版文化",
+      "recordType": "近世版本・デジタル原資料",
+      "sourceRole": "evidence",
+      "sourceType": "historical_book",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000135-I170268"
+    },
+    {
+      "id": "sekien-hyakki-shui-1781",
+      "title": "百鬼夜行拾遺 上之巻",
+      "provider": "早稲田大学図書館（NDLサーチ連携）",
+      "year": "1781年序",
+      "region": "江戸出版文化",
+      "recordType": "近世版本・デジタル原資料",
+      "sourceRole": "evidence",
+      "sourceType": "historical_book",
+      "url": "https://ndlsearch.ndl.go.jp/books/R000000050-I000023868"
+    },
+    {
+      "id": "ndl-sekien-akaname",
+      "title": "鳥山石燕の描いた妖怪―垢嘗",
+      "provider": "国立国会図書館 NDLイメージバンク",
+      "year": "『画図百鬼夜行』1776年",
+      "region": "江戸出版文化",
+      "recordType": "歴史図像・機関展示",
+      "sourceRole": "evidence",
+      "sourceType": "historical_image",
+      "url": "https://www.ndl.go.jp/imagebank/theme/sekienyokai"
+    },
+    {
+      "id": "kokon-hyakumonogatari-akaneburi",
+      "title": "古今百物語評判",
+      "provider": "東京大学デジタルアーカイブポータル／国文学研究資料館",
+      "year": "1686年序（公開本は後刷を含む）",
+      "region": "近世怪談・出版文化",
+      "recordType": "和古書・デジタル原資料",
+      "sourceRole": "evidence",
+      "sourceType": "historical_book",
+      "url": "https://da.dl.itc.u-tokyo.ac.jp/portal/assets/93aaaa77-5b9e-262e-132b-20a0b93a2689"
+    }
+  ],
+  "items": [
+    {
+      "id": "wanyudo",
+      "historySummary": "鳥山石燕『今昔画図続百鬼』の個別図像・詞書まで直接確認できる。車輪の轂に大きな入道の首がつき、自ら巡る怪異として記され、見る者が魂を失うこと、戸口に『此所勝母の里』と書いた紙を貼る対処も詞書にある。後世のゲーム的能力とは分離する。",
+      "coverage": {"timeline": "documented", "abilities": "documented", "countermeasures": "documented", "regionalVariants": "insufficient"},
+      "timeline": [
+        {"label": "1779年・鳥山石燕『今昔画図続百鬼』", "summary": "『輪入道』が個別名・図像・詞書を伴って刊行される。", "sourceIds": ["sekien-zoku-hyakki-1779"]}
+      ],
+      "abilities": [
+        {"name": "車輪の轂に入道の首を持ち、自ら巡る", "description": "石燕の詞書は、車輪の中心に大きな入道の首がつき、片輪で自ら巡り歩く怪異として記す。", "evidenceLevel": "A", "sourceIds": ["sekien-zoku-hyakki-1779"]},
+        {"name": "見た者が魂を失う", "description": "石燕の詞書に、これを見る者は魂を失うと記される。", "evidenceLevel": "A", "sourceIds": ["sekien-zoku-hyakki-1779"]}
+      ],
+      "countermeasures": [
+        {"name": "戸口に『此所勝母の里』と書いた紙を貼る", "description": "石燕の詞書では、この文言を書いた紙を家の出入口に貼れば近づかないとされる。", "evidenceLevel": "A", "sourceIds": ["sekien-zoku-hyakki-1779"]}
+      ],
+      "regionalVariants": [],
+      "glossaryTerms": [],
+      "evidenceNote": "燃える車輪という視覚要素は図像として確認する一方、炎を攻撃能力として扱わない。京都・東洞院の片輪車説話との系譜関係は別資料での比較が必要なため、今回のA claimには混ぜない。",
+      "sourceIds": ["sekien-zoku-hyakki-1779"]
+    },
+    {
+      "id": "mokumokuren",
+      "historySummary": "鳥山石燕『今昔百鬼拾遺』の個別図像・詞書へ到達した。荒れた家の障子に多数の目が描かれ、詞書は『昔だれか住みし家の隅々に目を多く持つ』ことを碁打ちの住んだ跡ではないかと見立てる。後世の『目を集めて売る』話は混ぜない。",
+      "coverage": {"timeline": "documented", "abilities": "documented", "countermeasures": "insufficient", "regionalVariants": "insufficient"},
+      "timeline": [
+        {"label": "1781年序・鳥山石燕『今昔百鬼拾遺』", "summary": "『目目連』が個別図像と詞書を伴って収録される。", "sourceIds": ["sekien-hyakki-shui-1781"]}
+      ],
+      "abilities": [
+        {"name": "荒れた家の障子に多数の目が現れる", "description": "石燕の図像では破れた障子の格子に多数の目が描かれ、詞書も昔人が住んだ家の隅々に多くの目があると記す。", "evidenceLevel": "A", "sourceIds": ["sekien-hyakki-shui-1781"]}
+      ],
+      "countermeasures": [],
+      "regionalVariants": [],
+      "glossaryTerms": [],
+      "evidenceNote": "碁打ちとの関係は石燕自身が『跡ならんか』と見立てる表現なので、確定した民俗伝承の由来へ昇格しない。後世の商人・眼医者の逸話も今回の直接資料には含めない。",
+      "sourceIds": ["sekien-hyakki-shui-1781"]
+    },
+    {
+      "id": "akaname",
+      "historySummary": "鳥山石燕『画図百鬼夜行』では『垢嘗』の名と図像を直接確認できるが、同作には個別詞書がない。一方、1686年序の『古今百物語評判』には『垢ねぶり』が古い風呂屋に住み、塵垢の気から化生して垢をなめるという別名の記述がある。両者を同一存在と断定せず、図像系統と先行怪談を分離する。",
+      "coverage": {"timeline": "documented", "abilities": "insufficient", "countermeasures": "insufficient", "regionalVariants": "insufficient"},
+      "timeline": [
+        {"label": "1686年序・『古今百物語評判』", "summary": "『垢ねぶり』という名で、古い風呂屋と塵垢に結びつく化生が記される。『垢嘗』との同一性はこの資料単独では確定しない。", "sourceIds": ["kokon-hyakumonogatari-akaneburi"]},
+        {"label": "1776年・鳥山石燕『画図百鬼夜行』", "summary": "『垢嘗』の名と、湯殿を思わせる場所で舌を出す図像が出版される。個別詞書はない。", "sourceIds": ["ndl-sekien-akaname"]}
+      ],
+      "abilities": [],
+      "countermeasures": [],
+      "regionalVariants": [],
+      "glossaryTerms": [],
+      "evidenceNote": "『風呂の垢をなめる』を垢嘗のA能力として直結させない。石燕の垢嘗は図像、古今百物語評判の垢ねぶりは本文として別々に保持し、両者の同一視は二次研究で検証する。",
+      "sourceIds": ["ndl-sekien-akaname", "kokon-hyakumonogatari-akaneburi"]
+    }
+  ]
+}
