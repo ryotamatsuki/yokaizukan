@@ -188,22 +188,36 @@ function createOption(value, label) {
 }
 
 function collectSources(items, fallbackSources) {
-  const collected = [];
-  items.forEach((item) => {
-    (item.detailedArticle?.references || []).forEach((source) => collected.push(source));
-  });
-  fallbackSources.forEach((source) => collected.push(source));
-
   const seen = new Set();
-  return collected.filter((source) => {
-    const key = `${source.title || ''}|${source.source || ''}|${source.url || ''}`;
-    if (!key.replaceAll('|', '')) {
-      return false;
-    }
-    if (seen.has(key)) {
-      return false;
+  const sources = [];
+
+  [
+    ...fallbackSources,
+    ...items.flatMap((item) => [
+      ...(item.textReferenceUrls || []),
+      ...(item.detailedArticle?.references || [])
+    ])
+  ].forEach((source) => {
+    const normalized = normalizeSource(source);
+    const key = normalized.url || `${normalized.title}-${normalized.source}`;
+    if (!key || seen.has(key)) {
+      return;
     }
     seen.add(key);
-    return true;
+    sources.push(normalized);
   });
+
+  return sources;
+}
+
+function normalizeSource(source) {
+  if (typeof source === 'string') {
+    return { title: source, source: '', url: source, note: '' };
+  }
+  return {
+    title: source.title || source.name || source.source || '',
+    source: source.source || source.provider || source.name || '',
+    url: source.url || source.sourcePageUrl || source.href || '',
+    note: source.note || source.description || ''
+  };
 }
