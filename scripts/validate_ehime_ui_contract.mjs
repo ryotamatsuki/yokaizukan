@@ -5,9 +5,11 @@ const app = fs.readFileSync('js/ehime.js', 'utf8');
 const researchUi = fs.readFileSync('js/ehime-research-v2.js', 'utf8');
 
 assert(app.includes('research: "public/data/ehime_research_v2.json"'), 'ehime.js must load Ehime Research v2 through the app state');
+assert(app.includes('research: []'), 'Ehime app state must reserve research items');
 assert(app.includes('loadOptionalJson(DATA_PATHS.research)'), 'Ehime Research v2 must remain an optional layer');
+assert(app.includes('state.research = normalizeArray(researchData?.items)'), 'loaded Ehime Research v2 items must be stored in app state');
+assert(app.includes('const research = state.research.find((item) => item.id === id) || null'), 'openDetail must resolve research by legend id from app state');
 assert(app.includes('new CustomEvent("ehime:detail-opened"'), 'openDetail must publish the formal detail-opened event');
-assert(app.includes('research: state.research'), 'Ehime app state must retain research items');
 assert(app.includes('sources: state.sources'), 'detail-opened event must pass the existing source state');
 
 assert(researchUi.includes("document.addEventListener('ehime:detail-opened'"), 'research UI must subscribe to the formal detail-opened event');
