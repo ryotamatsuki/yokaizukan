@@ -1,6 +1,13 @@
 const RESEARCH_DATA_URL = 'public/data/yokai_research_pilot.json';
 const RESEARCH_STYLE_URL = 'css/research.css';
 
+// The existing 50-item catalog predates the newer underscore convention for these two IDs.
+// Keep the legacy catalog IDs stable and map the pilot overlay onto them non-destructively.
+const BASE_ID_ALIASES = {
+  yuki_onna: 'yuki-onna',
+  zashiki_warashi: 'zashiki-warashi'
+};
+
 export function installResearchStyles() {
   if (document.querySelector('link[data-yokai-research-style]')) {
     return;
@@ -26,7 +33,9 @@ export async function loadPilotResearch(url = RESEARCH_DATA_URL) {
 
 export function mergePilotResearch(items, payload) {
   const sourceIndex = new Map(payload.sources.map((source) => [source.id, source]));
-  const researchIndex = new Map(payload.items.map((item) => [item.id, item]));
+  const researchIndex = new Map(
+    payload.items.map((item) => [toBaseCatalogId(item.id), item])
+  );
 
   return items.map((item) => {
     const research = researchIndex.get(item.id);
@@ -60,6 +69,7 @@ export function mergePilotResearch(items, payload) {
       detailedArticle,
       research: {
         ...research,
+        baseCatalogId: item.id,
         sources: resolvedSources,
         evidenceLevels: payload.evidenceLevels || {}
       }
@@ -183,6 +193,10 @@ export function enhanceDetailWithResearch(yokai) {
   } else {
     body.append(section);
   }
+}
+
+export function toBaseCatalogId(researchId) {
+  return BASE_ID_ALIASES[researchId] || researchId;
 }
 
 function resolveSources(sourceIds = [], sourceIndex) {
