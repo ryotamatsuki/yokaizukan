@@ -1,4 +1,5 @@
 const RESEARCH_DATA_URL = 'public/data/yokai_research_pilot.json';
+const RESEARCH_COMMON_SOURCES_URL = 'public/data/yokai_research_common_sources.json';
 const RESEARCH_EXPANSION_URLS = [1, 2, 3, 4, 5].map(
   (batch) => `public/data/yokai_research_expansion_0${batch}.json`
 );
@@ -27,12 +28,15 @@ export function installResearchStyles() {
 }
 
 export async function loadPilotResearch(url = RESEARCH_DATA_URL) {
-  const basePayload = await fetchResearchPayload(url);
+  const [basePayload, commonPayload] = await Promise.all([
+    fetchResearchPayload(url),
+    fetchResearchPayload(RESEARCH_COMMON_SOURCES_URL)
+  ]);
   const expansionResults = await Promise.allSettled(
     RESEARCH_EXPANSION_URLS.map((batchUrl) => fetchResearchPayload(batchUrl))
   );
 
-  const payloads = [basePayload];
+  const payloads = [basePayload, commonPayload];
   expansionResults.forEach((result, index) => {
     if (result.status === 'fulfilled') {
       payloads.push(result.value);
