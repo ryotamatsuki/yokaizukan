@@ -46,8 +46,8 @@ async function init() {
       return { items: [], sources: [], evidenceLevels: {} };
     });
 
-    const literaryItems = mergeLiteraryOverlay(data.items, literaryData);
-    state.allItems = mergePilotResearch(literaryItems, research);
+    const researchedItems = mergePilotResearch(data.items, research);
+    state.allItems = mergeLiteraryOverlay(researchedItems, literaryData);
     opening.setYokaiPool(state.allItems);
     renderFilterOptions(
       { categorySelect: elements.categorySelect, scarySelect: elements.scarySelect },
