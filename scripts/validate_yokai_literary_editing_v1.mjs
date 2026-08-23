@@ -43,7 +43,24 @@ const FACT_ANCHORS = {
   ittan_momen: ['鹿児島', '夜', 'ひらひら', '1938', '1956'],
   sunakake_baba: ['奈良', '砂', '姿', '1938'],
   sunekosuri: ['岡山', '雨', '犬', '足'],
-  abura_sumashi: ['天草', '山道', '油瓶', '1938']
+  abura_sumashi: ['天草', '山道', '油瓶', '1938'],
+  kappa: ['九州', '水', '相撲', '山童', '佐賀'],
+  tengu: ['石鎚', '高い木', '小さな火', '篠山', '翼'],
+  'yuki-onna': ['越後', '大雪', '宗祇', '作並', '声を出さず'],
+  'zashiki-warashi': ['岩泉', '床下', '五戸', '家'],
+  okuri_inu: ['山梨', '転ぶ', '宮城', 'まず一服', '握り飯']
+};
+
+const FORBIDDEN_MODERN_PATTERNS = {
+  nurikabe: [/手足のある壁/],
+  ittan_momen: [/首に巻/],
+  sunekosuri: [/猫の姿/, /丸い体/, /かわいらしい性格/],
+  abura_sumashi: [/石のような頭/],
+  kappa: [/きゅうり/, /甲羅/, /頭の皿/, /おじぎ/],
+  tengu: [/剣術/, /神通力/, /長い鼻/, /鼻の高/],
+  'yuki-onna': [/美しい女性/, /美人/],
+  'zashiki-warashi': [/ラッキー/, /かわいい子ども/, /可愛い子ども/],
+  okuri_inu: [/守護神/]
 };
 
 const META_PATTERNS = [
@@ -115,6 +132,9 @@ for (const item of items) {
 
   for (const anchor of FACT_ANCHORS[item.id] || []) {
     assert(prose.includes(anchor), `${item.id}: expected source-grounded anchor is missing: ${anchor}`);
+  }
+  for (const pattern of FORBIDDEN_MODERN_PATTERNS[item.id] || []) {
+    assert(!pattern.test(prose), `${item.id}: unsourced modern-standard imagery leaked into literary prose (${pattern})`);
   }
 }
 
