@@ -52,9 +52,9 @@ const FACT_ANCHORS = {
   'hitotsume-kozo': ['12月8日', '笊', '籠', '門口', '目'],
   konaki_jiji: ['徳島', '山奥', '赤子', '爺', '重く', '離せ'],
   ningyo: ['石垣島', '津波', '海へ返', '若狭', '長寿'],
-  bakeneko: ['群馬県大泉町', '5匹', '原っぱ', '鉢巻', '歌', '踊', '石川'],
+  bakeneko: ['群馬県大泉町', '原っぱ', '鉢巻', '歌', '踊', '石川'],
   'tofu-kozo': ['お盆', '持ち歩', '黄表紙', '1779', '江戸'],
-  daidarabotchi: ['群馬県太田市', '赤城山', '利根川', '吉沢の池', '東金井分の池', '矢倉岳']
+  daidarabotchi: ['群馬県太田市', '赤城山', '利根川', '足跡', '池', '矢倉岳']
 };
 
 const LEAD_ANCHORS = {
@@ -65,7 +65,7 @@ const LEAD_ANCHORS = {
   'hitotsume-kozo': ['12月8日', '一つ目小僧'],
   konaki_jiji: ['山奥', '赤子'],
   ningyo: ['石垣島', '津波'],
-  bakeneko: ['原っぱ', '5匹'],
+  bakeneko: ['原っぱ', '猫'],
   'tofu-kozo': ['豆腐', 'お盆'],
   daidarabotchi: ['群馬県太田市', '赤城山']
 };
@@ -80,7 +80,7 @@ const MEMORY_FACT_ANCHORS = {
   ningyo: ['石垣島', '津波'],
   bakeneko: ['猫', '鉢巻', '歌', '踊'],
   'tofu-kozo': ['豆腐', 'お盆', '持ち歩', '黄表紙'],
-  daidarabotchi: ['群馬県太田市', '足跡', '吉沢の池', '東金井分の池']
+  daidarabotchi: ['群馬県太田市', '足跡', '池']
 };
 
 const FINAL_MEMORY_HOOKS = {
@@ -93,7 +93,7 @@ const FINAL_MEMORY_HOOKS = {
   konaki_jiji: '赤子の声で泣く爺を抱くと、急に重くなる',
   betobeto_san: '後ろのビタビタ足音に「先へおこし」と道を譲る',
   kamikiri: '気づかないうちに、髪が根元から切られている',
-  daidarabotchi: '群馬県太田市では、デッタラボッチの足跡が吉沢の池と東金井分の池になった'
+  daidarabotchi: '群馬県太田市では、デッタラボッチの足跡が池になった'
 };
 
 const FORBIDDEN_MODERN_PATTERNS = {
