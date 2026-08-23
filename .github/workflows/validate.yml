@@ -22,6 +22,7 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           node --check js/app.js
+          node --check js/literary.js
           node --check js/research.js
           node --check js/ehime.js
           node --check js/ehime-research-v2.js
@@ -31,8 +32,10 @@ jobs:
           node --check scripts/validate_ehime_literary_editing_v1.mjs
           node --check scripts/validate_yokai_research_pilot.mjs
           node --check scripts/validate_yokai_research_expansions.mjs
+          node --check scripts/validate_yokai_literary_editing_v1.mjs
           node --check playwright.config.mjs
           node --check tests/e2e/ehime-research.spec.mjs
+          node --check tests/e2e/yokai-literary.spec.mjs
 
       - name: Install test dependencies
         run: npm install --no-package-lock --ignore-scripts
@@ -43,5 +46,5 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Run minimal Ehime browser regression
-        run: npm run test:e2e:ehime
+      - name: Run browser regression
+        run: npm run test:e2e
