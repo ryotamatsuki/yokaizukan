@@ -2,6 +2,7 @@ import fs from 'node:fs';
 
 const BASE_PATH = 'public/data/yokai.json';
 const PILOT_PATH = 'public/data/yokai_research_pilot.json';
+const COMMON_PATH = 'public/data/yokai_research_common_sources.json';
 const EXPANSION_FILES = [1, 2, 3, 4, 5].map((n) => `public/data/yokai_research_expansion_0${n}.json`);
 const EXPECTED_BATCHES = [
   ['rokurokubi','karakasa-kozo','chochin-obake','gashadokuro','karasu-tengu','hitotsume-kozo','bakeneko','kitsunebi'],
@@ -21,6 +22,7 @@ const COVERAGE_FIELDS = ['timeline','abilities','countermeasures','regionalVaria
 
 const base = readJson(BASE_PATH);
 const pilot = readJson(PILOT_PATH);
+const common = readJson(COMMON_PATH);
 const expansions = EXPANSION_FILES.map(readJson);
 const errors = [];
 
@@ -29,23 +31,54 @@ const baseIds = new Set(baseItems.map((item) => item.id));
 const pilotItems = Array.isArray(pilot.items) ? pilot.items : [];
 const expansionItems = expansions.flatMap((payload) => Array.isArray(payload.items) ? payload.items : []);
 const allItems = [...pilotItems, ...expansionItems];
-const allSources = [
-  ...(Array.isArray(pilot.sources) ? pilot.sources : []),
-  ...expansions.flatMap((payload) => Array.isArray(payload.sources) ? payload.sources : [])
-];
-const glossary = Object.assign({}, pilot.glossary || {}, ...expansions.map((payload) => payload.glossary || {}));
+const pilotSources = Array.isArray(pilot.sources) ? pilot.sources : [];
+const commonSources = Array.isArray(common.sources) ? common.sources : [];
+const expansionSources = expansions.flatMap((payload) => Array.isArray(payload.sources) ? payload.sources : []);
+const allSourceDefinitions = [...pilotSources, ...commonSources, ...expansionSources];
+const glossary = Object.assign({}, pilot.glossary || {}, common.glossary || {}, ...expansions.map((payload) => payload.glossary || {}));
+
+assert(common.schemaVersion === 2, 'common sources: schemaVersion must be 2');
+assert(Array.isArray(common.items) && common.items.length === 0, 'common sources must have items: []');
+
+const pilotSourceIds = new Set(pilotSources.map((source) => source.id));
+const commonSourceIds = new Set(commonSources.map((source) => source.id));
+const commonSourceIndex = new Map(commonSources.map((source) => [source.id, source]));
+assert(commonSourceIds.size === commonSources.length, 'common source IDs must be unique');
 
 for (const [index, payload] of expansions.entries()) {
   const batchNo = index + 1;
   assert(payload.schemaVersion === 2, `batch ${batchNo}: schemaVersion must be 2`);
   assert(payload.batch === batchNo, `batch ${batchNo}: batch field must be ${batchNo}`);
   const items = Array.isArray(payload.items) ? payload.items : [];
+  const sources = Array.isArray(payload.sources) ? payload.sources : [];
   const ids = items.map((item) => item.id);
   const expected = EXPECTED_BATCHES[index];
+  const batchSourceIds = new Set(sources.map((source) => source.id));
+  assert(batchSourceIds.size === sources.length, `batch ${batchNo}: source IDs must be unique within the batch`);
+
   ids.forEach((id) => assert(expected.includes(id), `batch ${batchNo}: unexpected item ${id}`));
   if (ids.length > 0) {
     assert(ids.length === expected.length, `batch ${batchNo}: once populated, batch must contain exactly ${expected.length} items`);
     expected.forEach((id) => assert(ids.includes(id), `batch ${batchNo}: missing item ${id}`));
+  }
+
+  for (const source of sources) {
+    const commonSource = commonSourceIndex.get(source.id);
+    if (commonSource) {
+      assert(
+        stableStringify(source) === stableStringify(commonSource),
+        `batch ${batchNo}: common source mirror ${source.id} must exactly match ${COMMON_PATH}`
+      );
+    }
+  }
+
+  for (const item of items) {
+    for (const sourceId of item.sourceIds || []) {
+      assert(
+        pilotSourceIds.has(sourceId) || commonSourceIds.has(sourceId) || batchSourceIds.has(sourceId),
+        `batch ${batchNo}: ${item.id}.sourceIds references cross-batch source ${sourceId}; expansion items may use only pilot/common sources or sources from their own batch`
+      );
+    }
   }
 }
 
@@ -58,10 +91,21 @@ for (const item of allItems) {
 const resolvedIds = researchIds.map(toBaseCatalogId);
 assert(new Set(resolvedIds).size === resolvedIds.length, 'research IDs must resolve to unique base catalog IDs');
 
-const sourceIds = allSources.map((source) => source.id);
-assert(new Set(sourceIds).size === sourceIds.length, 'source IDs must be unique across all research files');
-const sourceIdSet = new Set(sourceIds);
-const sourceIndex = new Map(allSources.map((source) => [source.id, source]));
+const sourceIndex = new Map();
+for (const source of allSourceDefinitions) {
+  const existing = sourceIndex.get(source.id);
+  if (!existing) {
+    sourceIndex.set(source.id, source);
+    continue;
+  }
+  const commonSource = commonSourceIndex.get(source.id);
+  assert(
+    Boolean(commonSource) && stableStringify(source) === stableStringify(commonSource) && stableStringify(existing) === stableStringify(commonSource),
+    `source ID ${source.id} is duplicated outside an identical common-source mirror`
+  );
+}
+const sourceIdSet = new Set(sourceIndex.keys());
+const allSources = [...sourceIndex.values()];
 
 for (const [term, definition] of Object.entries(glossary)) {
   assertText(term, 'glossary term');
@@ -89,7 +133,7 @@ if (errors.length) {
   errors.forEach((error) => console.error(`- ${error}`));
   process.exit(1);
 }
-console.log(`Yokai research expansion validation passed: ${expansionItems.length}/40 expansion items, ${populatedBatches}/5 batches populated.`);
+console.log(`Yokai research expansion validation passed: ${expansionItems.length}/40 expansion items, ${populatedBatches}/5 batches populated, cross-batch source dependencies forbidden.`);
 
 function validateSource(source) {
   assertText(source.id, 'source.id');
@@ -209,6 +253,14 @@ function validateEvidenceSourceRefs(refs, path) {
     const source = sourceIndex.get(sourceId);
     if (source) assert(source.sourceRole === 'evidence', `${path} must not use discovery-only source as evidence: ${sourceId}`);
   }
+}
+
+function stableStringify(value) {
+  if (Array.isArray(value)) return `[${value.map(stableStringify).join(',')}]`;
+  if (value && typeof value === 'object') {
+    return `{${Object.keys(value).sort().map((key) => `${JSON.stringify(key)}:${stableStringify(value[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
 }
 
 function toBaseCatalogId(id) { return BASE_ID_ALIASES[id] || id; }
