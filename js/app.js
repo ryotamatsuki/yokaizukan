@@ -1,8 +1,9 @@
-import { loadYokaiData } from './dataLoader.js';
+import { loadOptionalJson, loadYokaiData } from './dataLoader.js';
 import { applyFilters, getScaryOptions, readFilters, resetFilterForm } from './filters.js';
 import { renderCards, renderCount, renderFilterOptions, renderStatus } from './render.js';
 import { openDetail as openBaseDetail, setupDetailModal } from './detail.js';
 import { setupOpening } from './opening.js';
+import { LITERARY_PHASE1_URL, mergeLiteraryOverlay } from './literary.js';
 import {
   enhanceDetailWithResearch,
   installResearchStyles,
@@ -39,12 +40,14 @@ async function init() {
 
   try {
     const data = await loadYokaiData();
+    const literaryData = await loadOptionalJson(LITERARY_PHASE1_URL);
     const research = await loadPilotResearch().catch((error) => {
       console.warn('原典・地域差データを読み込めなかったため、基本図鑑だけで続行します。', error);
       return { items: [], sources: [], evidenceLevels: {} };
     });
 
-    state.allItems = mergePilotResearch(data.items, research);
+    const literaryItems = mergeLiteraryOverlay(data.items, literaryData);
+    state.allItems = mergePilotResearch(literaryItems, research);
     opening.setYokaiPool(state.allItems);
     renderFilterOptions(
       { categorySelect: elements.categorySelect, scarySelect: elements.scarySelect },
