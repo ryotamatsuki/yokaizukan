@@ -1,4 +1,5 @@
 export const LITERARY_PHASE1_URL = 'public/data/yokai_literary_phase1.json';
+export const LITERARY_PHASE2_URL = 'public/data/yokai_literary_phase2.json';
 
 const ALLOWED_ARTICLE_FIELDS = new Set(['title', 'subtitle', 'body']);
 
