@@ -16,16 +16,25 @@
 対象ファイル：
 
 - public/data/yokai.json
+- public/data/yokai_research_pilot.json
 - yokai_detailed_articles.md
+- js/research.js
 - scripts/build_detailed_articles.mjs
 - scripts/enrich_tradition_history.mjs
+- scripts/validate_yokai_research_pilot.mjs
 
 編集方針：
 
 - 全国的・一般的な妖怪図鑑として読める内容にする。
-- detailedArticle の正本は原則として yokai_detailed_articles.md とする。
+- 通常50体の detailedArticle の正本は原則として yokai_detailed_articles.md とする。
+- ただし、原典・地域差パイロット対象10体（kappa、tengu、oni、yuki_onna、zashiki_warashi、nurikabe、ittan_momen、ushi_oni、umibozu、nekomata）は、パイロット期間中に限り `public/data/yokai_research_pilot.json` の `editorial`、`article`、`timeline`、`abilities`、`countermeasures`、`regionalVariants`、`sourceIds` を公開時の正本とする。`js/research.js` が既存データへ非破壊で重ねる。
+- パイロット10体の本文を直す場合、`public/data/yokai.json` と `yokai_detailed_articles.md` に同じ修正を二重入力しない。パイロット終了時に正本統合を別タスクで行う。
 - public/data/yokai.json の detailedArticle だけを手で直すと、同期スクリプト実行時に上書きされる可能性があるため注意する。
-- childDescription は80〜160字程度で、姿・出る場所・性格・注意点を簡潔に入れる。
+- `habitat` は「川・山・家・海」など出現環境、`regionalVariants` は「どの地域・資料でどう語られたか」とし、混同しない。
+- `abilities` と `countermeasures` は伝承・資料で確認できる行動・対処だけを書く。`specialMove` と `animationProfile` はアプリ演出であり、研究データへ入れない。
+- パイロット研究記述は必ず `sourceIds` で資料へ結び、資料にない有名設定を全国共通の事実として補わない。
+- 確認度は A＝具体的な古典本文・図像または地域・掲載情報のある民俗記録、B＝国立・研究機関の展示・DB等で確認できるが原採集記録までは未確認、APP＝図鑑上の編集・要約、とする。根拠を超えて格上げしない。
+- childDescription は80〜160字程度を目安に、姿・出る場所・性格・注意点を簡潔に入れる。地域差を伝えるため必要な場合は、読みやすさを損なわない範囲で超過を許容する。
 - trivia はその妖怪固有の「へえ」と思える情報にする。
 - oneLine は20〜45字程度で、その妖怪を一発で思い出せる特徴を入れる。
 - detailedArticle は、民話での型、古典・説話・芸能、絵画での姿、地域差、現代イメージとの違いを必要に応じて入れる。
@@ -79,7 +88,8 @@
 
 # 5. 既知の注意事項
 
-- こども妖怪図鑑では yokai_detailed_articles.md が50件揃っているため、詳細記事改善はまずMarkdown原稿を編集する。
+- こども妖怪図鑑では yokai_detailed_articles.md が50件揃っている。ただし、原典・地域差パイロット10体については `public/data/yokai_research_pilot.json` が公開時に上書きするため、パイロット中の本文改善は同JSONを編集する。
+- パイロット研究JSONが読み込めない場合でも、`public/data/yokai.json` の基本50体図鑑は表示を継続する。
 - 愛媛版の旧派生記事46件は掲載終了済み。`child_articles.json` と旧生成スクリプトから再生成しない。
 - 2026-07-20以降、愛媛版は11の独立記事へ再編済み。旧46派生記事は表示・再生成せず、`child_articles.json` は互換用の空データとして維持する。
 - `scripts/migrate_ehime_11_traditions.mjs` は移行完了済みの廃止スクリプトであり、現在のJSON生成には使用しない。
@@ -90,10 +100,16 @@
 
 - node --check scripts/build_detailed_articles.mjs
 - node --check scripts/enrich_tradition_history.mjs
+- node --check js/app.js
+- node --check js/research.js
 - node --check js/ehime.js
+- node --check scripts/validate_yokai_research_pilot.mjs
+- node scripts/validate_yokai_research_pilot.mjs
 - node --check scripts/validate_ehime_11_traditions.mjs
 - node scripts/validate_ehime_11_traditions.mjs
+- npm run validate:data
 - public/data/yokai.json を JSON.parse できること
+- public/data/yokai_research_pilot.json を JSON.parse できること
 - public/data/legends.json を JSON.parse できること
 - public/data/articles.json を JSON.parse できること
 - public/data/child_articles.json を JSON.parse できること
@@ -101,10 +117,12 @@
 - public/data/courses.json を JSON.parse できること
 - public/data/sources.json を JSON.parse できること
 - public/data/evidence_check_table.json を JSON.parse できること
+- パイロットが固定10 IDと完全一致し、全 sourceIds が登録済み資料を指し、研究データへ specialMove / animationProfile が混入していないことを確認すること
 - articleId、locationId、courseIds、sourceIds の参照整合性を確認すること
 - 愛媛版のIDが固定11件と完全一致し、childItems と childItemIds が空であることを確認すること
 - legends.json と evidence_check_table.json の確認度が一致することを確認すること
 - generatedImagePath、imagePath の文字列が空でなく、愛媛版の画像ファイルが実在することを確認すること
 - こども妖怪図鑑と愛媛ふしぎ伝承図鑑の両方をローカルサーバーで表示確認すること
+- 全国版のパイロット10体で「地域と原典で読む」が表示され、原典リンク、地域差、能力・対処、時系列が読めること
 - 全国版の「もっと詳しく読む」が動くこと
 - 愛媛版では11の独立記事をすべて開け、旧派生項目が表示されないこと
