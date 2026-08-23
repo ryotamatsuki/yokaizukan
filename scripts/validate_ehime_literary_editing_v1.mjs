@@ -13,7 +13,11 @@ const EDITED_IDS = new Set([
   'iyo_basan_cluster',
   'yosuzume',
   'uwakai_sea_mystery_cluster',
-  'ishizuchi_tengu_cluster'
+  'ishizuchi_tengu_cluster',
+  'uwajima_ushioni_cluster',
+  'nobiagari',
+  'kihoku_oni_cluster',
+  'kane_no_kami_no_hi'
 ]);
 
 const EXPECTED_SOURCE_IDS = {
