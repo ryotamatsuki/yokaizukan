@@ -34,6 +34,35 @@ test('national card -> detail -> literary article -> Research -> source link', a
   await expect(sourceLink).toHaveAttribute('href', /nichibun\.ac\.jp/);
 });
 
+test('Phase 2 Batch A card -> literary article -> Research -> source link', async ({ page }) => {
+  await openYokai(page, 'azuki-arai');
+  const description = page.locator('.detail-section').filter({ has: page.getByRole('heading', { name: 'どんな妖怪？' }) });
+  await expect(description).toContainText('西条市丹原町');
+  await expect(description).toContainText('小豆を研ぐような音');
+
+  await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
+  const article = page.locator('#detailed-article-azuki-arai');
+  await expect(article).toBeVisible();
+  await expect(article).toContainText('雨の晩');
+  await expect(article).toContainText('松山市伊台');
+
+  const research = page.locator('[data-research-overview]');
+  await expect(research.getByRole('heading', { name: '地域と出典で読む' })).toBeVisible();
+  const sourceLink = research.locator('.research-source-list a').first();
+  await expect(sourceLink).toBeVisible();
+  await expect(sourceLink).toHaveAttribute('href', /nichibun\.ac\.jp/);
+});
+
+test('Phase 2 Batch A keeps betobeto-san Memory Hook grounded in sound and response', async ({ page }) => {
+  await openYokai(page, 'betobeto_san');
+  await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
+  const article = page.locator('#detailed-article-betobeto_san');
+  await expect(article).toBeVisible();
+  await expect(article).toContainText('ビタビタ');
+  await expect(article).toContainText('先へおこし');
+  await expect(article).toContainText('道をよけ');
+});
+
 test('insufficient countermeasure stays explicit instead of inventing a weakness', async ({ page }) => {
   await openYokai(page, 'zashiki-warashi');
 
