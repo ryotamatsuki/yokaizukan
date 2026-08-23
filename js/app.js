@@ -1,8 +1,14 @@
 import { loadYokaiData } from './dataLoader.js';
 import { applyFilters, getScaryOptions, readFilters, resetFilterForm } from './filters.js';
 import { renderCards, renderCount, renderFilterOptions, renderStatus } from './render.js';
-import { openDetail, setupDetailModal } from './detail.js';
+import { openDetail as openBaseDetail, setupDetailModal } from './detail.js';
 import { setupOpening } from './opening.js';
+import {
+  enhanceDetailWithResearch,
+  installResearchStyles,
+  loadPilotResearch,
+  mergePilotResearch
+} from './research.js';
 
 const elements = {
   form: document.querySelector('#filter-form'),
@@ -22,6 +28,7 @@ const state = {
 };
 
 const opening = setupOpening();
+installResearchStyles();
 
 init();
 
@@ -32,7 +39,12 @@ async function init() {
 
   try {
     const data = await loadYokaiData();
-    state.allItems = data.items;
+    const research = await loadPilotResearch().catch((error) => {
+      console.warn('原典・地域差データを読み込めなかったため、基本図鑑だけで続行します。', error);
+      return { items: [], sources: [], evidenceLevels: {} };
+    });
+
+    state.allItems = mergePilotResearch(data.items, research);
     opening.setYokaiPool(state.allItems);
     renderFilterOptions(
       { categorySelect: elements.categorySelect, scarySelect: elements.scarySelect },
@@ -75,4 +87,9 @@ function updateView() {
   state.visibleItems = applyFilters(state.allItems, filters);
   renderCards(state.visibleItems, elements.grid, openDetail);
   renderCount(elements.count, state.visibleItems.length, state.allItems.length);
+}
+
+function openDetail(yokai) {
+  openBaseDetail(yokai);
+  enhanceDetailWithResearch(yokai);
 }
