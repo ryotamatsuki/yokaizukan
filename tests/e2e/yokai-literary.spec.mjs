@@ -1,20 +1,21 @@
 import { test, expect } from '@playwright/test';
 
-async function openYokai(page, name) {
+async function openYokai(page, id) {
   await page.goto('/yokai.html');
   const skipOpening = page.locator('#skipOpeningButton');
   if (await skipOpening.isVisible()) {
     await skipOpening.click();
   }
   await expect(page.locator('#results-count')).toContainText('/ 50 体');
-  const card = page.locator('.yokai-card').filter({ hasText: name }).first();
+  const card = page.locator(`[data-yokai-id="${id}"]`);
   await expect(card).toBeVisible();
+  const title = (await card.locator('h3').textContent())?.trim() || '';
   await card.getByRole('button', { name: 'くわしく見る' }).click();
-  await expect(page.locator('#detail-title')).toContainText(name);
+  await expect(page.locator('#detail-title')).toContainText(title);
 }
 
 test('national card -> detail -> literary article -> Research -> source link', async ({ page }) => {
-  await openYokai(page, '塗壁');
+  await openYokai(page, 'nurikabe');
 
   const description = page.locator('.detail-section').filter({ has: page.getByRole('heading', { name: 'どんな妖怪？' }) });
   await expect(description).toContainText('福岡県遠賀郡');
@@ -34,7 +35,7 @@ test('national card -> detail -> literary article -> Research -> source link', a
 });
 
 test('insufficient countermeasure stays explicit instead of inventing a weakness', async ({ page }) => {
-  await openYokai(page, '座敷童子');
+  await openYokai(page, 'zashiki-warashi');
 
   const research = page.locator('[data-research-overview]');
   const weakness = research.locator('.research-claim-block').filter({ has: page.getByRole('heading', { name: '弱点・対処の伝承' }) });
@@ -43,7 +44,7 @@ test('insufficient countermeasure stays explicit instead of inventing a weakness
 });
 
 test('APP interpretation is displayed as editorial interpretation, not folklore fact', async ({ page }) => {
-  await openYokai(page, '猫又');
+  await openYokai(page, 'nekomata');
 
   const research = page.locator('[data-research-overview]');
   const editorial = research.locator('.research-editorial-note');
@@ -56,7 +57,7 @@ test.describe('mobile national literary flow', () => {
   test.use({ viewport: { width: 390, height: 844 } });
 
   test('literary article and Research remain reachable on mobile', async ({ page }) => {
-    await openYokai(page, '塗壁');
+    await openYokai(page, 'nurikabe');
     await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
     await expect(page.locator('#detailed-article-nurikabe')).toBeVisible();
     const research = page.locator('[data-research-overview]');
