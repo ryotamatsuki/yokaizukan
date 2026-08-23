@@ -78,6 +78,34 @@ test('Phase 2 Batch B keeps Ishigaki mermaid story out of Western standard image
   await expect(research.locator('.research-source-list a').first()).toHaveAttribute('href', /nichibun\.ac\.jp/);
 });
 
+test('Phase 2 Batch C keeps tofu-kozo as a publishing-culture yokai', async ({ page }) => {
+  await openYokai(page, 'tofu-kozo');
+  await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
+  const article = page.locator('#detailed-article-tofu-kozo');
+  await expect(article).toBeVisible();
+  await expect(article).toContainText('1779年');
+  await expect(article).toContainText('黄表紙');
+  await expect(article).toContainText('出版文化');
+  await expect(article).toContainText('お盆を持ち歩く');
+  await expect(article).not.toContainText(/村で昔から|地域伝承の怪物/);
+
+  const research = page.locator('[data-research-overview]');
+  await expect(research).toBeVisible();
+  await expect(research.locator('.research-source-list a').first()).toHaveAttribute('href', /ndl\.go\.jp/);
+});
+
+test('Phase 2 Batch C keeps daidarabotchi regional stories separate', async ({ page }) => {
+  await openYokai(page, 'daidarabotchi');
+  await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
+  const article = page.locator('#detailed-article-daidarabotchi');
+  await expect(article).toBeVisible();
+  await expect(article).toContainText('群馬県太田市');
+  await expect(article).toContainText('赤城山');
+  await expect(article).toContainText('足跡が池');
+  await expect(article).toContainText('静岡県御殿場市');
+  await expect(article).toContainText('矢倉岳');
+});
+
 test('insufficient countermeasure stays explicit instead of inventing a weakness', async ({ page }) => {
   await openYokai(page, 'zashiki-warashi');
 
@@ -100,12 +128,25 @@ test('APP interpretation is displayed as editorial interpretation, not folklore 
 test.describe('mobile national literary flow', () => {
   test.use({ viewport: { width: 390, height: 844 } });
 
-  test('literary article and Research remain reachable on mobile', async ({ page }) => {
+  test('Phase 1 literary article and Research remain reachable on mobile', async ({ page }) => {
     await openYokai(page, 'nurikabe');
     await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
     await expect(page.locator('#detailed-article-nurikabe')).toBeVisible();
     const research = page.locator('[data-research-overview]');
     await expect(research).toBeVisible();
     await expect(research.locator('.research-source-list a').first()).toBeVisible();
+  });
+
+  test('Phase 2 literary article -> Research -> source link works at 390px', async ({ page }) => {
+    await openYokai(page, 'betobeto_san');
+    await page.getByRole('button', { name: 'もっと詳しく読む' }).click();
+    const article = page.locator('#detailed-article-betobeto_san');
+    await expect(article).toBeVisible();
+    await expect(article).toContainText('ビタビタ');
+    await expect(article).toContainText('先へおこし');
+    const research = page.locator('[data-research-overview]');
+    await expect(research).toBeVisible();
+    await expect(research.locator('.research-source-list a').first()).toBeVisible();
+    await expect(research.locator('.research-source-list a').first()).toHaveAttribute('href', /nichibun\.ac\.jp/);
   });
 });
