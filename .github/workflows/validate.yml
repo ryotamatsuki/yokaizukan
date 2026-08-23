@@ -1,0 +1,31 @@
+name: Validate catalog data
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check js/app.js
+          node --check js/research.js
+          node --check scripts/validate_yokai_research_pilot.mjs
+
+      - name: Validate catalog data
+        run: npm run validate:data
