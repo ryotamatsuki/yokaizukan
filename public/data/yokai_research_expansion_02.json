@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-08-23",
+  "batch": 2,
+  "glossary": {},
+  "sources": [
+    {"id":"tanuki-awa-2220012","title":"森本安市『阿波狸伝説考』―神官に化ける狸","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1957年","region":"徳島県","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2220012"},
+    {"id":"tanuki-yamanashi-1550035","title":"高田十郎『各地のいひならはし（其五）』―狐と狸の化け方","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1923年","region":"山梨県笛吹市","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1550035"},
+    {"id":"azuki-ehime-C3820078","title":"愛媛県史―丹原町の小豆洗い","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1983年","region":"愛媛県西条市丹原町","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3820078-000"},
+    {"id":"azuki-matsuyama-0080252","title":"『ふるさとの民話―松山市伊台の民話―』小豆洗い","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1974年","region":"愛媛県松山市","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0080252"},
+    {"id":"ningyo-wakasa-3760013","title":"『北国奇談巡杖記』収録―若狭の人魚","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1974年刊『日本随筆大成』収録","region":"福井県・若狭","recordType":"歴史随筆収録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=3760013_002"},
+    {"id":"ningyo-ishigaki-1920029","title":"堀田吉雄『人魚雑考』―石垣島の人魚と津波","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1978年","region":"沖縄県石垣市","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1920029"},
+    {"id":"kamaitachi-miyagi-C0411095","title":"宮城県史―鎌鼬","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1956年","region":"宮城県","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0411095-000"},
+    {"id":"kamaitachi-echigo-5390004","title":"『楓軒偶記』収録―越後の鎌鼬と古暦の黒焼","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1975年刊『日本随筆大成』収録","region":"新潟県・越後","recordType":"歴史随筆収録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=5390004"}
+  ],
+  "items": [
+    {
+      "id":"bake-danuki","aliases":["化け狸","狸"],
+      "editorial":{"oneLine":"人の姿へ化ける狸の話は各地にあるが、悪さの程度や性格まで全国共通ではない。","childDescription":"化け狸は人の姿へ化ける話が多い妖怪です。1957年の阿波狸の記録では神官に化けた狸が登場し、1923年の山梨の言い伝えでは、狐と狸はどちらも化けるが、狸は人へ悪いことをしないとも語られています。","trivia":"同じ『化ける狸』でも、土地によって人をだます話、正体を明かす話など性格づけが違います。"},
+      "historySummary":"狸の変化能力は複数の地域記録で確認できますが、『陽気』『お人よし』など一つの性格には固定しません。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1923年・山梨","summary":"狐も狸も化けるが、狸は人に悪いことをしないという土地の言い伝えが記録される。","sourceIds":["tanuki-yamanashi-1550035"]},{"label":"1957年・徳島","summary":"阿波狸の話として、神官に化けた狸が登場する。","sourceIds":["tanuki-awa-2220012"]}],
+      "abilities":[{"name":"人の姿へ化ける","description":"徳島の記録では狸が神官へ化け、山梨の記録でも狸は化ける存在とされる。","evidenceLevel":"A","sourceIds":["tanuki-awa-2220012","tanuki-yamanashi-1550035"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"徳島県・阿波","localNames":["狸"],"summary":"神官へ化けた狸を人間が逆にだます話が記録される。","sourceIds":["tanuki-awa-2220012"]},{"region":"山梨県笛吹市周辺","localNames":["狸"],"summary":"狐と狸はいずれも化けるが、狸は人に悪いことをしないという言い伝えが記録される。","sourceIds":["tanuki-yamanashi-1550035"]}],
+      "glossaryTerms":[],"evidenceNote":"腹鼓・徳利・巨大な陰嚢など有名な図像を、今回の民俗カードだけで能力として追加しません。",
+      "sourceIds":["tanuki-awa-2220012","tanuki-yamanashi-1550035"],
+      "article":{"title":"化け狸―化け方は同じでも性格は土地で違う","subtitle":"阿波と山梨の記録を比べる","body":["狸は昔話で、人の姿へ化けて人を驚かせる動物としてよく登場します。","1957年の阿波狸の記録では、神官に化けた狸が登場します。人間の馬子は自分も狸だと嘘をつき、化けた狸を逆にだますという話です。","1923年の山梨の言い伝えでは、狐も狸も化けるものの、狐は人をだまして悪いことをし、狸はひとりで化けて正体を明かすだけで人に悪いことはしない、と区別されています。","つまり『狸は必ずこういう性格』ではありません。化けるという共通点の上に、土地ごとの評価や笑い話が重なっています。"],"sourceNote":"徳島と山梨の個別カードを直接参照しています。"}
+    },
+    {
+      "id":"akaname","aliases":["垢嘗","あかなめ"],
+      "editorial":{"oneLine":"鳥山石燕の妖怪画に名と姿が確認できるが、風呂の垢をなめる細かな生態は別資料が必要。","childDescription":"垢嘗は、お風呂場などの汚れをなめる妖怪として有名です。国立国会図書館の鳥山石燕妖怪画の紹介には『垢嘗』が含まれ、江戸中期に名と図像が共有されていたことは確認できます。ただし、この展示だけで現代図鑑の細かな行動をすべて昔からの事実にはしません。","trivia":"名前と絵が古くても、現代の図鑑で足された説明まで同じ時代の資料に書かれているとは限りません。"},
+      "historySummary":"鳥山石燕の図像で歴史上の存在は確認できますが、今回の資料だけでは地域伝承・対処法・詳細な行動を確定しません。",
+      "coverage":{"timeline":"documented","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[{"label":"江戸中期・鳥山石燕","summary":"鳥山石燕の妖怪画に『垢嘗』が描かれ、名と図像が出版文化に残る。","sourceIds":["ndl-sekien-theme"]}],
+      "abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"『掃除をしない家に出る』『風呂の垢を全部なめる』などの説明は、個別本文を追加確認するまで能力欄へ固定しません。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"垢嘗―古い絵があることと生態が分かることは別","subtitle":"鳥山石燕の図像から慎重に読む","body":["垢嘗は、長い舌で風呂場の汚れをなめる妖怪として知られています。","NDLの鳥山石燕妖怪画の紹介では『垢嘗』が取り上げられており、江戸中期にこの名の妖怪が絵に描かれたことを確認できます。","しかし、図像が存在することだけで、現代の図鑑にある細かな習性や教訓まで同じ資料が証明するわけではありません。","そこで今回は時系列だけを『documented』とし、能力・対処法・地域差は資料不足のまま残します。個別本文が確認できた時に追加します。"],"sourceNote":"NDLの鳥山石燕妖怪画展示を図像史の根拠にしています。"}
+    },
+    {
+      "id":"azuki-arai","aliases":["小豆洗い","小豆とぎ"],
+      "editorial":{"oneLine":"姿を見せる話も、誰もいない川から小豆を研ぐ音だけ聞こえる話もある水辺の怪異。","childDescription":"小豆洗いは水辺で小豆を研ぐような音を出す怪異です。愛媛県丹原町では雨の晩に人がいないのに音だけ聞こえるとされ、松山市伊台の記録では、明治初め頃に姉さん被りの女性が実際に小豆と米を洗う姿を見たという話が残ります。","trivia":"『音だけ』の土地と『人のような姿を見る』土地があり、同じ妖怪でも見え方が違います。"},
+      "historySummary":"愛媛県内でも丹原の音だけの怪異と、松山伊台の女性姿の怪異を別カードで比較できます。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"明治初め頃の話・1974年掲載","summary":"松山市伊台で、女性がたらいに小豆と米を入れて洗っていたという目撃談が記録される。","sourceIds":["azuki-matsuyama-0080252"]},{"label":"1983年県史収録・丹原","summary":"雨の晩、人影がないのに小豆を研ぐような音が聞こえる伝承が記録される。","sourceIds":["azuki-ehime-C3820078"]}],
+      "abilities":[{"name":"小豆を研ぐような音を出す","description":"丹原町の記録では、雨の晩に人がいないのに小豆を研ぐような音が聞こえる。","evidenceLevel":"A","sourceIds":["azuki-ehime-C3820078"]},{"name":"人の姿で小豆を洗う","description":"松山伊台の記録では、姉さん被りの女性がたらいで小豆と米を洗う姿を見たとされる。","evidenceLevel":"A","sourceIds":["azuki-matsuyama-0080252"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"愛媛県西条市丹原町","localNames":["小豆洗い"],"summary":"雨の晩に、姿は見えず小豆を研ぐような音だけが聞こえる。","sourceIds":["azuki-ehime-C3820078"]},{"region":"愛媛県松山市伊台","localNames":["小豆洗い"],"summary":"明治初め頃、女性の姿で小豆と米を洗うのを見たという話が残る。","sourceIds":["azuki-matsuyama-0080252"]}],
+      "glossaryTerms":[],"evidenceNote":"『人を川へ落とす』など別地域の有名設定を、この2枚の愛媛カードに追加しません。",
+      "sourceIds":["azuki-ehime-C3820078","azuki-matsuyama-0080252"],
+      "article":{"title":"小豆洗い―聞こえるだけか、姿も見えるか","subtitle":"愛媛の二つの記録を比べる","body":["小豆洗いは、川や水場で小豆を研ぐような音を立てる怪異として知られます。","愛媛県西条市丹原町の記録では、雨がしょぼしょぼ降る晩、人がいないのに小豆を研ぐような音が聞こえるとされます。姿は書かれていません。","一方、松山市伊台の話では、明治の初め頃、姉さん被りの女性がたらいに小豆と米を入れて洗っていたのを見た人がいたと記録されます。","同じ小豆洗いでも『音だけ』と『女性の姿』ではかなり違います。地域ごとのカードを並べると、妖怪が一枚の標準イラストだけでは表せないことが分かります。"],"sourceNote":"愛媛県丹原町と松山市伊台の個別カードを使用しています。"}
+    },
+    {
+      "id":"ningyo","aliases":["人魚","八百比丘尼につながる型"],
+      "editorial":{"oneLine":"長寿をもたらす肉の話も、津波を知らせる話もある、日本各地の人魚伝承。","childDescription":"日本の人魚は西洋のマーメイドと同じ話だけではありません。若狭の記録では人のような手と魚の下半身を持ち、食べると長寿になるとされます。石垣島の話では、人魚の肉が津波の到来を知らせ、返して謝った人々が助かったと語られます。","trivia":"人魚は『美しい海の姫』だけでなく、長寿、災害の予告、異形の魚などさまざまな意味で語られます。"},
+      "historySummary":"若狭の長寿伝承と石垣島の津波伝承を分け、日本の人魚を一つのマーメイド像へまとめません。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"documented","regionalVariants":"documented"},
+      "timeline":[{"label":"若狭を記す歴史随筆の収録記録","summary":"人のような手、魚の鱗と尾を持つ人魚と、肉を食べると長寿になるという説が収録される。","sourceIds":["ningyo-wakasa-3760013"]},{"label":"1978年掲載・石垣島伝承","summary":"人魚の肉が津波を知らせ、海へ返して謝った者が災害から助かる話が記録される。","sourceIds":["ningyo-ishigaki-1920029"]}],
+      "abilities":[{"name":"肉を食べると長寿になるとされる","description":"若狭の記録では、人魚を食べると長寿を得ると語られる。","evidenceLevel":"A","sourceIds":["ningyo-wakasa-3760013"]},{"name":"津波の到来を知らせる","description":"石垣島の伝承では、人魚の肉が津波が来ると告げたとされる。","evidenceLevel":"A","sourceIds":["ningyo-ishigaki-1920029"]}],
+      "countermeasures":[{"name":"海へ返して謝る","description":"石垣島の話では、人魚を食べようとした者たちが肉を海へ返し陳謝した後、津波から助かったと語られる。","evidenceLevel":"A","sourceIds":["ningyo-ishigaki-1920029"]}],
+      "regionalVariants":[{"region":"福井県・若狭","localNames":["人魚"],"summary":"人のような手、魚の鱗と尾を持ち、食べると長寿になると語られる。","sourceIds":["ningyo-wakasa-3760013"]},{"region":"沖縄県石垣市","localNames":["人魚"],"summary":"津波を知らせる神の使いとして語られる伝承がある。","sourceIds":["ningyo-ishigaki-1920029"]}],
+      "glossaryTerms":[],"evidenceNote":"若狭のカードは1974年刊の随筆集に収録された歴史資料であり、1974年に初めて生まれた伝承という意味ではありません。",
+      "sourceIds":["ningyo-wakasa-3760013","ningyo-ishigaki-1920029"],
+      "article":{"title":"人魚―長寿の肉から津波の知らせまで","subtitle":"日本の人魚は一つの物語ではない","body":["人魚と聞くと、美しい女性の上半身と魚の尾を思い浮かべるかもしれません。しかし日本の伝承では役割がかなり違います。","若狭についての記録では、人魚は人間のような両手を持ち、腰から下には魚の鱗と尾びれがあり、その肉を食べると長寿になるとされます。","石垣島の伝承では、人魚を捕らえて料理しようとした人々に、その肉が津波の到来を知らせます。人々は肉を海へ返して謝り、後の津波で助かったと語られます。","長寿をもたらす存在と、災害を知らせる存在では意味が違います。日本の人魚は、西洋のマーメイド像へ一つにまとめず、土地ごとの海の物語として読む方が実際の記録に近いです。"],"sourceNote":"若狭と石垣島の個別カードを用途別に参照しています。"}
+    },
+    {
+      "id":"wanyudo","aliases":["輪入道"],
+      "editorial":{"oneLine":"燃える車輪に顔がある姿で有名だが、今回の確認範囲では個別の直接資料を十分確保できていない。","childDescription":"輪入道は、燃える車輪に人の顔がついた妖怪として有名です。ただし今回の調査では、既存の鳥山石燕展示を妖怪画史の入口にはできても、輪入道そのものの本文・地域伝承を直接確かめられる資料を十分そろえられていません。そこで細かな能力や弱点は空欄にします。","trivia":"有名な妖怪でも、信頼できる直接資料が今すぐ見つからないなら『分からない』を残すのがこの図鑑のルールです。"},
+      "historySummary":"輪入道は近世妖怪画で知られる名称ですが、このバッチでは直接確認できる個別資料を確保できなかったため、研究項目を無理に埋めません。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"鳥山石燕妖怪画の一般展示だけから、魂を抜く・札で防ぐ等の有名設定を直接根拠付きのclaimにはしません。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"輪入道―有名でも資料不足なら埋めない","subtitle":"定番像と直接確認できた史料を分ける","body":["輪入道は、燃える車輪の中心に人の顔がある妖怪として、現代の図鑑ではとても有名です。","鳥山石燕の妖怪画を紹介するNDL展示は、近世の妖怪図像を調べる大切な入口になります。","しかし今回の作業では、輪入道について本文や地域の語りを直接たどれる個別資料を十分確認できませんでした。一般的な妖怪画展示だけで細かな能力や対処法を確定するのは避けます。","そのためこの項目は空欄が多く残ります。後のバッチや追加調査で個別資料を確認できた時に更新する前提です。"],"sourceNote":"NDLの鳥山石燕展示を調査入口として参照し、直接確認できていない細部はclaim化していません。"}
+    },
+    {
+      "id":"kamaitachi","aliases":["鎌鼬","かまいたち"],
+      "editorial":{"oneLine":"風とともに切り傷ができる怪異として語られ、原因も治し方も土地によって違う。","childDescription":"鎌鼬は、風に触れた時などに突然切り傷ができる怪異として語られました。宮城県史には旋風に乗って人の肉を切る魔獣という説明があり、越後の記録には古い暦を黒焼きにして飲むと治るという具体的な対処もあります。","trivia":"『三匹組で一匹目が転ばせ、二匹目が切り、三匹目が薬を塗る』という有名設定だけが全国共通ではありません。"},
+      "historySummary":"鎌鼬は突然の切創を説明する怪異で、魔獣・悪神・風など原因の理解も、治療の俗信も複数あります。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"documented","regionalVariants":"documented"},
+      "timeline":[{"label":"越後の歴史随筆収録記録","summary":"太刀で切られたような傷ができる鎌鼬と、古暦の黒焼を使う対処が記録される。","sourceIds":["kamaitachi-echigo-5390004"]},{"label":"1956年・宮城県史","summary":"旋風に乗って人の肉を切る、または生血を吸う魔獣として信じられたと記される。","sourceIds":["kamaitachi-miyagi-C0411095"]}],
+      "abilities":[{"name":"突然、切り傷をつける","description":"宮城県史では、旋風に乗って人の肉を切り取るなどと信じられた鎌鼬が記録される。","evidenceLevel":"A","sourceIds":["kamaitachi-miyagi-C0411095"]}],
+      "countermeasures":[{"name":"古い暦の黒焼を用いる","description":"越後の記録では、古い暦を黒焼きにし白湯で飲むと数日で癒えると語られる。","evidenceLevel":"A","sourceIds":["kamaitachi-echigo-5390004"]}],
+      "regionalVariants":[{"region":"宮城県","localNames":["鎌鼬"],"summary":"旋風に乗る魔獣、悪神の仕業、鎌形の傷など複数の説明が記録される。","sourceIds":["kamaitachi-miyagi-C0411095"]},{"region":"新潟県・越後","localNames":["鎌鼬"],"summary":"太刀傷のような傷と、古暦の黒焼を使う治療が語られる。","sourceIds":["kamaitachi-echigo-5390004"]}],
+      "glossaryTerms":[],"evidenceNote":"近代以降の自然科学的説明と、伝承上の魔獣・悪神説明は混同せず、ここでは資料に記録された信仰・俗信を扱います。",
+      "sourceIds":["kamaitachi-miyagi-C0411095","kamaitachi-echigo-5390004","ndl-sekien-theme"],
+      "article":{"title":"鎌鼬―突然できる傷をどう説明したか","subtitle":"風の魔獣と古暦の黒焼","body":["鎌鼬は、何もないところで突然体が切れたようになる怪異として各地で語られてきました。","宮城県史では、旋風に乗ってきて人の肉を切り取る、あるいは生血を吸う魔獣と信じられたと説明されています。また悪神の仕業、鎌の形の傷、出血しない傷など土地による違いも記されています。","越後についての歴史随筆には、鎌鼬で顔や手足に太刀傷のような傷ができた時、古い暦を黒焼きにして白湯で飲むと治るという対処が書かれています。","現代なら傷の原因を別の仕組みで説明する場合がありますが、この図鑑では『昔の人がどう説明し、どう治そうとしたか』を資料の言葉に沿って読みます。"],"sourceNote":"宮城県史と越後の歴史随筆収録カードを分けて参照しています。"}
+    },
+    {
+      "id":"kodama","aliases":["木魅","木霊","こだま"],
+      "editorial":{"oneLine":"鳥山石燕が『木魅』として描いた、古木や山の木に不思議な存在を感じる妖怪像。","childDescription":"木霊は、大きな古木などに宿る不思議な存在として知られます。NDLの鳥山石燕妖怪画の紹介には『木魅』が含まれ、江戸中期に木の怪異が名前と絵で表されていたことが確認できます。ただし『声が反響する現象は全部木霊』など細かな説明は今回の資料だけでは決めません。","trivia":"今の『こだま』という言葉は山びこの意味でも使われますが、妖怪画の『木魅』と同じものとして全部まとめるには注意が必要です。"},
+      "historySummary":"鳥山石燕の『木魅』図像を確認し、古木の霊的イメージは示しますが、地域伝承や具体的能力は別資料が必要です。",
+      "coverage":{"timeline":"documented","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[{"label":"江戸中期・鳥山石燕","summary":"鳥山石燕の妖怪画に『木魅』が描かれる。","sourceIds":["ndl-sekien-theme"]}],
+      "abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"山びこ・木の精・古木信仰を一つの生態へまとめず、今回直接確認できるのは歴史図像までとします。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"木霊―古い木に何かがいると感じる図像","subtitle":"鳥山石燕の『木魅』から読む","body":["木霊は、古い木や森に宿る不思議な存在として現代の物語でもよく登場します。","NDLの鳥山石燕妖怪画の紹介には『木魅』が含まれ、江戸中期の妖怪画で木の怪異が名前と姿を与えられていたことが確認できます。","一方、山で声が返ってくる『こだま』という現象や、各地の神木信仰まで、すべて同じ妖怪の能力だとするには別の資料が必要です。","そこで今回は歴史図像だけを確定し、能力・弱点・地域差を資料不足のまま残します。"],"sourceNote":"NDLの鳥山石燕妖怪画展示にある『木魅』を図像史の根拠にしています。"}
+    },
+    {
+      "id":"yamanba","aliases":["山姥","やまんば"],
+      "editorial":{"oneLine":"山に住む恐ろしい女として描かれる一方、山姥の物語は古典・芸能・地域伝承で姿が変わる。","childDescription":"山姥は山に住む女性の怪異として有名です。NDLの鳥山石燕妖怪画の紹介には『山姥』が含まれ、江戸中期に妖怪画として姿が共有されていたことは確認できます。ただし、人を食う・旅人を助けるなど多様な物語を一枚の絵だけから能力として決めません。","trivia":"『山の怖いおばあさん』という一言ではまとめられないほど、山姥には説話や芸能で多くの役があります。"},
+      "historySummary":"鳥山石燕の山姥図像は確認できますが、山姥の多様な説話・芸能史は別資料を追加して段階的に整理します。",
+      "coverage":{"timeline":"documented","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[{"label":"江戸中期・鳥山石燕","summary":"鳥山石燕の妖怪画に『山姥』が描かれる。","sourceIds":["ndl-sekien-theme"]}],
+      "abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"山姥には人食い・養育・山の神に近い像など複数の物語がありますが、今回の図像資料だけで全国共通能力にはしません。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"山姥―一枚の怖い女の絵だけでは足りない","subtitle":"鳥山石燕の図像から、まだ分からない部分を残す","body":["山姥は、山奥で旅人を待つ恐ろしい女性として昔話や現代作品に登場します。","NDLの鳥山石燕妖怪画の紹介には『山姥』が含まれ、江戸中期の妖怪画で山姥が描かれていたことは確認できます。","しかし山姥には、人を害する話だけでなく、子を育てる話や芸能で重要な役を持つ作品など、さまざまな姿があります。図像一枚からそれら全部を説明することはできません。","そのため今回は歴史図像だけを確定し、能力・対処・地域差は追加資料を待ちます。資料不足をそのまま示すことも、山姥の多様さを壊さない方法です。"],"sourceNote":"NDLの鳥山石燕妖怪画展示を図像史の入口として使用しています。"}
+    }
+  ]
+}

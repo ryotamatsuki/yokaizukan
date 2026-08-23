@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-08-23",
+  "batch": 5,
+  "glossary": {},
+  "sources": [
+    {"id":"betobeto-miyagi-C0410979","title":"宮城県史―ベトベトさん","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1956年","region":"宮城県史収録","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0410979-000"},
+    {"id":"okuri-yamanashi-1310053","title":"『上和田の民俗』―送り犬・オイヌサマ","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1977年","region":"山梨県大月市七保町","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1310053"},
+    {"id":"okuri-miyagi-C0410965","title":"宮城県史―送り犬・送り狼","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1956年","region":"宮城県史収録","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C0410965-000"},
+    {"id":"kamikiri-tokyo-6520005","title":"『天弘録』収録―髪切","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1982年刊資料に収録","region":"東京都墨田区","recordType":"歴史随筆収録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=6520005"},
+    {"id":"ubume-kumamoto-1232443","title":"熊本のウブメ伝承","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1933年","region":"熊本県","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1232443"},
+    {"id":"hyosube-saga-0640061-002","title":"毛利龍一『河童をヒヤウスベと言ふこと』―兵主部の由来","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1914年","region":"佐賀県","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640061_002"},
+    {"id":"hyosube-saga-0640061-003","title":"毛利龍一『河童をヒヤウスベと言ふこと』―水難除けの歌","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1914年","region":"佐賀県","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640061_003"},
+    {"id":"daidara-gunma-C1040166","title":"群馬県史―デッタラボッチ・ダイダラボッチ","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1982年","region":"群馬県太田市","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1040166-000"},
+    {"id":"daidara-shizuoka-1422040","title":"『富士東麓の民俗』―ダイダラボッチ","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1975年","region":"静岡県御殿場市","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1422040"}
+  ],
+  "items": [
+    {
+      "id":"betobeto_san","aliases":["ベトベトさん"],
+      "editorial":{"oneLine":"夜道で後ろから足音だけがついてきて、道を譲ると消える怪異。","childDescription":"ベトベトさんは姿より足音で語られる怪異です。1956年の宮城県史のカードでは、夜中に道を歩くと後ろからビタビタという足音が聞こえ、『ベトベトさん、さきへおこし』と道をよけて声をかけると、足音がしなくなると記されています。","trivia":"有名な丸い妖怪の姿より先に、資料で確かめられるのは『後ろの足音』と『先へどうぞ』という対処です。"},
+      "historySummary":"宮城県史の記録は、ベトベトさんを見えない足音の怪異として具体的に記録しています。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"documented","regionalVariants":"insufficient"},
+      "timeline":[{"label":"1956年・宮城県史","summary":"夜道で後ろからビタビタという足音がついてくるベトベトさんが記録される。","sourceIds":["betobeto-miyagi-C0410979"]}],
+      "abilities":[{"name":"後ろから足音をついてこさせる","description":"夜道で誰かが後ろからついてくるようなビタビタという足音が聞こえる。","evidenceLevel":"A","sourceIds":["betobeto-miyagi-C0410979"]}],
+      "countermeasures":[{"name":"道をよけて『先へおこし』と言う","description":"道をよけてベトベトさんに先へ行くよう声をかけると、足音がしなくなると記録される。","evidenceLevel":"A","sourceIds":["betobeto-miyagi-C0410979"]}],
+      "regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"現代の丸い姿や笑顔を、このカードの直接記述としては扱いません。",
+      "sourceIds":["betobeto-miyagi-C0410979"],
+      "article":{"title":"ベトベトさん―見えない足音に道を譲る","subtitle":"姿より音と作法が残る夜道の怪異","body":["ベトベトさんは、後ろから何かがついてくる夜道の怪異として知られます。","1956年の宮城県史のカードでは、夜中に道を歩いていると、誰かが後からついてくるようなビタビタという足音が聞こえることがあると記されています。","その時、道をよけて『ベトベトさん、さきへおこし』と言うと、あとは足音がしなくなるとされています。戦う弱点ではなく、道を譲る作法が対処になっています。","現代作品では姿を与えられることがありますが、研究欄ではまず足音と声かけという記録を中心にします。"],"sourceNote":"宮城県史のベトベトさん個別カードを直接参照しています。"}
+    },
+    {
+      "id":"okuri_inu","aliases":["送り犬","送り狼","オイヌサマ"],
+      "editorial":{"oneLine":"夜道を後ろから送る犬・狼。転ぶと危険だが、無事に着けば礼をする話もある。","childDescription":"送り犬は山道などで人の後ろについてくる犬や狼の怪異です。山梨の記録では転ぶとかみつかれ、家に着いたら『ご苦労さんでした』と礼をします。宮城県史には、転んだ時に『まず一服』と言えば襲われず、無事に帰れば握り飯やわらじを礼として渡す話もあります。","trivia":"送り犬はただ襲う怪物ではなく、人を家まで送る面と、転んだ時に危険になる面が同じ伝承にあります。"},
+      "historySummary":"山梨と宮城の記録から、送り犬・送り狼が危険と護送の両面を持ち、地域ごとに礼や対処が違うことを示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"documented","regionalVariants":"documented"},
+      "timeline":[{"label":"1956年・宮城県史","summary":"送り犬・送り狼について、転倒時の掛け声と帰宅後の礼が記録される。","sourceIds":["okuri-miyagi-C0410965"]},{"label":"1977年・山梨","summary":"転ぶとかみつかれ、家に着いたら送り犬へ礼を言う話が記録される。","sourceIds":["okuri-yamanashi-1310053"]}],
+      "abilities":[{"name":"夜道を後ろから送る","description":"人の後ろについて家まで送る存在として語られる一方、転ぶとかみつくとされる。","evidenceLevel":"A","sourceIds":["okuri-yamanashi-1310053","okuri-miyagi-C0410965"]}],
+      "countermeasures":[{"name":"転んだ時に休む掛け声をする","description":"宮城の記録では転んだ時に『まず一服』と休むような掛け声をすれば襲われないとされる。","evidenceLevel":"A","sourceIds":["okuri-miyagi-C0410965"]},{"name":"無事に着いたら礼をする","description":"山梨では礼を言い、宮城では握り飯と片足のわらじを与える型が記録される。","evidenceLevel":"A","sourceIds":["okuri-yamanashi-1310053","okuri-miyagi-C0410965"]}],
+      "regionalVariants":[{"region":"山梨県大月市七保町","localNames":["送り犬","オイヌサマ"],"summary":"転ぶとかみつかれ、到着後に『ご苦労さんでした』と礼をする。","sourceIds":["okuri-yamanashi-1310053"]},{"region":"宮城県史収録","localNames":["オクリイヌ","送り狼"],"summary":"転んだ時の掛け声、握り飯とわらじを礼にする話が記録される。","sourceIds":["okuri-miyagi-C0410965"]}],
+      "glossaryTerms":[],"evidenceNote":"『必ず守護神』『必ず人を食う』のどちらか一方へ固定せず、送る役割と転倒時の危険を同時に残します。",
+      "sourceIds":["okuri-yamanashi-1310053","okuri-miyagi-C0410965"],
+      "article":{"title":"送り犬―襲うのか、家まで送るのか","subtitle":"転ばないことと、最後の礼が大切な夜道の話","body":["送り犬は、夜の道で人の後ろをついてくる犬や狼の怪異です。","山梨県大月市の記録では、道で転ぶと送り犬に後ろからかみつかれます。しかし家まで無事に着いたら、『オイヌサマ、どうも、ご苦労さんでした』と礼を言って家へ入ります。","宮城県史では、転んだ時は『まず一服』と休むような掛け声をすると襲われないとされます。無事に家へ着けば、握り飯一つとわらじ片足を礼として与える型もあります。","送り犬は単なる敵ではありません。怖い山道を最後までついてくる存在と、人が守る作法がセットになった伝承として読むと特徴がよく分かります。"],"sourceNote":"山梨と宮城の個別カードを比較しています。"}
+    },
+    {
+      "id":"enenra","aliases":["煙々羅","煙羅煙羅"],
+      "editorial":{"oneLine":"煙の中に顔や形を見る妖怪として知られるが、今回の採用公的ソースでは個別詞書を十分に確保できていない。","childDescription":"煙々羅は、煙が人のような形を作る妖怪として鳥山石燕の妖怪画で知られます。ただし今回の採用ソースでは、煙々羅個別の公的な詞書ページを十分に確保できませんでした。そこで『心のきれいな人だけ見える』など後世の有名設定を研究上の能力にはしません。","trivia":"煙は形がすぐ変わるため妖怪に見立てやすいですが、後世の説明と石燕の詞書を分けて確認する必要があります。"},
+      "historySummary":"鳥山石燕の妖怪画で知られる煙の妖怪ですが、個別の採用資料が不足しているため詳細claimは保留します。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"not_applicable","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"『清い心の人にだけ見える』『風が弱点』など後世の説明を、石燕の直接記録として扱いません。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"煙々羅―煙の顔は、後世の設定を足さずに読む","subtitle":"有名でも個別詞書が確認できるまで待つ","body":["煙々羅は、煙がもつれて人の顔のような姿を作る妖怪として知られます。","鳥山石燕の妖怪画を紹介するNDL展示は、近世妖怪画を調べる入口として使えます。","しかし今回の採用済み公的資料だけでは、煙々羅個別の詞書まで安定してたどれる形にできませんでした。後世に広まった『心の清い人にだけ見える』といった説明を古い伝承には戻しません。","そのため地域差や能力は資料不足のままです。個別の一次資料を安定して追加できた時にdocumentedへ更新します。"],"sourceNote":"鳥山石燕の一般展示を調査入口とし、個別詞書が未確認の部分はinsufficientとしています。"}
+    },
+    {
+      "id":"ame_onna","aliases":["雨女","あめおんな"],
+      "editorial":{"oneLine":"鳥山石燕の妖怪画で知られる雨中の女性像。『雨を呼ぶ人』という現代語とは分けて読む。","childDescription":"雨女は、今では『その人が出かけると雨になる』という日常語でも使われます。妖怪としては鳥山石燕『今昔百鬼拾遺』の女性像で知られますが、今回の採用済み公的資料では個別詞書を十分に確保できていません。そこで雨を降らせる能力や子をさらう話を一つの設定にまとめません。","trivia":"同じ『雨女』という言葉でも、江戸の妖怪画と現代の日常語は同じ意味ではありません。"},
+      "historySummary":"石燕の『雨女』と現代の日常語を区別し、個別の公的詞書を今回確保できなかったため詳細claimを保留します。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"not_applicable","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"『雨を呼ぶ』『子どもをさらう』『恵みの雨を降らす』など複数の後世解説を、直接資料なしに一つの伝承へ統合しません。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"雨女―妖怪画の名前と日常語を分ける","subtitle":"雨を降らせる能力を先に決めない","body":["雨女という言葉は、現在では行事のたびに雨になる人を冗談で呼ぶ時にも使われます。","妖怪の雨女は鳥山石燕の妖怪画で知られていますが、現代の日常語とそのまま同じ意味ではありません。","今回の採用済み公的ソースでは、雨女個別の詞書を安定した形で直接確認できる資料を十分確保できませんでした。そこで、雨を呼ぶ能力や子どもに関する後世の伝承を研究欄へ混ぜません。","有名な名前でも、古い図像・詞書・後世の民間説話・現代語を分けてから説明することが必要です。"],"sourceNote":"鳥山石燕の一般展示を調査入口とし、個別の未確認事項はinsufficientとしています。"}
+    },
+    {
+      "id":"kamikiri","aliases":["髪切","カミキリ"],
+      "editorial":{"oneLine":"気づかないうちに髪を根元から切られている、江戸の怪異として記録された現象。","childDescription":"髪切は、正体の姿より『いつの間にか髪が切られている』現象で語られます。『天弘録』を収録したカードでは、江戸・本所の下女が便所でめまいを起こし、外へ出た後に髪が根元から切り下ろされていることが分かったと記されています。","trivia":"古い髪切の記録では、犯人の妖怪の姿がはっきり見えないまま、髪だけ切られる話があります。"},
+      "historySummary":"髪切は姿のある怪物より、突然髪が切られる原因不明の現象として歴史記録を追う方が資料に近い項目です。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"『天弘録』収録の江戸の話","summary":"本所緑町の下女が便所でめまいを起こし、外へ出ると髪が根元から切られていたという話が記録される。","sourceIds":["kamikiri-tokyo-6520005"]}],
+      "abilities":[{"name":"気づかれないうちに髪を切る","description":"江戸・本所の記録では、下女の髪が根元から切り下ろされていたが、切られる瞬間の正体は示されない。","evidenceLevel":"A","sourceIds":["kamikiri-tokyo-6520005"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"東京都墨田区・本所の記録","localNames":["髪切"],"summary":"便所でめまいを起こした後、髪が根元から切られていたという歴史随筆の話が残る。","sourceIds":["kamikiri-tokyo-6520005"]}],
+      "glossaryTerms":[],"evidenceNote":"蟹や虫のような現代の妖怪デザインを、この髪切現象のカードに直接結びつけません。",
+      "sourceIds":["kamikiri-tokyo-6520005"],
+      "article":{"title":"髪切―妖怪の姿より『切られた髪』が先にある","subtitle":"江戸の原因不明な髪切り現象","body":["髪切は、人の髪を切る妖怪として現在は姿を描かれることがあります。","日文研のカードに収録された『天弘録』の話では、本所緑町の下女が便所に入ったところ急にめまいを起こし、倒れそうになりました。","外へ出た後、髪の毛が根元から切り下ろされていることが分かります。しかし、何者がどんな姿で切ったのかは要約には出てきません。","このような記録では『髪切』は怪物の生態より、説明できない髪切り現象の名前として読む方が自然です。"],"sourceNote":"『天弘録』を収録する髪切の個別カードを参照しています。"}
+    },
+    {
+      "id":"ubume","aliases":["産女","ウブメ","ウグメ"],
+      "editorial":{"oneLine":"出産前後に亡くなった女性が、夜道で人に赤子を抱いてほしいと頼む怪異として各地に残る。","childDescription":"産女は、出産できないまま亡くなった女性の怪異として語られます。1933年の熊本の記録では、赤ん坊を抱いた女が通行人に『少し抱いていて』と預け、姿を消します。朝になると抱いていたものが墓石や石だったという話もあります。","trivia":"産女の話には、赤子を抱くと石になる型、墓の中の子を守る型など複数があり、地域ごとに対処も違います。"},
+      "historySummary":"1933年の熊本記録から、死産・埋葬習俗と子を預ける産女の怪異が結びついていることを具体的に示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"documented","regionalVariants":"documented"},
+      "timeline":[{"label":"1933年・熊本","summary":"胎児を残したまま亡くなった妊婦がウブメになり、夜ごと現れて子を人へ預けるとする記録が残る。","sourceIds":["ubume-kumamoto-1232443"]}],
+      "abilities":[{"name":"赤子を人に預けて消える","description":"熊本の記録では、赤子を抱いた女が通行人へ子を預け、姿を消す。夜明けには抱いていたものが墓石や石だったとされる。","evidenceLevel":"A","sourceIds":["ubume-kumamoto-1232443"]}],
+      "countermeasures":[{"name":"妊婦と胎児を分けて葬る習俗","description":"同カードでは、妊婦が亡くなった時は胎児を取り出して葬り、難しい時は藁人形を背に付けて葬るという対処が記録される。","evidenceLevel":"A","sourceIds":["ubume-kumamoto-1232443"]}],
+      "regionalVariants":[{"region":"熊本県","localNames":["ウブメ","ウグメ"],"summary":"亡くなった妊婦が夜に現れ、赤子を預ける。埋葬時の対処法も具体的に記録される。","sourceIds":["ubume-kumamoto-1232443"]}],
+      "glossaryTerms":[],"evidenceNote":"『抱いた子が重くなると宝を授かる』など別系統の有名話を、この熊本カードへまとめて入れません。",
+      "sourceIds":["ubume-kumamoto-1232443"],
+      "article":{"title":"産女―赤子を抱いてほしいと頼む死者の母","subtitle":"熊本の記録と埋葬習俗を一緒に読む","body":["産女は、出産をめぐって亡くなった女性が赤子を抱いて現れる怪異として各地に語られます。","1933年の熊本の記録では、胎児を体内に残したまま死んだ妊婦はウブメ、またはウグメになって夜ごと現れると信じられていました。","赤子を抱いた女が通行人に子を預けて姿を消し、夜が明けると抱いていたものが墓石や石だった、という話が記録されています。","同じカードには、妊婦が亡くなった時の埋葬方法も書かれています。怪異の話と、死者をどう葬るかという地域の習俗が強く結びついた妖怪です。"],"sourceNote":"1933年の熊本のウブメ個別カードを直接参照しています。"}
+    },
+    {
+      "id":"hyosube","aliases":["ヒョウスベ","兵主部","ヒヤウスベ"],
+      "editorial":{"oneLine":"佐賀の1914年記録では河童の呼び名・由来と結びつき、水難除けの歌まで伝わる存在。","childDescription":"ヒョウスベは九州の河童系の怪異として知られます。1914年の佐賀の記録では、人形を川へ捨てたものが河童になり、兵部大輔の名からヒョウスベと呼ぶようになったという由来が紹介されています。潮見神社の神職家には水難除けの歌も伝わっていました。","trivia":"ヒョウスベを河童とは別種の動物のように決めるより、佐賀の記録では河童の呼び名・由来と重なる点が重要です。"},
+      "historySummary":"1914年の毛利龍一の記録から、ヒョウスベを佐賀の河童伝承・神社・水難除けの歌と結びつけて扱います。",
+      "coverage":{"timeline":"documented","abilities":"insufficient","countermeasures":"documented","regionalVariants":"documented"},
+      "timeline":[{"label":"1914年・佐賀","summary":"ヒョウスベという呼称の由来、河童との関係、潮見神社の水難除けの歌が『郷土研究』に記録される。","sourceIds":["hyosube-saga-0640061-002","hyosube-saga-0640061-003"]}],
+      "abilities":[],
+      "countermeasures":[{"name":"水難除けの歌を伝える","description":"潮見神社の神職家には、ヒョウスベとの約束を忘れるなと唱える水難除けの歌が伝わる。","evidenceLevel":"A","sourceIds":["hyosube-saga-0640061-003"]}],
+      "regionalVariants":[{"region":"佐賀県・潮見神社周辺の伝承","localNames":["ヒョウスベ","兵主部","河童"],"summary":"河童の由来とヒョウスベの呼称が重なり、神職家に水難除けの歌が伝わる。","sourceIds":["hyosube-saga-0640061-002","hyosube-saga-0640061-003"]}],
+      "glossaryTerms":[],"evidenceNote":"毛深い姿、笑う声、風呂を好む等の後世の有名設定を、この1914年カードだけで能力欄に追加しません。",
+      "sourceIds":["hyosube-saga-0640061-002","hyosube-saga-0640061-003"],
+      "article":{"title":"ヒョウスベ―佐賀では河童の名と由来が重なる","subtitle":"人形の由来と水難除けの歌","body":["ヒョウスベは、九州に伝わる河童に近い妖怪として紹介されます。","1914年の佐賀の記録では、島田丸が神社造営に使った人形を川へ捨てたところ河童になり、その災いを鎮めた人物の官職名と結びつけてヒョウスベと呼ぶようになった、という由来が紹介されています。","同じ論文の別カードには、潮見神社の神職を代々務める家に、水難除けの歌が伝わっていることも記されています。","ヒョウスベを河童と完全に別の一種類の妖怪へ分けるより、佐賀で河童の呼び名・由来・水難信仰が重なる様子を読む方が資料に忠実です。"],"sourceNote":"1914年『郷土研究』のヒョウスベに関する二つの個別カードを使用しています。"}
+    },
+    {
+      "id":"daidarabotchi","aliases":["ダイダラボッチ","デッタラボッチ","デエダラボッチ"],
+      "editorial":{"oneLine":"山を運び、足跡を池にし、地形の理由を巨人の仕事として説明する各地の伝説。","childDescription":"ダイダラボッチは山や池を作るほど大きな巨人として語られます。群馬県太田市では赤城山に腰掛けて利根川で足を洗い、その足跡が池になったとされます。静岡県御殿場市では山を藤蔓で縛って運び、蔓が切れて落ちたものが矢倉岳になったという話があります。","trivia":"山・池・くぼ地など実際の地形を見て、『これは巨人が作った跡だ』と説明する伝説が各地にあります。"},
+      "historySummary":"群馬と静岡の個別記録から、ダイダラボッチを地形の成り立ちを物語で説明する巨人伝説として比較します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"not_applicable","regionalVariants":"documented"},
+      "timeline":[{"label":"1975年・静岡","summary":"山を藤蔓で縛って運び、蔓が切れて落ちた山が矢倉岳になったという伝説が記録される。","sourceIds":["daidara-shizuoka-1422040"]},{"label":"1982年・群馬県史","summary":"赤城山に腰掛け利根川で足を洗い、その足跡が池になったというデッタラボッチの伝説が記録される。","sourceIds":["daidara-gunma-C1040166"]}],
+      "abilities":[{"name":"山を運び、地形を作るほど巨大","description":"静岡では山を運び、群馬では山に腰掛け川で足を洗い、その足跡や落とした土が地形になったと語られる。","evidenceLevel":"A","sourceIds":["daidara-shizuoka-1422040","daidara-gunma-C1040166"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"群馬県太田市","localNames":["デッタラボッチ","ダイダラボッチ"],"summary":"赤城山に腰掛けて利根川で足を洗い、足跡が池になったと語られる。","sourceIds":["daidara-gunma-C1040166"]},{"region":"静岡県御殿場市","localNames":["ダイダラボッチ"],"summary":"山を藤蔓で運び、蔓が切れて落ちたものが矢倉岳になったと語られる。","sourceIds":["daidara-shizuoka-1422040"]}],
+      "glossaryTerms":[],"evidenceNote":"これは巨大生物の実在記録ではなく、山や池などの地形を巨人の行為で説明する土地の伝説として扱います。",
+      "sourceIds":["daidara-gunma-C1040166","daidara-shizuoka-1422040"],
+      "article":{"title":"ダイダラボッチ―巨人の足跡が地形になる","subtitle":"群馬の池と静岡の山運び伝説","body":["ダイダラボッチは、日本各地で山や池を作ったと語られる巨大な人の伝説です。","群馬県太田市の県史記録では、デッタラボッチが赤城山に腰掛けて利根川で足を洗い、その足跡が二つの池になったとされています。","静岡県御殿場市では、ダイダラボッチが山を藤蔓で縛って運んでいたところ、足柄山で蔓が切れ、落ちた山が矢倉岳になったと語られます。","こうした話は、目の前にある山や池の不思議な形を、想像できないほど大きな巨人の仕事として説明する土地の物語です。地域が変わると、巨人が作った地形も変わります。"],"sourceNote":"群馬県太田市と静岡県御殿場市の個別カードを比較しています。"}
+    }
+  ]
+}

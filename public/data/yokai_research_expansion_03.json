@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-08-23",
+  "batch": 3,
+  "glossary": {},
+  "sources": [
+    {"id":"oonyudo-kanagawa-2210025","title":"中村亮雄『津久井の河童と川天狗』―大入道とカワウソ","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1955年","region":"神奈川県相模原市緑区","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2210025"},
+    {"id":"tsuchigumo-raiko-3090003","title":"『鋸屑譚』収録―源頼光と蜘蛛・土蜘蛛","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1975年刊『日本随筆大成』収録","region":"説話・歴史随筆","recordType":"歴史随筆収録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=3090003"},
+    {"id":"tsuchigumo-oita-0640142","title":"伊東東『豊後の七ツ森』―土蜘蛛の墳墓伝承","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1915年","region":"大分県竹田市","recordType":"地域伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0640142"},
+    {"id":"nue-classic-3270009","title":"『善庵随筆』収録―『平家物語』『源平盛衰記』の鵺","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1975年刊『日本随筆大成』収録","region":"京都の説話世界","recordType":"古典参照カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=3270009"},
+    {"id":"nue-ehime-1231910","title":"柳田國男『伝説と習俗』―愛媛の源頼政・鵺伝承","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1930年","region":"愛媛県上浮穴郡","recordType":"地域伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1231910"},
+    {"id":"hitodama-saitama-C1130033","title":"新編埼玉県史―人魂","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1986年","region":"埼玉県児玉郡神川町","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1130033-000"},
+    {"id":"hitodama-gunma-C1040120","title":"群馬県史―人魂・火の玉・鬼火・光玉","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1982年","region":"群馬県","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1040120-000"},
+    {"id":"ndl-tofu-kozo","title":"本の万華鏡 第21回 大豆―妖怪『豆腐小僧』","provider":"国立国会図書館","year":"江戸中期資料を紹介","region":"江戸出版文化","recordType":"機関解説・歴史資料紹介","sourceRole":"evidence","sourceType":"institutional_exhibit","url":"https://www.ndl.go.jp/kaleido/entry/21/2.html"},
+    {"id":"ndl-hyakki-emaki-leaflet","title":"異界への扉―妖怪・あの世・異類を描く 関西館展示ちらし","provider":"国立国会図書館","year":"2024年展示／江戸中期写本を紹介","region":"絵巻文化","recordType":"機関展示資料","sourceRole":"evidence","sourceType":"institutional_exhibit","url":"https://www.ndl.go.jp/file/d_exhibitions/emaki/leafletK.pdf"}
+  ],
+  "items": [
+    {
+      "id":"oonyudo","aliases":["大入道","オオニュウドウ"],
+      "editorial":{"oneLine":"巨大な僧形の怪異として一つに決まらず、動物が化けたと説明される土地もある。","childDescription":"大入道は巨大な人影として語られる怪異です。1955年の神奈川県津久井の記録では、川で網を打っていた船の舳先に大入道が現れ、話者はカワウソが化けたものだろうと説明しています。","trivia":"『大入道』は一種類の妖怪名というより、巨大な人型の怪異を表す呼び名としてさまざまな話に現れます。"},
+      "historySummary":"大入道は多様な怪異へ使われる呼称なので、今回は神奈川の一事例だけを具体的に示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[{"label":"1955年掲載・神奈川","summary":"網打ちの船の舳先に大入道が現れ、カワウソが化けたものと説明する話が記録される。","sourceIds":["oonyudo-kanagawa-2210025"]}],
+      "abilities":[{"name":"巨大な人影として現れる","description":"津久井の記録では船の舳先に大入道が現れ、目撃者を震えさせた。","evidenceLevel":"A","sourceIds":["oonyudo-kanagawa-2210025"]}],
+      "countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"大入道をカワウソ・狸・狐などの化けた姿とする例は複数ありますが、この項目では確認した神奈川のカードに限定します。",
+      "sourceIds":["oonyudo-kanagawa-2210025"],
+      "article":{"title":"大入道―巨大な姿は『正体』まで同じではない","subtitle":"津久井の川に現れた一事例から読む","body":["大入道は、見上げるほど大きな人の姿をした怪異として各地の話に出てきます。","1955年の神奈川県津久井の記録では、網打ちに出た船の舳先へ大入道が現れ、船頭が恐怖で口もきけないほど震えたとされています。","この話では大入道の正体を、おそらくカワウソが化けたものだろうと説明しています。つまり『大入道』が一種類の巨大妖怪そのものとは限りません。","巨大な人型という見え方と、その正体についての土地の説明を分けて読むと、大入道という呼び名の広さが分かります。"],"sourceNote":"神奈川県津久井の個別カードを直接参照しています。"}
+    },
+    {
+      "id":"tsuchigumo","aliases":["土蜘蛛","蜘蛛"],
+      "editorial":{"oneLine":"巨大蜘蛛の妖怪像と、古く『土蜘蛛』と呼ばれた人々・土地伝承が重なる複雑な名前。","childDescription":"土蜘蛛は巨大な蜘蛛の妖怪として有名ですが、昔の資料では意味が一つではありません。源頼光を蜘蛛が化けて惑わす説話がある一方、大分県竹田市には景行天皇が滅ぼした土蜘蛛の墓だとする七つの塚の伝承もあります。","trivia":"『土蜘蛛』は最初から蜘蛛の姿だけを指す妖怪名ではなく、歴史上の人々への呼び方と怪物の蜘蛛像が重なっています。"},
+      "historySummary":"人へ化ける蜘蛛の説話と、土蜘蛛を被征服者として語る土地伝承を同じ『巨大蜘蛛の生態』へまとめません。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"古典説話を伝える随筆","summary":"蜘蛛が人へ化けて源頼光を惑わせようとした話と、『土蜘蛛』という呼称の古い意味が紹介される。","sourceIds":["tsuchigumo-raiko-3090003"]},{"label":"1915年・大分","summary":"竹田市の七つの塚を、景行天皇に滅ぼされた土蜘蛛の墳墓とする伝承が記録される。","sourceIds":["tsuchigumo-oita-0640142"]}],
+      "abilities":[{"name":"人に化けて惑わせる蜘蛛として語られる","description":"『鋸屑譚』収録の説話では、蜘蛛が人に化けて源頼光をたぶらかそうとする。","evidenceLevel":"A","sourceIds":["tsuchigumo-raiko-3090003"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"源頼光説話","localNames":["蜘蛛","土蜘蛛"],"summary":"人へ化ける巨大蜘蛛の怪異と、土蜘蛛という呼称の説明が重なる。","sourceIds":["tsuchigumo-raiko-3090003"]},{"region":"大分県竹田市","localNames":["土蜘蛛"],"summary":"七つの塚を景行天皇が滅ぼした土蜘蛛の墓とする土地伝承がある。","sourceIds":["tsuchigumo-oita-0640142"]}],
+      "glossaryTerms":[],"evidenceNote":"古代史上の『土蜘蛛』と後世の巨大蜘蛛妖怪を同一の生き物として説明しません。",
+      "sourceIds":["tsuchigumo-raiko-3090003","tsuchigumo-oita-0640142"],
+      "article":{"title":"土蜘蛛―巨大な蜘蛛だけでは説明できない名前","subtitle":"頼光説話と大分の土地伝承を分ける","body":["土蜘蛛は、大きな蜘蛛の妖怪として現在の図鑑に描かれることが多い存在です。","歴史随筆に収録された説話では、蜘蛛が人の姿へ化けて源頼光を惑わせようとし、捕らえると大きな蜘蛛だったとされています。","一方、大分県竹田市には、七つの塚を景行天皇が滅ぼした土蜘蛛の墓だとする伝承があります。ここでの『土蜘蛛』は単純な巨大蜘蛛の生態説明ではありません。","同じ名前の下に、怪物の蜘蛛像と歴史・土地の記憶が重なっています。二つを分けて読むことが土蜘蛛の重要なポイントです。"],"sourceNote":"頼光説話を伝えるカードと大分の土地伝承カードを分けています。"}
+    },
+    {
+      "id":"nue","aliases":["鵺","鵼","ぬえ"],
+      "editorial":{"oneLine":"怪鳥の鳴き声と、猿・虎・蛇などを合わせた怪物像が古典の中で重なった存在。","childDescription":"鵺は猿の頭、虎や狸の体、蛇の尾などを合わせた怪物として有名です。古典を参照する資料では『鵺』はもともと鳴き声の鳥を指す面もあると説明され、愛媛には源頼政が鵺を退治して名を上げたという伝承も残ります。","trivia":"『鵺』という言葉が怪物全体の名前なのか、鳴き声を出す鳥の名なのかという問題まで古い資料で議論されています。"},
+      "historySummary":"『平家物語』などの複合怪物像と、鳥としての鵺、愛媛の頼政伝承を分けて示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"documented","regionalVariants":"documented"},
+      "timeline":[{"label":"古典を参照する随筆記録","summary":"『平家物語』『源平盛衰記』の鵺について、猿・虎・蛇など複数動物の特徴を持つ姿が紹介される。","sourceIds":["nue-classic-3270009"]},{"label":"1930年・愛媛伝承","summary":"源頼政が鵺を退治し功名を立てた人だという上浮穴郡の伝承が記録される。","sourceIds":["nue-ehime-1231910"]}],
+      "abilities":[{"name":"複数の動物が合わさった姿で語られる","description":"古典参照カードには猿の頭、虎または狸の体、蛇などの尾といった異なる記述が残る。","evidenceLevel":"A","sourceIds":["nue-classic-3270009"]}],
+      "countermeasures":[{"name":"源頼政に射落とされる","description":"愛媛の伝承では、弓の名手・源頼政が鵺を退治して功名を立てたと語られる。","evidenceLevel":"A","sourceIds":["nue-ehime-1231910"]}],
+      "regionalVariants":[{"region":"古典説話の京都","localNames":["鵺","鵼"],"summary":"怪鳥の鳴き声と複合的な怪物の姿が重なって語られる。","sourceIds":["nue-classic-3270009"]},{"region":"愛媛県上浮穴郡","localNames":["鵺"],"summary":"源頼政の鵺退治を郷土の伝承として語る。","sourceIds":["nue-ehime-1231910"]}],
+      "glossaryTerms":[],"evidenceNote":"『鵺＝必ず猿頭・虎胴・蛇尾』と一種類の生物分類にせず、古典ごとの記述差を残します。",
+      "sourceIds":["nue-classic-3270009","nue-ehime-1231910"],
+      "article":{"title":"鵺―怪鳥の名と合成怪物が重なる","subtitle":"古典の姿と愛媛の頼政伝承","body":["鵺は、いくつもの動物を組み合わせた奇妙な姿で知られています。","古典を参照するカードでは、『源平盛衰記』と『平家物語』で体の組み合わせにも違いがあり、さらに『鵺』は鳴き声を表す鳥の名だったという説明も紹介されています。","愛媛県上浮穴郡では、弓の名手・源頼政が鵺を退治して功名を立てた人物だという伝承が1930年に記録されています。","一枚の怪物イラストに固定するより、鳥の声、古典の合成怪物、頼政の英雄譚が重なって今の鵺像ができていると見る方が資料に忠実です。"],"sourceNote":"古典参照カードと愛媛の地域伝承カードを分けています。"}
+    },
+    {
+      "id":"hitodama","aliases":["人魂","火の玉","鬼火"],
+      "editorial":{"oneLine":"死の前後に家や人から出る青白い火として語られ、色・形・飛び方にも地域差がある。","childDescription":"人魂は人の魂が火のように飛ぶものと語られました。埼玉では死ぬ前に家の屋根から青い尾を引く人魂が出る話があり、群馬県史には青・赤など色もさまざまで、上下したりふらふら飛んだりする多数の記録がまとめられています。","trivia":"『青い火の玉』だけでなく、赤い玉、淡い光、長い尾など記録上の見え方は一つではありません。"},
+      "historySummary":"死の予兆・死者の魂としての人魂を、埼玉と群馬の具体的な記録から示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1982年・群馬県史","summary":"死の際に魂が人魂として出るとする多数の形・色・飛び方が整理される。","sourceIds":["hitodama-gunma-C1040120"]},{"label":"1986年・埼玉県史","summary":"死の前に家の屋根から青火の尾を引く人魂が出るという伝承が記録される。","sourceIds":["hitodama-saitama-C1130033"]}],
+      "abilities":[{"name":"死の前後に火のように飛ぶ","description":"埼玉・群馬の記録では、死の予兆や死者の魂として火の玉状に飛ぶと語られる。","evidenceLevel":"A","sourceIds":["hitodama-saitama-C1130033","hitodama-gunma-C1040120"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"埼玉県神川町","localNames":["人魂"],"summary":"死の前に屋根の棟から青火の尾を引いて出ると語られる。","sourceIds":["hitodama-saitama-C1130033"]},{"region":"群馬県内","localNames":["人魂","火の玉","鬼火","光玉"],"summary":"青・赤など多様な色と、上下する・尾を引く・ふらふら飛ぶ等の描写が集められている。","sourceIds":["hitodama-gunma-C1040120"]}],
+      "glossaryTerms":[],"evidenceNote":"人魂の物理的な正体を断定せず、死や魂と結びつけてどう語られたかを扱います。",
+      "sourceIds":["hitodama-saitama-C1130033","hitodama-gunma-C1040120"],
+      "article":{"title":"人魂―青い火だけではない魂の光","subtitle":"死の予兆と地域ごとの色・飛び方","body":["人魂は、人の魂が火の玉のようになって飛ぶものとして語られてきました。","埼玉県神川町の記録では、人が死ぬ前にその家の屋根の棟から人魂が出て、青い火の尾を引くとされています。","群馬県史には、人魂・火の玉・鬼火・光玉という呼び名とともに、青、赤、月のような色、波のように上下する飛び方など多くの語りがまとめられています。","現代の一枚絵では青白い火に統一されがちですが、記録では色も形も動きも違います。人魂は死をどう感じたかを映す地域の語りとして読むことができます。"],"sourceNote":"埼玉県史と群馬県史の個別カードを参照しています。"}
+    },
+    {
+      "id":"tofu-kozo","aliases":["豆腐小僧","大頭小僧と記される例"],
+      "editorial":{"oneLine":"江戸中期の黄表紙で流行した、豆腐を盆に載せて歩く滑稽な子ども妖怪。","childDescription":"豆腐小僧は豆腐を載せた盆を持つ子どもの妖怪です。国立国会図書館の解説では、最古の登場例として1779年の黄表紙『妖怪仕内評判記』が挙げられ、その後の黄表紙にもよく登場したと紹介されています。人を襲うより、気弱で滑稽な役として描かれる例が多い妖怪です。","trivia":"古い作品では『豆腐小僧』だけでなく『大あたまこぞう』と書かれ、一つ目小僧などと混同される例もあります。"},
+      "historySummary":"豆腐小僧は地域口承より江戸の出版キャラクターとして資料が豊富で、NDLの具体的な黄表紙解説から成立と役割を追えます。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"not_applicable","regionalVariants":"insufficient"},
+      "timeline":[{"label":"1779年・黄表紙","summary":"NDLは『妖怪仕内評判記』を豆腐小僧が登場する最古の文献として紹介している。","sourceIds":["ndl-tofu-kozo"]},{"label":"天明・寛政期","summary":"黄表紙、カルタ、双六などで豆腐小僧が広まり、滑稽なキャラクターとして描かれる。","sourceIds":["ndl-tofu-kozo"]}],
+      "abilities":[{"name":"豆腐を載せた盆を持って現れる","description":"NDL解説では大きな傘をかぶった子ども姿で、紅葉印の豆腐を盆に載せて歩く典型像が紹介される。","evidenceLevel":"B","sourceIds":["ndl-tofu-kozo"]}],
+      "countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"豆腐小僧は人を害する地域怪異というより出版物のキャラクターとして確認しやすく、countermeasuresはnot_applicableとしました。",
+      "sourceIds":["ndl-tofu-kozo"],
+      "article":{"title":"豆腐小僧―江戸の本で人気になった妖怪キャラクター","subtitle":"最古級の黄表紙から流行を追う","body":["豆腐小僧は、豆腐の載った盆を持つ子どもの妖怪として知られています。","国立国会図書館の解説では、豆腐小僧が登場する最も古い文献として1779年の黄表紙『妖怪仕内評判記』が紹介されています。","その後、天明・寛政期の黄表紙によく登場し、雨の夕暮れに現れて豆腐を持っているだけ、人間を怖がって逃げるなど、気弱で滑稽な役も描かれました。","豆腐小僧は『昔から村で恐れられた怪物』というより、江戸の出版文化で育った妖怪キャラクターとして読むと特徴がよく見えます。"],"sourceNote":"国立国会図書館『本の万華鏡』の豆腐小僧解説を使用しています。"}
+    },
+    {
+      "id":"hyakki-yagyo","aliases":["百鬼夜行","百鬼夜行絵巻"],
+      "editorial":{"oneLine":"一匹の妖怪ではなく、多くの異類・妖怪が列をなす物語と絵巻のモチーフ。","childDescription":"百鬼夜行は一体の妖怪ではありません。国立国会図書館が所蔵する『百鬼夜行絵巻』は江戸中期の写本で、多くの妖怪が行列する絵巻の一つです。NDL所蔵本には冒頭の詞書と男二人が語り合う導入部があるという特徴も紹介されています。","trivia":"『百鬼』はきっちり100種類の妖怪がいるという数え方ではなく、たくさんの怪異が群れ動くイメージとして読む方が適切です。"},
+      "historySummary":"百鬼夜行は単一妖怪ではなく絵巻・物語の形式なので、能力や弱点ではなく図像史を中心に扱います。",
+      "coverage":{"timeline":"documented","abilities":"not_applicable","countermeasures":"not_applicable","regionalVariants":"insufficient"},
+      "timeline":[{"label":"江戸中期写本・NDL所蔵","summary":"国立国会図書館所蔵の『百鬼夜行絵巻』が展示され、多数の模本の中でも導入部を持つ特徴的な一本として紹介される。","sourceIds":["ndl-hyakki-emaki-leaflet"]}],
+      "abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"百鬼夜行を一匹の妖怪として能力値化せず、集団的な怪異表現・絵巻モチーフとして扱います。",
+      "sourceIds":["ndl-hyakki-emaki-leaflet"],
+      "article":{"title":"百鬼夜行―妖怪が『一列に集まる』という物語","subtitle":"一体の怪物ではなく絵巻の世界を読む","body":["百鬼夜行は一匹の妖怪の名前ではなく、たくさんの妖怪や異類が夜に列をなすイメージです。","国立国会図書館が紹介する『百鬼夜行絵巻』は江戸中期の写本で、多くの模本が知られる百鬼夜行絵巻の一例です。","NDL所蔵本には、冒頭の詞書と、その後に男二人が語り合う導入部の絵があるという特徴が紹介されています。妖怪の行列だけでなく、物語への入り口まである絵巻です。","そのためこの項目に『攻撃方法』『弱点』を無理に作りません。百鬼夜行は、妖怪文化が集団で描かれた表現そのものを楽しむ項目です。"],"sourceNote":"国立国会図書館の企画展示資料を参照しています。"}
+    },
+    {
+      "id":"mokumokuren","aliases":["目目連","もくもくれん"],
+      "editorial":{"oneLine":"破れた障子に無数の目がある姿で有名だが、今回の機関資料だけでは個別本文を十分確認できていない。","childDescription":"目目連は、障子の格子一つ一つに目が浮かぶ妖怪として知られます。鳥山石燕の妖怪画の系統で知られる存在ですが、今回確認したNDLの一般展示だけでは目目連個別の本文や地域伝承を十分たどれませんでした。そこで能力や対処法は資料不足として残します。","trivia":"有名な絵がある妖怪でも、その絵の説明文と後世の解説を区別するには個別資料の確認が必要です。"},
+      "historySummary":"近世妖怪画で知られる目目連について、直接確認できる個別資料が不足しているため、現代の定番設定を研究claimへ移しません。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"破れ障子・多数の目という定番像は知られますが、今回の直接資料が不足しているため研究欄は保留します。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"目目連―有名な障子の目も、直接資料から確認する","subtitle":"定番像を知っていても先に埋めない","body":["目目連は、古い障子にたくさんの目が浮かぶ姿で有名な妖怪です。","鳥山石燕の妖怪画を紹介するNDL展示は、近世妖怪画を調べる重要な入口です。","しかし今回の確認範囲では、目目連個別のページや本文を十分に確保できませんでした。名前から想像して能力や弱点を作ることはしません。","今後、石燕の個別図像や本文へ直接たどれる資料を追加した時に、timelineやabilitiesをdocumentedへ更新します。"],"sourceNote":"鳥山石燕の一般展示を調査入口として参照し、未確認の細部はclaim化していません。"}
+    },
+    {
+      "id":"nuppeppo","aliases":["ぬっぺっぽう","ぬっぺふほふ"],
+      "editorial":{"oneLine":"肉の塊のような姿で有名だが、古い絵と後世の『墓地に出る』説明を同じ根拠として扱わない。","childDescription":"ぬっぺっぽうは、顔と体の境目が分からない肉の塊のような姿で知られます。鳥山石燕など近世の妖怪画に名と姿が見える一方、墓地や廃寺に出るといった説明は後世の想像が混じる可能性が指摘されています。今回の直接資料だけで行動や弱点は決めません。","trivia":"妖怪は『絵だけ残っていて何をするのか分からない』ことがあります。ぬっぺっぽうはその面白さがよく見える例です。"},
+      "historySummary":"近世妖怪画に姿があることと、後世に付けられた行動説明を分離し、今回確認不足のclaimは空欄にします。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"古い図像の存在は知られますが、今回のNDL一般展示だけでは個別の本文・年代を十分確認できないため、固定設定を作りません。",
+      "sourceIds":["ndl-sekien-theme"],
+      "article":{"title":"ぬっぺっぽう―絵はあるのに『何をするか』が分からない","subtitle":"妖怪図像と後世の説明を分ける","body":["ぬっぺっぽうは、しわのある肉の塊のような姿で描かれる妖怪として知られています。","近世の妖怪画に名と姿があることで有名ですが、妖怪画には説明が少なく、何をする存在だったのか分かりにくいものもあります。","後世の妖怪事典では墓地や廃寺に現れるといった説明も見られますが、それが古い絵の本文に直接書かれているとは限りません。","この図鑑では、絵が有名だからという理由だけで行動・弱点・地域差を補いません。『まだ分からない』こと自体を残します。"],"sourceNote":"鳥山石燕の一般展示を調査入口とし、個別資料が不足する項目はinsufficientとしています。"}
+    }
+  ]
+}
