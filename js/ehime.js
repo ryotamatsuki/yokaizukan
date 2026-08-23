@@ -5,7 +5,8 @@
     locations: "public/data/locations.json",
     courses: "public/data/courses.json",
     sources: "public/data/sources.json",
-    evidence: "public/data/evidence_check_table.json"
+    evidence: "public/data/evidence_check_table.json",
+    research: "public/data/ehime_research_v2.json"
   };
 
   const STORAGE_KEY = "ehimeLegendNotebook";
@@ -44,6 +45,7 @@
     courses: [],
     sources: [],
     evidence: [],
+    research: [],
     currentView: "home",
     filteredLegends: []
   };
@@ -75,14 +77,24 @@
     return response.json();
   }
 
+  async function loadOptionalJson(path) {
+    try {
+      return await loadJson(path);
+    } catch (error) {
+      console.warn(`${path} の読み込みをスキップしました。`, error);
+      return null;
+    }
+  }
+
   async function loadAllData() {
-    const [legendsData, articlesData, locationsData, coursesData, sourcesData, evidenceData] = await Promise.all([
+    const [legendsData, articlesData, locationsData, coursesData, sourcesData, evidenceData, researchData] = await Promise.all([
       loadJson(DATA_PATHS.legends),
       loadJson(DATA_PATHS.articles),
       loadJson(DATA_PATHS.locations),
       loadJson(DATA_PATHS.courses),
       loadJson(DATA_PATHS.sources),
-      loadJson(DATA_PATHS.evidence)
+      loadJson(DATA_PATHS.evidence),
+      loadOptionalJson(DATA_PATHS.research)
     ]);
 
     state.legends = normalizeArray(legendsData.legends).filter((legend) => legend.displayInList !== false);
@@ -91,6 +103,7 @@
     state.courses = normalizeArray(coursesData.courses);
     state.sources = normalizeArray(sourcesData.sources);
     state.evidence = normalizeArray(evidenceData.legendEvidence);
+    state.research = normalizeArray(researchData?.items);
   }
 
   function normalizeArray(value) {
@@ -462,6 +475,19 @@
     bindDynamicActions(content);
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
+
+    const research = state.research.find((item) => item.id === id) || null;
+    const evidence = state.evidence.find((item) => item.legendId === id) || null;
+    document.dispatchEvent(new CustomEvent("ehime:detail-opened", {
+      detail: {
+        id,
+        research,
+        evidence,
+        sources: state.sources,
+        traditionLabel: TRADITION_LABELS[research?.traditionType || legend.traditionLayer] || legend.traditionType || ""
+      }
+    }));
+
     $(".legend-modal__close")?.focus();
     renderDashboard();
     renderNotebook();
@@ -543,7 +569,6 @@
   }
 
   function detailSourcesHtml(legend) {
-    const article = findArticle(legend.articleId || legend.id);
     const evidence = state.evidence.find((item) => item.legendId === legend.id);
 
     return `
@@ -572,7 +597,6 @@
         removeNotebook(button.dataset.removeNotebook);
       });
     });
-
   }
 
   function populateFilters() {
