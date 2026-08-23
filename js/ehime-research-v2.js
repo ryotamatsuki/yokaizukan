@@ -62,7 +62,7 @@
     },
     kane_no_kami_no_hi: {
       '愛媛のどこに残る？': 'context',
-      'どんな話？': 'story',
+      '大みそかに現れる火': 'story',
       '資料から分かること': 'research_note',
       'まだ分からないこと': 'research_note'
     }
