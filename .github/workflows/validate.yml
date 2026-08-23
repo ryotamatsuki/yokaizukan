@@ -36,10 +36,12 @@ jobs:
           node --check scripts/validate_yokai_literary_phase2_audit.mjs
           node --check scripts/validate_yokai_literary_phase2.mjs
           node --check scripts/validate_yokai_literary_phase3.mjs
+          node --check scripts/validate_yokai_research_deepening_phase4.mjs
           node --check playwright.config.mjs
           node --check tests/e2e/ehime-research.spec.mjs
           node --check tests/e2e/yokai-literary.spec.mjs
           node --check tests/e2e/yokai-literary-phase3.spec.mjs
+          node --check tests/e2e/yokai-research-phase4.spec.mjs
 
       - name: Install test dependencies
         run: npm install --no-package-lock --ignore-scripts
