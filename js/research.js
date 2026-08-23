@@ -1,4 +1,7 @@
 const RESEARCH_DATA_URL = 'public/data/yokai_research_pilot.json';
+const RESEARCH_EXPANSION_URLS = [1, 2, 3, 4, 5].map(
+  (batch) => `public/data/yokai_research_expansion_0${batch}.json`
+);
 const RESEARCH_STYLE_URL = 'css/research.css';
 
 const BASE_ID_ALIASES = {
@@ -24,15 +27,21 @@ export function installResearchStyles() {
 }
 
 export async function loadPilotResearch(url = RESEARCH_DATA_URL) {
-  const response = await fetch(url, { cache: 'no-cache' });
-  if (!response.ok) {
-    throw new Error(`出典・地域差データの読み込みに失敗しました。HTTP ${response.status}`);
-  }
-  const payload = await response.json();
-  if (!Array.isArray(payload.items) || !Array.isArray(payload.sources)) {
-    throw new Error('yokai_research_pilot.json の形式が正しくありません。');
-  }
-  return payload;
+  const basePayload = await fetchResearchPayload(url);
+  const expansionResults = await Promise.allSettled(
+    RESEARCH_EXPANSION_URLS.map((batchUrl) => fetchResearchPayload(batchUrl))
+  );
+
+  const payloads = [basePayload];
+  expansionResults.forEach((result, index) => {
+    if (result.status === 'fulfilled') {
+      payloads.push(result.value);
+      return;
+    }
+    console.warn(`研究データ batch ${index + 1} の読み込みをスキップしました。`, result.reason);
+  });
+
+  return combineResearchPayloads(payloads);
 }
 
 export function mergePilotResearch(items, payload) {
@@ -218,6 +227,54 @@ export function enhanceDetailWithResearch(yokai) {
 
 export function toBaseCatalogId(researchId) {
   return BASE_ID_ALIASES[researchId] || researchId;
+}
+
+async function fetchResearchPayload(url) {
+  const response = await fetch(url, { cache: 'no-cache' });
+  if (!response.ok) {
+    throw new Error(`${url} の読み込みに失敗しました。HTTP ${response.status}`);
+  }
+  const payload = await response.json();
+  if (!Array.isArray(payload.items) || !Array.isArray(payload.sources)) {
+    throw new Error(`${url} の形式が正しくありません。`);
+  }
+  return payload;
+}
+
+function combineResearchPayloads(payloads) {
+  const base = payloads[0] || {};
+  const sources = [];
+  const items = [];
+  const sourceIds = new Set();
+  const itemIds = new Set();
+  const glossary = {};
+
+  for (const payload of payloads) {
+    Object.assign(glossary, payload.glossary || {});
+    for (const source of payload.sources || []) {
+      if (sourceIds.has(source.id)) {
+        console.warn(`重複する研究sourceIdをスキップしました: ${source.id}`);
+        continue;
+      }
+      sourceIds.add(source.id);
+      sources.push(source);
+    }
+    for (const item of payload.items || []) {
+      if (itemIds.has(item.id)) {
+        console.warn(`重複する研究item idをスキップしました: ${item.id}`);
+        continue;
+      }
+      itemIds.add(item.id);
+      items.push(item);
+    }
+  }
+
+  return {
+    ...base,
+    sources,
+    items,
+    glossary
+  };
 }
 
 function resolveSources(sourceIds = [], sourceIndex) {
