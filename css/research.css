@@ -48,7 +48,8 @@
 
 .research-fact span,
 .research-source-list span,
-.research-claim-block small {
+.research-claim-block small,
+.research-editorial-note small {
   display: block;
   color: var(--muted, #655f55);
   font-size: 0.8rem;
@@ -98,6 +99,33 @@
   line-height: 1.65;
 }
 
+.research-claim-block small {
+  margin-top: 0.3rem;
+  font-weight: 700;
+}
+
+.research-editorial-note {
+  margin: 0 0 1.25rem;
+  padding: 0.9rem;
+  border: 1px dashed rgba(91, 73, 47, 0.24);
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.research-editorial-note strong,
+.research-editorial-note p {
+  display: block;
+}
+
+.research-editorial-note p {
+  margin: 0.35rem 0;
+  line-height: 1.7;
+}
+
+.research-editorial-note small {
+  font-weight: 700;
+}
+
 .research-region-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -132,6 +160,30 @@
   margin-bottom: 1.25rem;
 }
 
+.research-glossary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: 0 0 1.25rem;
+}
+
+.research-glossary > div {
+  padding: 0.7rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.research-glossary dt {
+  font-weight: 700;
+}
+
+.research-glossary dd {
+  margin: 0.2rem 0 0;
+  color: var(--muted, #655f55);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
 .research-source-list a {
   font-weight: 700;
   text-underline-offset: 0.16em;
@@ -153,7 +205,8 @@
 @media (max-width: 760px) {
   .research-quick-facts,
   .research-columns,
-  .research-region-grid {
+  .research-region-grid,
+  .research-glossary {
     grid-template-columns: 1fr;
   }
 }
