@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-08-23",
+  "purpose": "愛媛11伝承を、子どもでも読める一方、具体的な地域・資料・未確認事項までたどれる研究レイヤーとして整理する。",
+  "coverageStatuses": ["documented", "insufficient", "not_applicable"],
+  "items": [
+    {
+      "id": "uwajima_ushioni_cluster",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"南予","municipality":"宇和島市・吉田町・愛南町など","specificPlaces":["宇和島市吉田町","愛南町","宇和島市街の祭礼"]},
+      "childLead": "牛鬼は『愛媛の同じ妖怪がどこでも同じ姿』ではありません。宇和島・吉田の怪物伝承と、南予の祭りで動く牛鬼は資料を分けて読む必要があります。",
+      "regionalRecords": [
+        {"place":"宇和島市吉田町","summary":"泉ヶ森の牛鬼塚と牛鬼退治の伝説が記録される。","sourceIds":["SRC_IYO_MINZOKU_0200004"]},
+        {"place":"南予・愛南町など","summary":"祭りに登場し、大勢の人が中に入って動かす牛鬼の練り物が記録される。","sourceIds":["SRC_IYO_MINZOKU_0200265"]},
+        {"place":"宇和島市","summary":"現在のうわじま牛鬼まつりの牛鬼の形・役割と、市民イベントとしての開始年を公式資料で確認できる。","sourceIds":["SRC_UWAJIMA_CITY_2026"]}
+      ],
+      "claims": [
+        {"label":"伝説と祭礼を分ける","text":"怪物としての牛鬼伝説と、祭礼で動かす牛鬼は同一の歴史資料ではない。","evidenceLevel":"A","sourceIds":["SRC_IYO_MINZOKU_0200004","SRC_IYO_MINZOKU_0200265"]}
+      ],
+      "needsFollowUp":["祭礼の牛鬼そのものが、いつ現在につながる形で成立したかは未確定。"],
+      "sourceIds":["SRC_UWAJIMA_CITY_2026","SRC_IYO_MINZOKU_0200004","SRC_IYO_MINZOKU_0200265"]
+    },
+    {
+      "id": "matsuyama_tanuki_cluster",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"中予","municipality":"松山市","specificPlaces":["松山城下","松山市内の狸伝承地"]},
+      "childLead": "八百八狸は『昔の松山で本当に起きた事件』として読むのではなく、松山藩のお家騒動と狸の物語が結びついて広まった伝説として読むと分かりやすくなります。",
+      "regionalRecords": [
+        {"place":"松山市","summary":"刑部狸など、市内に残る複数の狸伝承と所在地を松山市資料で確認できる。","sourceIds":["SRC_MATSUYAMA_TANUKI_OFFICIAL"]},
+        {"place":"松山の郷土資料群","summary":"愛媛県立図書館の調査で、刑部狸・八百八狸・松山騒動に関する複数資料が整理されている。","sourceIds":["SRC_NDL_TANUKI_REFERENCE"]}
+      ],
+      "claims":[{"label":"物語化された伝説","text":"松山騒動を背景に、狸たちを登場させた読み物・講談として発展した部分を地域伝承と区別する。","evidenceLevel":"B","sourceIds":["SRC_NDL_TANUKI_REFERENCE"]}],
+      "needsFollowUp":["講談・読み物の版ごとの成立順と内容差は追加調査が必要。"],
+      "sourceIds":["SRC_NDL_TANUKI_REFERENCE","SRC_MATSUYAMA_TANUKI_OFFICIAL"]
+    },
+    {
+      "id": "iyo_basan_cluster",
+      "coverage": {"history":"documented","regionalRecords":"insufficient","claims":"documented"},
+      "locality": {"region":"伊予","municipality":"特定市町村は未確認","specificPlaces":[]},
+      "childLead": "波山は『愛媛のどこかの村で採集された話』ではなく、1841年の妖怪本に『伊予の山中』の怪鳥として登場することが確実に確認できます。",
+      "regionalRecords": [],
+      "claims":[{"label":"1841年の妖怪本に登場","text":"『絵本百物語』に伊予の山中の怪鳥として波山が記される。","evidenceLevel":"A","sourceIds":["SRC_EHON_HYAKU_MONOGATARI_1841"]}],
+      "needsFollowUp":["愛媛県内の具体的な市町村・集落で口承採集された波山の記録は未確認。"],
+      "sourceIds":["SRC_EHON_HYAKU_MONOGATARI_1841"]
+    },
+    {
+      "id": "ishizuchi_tengu_cluster",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"東予・石鎚山麓","municipality":"西条市小松町・丹原町など","specificPlaces":["石鎚山","旧小松町","旧丹原町","天狗岳"]},
+      "childLead": "石鎚の天狗は、全国の天狗設定をそのまま当てはめず、石鎚山麓で実際に記録された『高い木の烏天狗』『枝の間の小さな火』などから読みます。",
+      "regionalRecords":[{"place":"西条市小松町・丹原町周辺","summary":"石鎚山を天狗の巣とし、高い木の烏天狗、枝の間の小さな火、白装束の天狗などが記録される。","sourceIds":["SRC_ASHINAKA_116_TENGU"]},{"place":"石鎚山","summary":"天狗岳という地名、山岳信仰と修験道の背景を公式資料で確認できる。","sourceIds":["SRC_ISHIZUCHI_OFFICIAL"]}],
+      "claims":[{"label":"民俗記録と宗教史を分ける","text":"天狗の具体的な怪異記録と、石鎚山の山岳信仰・修験道という歴史背景は別資料で確認する。","evidenceLevel":"A","sourceIds":["SRC_ASHINAKA_116_TENGU","SRC_ISHIZUCHI_OFFICIAL"]}],
+      "needsFollowUp":["各集落の話者・採集地点はさらに細かく確認できる余地がある。"],
+      "sourceIds":["SRC_ASHINAKA_116_TENGU","SRC_ISHIZUCHI_OFFICIAL"]
+    },
+    {
+      "id": "dogo_myth_cluster",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"中予","municipality":"松山市","specificPlaces":["道後温泉","玉の石"]},
+      "childLead": "道後温泉には一つだけでなく、白鷺が傷を癒した話と、少彦名命が湯で回復した話という異なる由来が伝わっています。",
+      "regionalRecords":[{"place":"道後温泉","summary":"白鷺が湯で傷を癒した温泉発見譚が地誌に記録される。","sourceIds":["SRC_YOYOGUN_GORIGENSHU_1710"]},{"place":"道後温泉・玉の石","summary":"少彦名命を大国主命が湯で温め、玉の石の上で踊った説話が風土記逸文に伝わる。","sourceIds":["SRC_IYOKOKU_FUDOKI_DOGO"]}],
+      "claims":[{"label":"二つの由来を混ぜない","text":"白鷺伝説と神々の説話は異なる資料系統として確認する。","evidenceLevel":"A","sourceIds":["SRC_YOYOGUN_GORIGENSHU_1710","SRC_IYOKOKU_FUDOKI_DOGO"]}],
+      "needsFollowUp":[],
+      "sourceIds":["SRC_YOYOGUN_GORIGENSHU_1710","SRC_IYOKOKU_FUDOKI_DOGO","SRC_DOGO_OFFICIAL"]
+    },
+    {
+      "id": "ishiteji_emon_saburo_cluster",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"中予","municipality":"松山市","specificPlaces":["石手寺"]},
+      "childLead": "衛門三郎伝説は、物語のすべてが同じ時代からあったと考えず、少なくとも1567年の石手寺刻板まで遡れることと、後世に広がった遍路物語を分けて読みます。",
+      "regionalRecords":[{"place":"松山市・石手寺","summary":"愛媛県立図書館の調査では、衛門三郎伝説の初見として永禄10年（1567）の石手寺刻板が挙げられる。","sourceIds":["SRC_EMON_SABURO_REFERENCE"]}],
+      "claims":[{"label":"少なくとも1567年まで遡る","text":"衛門三郎伝説の存在は石手寺刻板まで遡って確認できるが、現在知られる全場面が同時成立したとは限らない。","evidenceLevel":"B","sourceIds":["SRC_EMON_SABURO_REFERENCE"]}],
+      "needsFollowUp":["伝説の各場面がいつ成立・追加されたかは個別調査が必要。"],
+      "sourceIds":["SRC_EMON_SABURO_REFERENCE"]
+    },
+    {
+      "id": "uwakai_sea_mystery_cluster",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"南予・宇和海","municipality":"宇和島市・大洲市・日振島周辺","specificPlaces":["宇和海","日振島","宇和島市","大洲市"]},
+      "childLead": "宇和海の船幽霊には、柄杓を求める話と、火の姿で船を止める話があります。同じ『船幽霊』でも、場所と記録を分けると違いが見えます。",
+      "regionalRecords":[{"place":"大洲市・宇和島市","summary":"船幽霊が柄杓を求める話が民俗資料に記録される。","sourceIds":["SRC_IYO_MINZOKU_0200237"]},{"place":"宇和海・日振島航路の伝承","summary":"船を止める陰火としての船幽霊が愛媛県史に収録される。","sourceIds":["SRC_EHIME_PREF_FOLKLORE_1983"]}],
+      "claims":[{"label":"海の怪異にも複数型","text":"柄杓を求める船幽霊と、火の姿で船を止める船幽霊を別の地域記録として扱う。","evidenceLevel":"A","sourceIds":["SRC_IYO_MINZOKU_0200237","SRC_EHIME_PREF_FOLKLORE_1983"]}],
+      "needsFollowUp":["日振島の話の元になった個別採集記録・話者は追加確認の余地がある。"],
+      "sourceIds":["SRC_EHIME_PREF_FOLKLORE_1983","SRC_IYO_MINZOKU_0200237"]
+    },
+    {
+      "id": "kihoku_oni_cluster",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"南予・山間部","municipality":"鬼北町・宇和島市周辺","specificPlaces":["等妙寺","鬼ヶ城","タモト岩","鼓岩"]},
+      "childLead": "鬼北の鬼は、現代の地域PRだけから生まれたのではありません。等妙寺縁起を紹介する資料に、鬼王段三郎と鬼ヶ城・大岩を結ぶ伝説が確認できます。",
+      "regionalRecords":[{"place":"鬼北町・等妙寺周辺","summary":"等妙寺縁起に基づく鬼王段三郎、鬼ヶ城、タモト岩、鼓岩の伝承が自治体資料で紹介される。","sourceIds":["SRC_KIHOKU_ONI_LEGEND"]}],
+      "claims":[{"label":"古い伝説と現代PRを分ける","text":"鬼王段三郎の伝説と、現代の『鬼のまち』としての地域発信は別レイヤーとして読む。","evidenceLevel":"B","sourceIds":["SRC_KIHOKU_ONI_LEGEND"]}],
+      "needsFollowUp":["等妙寺縁起の原文・巻頁を直接確認する必要がある。"],
+      "sourceIds":["SRC_KIHOKU_ONI_LEGEND"]
+    },
+    {
+      "id": "yosuzume",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"南予","municipality":"愛南町周辺・旧南宇和郡","specificPlaces":["旧南宇和郡の夜道"]},
+      "childLead": "夜雀は『鳥の姿』より音と山犬との関係が重要です。南宇和の記録では『ちっちっ』とついてくる声が、山犬が近づく前触れとされました。",
+      "regionalRecords":[{"place":"旧南宇和郡","summary":"夜道を『ちっちっ』と鳴きながらついてきて、山犬が近づく前触れとされる夜雀が記録される。","sourceIds":["SRC_YOSUZUME_1100055"]}],
+      "claims":[{"label":"姿より音の怪異","text":"確認できる記録では、夜雀の鳴き声と山犬との関係が中心である。","evidenceLevel":"A","sourceIds":["SRC_YOSUZUME_1100055"]}],
+      "needsFollowUp":[],
+      "sourceIds":["SRC_YOSUZUME_1100055"]
+    },
+    {
+      "id": "nobiagari",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"南予","municipality":"宇和島市下波・西予市城川町","specificPlaces":["旧下波村","西予市城川町"]},
+      "childLead": "伸上りは南予でも一つの話ではありません。下波では見上げるほど伸びる怪異と具体的な対処が記録され、城川町には別の事例があります。",
+      "regionalRecords":[{"place":"旧北宇和郡下波村","summary":"夜道に現れて伸び上がる怪異と、地面から一尺ほど上を蹴る対処が記録される。","sourceIds":["SRC_NOBIAGARI_0200015"]},{"place":"西予市城川町","summary":"別の伸上りの事例が南予の怪談記録に残る。","sourceIds":["SRC_NOBIAGARI_0200232"]}],
+      "claims":[{"label":"地域によって話型が違う","text":"下波と城川の伸上りを一つの全国共通設定にまとめず、別記録として比較する。","evidenceLevel":"A","sourceIds":["SRC_NOBIAGARI_0200015","SRC_NOBIAGARI_0200232"]}],
+      "needsFollowUp":["地域ごとの話型と対処法の違いはさらに比較できる。"],
+      "sourceIds":["SRC_NOBIAGARI_0200015","SRC_NOBIAGARI_0200232"]
+    },
+    {
+      "id": "kane_no_kami_no_hi",
+      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
+      "locality": {"region":"中予・島しょ部","municipality":"松山市怒和島","specificPlaces":["怒和島"]},
+      "childLead": "怒和島の大みそかの火は、妖怪の怪火ではなく、新しい年の神・歳徳神が来た知らせとして説明された年中行事の伝承です。",
+      "regionalRecords":[{"place":"松山市怒和島","summary":"大みそかの夜、氏神の後ろに提灯のような火が現れ、歳徳神の来訪を知らせるとする語彙が収録される。","sourceIds":["SRC_SOGO_NIHON_MINZOKU_GOI_1955"]}],
+      "claims":[{"label":"神の来訪を知らせる火","text":"妖怪の怪火と決めつけず、歳徳神の来訪を知らせる年中行事の語りとして扱う。","evidenceLevel":"B","sourceIds":["SRC_SOGO_NIHON_MINZOKU_GOI_1955"]}],
+      "needsFollowUp":["『綜合日本民俗語彙』が参照した原資料、採集者、採集年、掲載頁は未確認。"],
+      "sourceIds":["SRC_SOGO_NIHON_MINZOKU_GOI_1955"]
+    }
+  ]
+}
