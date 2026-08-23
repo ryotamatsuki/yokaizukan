@@ -1,0 +1,575 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-23",
+  "purpose": "子どもでも読める一方、地域差と原典・民俗記録までたどれる全国版妖怪図鑑の10体パイロット。",
+  "evidenceLevels": {
+    "A": "具体的な古典本文・図像、または書誌情報と地域・掲載箇所が確認できる民俗記録に直接ひも付く記述",
+    "B": "国立機関・研究機関の展示やデータベースで確認できるが、個別伝承の原採集記録までは未確認の記述",
+    "APP": "図鑑の読みやすさのための編集・要約。伝承上の事実とは分けて扱う"
+  },
+  "sources": [
+    {
+      "id": "ndl-sekien-theme",
+      "title": "鳥山石燕の描いた妖怪",
+      "provider": "国立国会図書館 NDLイメージバンク",
+      "year": "江戸中期資料を収録",
+      "region": "全国・出版文化",
+      "recordType": "歴史図像",
+      "url": "https://www.ndl.go.jp/imagebank/theme/sekienyokai"
+    },
+    {
+      "id": "ndl-sekien-column",
+      "title": "鳥山石燕の妖怪図鑑でみる妖怪の世界",
+      "provider": "国立国会図書館 NDLイメージバンク",
+      "year": "『画図百鬼夜行』1776年ほか",
+      "region": "全国・出版文化",
+      "recordType": "機関解説・歴史図像",
+      "url": "https://www.ndl.go.jp/imagebank/column/sekienyokai"
+    },
+    {
+      "id": "ndl-emaki-ikai",
+      "title": "異界・異類の描かれ方―絵巻の世界",
+      "provider": "国立国会図書館",
+      "year": "室町期以降の物語を近世以降の写本で伝承",
+      "region": "大江山・伊吹山など",
+      "recordType": "歴史絵巻・機関解説",
+      "url": "https://www.ndl.go.jp/en/d_exhibitions/emaki/22"
+    },
+    {
+      "id": "nichibun-kappa-oita-kumamoto",
+      "title": "河童の姿・呼称・行動に関する複数地域記録",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1956-1985年掲載資料等",
+      "region": "大分県・熊本県ほか",
+      "recordType": "民俗記録データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=0820001"
+    },
+    {
+      "id": "nichibun-kappa-seasonal",
+      "title": "河童・山童の季節移動などの地域記録",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1930-1992年掲載資料等",
+      "region": "宮崎県・熊本県・大分県ほか",
+      "recordType": "民俗記録データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=C0411013-000"
+    },
+    {
+      "id": "nichibun-tengu-ishizuchi",
+      "title": "末広昌雄『伊予路の天狗噺』―石鎚山の天狗",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1969年",
+      "region": "愛媛県西条市小松町・丹原町",
+      "recordType": "民俗記録カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0030258"
+    },
+    {
+      "id": "nichibun-tengu-ainan",
+      "title": "愛媛県史 民俗下巻―篠山の天狗",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1984年",
+      "region": "愛媛県南宇和郡愛南町",
+      "recordType": "県史収録伝承カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3820112-000"
+    },
+    {
+      "id": "nichibun-oni-shuten",
+      "title": "酒呑童子・大江山の鬼退治に関する記録",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1929年掲載資料ほか",
+      "region": "京都府大江山ほか",
+      "recordType": "民俗・説話記録データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=0700148"
+    },
+    {
+      "id": "nichibun-yukionna-sogi",
+      "title": "宗祇が越後で見たとされる雪女の記録",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1928年掲載資料（宗祇説話を収録）",
+      "region": "新潟県",
+      "recordType": "歴史説話を伝える民俗記録",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=1230004_001"
+    },
+    {
+      "id": "nichibun-yukionna-national",
+      "title": "雪女の全国呼称検索",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1928年以降の採録資料等",
+      "region": "東北・中部など",
+      "recordType": "地域比較データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/ksearch.cgi?Area=%E5%85%A8%E5%9B%BD&Name=%E3%83%A6%E3%82%AD%E3%82%AA%E3%83%B3%E3%83%8A&Pref="
+    },
+    {
+      "id": "nichibun-zashiki-sasaki",
+      "title": "佐々木喜善『ザシキワラシの話』",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1924年",
+      "region": "岩手県下閉伊郡岩泉町",
+      "recordType": "民俗記録カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0690189"
+    },
+    {
+      "id": "nichibun-zashiki-tohoku",
+      "title": "座敷童子の東北各地の異名・家運伝承",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1956年ほか",
+      "region": "岩手・青森・秋田・宮城",
+      "recordType": "地域比較データベース",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/simsearch.cgi?ID=C0220116-000"
+    },
+    {
+      "id": "nichibun-nurikabe-yanagita",
+      "title": "柳田國男『妖怪名彙（四）』―塗り壁",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1938年",
+      "region": "福岡県遠賀郡",
+      "recordType": "民俗記録カード・掲載箇所あり",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2180774"
+    },
+    {
+      "id": "nichibun-ittan-yanagita",
+      "title": "柳田國男『妖怪名彙（四）』―一反木綿",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1938年",
+      "region": "鹿児島県肝属郡",
+      "recordType": "民俗記録カード・掲載箇所あり",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2180776"
+    },
+    {
+      "id": "nichibun-ushi-uwajima",
+      "title": "『伊予の民俗』―宇和島・吉田の牛鬼",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1975年",
+      "region": "愛媛県宇和島市吉田町",
+      "recordType": "地域伝承カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0200004"
+    },
+    {
+      "id": "nichibun-ushi-festival",
+      "title": "秋田忠俊『祭り盛り上げ牛鬼』",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1975年",
+      "region": "愛媛県南宇和郡愛南町",
+      "recordType": "祭礼民俗記録カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0200265"
+    },
+    {
+      "id": "nichibun-umibozu-uwajima",
+      "title": "愛媛県史 民俗上巻―宇和島の海坊主",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1983年",
+      "region": "愛媛県宇和島市",
+      "recordType": "県史収録伝承カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C3820084-000"
+    },
+    {
+      "id": "nichibun-umibozu-akashi",
+      "title": "河本正義『舞子の漁船』―海坊主",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1935年",
+      "region": "兵庫県明石市",
+      "recordType": "漁撈民俗記録カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1232841"
+    },
+    {
+      "id": "aozora-tsurezuregusa-89",
+      "title": "『徒然草』第八十九段「奥山に猫またといふものありて」",
+      "provider": "青空文庫（佐藤春夫訳）",
+      "year": "原典は鎌倉末〜南北朝期",
+      "region": "京都・山間の噂",
+      "recordType": "古典本文への入口",
+      "url": "https://www.aozora.gr.jp/cards/002238/files/61411_78314.html"
+    },
+    {
+      "id": "nichibun-nekomata-ishikawa",
+      "title": "山下久男『能美郡昔話』―猫又",
+      "provider": "国際日本文化研究センター 怪異・妖怪伝承データベース",
+      "year": "1936年",
+      "region": "石川県白山市",
+      "recordType": "昔話記録カード",
+      "url": "https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2460015"
+    }
+  ],
+  "items": [
+    {
+      "id": "kappa",
+      "aliases": ["河太郎", "ガラッパ", "セコ", "山童と連続する型"],
+      "editorial": {
+        "oneLine": "川の怪物ひとつではなく、土地ごとに姿も名前も変わる水辺の妖怪。",
+        "childDescription": "河童は、川や池で人や馬を水へ引きこむと恐れられた一方、相撲好き、約束を守る、魚を返礼に持ってくるなど、人と交渉する話も多い妖怪です。九州ではガラッパなど別名も多く、冬は山へ移るという土地もあります。",
+        "trivia": "いま定番の「皿・甲羅・水かき」の姿だけが昔から全国共通だったわけではありません。猿に似る、毛深い、亀に似るなど、土地ごとの姿が記録されています。"
+      },
+      "historySummary": "河童は全国の水辺伝承を一つにまとめた名前に近く、近世の妖怪画や近代の図鑑によって現在の分かりやすい姿が広まりました。",
+      "timeline": [
+        {"label": "江戸中期", "summary": "鳥山石燕の妖怪画に河童が描かれ、出版物の中で視覚的な輪郭を持つ。", "sourceIds": ["ndl-sekien-theme"]},
+        {"label": "近代以降の民俗採録", "summary": "九州を中心に、ガラッパ・セコなどの別名、季節移動、相撲、水難など多様な話が記録される。", "sourceIds": ["nichibun-kappa-oita-kumamoto", "nichibun-kappa-seasonal"]}
+      ],
+      "abilities": [
+        {"name": "水へ引きこむ", "description": "子どもや馬を水中へ引きこむという水難型の伝承が各地にある。", "evidenceLevel": "A", "sourceIds": ["nichibun-kappa-oita-kumamoto"]},
+        {"name": "相撲を取る", "description": "九州などでは人に相撲を挑む話が記録され、単なる怪物ではなく人と競う存在として語られる。", "evidenceLevel": "A", "sourceIds": ["nichibun-kappa-seasonal"]},
+        {"name": "山と川を行き来する", "description": "熊本・宮崎などには、季節によって山童と河童が入れ替わるように語る型がある。", "evidenceLevel": "A", "sourceIds": ["nichibun-kappa-seasonal"]}
+      ],
+      "countermeasures": [
+        {"name": "金物を嫌うという伝承", "description": "地域によって金物を嫌う、金物で打つと弱るなどの話がある。全国共通の弱点とは限らない。", "evidenceLevel": "A", "sourceIds": ["nichibun-kappa-oita-kumamoto"]}
+      ],
+      "regionalVariants": [
+        {"region": "熊本・宮崎", "localNames": ["ガラッパ", "セコ"], "summary": "冬は山、暖かい季節は川という季節移動や、山童との連続性が語られる地域がある。", "sourceIds": ["nichibun-kappa-seasonal"]},
+        {"region": "大分・九州北部", "localNames": ["河童", "河太郎系呼称"], "summary": "亀に似た歯や背、猿のような姿など、現代の緑色の標準像とは異なる身体描写が残る。", "sourceIds": ["nichibun-kappa-oita-kumamoto"]}
+      ],
+      "evidenceNote": "河童は地域差が非常に大きいため、『河童は必ずこうする』ではなく、どの地域・資料の話かを併記します。",
+      "sourceIds": ["ndl-sekien-theme", "ndl-sekien-column", "nichibun-kappa-oita-kumamoto", "nichibun-kappa-seasonal"],
+      "article": {
+        "title": "河童―水辺ごとに姿を変える妖怪",
+        "subtitle": "皿と甲羅だけでは分からない、各地の水怪伝承",
+        "body": [
+          "河童というと、頭に皿、背中に甲羅、水かきのある緑色の姿を思い浮かべる人が多いでしょう。しかし民俗資料を読むと、河童は土地ごとにかなり違います。猿に似る、亀に似る、毛が生えている、口がとがるなど、同じ名前でも姿は一つではありません。",
+          "行動もさまざまです。人や馬を川へ引きこむ怖い話がある一方、相撲を好む、腕を返してもらう代わりに人を襲わないと約束する、といった交渉の物語もあります。水辺は暮らしに必要であると同時に危険な場所でした。河童の話は、その両方を覚えておくための物語にもなっていました。",
+          "九州では、河童が冬になると山へ移って山童になるという話もあります。つまり『川だけに住む妖怪』とも限りません。ガラッパ、セコなど呼び名も変わり、川・山・祭り・水神信仰が重なります。",
+          "江戸時代の妖怪画は、ばらばらだった地域の怪異に名前と絵を与え、後の図鑑や児童文化がさらに分かりやすい姿へ整えていきました。河童を見るときは、いまのキャラクター像と、土地ごとの古い記録を分けて読むと、妖怪の歴史がずっと立体的になります。"
+        ],
+        "sourceNote": "図像史はNDL、地域差は日文研の具体的な民俗記録を入口にしています。"
+      }
+    },
+    {
+      "id": "tengu",
+      "aliases": ["天狗", "烏天狗", "柴天狗"],
+      "editorial": {
+        "oneLine": "山の信仰と結びつき、土地ごとに姿も役割も違う山の怪異。",
+        "childDescription": "天狗は山にすむ怪異として全国に知られますが、鼻の高い姿だけではありません。愛媛の石鎚山麓では烏天狗や山の火の話、南予では人と約束して家を守る話も残ります。山をおそれ敬う気持ちと深く結びついた存在です。",
+        "trivia": "天狗は『悪さをする怪物』だけではなく、山を守る、修行者を試す、人と約束するなど、山岳信仰の中で複数の役割を持ちます。"
+      },
+      "historySummary": "天狗の姿は古代中国由来の語から日本の山岳信仰・仏教説話へ入り、近世の絵画で鼻高天狗や烏天狗の姿が広く定着しました。",
+      "timeline": [
+        {"label": "近世以前", "summary": "山の異界・仏法を乱す存在・修験の霊山に関わる存在など、多層的な天狗像が育つ。", "sourceIds": ["ndl-sekien-column"]},
+        {"label": "江戸期の図像", "summary": "鳥山石燕らの出版文化で、天狗が名前と図像を伴う妖怪として広く共有される。", "sourceIds": ["ndl-sekien-theme"]},
+        {"label": "近現代の地域採録", "summary": "石鎚山麓や篠山などで、木の上、火、翼、人との約束など具体的な天狗伝承が記録される。", "sourceIds": ["nichibun-tengu-ishizuchi", "nichibun-tengu-ainan"]}
+      ],
+      "abilities": [
+        {"name": "山中で人を惑わせる", "description": "山で姿を見せたり、人を転ばせたり、異音や火の光で存在を知らせる話が各地にある。", "evidenceLevel": "A", "sourceIds": ["nichibun-tengu-ishizuchi"]},
+        {"name": "翼・飛行", "description": "愛南の伝承では翼を射落とされた天狗が登場し、飛行能力を具体的に語る。", "evidenceLevel": "A", "sourceIds": ["nichibun-tengu-ainan"]},
+        {"name": "約束して家を守る", "description": "篠山の話では、翼を返してもらう代わりに家を盗難から守ると約束する。", "evidenceLevel": "A", "sourceIds": ["nichibun-tengu-ainan"]}
+      ],
+      "countermeasures": [
+        {"name": "山の禁忌を守る", "description": "地域によって不浄を嫌う、山の秩序を乱す者を懲らしめると語られる。ゲームの弱点ではなく山の作法に近い。", "evidenceLevel": "B", "sourceIds": ["nichibun-tengu-ishizuchi"]}
+      ],
+      "regionalVariants": [
+        {"region": "愛媛・石鎚山麓", "localNames": ["天狗", "烏天狗"], "summary": "石鎚山を天狗の巣とし、夜に高木へ来る、枝の間に小さな火が見えるといった話が記録される。", "sourceIds": ["nichibun-tengu-ishizuchi"]},
+        {"region": "愛媛・篠山周辺", "localNames": ["天狗"], "summary": "人に翼を射落とされ、返してもらう代わりに家を守るという、人と契約する型が残る。", "sourceIds": ["nichibun-tengu-ainan"]}
+      ],
+      "evidenceNote": "『鼻が長い山伏姿』は有名ですが、地域の口承には烏天狗、小柄な柴天狗、姿より音や火で語られる天狗もあります。",
+      "sourceIds": ["ndl-sekien-theme", "ndl-sekien-column", "nichibun-tengu-ishizuchi", "nichibun-tengu-ainan"],
+      "article": {
+        "title": "天狗―山の怪物から霊山の住人へ",
+        "subtitle": "鼻の長さだけでは語れない天狗の歴史",
+        "body": [
+          "天狗は、日本の妖怪の中でも長い歴史を持ちます。ただし、最初から『赤い顔で鼻が長く、羽団扇を持つ山伏』だったわけではありません。仏教説話、山岳信仰、修験道、山の怪異が重なりながら、時代ごとに意味と姿を変えてきました。",
+          "愛媛の石鎚山麓には、夜になると高い松へ烏天狗が来る、暗い晩に木の枝で小さな火が見える、といった記録があります。山中で正体の分からない音や光に出会う経験が、天狗という名前で説明されたのでしょう。",
+          "一方、愛南の篠山では、天狗が人に翼を射落とされ、それを返してもらう代わりに家を盗難から守るという話があります。ここでの天狗は、一方的に襲う怪物ではなく、交渉し、約束する相手です。",
+          "江戸時代の妖怪画によって天狗の姿は広く共有されましたが、土地の伝承を読むと、山そのものへの畏れ、修行の場の厳しさ、人が守るべき禁忌が見えてきます。天狗は『山には人間だけのルールでは届かない場所がある』ことを伝える妖怪でもあります。"
+        ],
+        "sourceNote": "図像史と愛媛の具体的な山岳伝承を分けて記述しています。"
+      }
+    },
+    {
+      "id": "oni",
+      "aliases": ["鬼", "酒呑童子", "鬼女・鬼神など多様な型"],
+      "editorial": {
+        "oneLine": "角と虎皮だけではない、災い・異界・敵・神まで重なる大きな妖怪概念。",
+        "childDescription": "鬼は、昔話の赤鬼・青鬼だけを指す言葉ではありません。古い説話や絵巻では、人をさらう異界の者、山の主、退治される敵、時には神に近い力を持つ存在として描かれます。酒呑童子の物語のように、土地と武将の伝説が結びついた例もあります。",
+        "trivia": "『鬼』は一種類の生き物の名前というより、時代ごとに『人ではない恐ろしいもの』をまとめて表す大きな箱のような言葉です。"
+      },
+      "historySummary": "鬼は古代から説話・宗教・芸能に現れ、室町期以降の酒呑童子絵巻や近世の出版文化によって、角を持つ怪物像が視覚的に強く共有されました。",
+      "timeline": [
+        {"label": "古代〜中世", "summary": "説話や宗教世界で、災い・異界の者・人を害する存在など幅広い意味を持つ。", "sourceIds": ["ndl-emaki-ikai"]},
+        {"label": "室町期以降", "summary": "大江山の酒呑童子退治など、武将が鬼を討つ御伽草子・絵巻が広く伝わる。", "sourceIds": ["ndl-emaki-ikai", "nichibun-oni-shuten"]}
+      ],
+      "abilities": [
+        {"name": "人をさらう・食う", "description": "酒呑童子系の物語では、都から人をさらい、大江山の異界に住む強敵として描かれる。", "evidenceLevel": "A", "sourceIds": ["nichibun-oni-shuten"]},
+        {"name": "怪力・異形", "description": "人間の武力では簡単に倒せない存在として語られ、神仏の助けや策略を伴う退治譚が発達した。", "evidenceLevel": "B", "sourceIds": ["ndl-emaki-ikai", "nichibun-oni-shuten"]}
+      ],
+      "countermeasures": [
+        {"name": "神仏の助けと策略", "description": "酒呑童子退治では、武力だけでなく山伏への変装や神から授けられた酒などを使って討つ。", "evidenceLevel": "A", "sourceIds": ["nichibun-oni-shuten"]}
+      ],
+      "regionalVariants": [
+        {"region": "京都・大江山", "localNames": ["酒呑童子", "鬼"], "summary": "源頼光らが山伏姿で大江山へ入り、鬼の首領を退治する物語が代表的。", "sourceIds": ["nichibun-oni-shuten", "ndl-emaki-ikai"]},
+        {"region": "近江・伊吹山系の物語", "localNames": ["伊吹童子", "酒呑童子"], "summary": "酒呑童子の生い立ちを伊吹山と結びつける別系統の物語もあり、一つの固定した伝記ではない。", "sourceIds": ["ndl-emaki-ikai"]}
+      ],
+      "evidenceNote": "鬼は範囲が広すぎるため、ここでは『全国の鬼を一つの生態で説明する』ことを避け、代表的な物語系統を示します。",
+      "sourceIds": ["ndl-emaki-ikai", "nichibun-oni-shuten"],
+      "article": {
+        "title": "鬼―一種類ではない『異界のもの』",
+        "subtitle": "赤鬼・青鬼の前にあった多様な鬼の姿",
+        "body": [
+          "鬼は、河童や一反木綿のように一つの姿や行動で説明しにくい存在です。古い日本語では、目に見えない災い、人間社会の外にいる恐ろしい者、死者や怨霊に近いものまで『鬼』と呼ばれることがありました。",
+          "有名な酒呑童子の物語では、鬼は大江山に館を構え、人をさらう強敵です。源頼光らは力だけで正面から戦うのではなく、山伏に変装し、神の助けを受け、酒を使って鬼を弱らせます。退治譚そのものが、異界へ入り、知恵と加護で戻ってくる冒険物語になっています。",
+          "さらに酒呑童子には、大江山だけでなく伊吹山などと結びつく系統もあります。どこで生まれ、なぜ鬼になったかは一つではありません。昔話や絵巻が語り継がれるたび、土地や時代に合わせて物語が変化してきました。",
+          "いまの赤鬼・青鬼、角、虎皮の腰巻という姿は、とても分かりやすい記号です。しかし鬼を深く読むなら、『昔の人が何を人間社会の外側に置いたのか』を見る必要があります。鬼は日本の怪異観そのものを考える入口になる存在です。"
+        ],
+        "sourceNote": "酒呑童子系の絵巻・地域説話を代表例として扱い、鬼全体への過度な一般化を避けています。"
+      }
+    },
+    {
+      "id": "yuki_onna",
+      "aliases": ["雪女", "雪女郎", "雪御嬢"],
+      "editorial": {
+        "oneLine": "吹雪や雪夜に現れる女性の怪異で、土地ごとに姿も危険度も違う。",
+        "childDescription": "雪女は雪の夜に現れる女性の怪異です。新潟では白い単衣の大きな女が消えたという古い話、東北では雪女郎、熊本では雪御嬢という呼び名もあります。人を凍らせる有名な物語だけでなく、姿を見せて消えるだけの土地もあります。",
+        "trivia": "『雪女は息で人を凍らせる』という印象は有名ですが、民俗記録には、ただ現れて消える、道で人を惑わす、子を抱いてほしいと頼むなど別の型もあります。"
+      },
+      "historySummary": "雪女は雪国を中心に多様な女性怪異として語られ、近代の採録や文学作品を通して『白い美しい女性』という標準像が強まりました。",
+      "timeline": [
+        {"label": "宗祇に結びつく説話", "summary": "越後で、透き通るように白い女性を見たという話が後世の資料に収録される。", "sourceIds": ["nichibun-yukionna-sogi"]},
+        {"label": "1920年代以降の民俗採録", "summary": "東北・中部などで雪女、雪女郎、雪の精霊など複数の呼称と話型が記録される。", "sourceIds": ["nichibun-yukionna-national"]}
+      ],
+      "abilities": [
+        {"name": "雪の中に現れて消える", "description": "越後の記録では、大雪の年に現れる白い女性を見届けようとすると消えたとされる。", "evidenceLevel": "A", "sourceIds": ["nichibun-yukionna-sogi"]},
+        {"name": "雪道で人を惑わせる", "description": "地域によって雪道で呼びかける、谷へ落とす、子を抱いてほしいと頼むなど異なる行動が語られる。", "evidenceLevel": "A", "sourceIds": ["nichibun-yukionna-national"]}
+      ],
+      "countermeasures": [
+        {"name": "一つの全国共通対処はない", "description": "雪女の話型自体が地域で大きく違うため、特定の弱点を全国共通の設定として扱わない。", "evidenceLevel": "B", "sourceIds": ["nichibun-yukionna-national"]}
+      ],
+      "regionalVariants": [
+        {"region": "新潟・越後", "localNames": ["雪女"], "summary": "大雪の年、白い単衣を着た大きな女性が現れ、見ようとすると消えるという説話が伝えられる。", "sourceIds": ["nichibun-yukionna-sogi"]},
+        {"region": "東北・中部", "localNames": ["雪女", "雪女郎", "雪の精霊"], "summary": "姿、出る時期、人への働きかけが違い、単一の物語ではまとめられない。", "sourceIds": ["nichibun-yukionna-national"]}
+      ],
+      "evidenceNote": "文学作品で有名になった筋と、各地の民俗記録を混同しないよう、地域名と記録年代を優先しています。",
+      "sourceIds": ["nichibun-yukionna-sogi", "nichibun-yukionna-national"],
+      "article": {
+        "title": "雪女―雪国ごとに違う白い怪異",
+        "subtitle": "一つの悲恋物語ではない雪女の地域差",
+        "body": [
+          "雪女には、現代では『美しい白い女性が吹雪の夜に現れ、人を凍らせる』という強いイメージがあります。しかし各地の記録を比べると、姿も行動もかなり違います。",
+          "新潟には、宗祇が越後で背の高い白い女性を見たという話が後世の資料に残ります。近づいてよく見ようとすると消え、土地の人から大雪の年に出る雪女だと聞いた、という筋です。ここでは誰かを襲うより、『雪の中に突然現れる異界の女性』として語られています。",
+          "別の地域では雪女郎、雪御嬢などの名があり、雪道で人を惑わせる、谷へ落とす、子どもを抱いてほしいと頼むなど話が変わります。厳しい冬、視界を失う吹雪、雪崩や凍死の危険が、女性の姿をした怪異として語られたと考えると地域差が見えやすくなります。",
+          "雪女を読むときは、有名な一つの物語を『本当の設定』にしないことが大切です。雪の多い土地ごとに生まれた複数の話が、文学や映画、漫画を通して一つの美しい妖怪像へまとまっていった、と考える方が歴史に近いのです。"
+        ],
+        "sourceNote": "越後の具体記録と全国の呼称検索を併用し、文学上の標準像と地域伝承を分けています。"
+      }
+    },
+    {
+      "id": "zashiki_warashi",
+      "aliases": ["座敷童子", "ザシキワラシ", "クラワラシ", "ザシキボッコ"],
+      "editorial": {
+        "oneLine": "東北の旧家で語られた、家の運と結びつく子どもの姿の不思議な存在。",
+        "childDescription": "座敷童子は、岩手を中心に東北の古い家で語られてきた子どものような存在です。いる家は栄え、去ると家運が落ちるという話が有名ですが、足音だけする、布団に乗る、いたずらするなど姿を見せない例もあります。",
+        "trivia": "座敷童子は『幸運を運ぶかわいい妖怪』だけではありません。薄気味悪い、眠れなくする、見た人に不吉なことが起こるなど、土地や家によって評価が違います。"
+      },
+      "historySummary": "座敷童子は岩手県を中心とする家の怪異で、佐々木喜善らの採録を通して全国に知られるようになりました。",
+      "timeline": [
+        {"label": "1924年", "summary": "佐々木喜善『ザシキワラシの話』に岩手県岩泉町などの具体例が記録される。", "sourceIds": ["nichibun-zashiki-sasaki"]},
+        {"label": "20世紀の各地採録", "summary": "岩手を中心に青森・秋田・宮城にも異名や家運との関係が記録される。", "sourceIds": ["nichibun-zashiki-tohoku"]}
+      ],
+      "abilities": [
+        {"name": "家の中で音や気配を出す", "description": "奥座敷で騒ぐ、布団を押す、足音を立てるなど、姿より気配で語られる例も多い。", "evidenceLevel": "A", "sourceIds": ["nichibun-zashiki-tohoku"]},
+        {"name": "家運と結びつく", "description": "いる家は栄え、去ると衰えるという話が広く記録されるが、逆に災いの前兆とする地域例もある。", "evidenceLevel": "A", "sourceIds": ["nichibun-zashiki-tohoku"]}
+      ],
+      "countermeasures": [
+        {"name": "追い払わない", "description": "怒りつけて出て行くと家が衰えたという話があり、家の住人として丁重に扱う型がある。", "evidenceLevel": "A", "sourceIds": ["nichibun-zashiki-tohoku"]}
+      ],
+      "regionalVariants": [
+        {"region": "岩手県岩泉町", "localNames": ["ザシキワラシ"], "summary": "新築時に童形の人形を床下へ埋めるという大工に関する説明型まで記録されている。", "sourceIds": ["nichibun-zashiki-sasaki"]},
+        {"region": "東北各地", "localNames": ["クラワラシ", "ザシキボッコ", "クラボッコ"], "summary": "旧家の繁栄、不思議な足音、子どもの姿など共通点を持ちながら細部は異なる。", "sourceIds": ["nichibun-zashiki-tohoku"]}
+      ],
+      "evidenceNote": "観光的な『会えれば幸運』だけに寄せず、家の怪異としての不気味さと多様な評価も残します。",
+      "sourceIds": ["nichibun-zashiki-sasaki", "nichibun-zashiki-tohoku"],
+      "article": {
+        "title": "座敷童子―家の運を背負う小さな住人",
+        "subtitle": "岩手から広がった『家にいる子ども』の怪異",
+        "body": [
+          "座敷童子は、岩手県を中心に東北の旧家で語られてきました。子どもの姿を見る話もありますが、夜中の足音、座敷で遊ぶ音、布団の上から押される感覚など、姿を見ないまま『いる』と分かる話も多くあります。",
+          "佐々木喜善が1924年に記した例には、家を建てるとき大工が童形の人形を床下へ埋め、それが座敷童子になるという説明まであります。座敷童子は、単なる外から来る幽霊ではなく、家の建築や家系そのものに結びつく存在としても考えられていました。",
+          "『座敷童子がいる家は栄える』という話は有名です。ただし、どの土地でも完全な福の神だったわけではありません。薄気味悪いと感じられたり、去ることが衰退の前触れになったり、見ること自体を不吉とする例もあります。",
+          "現代ではかわいらしい子どもの妖怪として描かれることが多いですが、元の伝承には、家の繁栄、古い家への畏れ、夜の物音、家族以外の何者かが同居している感覚が重なっています。『幸運キャラクター』だけにしない方が、座敷童子の面白さがよく見えます。"
+        ],
+        "sourceNote": "佐々木喜善の具体記録と東北の地域比較を中心に再構成しています。"
+      }
+    },
+    {
+      "id": "nurikabe",
+      "aliases": ["塗り壁", "ヌリカベ", "ヌリボウに似る型"],
+      "editorial": {
+        "oneLine": "夜道の先が見えない壁のようになり、進めなくなる福岡の道の怪異。",
+        "childDescription": "塗壁は、大きな壁の体を持つ妖怪として有名ですが、1938年に柳田國男が紹介した福岡県遠賀郡の記録では、夜道を歩くと急に前が壁のようになって進めなくなる怪異です。下の方を棒で払うと消えるとも記されています。",
+        "trivia": "古い記録には、目や手足のある『壁の生き物』とは書かれていません。今の姿は、見えない道の怪異を分かりやすく絵にした後世のイメージです。"
+      },
+      "historySummary": "塗壁は少なくとも1938年の柳田國男『妖怪名彙（四）』で福岡県遠賀郡の夜道の怪異として確認でき、現代の壁型キャラクター像とは区別が必要です。",
+      "timeline": [
+        {"label": "1938年", "summary": "柳田國男が『妖怪名彙（四）』で筑前遠賀郡の塗り壁を紹介。", "sourceIds": ["nichibun-nurikabe-yanagita"]},
+        {"label": "戦後の妖怪文化", "summary": "見えない障害の怪異が、壁の形をしたキャラクターとして視覚化され広く知られるようになる。", "sourceIds": ["nichibun-nurikabe-yanagita"]}
+      ],
+      "abilities": [
+        {"name": "道をふさぐ", "description": "夜道で急に進行方向が壁になったように感じ、どこへも行けなくなる。", "evidenceLevel": "A", "sourceIds": ["nichibun-nurikabe-yanagita"]}
+      ],
+      "countermeasures": [
+        {"name": "下を棒で払う", "description": "柳田の記録では、上を叩いてもだめだが、下の方を棒で払うと消えるとされる。", "evidenceLevel": "A", "sourceIds": ["nichibun-nurikabe-yanagita"]}
+      ],
+      "regionalVariants": [
+        {"region": "福岡県遠賀郡", "localNames": ["塗り壁"], "summary": "夜道で前方が壁のようになって進めない怪異として記録される。", "sourceIds": ["nichibun-nurikabe-yanagita"]},
+        {"region": "長崎県壱岐島との比較", "localNames": ["ヌリボウ"], "summary": "柳田は壱岐島のヌリボウを似たものとして挙げており、道をふさぐ怪異の地域比較ができる。", "sourceIds": ["nichibun-nurikabe-yanagita"]}
+      ],
+      "evidenceNote": "原記録で確認できるのは『道が壁のようになる現象』です。現在のキャラクターデザインは伝承本文と分けて表示します。",
+      "sourceIds": ["nichibun-nurikabe-yanagita"],
+      "article": {
+        "title": "塗壁―壁の妖怪ではなく『進めない夜道』",
+        "subtitle": "1938年の記録から現在の姿を見直す",
+        "body": [
+          "塗壁は、いまでは大きな壁に目や手足がついた妖怪として有名です。しかし、柳田國男が1938年の『妖怪名彙（四）』で紹介した福岡県遠賀郡の話を読むと、最初に記録されているのは姿ではなく現象です。",
+          "夜道を歩いていると、急に行く先が壁になったように感じ、どこへも進めなくなる。それが『塗り壁』です。そして面白いのは対処法まで書かれていること。上を叩いてもだめで、棒で下の方を払うと消えるとされています。",
+          "この話なら、霧や暗闇、方向感覚の喪失、山道や海辺の不安など、夜道で起きる『どうしても前へ進めない』感覚が怪異になったと読むことができます。ただし、原資料がそう説明しているわけではないので、これは現代からの解釈として分けて考える必要があります。",
+          "塗壁は、妖怪の姿が後から強く定着した好例です。古い記録→後世の絵→現代のキャラクターという順に見ると、妖怪が『作り変えられながら伝わる文化』だということがよく分かります。"
+        ],
+        "sourceNote": "1938年の柳田國男による具体的な掲載記録を基準にしています。"
+      }
+    },
+    {
+      "id": "ittan_momen",
+      "aliases": ["一反木綿", "イッタンモメン"],
+      "editorial": {
+        "oneLine": "鹿児島で記録された、夜道をひらひら飛んで人を襲う白い反物の怪異。",
+        "childDescription": "一反木綿は、鹿児島県肝属郡で記録された夜道の怪異です。一反ほどの木綿のような白いものがひらひら飛び、人を襲うとされました。全国どこでも昔から同じ名で語られた妖怪ではなく、南九州の具体的な土地と結びついています。",
+        "trivia": "『一反』は布の長さを表す昔の単位に関係する言葉です。名前そのものが、昔の暮らしで身近だった反物の感覚を残しています。"
+      },
+      "historySummary": "一反木綿は柳田國男『妖怪名彙（四）』の1938年記録で鹿児島県肝属郡の怪異として確認でき、地域性のはっきりした妖怪です。",
+      "timeline": [
+        {"label": "1938年", "summary": "鹿児島県肝属郡で、一反木綿の形をしたものが夜ひらひら現れて人を襲うと記録される。", "sourceIds": ["nichibun-ittan-yanagita"]},
+        {"label": "戦後〜現代", "summary": "児童図鑑や漫画などを通じて全国的に知られる妖怪へなる。", "sourceIds": ["nichibun-ittan-yanagita"]}
+      ],
+      "abilities": [
+        {"name": "夜空をひらひら飛ぶ", "description": "白い反物のような形で夜間に現れると記録される。", "evidenceLevel": "A", "sourceIds": ["nichibun-ittan-yanagita"]},
+        {"name": "人を襲う", "description": "原記録は人を襲うとするが、具体的な攻撃方法を細かく固定してはいない。", "evidenceLevel": "A", "sourceIds": ["nichibun-ittan-yanagita"]}
+      ],
+      "countermeasures": [],
+      "regionalVariants": [
+        {"region": "鹿児島県肝属郡", "localNames": ["一反木綿"], "summary": "柳田國男の1938年の記録で確認できる中心地域。夜間に反物状のものが人を襲う。", "sourceIds": ["nichibun-ittan-yanagita"]},
+        {"region": "鹿児島県高山地方の後続記録", "localNames": ["一反木綿"], "summary": "後の資料でも白い反物のようなものが目をくらませ人を襲う型が採録される。", "sourceIds": ["nichibun-ittan-yanagita"]}
+      ],
+      "evidenceNote": "伝承で確認できない『首に巻きつく』『刃物で切ると血が出る』などの有名設定は、出典を確認せず本文へ追加しません。",
+      "sourceIds": ["nichibun-ittan-yanagita"],
+      "article": {
+        "title": "一反木綿―南九州の夜空を飛ぶ反物",
+        "subtitle": "全国妖怪になる前の、鹿児島の具体的な記録",
+        "body": [
+          "一反木綿は、白い長い布が空を飛ぶ姿でよく知られています。この妖怪の強みは、地域がかなりはっきりしていることです。柳田國男が1938年にまとめた『妖怪名彙（四）』では、鹿児島県肝属郡の怪異として記録されています。",
+          "記述はとても短く、一反木綿の形をしたものが夜間にひらひら現れ、人を襲うという内容です。現在の図鑑では、首に巻きつく、切ると血が出るなど細かな設定が加えられることがありますが、少なくともこの記録だけからそこまでは言えません。",
+          "一反という単位や木綿の反物は、昔の生活ではもっと身近なものでした。日常の布が、夜になると長く白い正体不明のものとして空を動く。その身近さと不気味さが、この妖怪の面白さです。",
+          "一反木綿は、地域に根ざした短い怪異記録が、漫画や児童図鑑を通じて全国区の妖怪へ成長した例として読むことができます。どこで最初に記録されたかを知ると、ただの『空飛ぶ布』よりずっと具体的な土地の記憶になります。"
+        ],
+        "sourceNote": "1938年の鹿児島県肝属郡の記録を核に、後世の設定を混ぜすぎない構成です。"
+      }
+    },
+    {
+      "id": "ushi_oni",
+      "aliases": ["牛鬼", "ウショウニ", "祭礼の牛鬼"],
+      "editorial": {
+        "oneLine": "海や山の怪物の伝承と、南予の祭礼を練り歩く巨大な牛鬼が重なる存在。",
+        "childDescription": "牛鬼は、牛の頭を持つ恐ろしい怪物として各地に語られますが、愛媛県南予では祭りを練り歩く巨大な牛鬼でもあります。宇和島周辺には牛鬼塚などの伝承があり、愛南では若者が中に入る祭礼の牛鬼が記録されています。",
+        "trivia": "愛媛の牛鬼は『昔話の怪物』と『今も祭りに出る造り物』を分けて見るのが大切です。同じ名前でも役割が違います。"
+      },
+      "historySummary": "牛鬼は各地の怪物伝承と愛媛南予の祭礼文化が交差する存在で、宇和島・吉田・愛南などに具体的な記録があります。",
+      "timeline": [
+        {"label": "地域伝承", "summary": "宇和島周辺で牛鬼退治、牛鬼塚、海の怪など複数の話が語られる。", "sourceIds": ["nichibun-ushi-uwajima"]},
+        {"label": "近現代の祭礼記録", "summary": "南予の祭りで大型の牛鬼が町を練り歩く様子が民俗資料に記録される。", "sourceIds": ["nichibun-ushi-festival"]}
+      ],
+      "abilities": [
+        {"name": "人を脅かす怪物", "description": "宇和島周辺には退治された牛鬼や牛鬼塚にまつわる話があり、強大な怪物として語られる。", "evidenceLevel": "A", "sourceIds": ["nichibun-ushi-uwajima"]},
+        {"name": "祭りで厄を払う象徴になる", "description": "南予では巨大な牛鬼の造り物が町を練り歩き、祭礼を特徴づける。", "evidenceLevel": "A", "sourceIds": ["nichibun-ushi-festival"]}
+      ],
+      "countermeasures": [
+        {"name": "退治・鎮めの物語", "description": "大国主命などが牛鬼を退治したとする伝承があるが、祭礼の牛鬼そのものを『退治対象』とみなすのは誤り。", "evidenceLevel": "A", "sourceIds": ["nichibun-ushi-uwajima"]}
+      ],
+      "regionalVariants": [
+        {"region": "愛媛・宇和島市吉田町", "localNames": ["牛鬼", "ウショウニ"], "summary": "牛鬼塚や大国主命の退治譚など、土地に結びつく怪物伝承が記録される。", "sourceIds": ["nichibun-ushi-uwajima"]},
+        {"region": "愛媛・愛南町など南予", "localNames": ["牛鬼", "ウショウニ"], "summary": "若者が中に入り町を練る大型の祭礼造形として現れ、地域文化の象徴になっている。", "sourceIds": ["nichibun-ushi-festival"]}
+      ],
+      "evidenceNote": "怪物としての牛鬼と祭礼の牛鬼を同じ『生態』として説明しないことを最優先にしています。",
+      "sourceIds": ["nichibun-ushi-uwajima", "nichibun-ushi-festival"],
+      "article": {
+        "title": "牛鬼―怪物と祭りが同じ名前で生きる",
+        "subtitle": "南予で見る、伝承が祭礼文化へ重なる姿",
+        "body": [
+          "牛鬼は、牛の頭を持つ恐ろしい怪物として説明されることが多い妖怪です。しかし愛媛県南予では、牛鬼という名前は今も祭りの中で生きています。巨大な頭と長い首を持つ造り物を大勢で担ぎ、町を練り歩く光景は、この地域を代表する祭礼文化の一つです。",
+          "宇和島市吉田町などには、牛鬼塚や牛鬼退治に結びつく話も記録されています。つまり同じ『牛鬼』という言葉の中に、倒される怪物、海や土地の怪異、祭りに登場する造形が重なっています。",
+          "ここで大切なのは、祭りの牛鬼をそのまま『昔の怪物の実物模型』と決めつけないことです。祭礼は時代の中で形を変え、地域社会の役割や厄払い、見せ場として発展してきました。怪物伝承との関係も一つの説明だけでは足りません。",
+          "牛鬼を地域から読むと、妖怪が本の中だけの存在ではなく、祭り、町並み、担ぎ手、地域の記憶の中に姿を変えて残ることが分かります。愛媛版の伝承図鑑ともつながる、全国版の中でも特に『土地へ行って確かめられる』妖怪です。"
+        ],
+        "sourceNote": "宇和島周辺の怪物伝承と南予祭礼の記録を分離して整理しています。"
+      }
+    },
+    {
+      "id": "umibozu",
+      "aliases": ["海坊主", "海上の怪異"],
+      "editorial": {
+        "oneLine": "海で船を止めたり杓子を求めたりする一方、姿を見れば長寿という土地もある海の怪異。",
+        "childDescription": "海坊主は海に現れる怪異ですが、巨大な黒い坊主頭だけが昔から共通の姿ではありません。宇和島では船が進まなくなる、杓子を求め海水を入れるという話があり、松山沖では赤銅色で手足と尾のある姿を見た人は長寿すると語る記録もあります。",
+        "trivia": "海坊主は『見たら船が沈む』だけではありません。愛媛には、見た人が長生きするという正反対の評価の話もあります。"
+      },
+      "historySummary": "海坊主は漁師の海上経験と結びつく怪異の総称的な面があり、地域によって姿・出現条件・吉凶が大きく違います。",
+      "timeline": [
+        {"label": "近代の漁撈民俗記録", "summary": "明石では凪の日に船へ来る海坊主と、底を抜いた杓子で対処する話が記録される。", "sourceIds": ["nichibun-umibozu-akashi"]},
+        {"label": "愛媛県史の採録", "summary": "宇和島では船を止める・杓子を求める怪異、松山沖では具体的な身体を持つ海坊主が記録される。", "sourceIds": ["nichibun-umibozu-uwajima"]}
+      ],
+      "abilities": [
+        {"name": "船を進めなくする", "description": "宇和島の記録では、艪をこいでも前へ進まないとき海坊主がついているとされる。", "evidenceLevel": "A", "sourceIds": ["nichibun-umibozu-uwajima"]},
+        {"name": "海水を船へ入れる", "description": "杓子を貸せと求め、普通の杓子を渡すと海水を汲み入れて沈める型がある。", "evidenceLevel": "A", "sourceIds": ["nichibun-umibozu-uwajima", "nichibun-umibozu-akashi"]}
+      ],
+      "countermeasures": [
+        {"name": "底を抜いた杓子を渡す", "description": "明石や宇和島などに、海水を汲めないよう底を抜いた杓子を渡す対処型がある。", "evidenceLevel": "A", "sourceIds": ["nichibun-umibozu-akashi", "nichibun-umibozu-uwajima"]}
+      ],
+      "regionalVariants": [
+        {"region": "愛媛・宇和島", "localNames": ["海坊主"], "summary": "船が進まなくなる、火の玉や女の姿になる、杓子を求めるなど複数の型が県史に収録される。", "sourceIds": ["nichibun-umibozu-uwajima"]},
+        {"region": "兵庫・明石", "localNames": ["海坊主"], "summary": "凪の日に船へ来るとされ、底を抜いた杓子を海へ流す対処が記録される。", "sourceIds": ["nichibun-umibozu-akashi"]}
+      ],
+      "evidenceNote": "『巨大な黒い頭』という現代の標準像に寄せず、漁民が語った具体的な現象と対処を優先します。",
+      "sourceIds": ["nichibun-umibozu-uwajima", "nichibun-umibozu-akashi"],
+      "article": {
+        "title": "海坊主―海の怖さを一つの姿にしない",
+        "subtitle": "船を止める怪異から長寿のしるしまで",
+        "body": [
+          "海坊主は、海から巨大な黒い頭が現れて船を沈める妖怪として有名です。しかし漁師の伝承を読むと、その姿は一つではありません。そもそも姿を見ず、船が急に進まなくなったことで海坊主の存在に気づく話もあります。",
+          "宇和島の記録では、海坊主が杓子を貸せと求め、渡すと海水を船に汲み入れて沈めるとされます。そのため底を抜いた杓子を渡すという知恵が語られます。兵庫県明石にも似た対処があり、海上の危険と漁師の機転がセットになった話です。",
+          "一方、愛媛の松山沖では、赤銅色の坊主頭で手足と尾がある海坊主を見たという記録があり、しかも見た人は長寿するとされます。恐ろしい凶兆どころか、珍しいものを見た吉兆に近い評価です。",
+          "海は天候、波、潮、視界が急に変わる場所です。海坊主という名前の下には、船が動かない、何かが乗る、火が飛ぶ、奇妙な生き物を見るなど、海で経験する説明しにくい出来事が集まっています。地域ごとに読むほど、海坊主は一匹の巨大怪獣ではなくなります。"
+        ],
+        "sourceNote": "宇和島・明石の漁撈伝承を比較し、地域による吉凶の違いを示しています。"
+      }
+    },
+    {
+      "id": "nekomata",
+      "aliases": ["猫又", "猫また", "年を経た猫の怪異"],
+      "editorial": {
+        "oneLine": "山の怪物とも、年を経た飼い猫の変化とも語られた古い猫の怪異。",
+        "childDescription": "猫又は、古い『徒然草』にも登場する猫の怪異です。山にいて人を食う猫又の噂と、年を取った飼い猫が猫又になるという噂が並んで語られます。江戸の妖怪画では尾が二つの猫又も描かれ、現在の姿へつながっていきました。",
+        "trivia": "『徒然草』第89段では、猫又だと思って大騒ぎした相手が実は飼い犬だった、という落ちまであります。妖怪の噂に人がびくびくする様子自体が描かれています。"
+      },
+      "historySummary": "猫又は中世文学にすでに名前が見え、山の怪物と年老いた飼い猫の変化という二つのイメージが早くから並存しました。近世妖怪画で二股の尾が視覚的な記号になります。",
+      "timeline": [
+        {"label": "中世『徒然草』", "summary": "奥山の猫又が人を食うという噂と、飼い猫が年を経て猫又になるという噂が第89段に登場する。", "sourceIds": ["aozora-tsurezuregusa-89"]},
+        {"label": "江戸中期", "summary": "鳥山石燕の妖怪画に猫またが描かれ、視覚的な妖怪像が広く共有される。", "sourceIds": ["ndl-sekien-theme"]},
+        {"label": "近代の昔話採録", "summary": "石川県には人を食べて老婆に化ける猫又の昔話が記録される。", "sourceIds": ["nichibun-nekomata-ishikawa"]}
+      ],
+      "abilities": [
+        {"name": "人を襲う", "description": "中世には山で人を食うと噂され、近代の昔話にも人を害する猫又が現れる。", "evidenceLevel": "A", "sourceIds": ["aozora-tsurezuregusa-89", "nichibun-nekomata-ishikawa"]},
+        {"name": "人に化ける", "description": "石川県の昔話では、老婆を食い殺してその老婆に化けていた猫又が語られる。", "evidenceLevel": "A", "sourceIds": ["nichibun-nekomata-ishikawa"]}
+      ],
+      "countermeasures": [
+        {"name": "噂を事実と決めつけない", "description": "『徒然草』では猫又と思ったものが飼い犬だったという落ちがあり、怪異の噂と人の恐怖を風刺する面もある。", "evidenceLevel": "A", "sourceIds": ["aozora-tsurezuregusa-89"]}
+      ],
+      "regionalVariants": [
+        {"region": "中世京都の説話世界", "localNames": ["猫また"], "summary": "山の人食い怪物という噂と、年老いた飼い猫が変化するという噂が同時に語られる。", "sourceIds": ["aozora-tsurezuregusa-89"]},
+        {"region": "石川県白山市周辺", "localNames": ["猫又"], "summary": "人を食べ、老婆に化ける昔話が1936年の採録資料に残る。", "sourceIds": ["nichibun-nekomata-ishikawa"]}
+      ],
+      "evidenceNote": "『尾が二本なら必ず猫又』という生物分類ではなく、文学・昔話・図像が作った複数の猫又像として説明します。",
+      "sourceIds": ["aozora-tsurezuregusa-89", "ndl-sekien-theme", "nichibun-nekomata-ishikawa"],
+      "article": {
+        "title": "猫又―山の怪物と老猫の変化が出会う",
+        "subtitle": "『徒然草』から妖怪画まで続く猫の怪異",
+        "body": [
+          "猫又はかなり古くから名前が確認できる妖怪です。『徒然草』第89段には、奥山には人を食う猫又がいるという噂と、この辺でも飼い猫が年を取ると猫又になって人を取るという噂が続けて書かれています。",
+          "ところが物語の主人公は、その噂を気にしすぎます。夜道で何かに飛びつかれ、『猫又だ』と大騒ぎしますが、正体は飼い犬でした。つまり『徒然草』は猫又そのものだけでなく、怖い噂を聞いた人間が何でも妖怪に見えてしまう姿も描いています。",
+          "江戸時代の妖怪画では、猫又は二つに分かれた尾など、見ればすぐ分かる姿で描かれるようになります。一方、近代に採録された石川県の昔話では、人を食べて老婆に化ける恐ろしい猫又が語られました。",
+          "猫は人の家のすぐ近くにいる動物だからこそ、『長く生きたら人ではない力を持つのではないか』『夜に何をしているのか分からない』という想像が生まれやすかったのでしょう。猫又は、身近な動物が少しずつ異界へ近づく妖怪です。"
+        ],
+        "sourceNote": "中世文学、江戸図像、近代昔話の3層を分けて追える構成です。"
+      }
+    }
+  ]
+}
