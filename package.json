@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "validate:data": "node scripts/run_data_integrity_compact.mjs && node scripts/validate_ehime_11_traditions.mjs && node scripts/validate_ehime_research_v2.mjs && node scripts/validate_ehime_ui_contract.mjs && node scripts/validate_ehime_literary_editing_v1.mjs && node scripts/validate_yokai_research_pilot.mjs && node scripts/validate_yokai_research_expansions.mjs && node scripts/validate_yokai_literary_editing_v1.mjs",
-    "validate:research": "node scripts/validate_ehime_research_v2.mjs && node scripts/validate_ehime_ui_contract.mjs && node scripts/validate_ehime_literary_editing_v1.mjs && node scripts/validate_yokai_research_pilot.mjs && node scripts/validate_yokai_research_expansions.mjs && node scripts/validate_yokai_literary_editing_v1.mjs",
+    "validate:data": "node scripts/run_data_integrity_compact.mjs && node scripts/validate_ehime_11_traditions.mjs && node scripts/validate_ehime_research_v2.mjs && node scripts/validate_ehime_ui_contract.mjs && node scripts/validate_ehime_literary_editing_v1.mjs && node scripts/validate_yokai_research_pilot.mjs && node scripts/validate_yokai_research_expansions.mjs && node scripts/validate_yokai_literary_editing_v1.mjs && node scripts/validate_yokai_literary_phase2_audit.mjs",
+    "validate:research": "node scripts/validate_ehime_research_v2.mjs && node scripts/validate_ehime_ui_contract.mjs && node scripts/validate_ehime_literary_editing_v1.mjs && node scripts/validate_yokai_research_pilot.mjs && node scripts/validate_yokai_research_expansions.mjs && node scripts/validate_yokai_literary_editing_v1.mjs && node scripts/validate_yokai_literary_phase2_audit.mjs",
     "test:e2e:ehime": "playwright test tests/e2e/ehime-research.spec.mjs",
     "test:e2e:national": "playwright test tests/e2e/yokai-literary.spec.mjs",
     "test:e2e": "playwright test tests/e2e/ehime-research.spec.mjs tests/e2e/yokai-literary.spec.mjs"
