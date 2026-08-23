@@ -28,6 +28,7 @@ jobs:
           node --check scripts/run_data_integrity_compact.mjs
           node --check scripts/validate_ehime_research_v2.mjs
           node --check scripts/validate_ehime_ui_contract.mjs
+          node --check scripts/validate_ehime_literary_editing_v1.mjs
           node --check scripts/validate_yokai_research_pilot.mjs
           node --check scripts/validate_yokai_research_expansions.mjs
           node --check playwright.config.mjs
