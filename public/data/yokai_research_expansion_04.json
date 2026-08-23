@@ -3,6 +3,107 @@
   "updatedAt": "2026-08-23",
   "batch": 4,
   "glossary": {},
-  "sources": [],
-  "items": []
+  "sources": [
+    {"id":"ndl-koto-furunushi","title":"本の万華鏡 第24回―箏の妖怪『琴古主』","provider":"国立国会図書館","year":"鳥山石燕『百鬼徒然袋』を紹介","region":"江戸出版文化","recordType":"機関解説・歴史図像紹介","sourceRole":"evidence","sourceType":"institutional_exhibit","url":"https://www.ndl.go.jp/kaleido/entry/24/2.html"},
+    {"id":"abura-amakusa-2180763","title":"柳田國男『妖怪名彙（三）』―アブラスマシ","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1938年","region":"熊本県天草市","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2180763"},
+    {"id":"sunekosuri-okayama-2180752","title":"柳田國男『妖怪名彙（三）』―スネコスリ","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1938年","region":"岡山県","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2180752"},
+    {"id":"sunakake-nara-2180739","title":"柳田國男『妖怪名彙』―スナカケババ","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1938年","region":"奈良県","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2180739"},
+    {"id":"konaki-tokushima-2180717","title":"柳田國男『妖怪名彙』―児啼爺・ゴギや啼き","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1938年","region":"徳島県","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2180717"}
+  ],
+  "items": [
+    {
+      "id":"shiro_uneri","aliases":["白容裔","白うねり","しろうねり"],
+      "editorial":{"oneLine":"古い布が妖怪になる姿で知られるが、今回の公的資料では個別図像本文まで十分に確認できていない。","childDescription":"白うねりは、古い布が長くうねる妖怪として知られます。NDLの『付喪神絵巻』からは、古道具が妖怪になる物語文化そのものは確認できます。ただし今回の確認範囲では、白うねり個別の公的な本文ページを十分確保できなかったため、細かな行動は研究欄へ入れません。","trivia":"『付喪神の仲間だから、この妖怪も必ず同じ性格』とは限りません。個別資料と背景資料は分けて扱います。"},
+      "historySummary":"古道具が妖怪になる文化的背景は確認できますが、白うねり個別の直接資料が不足しているため、固定設定を増やしません。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"古布巾が化けたという有名な石燕解釈はありますが、今回の採用ソースでは個別ページを直接確認できていないためclaim化を保留します。",
+      "sourceIds":["ndl-tsukumogami-theme"],
+      "article":{"title":"白うねり―付喪神の背景と個別妖怪を分ける","subtitle":"古い布の定番像を、未確認のまま膨らませない","body":["白うねりは、長い布が蛇や龍のようにうねる姿で知られる妖怪です。","国立国会図書館の『付喪神絵巻』は、古い道具が妖怪へ変化する物語文化を知るための重要な資料です。","しかし、付喪神一般の資料がそのまま白うねり個別の姿・行動・弱点を証明するわけではありません。今回の公的な確認範囲では個別本文を十分確保できませんでした。","そのため、細かな能力や地域差は空欄のままにします。背景は分かるが個別の証拠はまだ足りない、という状態をそのまま表示します。"],"sourceNote":"NDL『付喪神絵巻』は背景資料として使い、白うねり個別の未確認事項はinsufficientとしています。"}
+    },
+    {
+      "id":"fumikuruma_yohi","aliases":["文車妖妃","ふぐるまようひ"],
+      "editorial":{"oneLine":"古い手紙や文書の妖怪として知られるが、付喪神一般の資料だけで恋文の情念まで断定しない。","childDescription":"文車妖妃は、古い文書や手紙に結びつく女性の妖怪として知られます。NDLの『付喪神絵巻』は道具が妖怪になる文化を示しますが、この資料だけで文車妖妃の個別の詞書や『恋文の恨み』まで直接確認したことにはなりません。そこで細かな設定は保留します。","trivia":"名前や現代の説明を知っていても、古い本文を直接確かめられるまでは研究欄で断定しないのがこの図鑑のルールです。"},
+      "historySummary":"付喪神文化との関係は背景として示せますが、文車妖妃個別の直接資料が今回不足しているため、能力・地域差を埋めません。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"『古い恋文の情念が妖怪になる』という定番解説は、個別の石燕本文を公的ソースで確認してからdocumentedへ上げます。",
+      "sourceIds":["ndl-tsukumogami-theme"],
+      "article":{"title":"文車妖妃―手紙の妖怪も背景だけで決めない","subtitle":"付喪神一般と個別の詞書を分ける","body":["文車妖妃は、古い文書や手紙に結びつく女性の妖怪としてよく紹介されます。","NDLの『付喪神絵巻』からは、古道具が妖怪へ変わるという物語文化が古くから描かれたことを確認できます。","一方、その一般的な背景だけで、文車妖妃の具体的な成立、恋文との関係、行動をすべて証明することはできません。","今回は個別の公的本文を確保できなかったため、研究欄を無理に埋めず、直接資料を追加できた時に更新します。"],"sourceNote":"付喪神の背景資料のみを使い、文車妖妃個別の細部は保留しています。"}
+    },
+    {
+      "id":"koto_furunushi","aliases":["琴古主","ことふるぬし"],
+      "editorial":{"oneLine":"鳥山石燕『百鬼徒然袋』に描かれ、忘れられた箏の音への恨みを姿にした妖怪。","childDescription":"琴古主は箏の妖怪です。国立国会図書館の解説では、鳥山石燕『百鬼徒然袋』に龍のような胴、大きな目、乱れ髪のような切れた弦を持つ姿で描かれます。詞書には、昔の箏の音を知る人が少なくなった恨みを知らせるため現れたのではないか、という石燕の想像が示されています。","trivia":"琴古主は『古い楽器なら何でも妖怪になる』という一般論より、忘れられていく音楽への思いを石燕が妖怪化した点が特徴です。"},
+      "historySummary":"NDLが鳥山石燕『百鬼徒然袋』の琴古主を図像と詞書付きで紹介しており、出版妖怪として具体的に追えます。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"not_applicable","regionalVariants":"insufficient"},
+      "timeline":[{"label":"鳥山石燕『百鬼徒然袋』","summary":"箏の妖怪『琴古主』が、龍型の胴・大きな目・切れた弦を持つ姿で描かれる。","sourceIds":["ndl-koto-furunushi"]}],
+      "abilities":[{"name":"忘れられた音への恨みを姿で知らせる","description":"NDLが紹介する石燕の詞書では、筑紫箏の音を知る人が少なくなった恨みを知らせるためこの姿を現したのではないか、と描かれる。","evidenceLevel":"B","sourceIds":["ndl-koto-furunushi"]}],
+      "countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"これは地域口承の『生態』ではなく、石燕の出版妖怪としての詞書・図像です。countermeasuresは対象外とします。",
+      "sourceIds":["ndl-koto-furunushi"],
+      "article":{"title":"琴古主―忘れられる音楽が妖怪になる","subtitle":"鳥山石燕の詞書までたどれる箏の妖怪","body":["琴古主は、古い箏が妖怪になったような姿で描かれる存在です。","国立国会図書館は鳥山石燕『百鬼徒然袋』の琴古主を紹介し、龍のような胴、大きな目、切れた弦が乱れ髪のように見える姿を説明しています。","石燕の詞書には、筑紫箏や八橋という言葉が出てきます。そして、その音色を知る人が少なくなった恨みを知らせるため、このような姿を現したのではないか、と夢の中で考えた形で書かれています。","琴古主は『古道具が勝手に動く』だけではなく、忘れられていく音楽文化そのものを妖怪の姿へ変えた出版上の創作として読むと面白い存在です。"],"sourceNote":"国立国会図書館『本の万華鏡』の琴古主解説を直接参照しています。"}
+    },
+    {
+      "id":"kaichigo","aliases":["貝児","かいちご"],
+      "editorial":{"oneLine":"貝の中から子どもが現れる姿で知られるが、今回の公的資料では個別本文を十分に確認できていない。","childDescription":"貝児は、貝と子どもの姿を組み合わせた妖怪として知られます。付喪神や器物妖怪の系統と一緒に紹介されることがありますが、今回の調査では貝児個別の公的本文を十分確保できませんでした。そこで、貝から飛び出す・人を驚かすといった細かな行動は研究欄へ入れません。","trivia":"見た目から想像しやすい妖怪ほど、『絵にそう見える』ことと『本文にそう書いてある』ことを分ける必要があります。"},
+      "historySummary":"貝児の個別資料を今回の採用ソースで十分確認できなかったため、付喪神の一般背景以上は保留します。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"貝の妖怪という外見だけから、子どもを守る・脅かす等の役割を創作しません。",
+      "sourceIds":["ndl-tsukumogami-theme"],
+      "article":{"title":"貝児―見た目だけで物語を足さない","subtitle":"直接資料がない部分を空欄にする","body":["貝児は、貝殻と子どもの姿が組み合わさった妖怪として図鑑で見かけます。","古道具が妖怪になる付喪神の文化はNDL資料から確認できますが、貝児そのものの個別の詞書や地域伝承は今回十分に確認できませんでした。","絵の形だけを見ると、貝から生まれる、隠れる、人を驚かすなど多くの物語を想像できます。しかしそれを伝承上の能力として書くことはしません。","直接資料を確保できるまでは、空欄を残したままにします。資料が少ない妖怪の『分からなさ』も図鑑の情報です。"],"sourceNote":"付喪神の一般背景のみNDL資料で示し、貝児個別の設定は保留しています。"}
+    },
+    {
+      "id":"abura_sumashi","aliases":["油すまし","アブラスマシ"],
+      "editorial":{"oneLine":"1938年の天草の記録では、山道に出て油瓶を下げている怪物として短く記される。","childDescription":"油すましは石のような頭のキャラクターとして有名ですが、柳田國男が1938年に記した熊本県天草のカードはもっと短い記録です。山道に出る怪物で、油瓶を下げている、とだけまとめられています。現代の顔や服装をこの記録へ戻してはいけません。","trivia":"古いカードに書かれているのは『山道』『怪物』『油瓶』まで。今の有名な姿は別の受容史として調べる必要があります。"},
+      "historySummary":"油すましは現代の視覚像が強い一方、1938年の個別記録は天草の山道に出る油瓶を下げた怪物という簡潔な内容です。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1938年・柳田國男『妖怪名彙（三）』","summary":"熊本県天草の山道に出る、油瓶を下げた怪物としてアブラスマシが記録される。","sourceIds":["abura-amakusa-2180763"]}],
+      "abilities":[{"name":"山道に姿を現す","description":"1938年のカードでは、山道に出る怪物で油瓶を下げていると記録される。","evidenceLevel":"A","sourceIds":["abura-amakusa-2180763"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"熊本県天草市","localNames":["アブラスマシ"],"summary":"山道に出て油瓶を下げている怪物として記録される。","sourceIds":["abura-amakusa-2180763"]}],
+      "glossaryTerms":[],"evidenceNote":"石頭・蓑・表情など現代で定着した外見は、この1938年カードの要約にはありません。",
+      "sourceIds":["abura-amakusa-2180763"],
+      "article":{"title":"油すまし―古い記録は驚くほど短い","subtitle":"天草の山道と油瓶だけから出発する","body":["油すましは、丸い石のような頭を持つ姿で現代の妖怪作品に登場します。","しかし1938年の柳田國男『妖怪名彙（三）』に収録された天草のカードは、山道に出る怪物で油瓶を下げている、という短い要約です。","この記録から確認できるのは、場所が山道であること、怪物として語られたこと、油瓶を持つことです。現代の顔つきや服装は書かれていません。","有名なキャラクター像ほど、古い記録に本当に書かれている情報を小さくても正確に残すことが重要です。"],"sourceNote":"柳田國男『妖怪名彙（三）』の天草個別カードを直接参照しています。"}
+    },
+    {
+      "id":"sunekosuri","aliases":["すねこすり","スネコスリ"],
+      "editorial":{"oneLine":"1938年の岡山記録では、雨の晩に犬の形で人の足の間をこすって通る怪物。","childDescription":"すねこすりは小さくかわいい動物の妖怪として描かれることがあります。1938年の岡山の記録では、犬の形をしていて、雨の晩に通行人の足の間をこすりながら通る怪物だと書かれています。猫のような姿とは記されていません。","trivia":"名前どおり『すねをこする』行動は古いカードで確認できますが、現代の猫っぽい姿は同じカードの記述ではありません。"},
+      "historySummary":"1938年の岡山カードは犬型・雨夜・足の間をこするという具体的な記録を持ち、現代の視覚像と比較できます。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1938年・柳田國男『妖怪名彙（三）』","summary":"岡山県で、犬の形をし雨の晩に通行人の足の間をこするスネコスリが記録される。","sourceIds":["sunekosuri-okayama-2180752"]}],
+      "abilities":[{"name":"雨の晩に足の間をこする","description":"岡山の記録では犬の形をし、通行人の足の間をこすりながら通る。","evidenceLevel":"A","sourceIds":["sunekosuri-okayama-2180752"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"岡山県","localNames":["スネコスリ"],"summary":"犬の形で、雨の晩に人の足の間をこすりながら通ると記録される。","sourceIds":["sunekosuri-okayama-2180752"]}],
+      "glossaryTerms":[],"evidenceNote":"現代の猫型・愛玩動物的なデザインは、この1938年カードの直接記述とは区別します。",
+      "sourceIds":["sunekosuri-okayama-2180752"],
+      "article":{"title":"すねこすり―古い記録では『犬の形』","subtitle":"かわいい現代像と1938年の岡山記録を分ける","body":["すねこすりは、人の足元へ寄ってくる小さな妖怪として親しまれています。","1938年の岡山県のカードには、すねこすりは犬の形をしていると明記されています。そして雨の晩、通行人の足の間をこすりながら通ると記録されています。","ここには猫の姿、丸い体、かわいい性格などの説明はありません。名前から連想できる『足をこする』行動は古い記録でも確認できます。","現代のキャラクターとしての魅力を残しつつ、研究欄では1938年の短い記録をそのまま見せることで、妖怪像が後から変わる面白さが分かります。"],"sourceNote":"柳田國男『妖怪名彙（三）』の岡山個別カードを直接参照しています。"}
+    },
+    {
+      "id":"sunakake_baba","aliases":["砂かけ婆","スナカケババ"],
+      "editorial":{"oneLine":"1938年の奈良記録では姿を見た者はいないのに『婆』と呼ばれ、森陰で砂をかける怪異。","childDescription":"砂かけ婆は、砂を投げるおばあさんの姿で有名です。ところが1938年の奈良の記録では『姿を見たものはいないが、婆といわれている』とされ、森陰などを通ると砂をばらばらと振りかけて人を驚かす怪異として書かれています。","trivia":"古いカードでは『おばあさんの姿を見た』とは書かれていません。名前から後世に姿がはっきりしていった可能性を考える好例です。"},
+      "historySummary":"奈良の1938年カードは、姿が見えない怪異なのに『婆』と呼ばれる点を明記しており、現代の老女キャラクター像との違いが重要です。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1938年・柳田國男『妖怪名彙』","summary":"奈良県の伝承として、姿を見た者はいないが婆と呼ばれ、森陰などで砂を振りかける怪異が記録される。","sourceIds":["sunakake-nara-2180739"]}],
+      "abilities":[{"name":"森陰などで砂を振りかける","description":"奈良の記録では、寂しい森陰などを通ると砂をばらばらと振りかけて人を驚かす。","evidenceLevel":"A","sourceIds":["sunakake-nara-2180739"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"奈良県","localNames":["スナカケババ"],"summary":"姿を見た者はいないが婆と呼ばれ、森陰で砂をかける怪異として記録される。","sourceIds":["sunakake-nara-2180739"]}],
+      "glossaryTerms":[],"evidenceNote":"現代の『砂袋を持った老女』という具体的な姿を1938年カードへ逆輸入しません。",
+      "sourceIds":["sunakake-nara-2180739"],
+      "article":{"title":"砂かけ婆―『婆』なのに姿は見えない","subtitle":"奈良の1938年記録をそのまま読む","body":["砂かけ婆は、砂を投げる老女の妖怪としてとても有名です。","1938年に柳田國男が紹介した奈良県の記録では、姿を見た者はいないと明記されています。それでも『婆』だと言われていた、というのが興味深い点です。","人が寂しい森陰などを通ると、ばらばらと砂を振りかけて驚かすとされています。記録の中心は見えない砂の怪異です。","今の老女キャラクター像と古い記録を分けて読むと、妖怪の名前から後に姿がはっきりしていく過程を考えることができます。"],"sourceNote":"柳田國男『妖怪名彙』の奈良個別カードを直接参照しています。"}
+    },
+    {
+      "id":"konaki_jiji","aliases":["児啼爺","子泣き爺","ゴギや啼き"],
+      "editorial":{"oneLine":"徳島の1938年記録では爺の姿で赤子の声を出し、抱くと重くなって離せなくなる山の怪異。","childDescription":"子泣き爺は赤ちゃんのように泣く老人の妖怪として知られます。1938年の徳島の記録では、山奥にいる爺の姿で赤子の泣き声を出し、かわいそうに思って抱くと急に重くなり、離そうとしても離せなくなるとされています。","trivia":"同じカードには『ゴギや啼き』という一本足の怪物も紹介され、鳴くと地震があると言われたと記されています。"},
+      "historySummary":"1938年の徳島カードは、児啼爺の姿・声・抱き上げた後の重さまで具体的に記録しています。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1938年・柳田國男『妖怪名彙』","summary":"徳島県の児啼爺とゴギや啼きについて、山中での姿・泣き声・重さ・地震との関係が記録される。","sourceIds":["konaki-tokushima-2180717"]}],
+      "abilities":[{"name":"赤子の泣き声を出す","description":"山奥で爺の姿をしながら赤子のような泣き声を出すと記録される。","evidenceLevel":"A","sourceIds":["konaki-tokushima-2180717"]},{"name":"抱くと急に重くなり離せなくなる","description":"哀れに思って抱き上げると急に重くなり、離そうとしても離せず、最後には命を取られると記録される。","evidenceLevel":"A","sourceIds":["konaki-tokushima-2180717"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"徳島県","localNames":["児啼爺","ゴギや啼き"],"summary":"児啼爺は爺姿で赤子の声を出し、ゴギや啼きは一本足で山中を歩き、その鳴き声を地震の前兆とする。","sourceIds":["konaki-tokushima-2180717"]}],
+      "glossaryTerms":[],"evidenceNote":"『重さに耐えると力を授かる』など他資料由来の有名設定は、このカードだけでは追加しません。",
+      "sourceIds":["konaki-tokushima-2180717"],
+      "article":{"title":"子泣き爺―泣き声を聞いて抱くと重くなる","subtitle":"徳島の1938年記録が伝える具体的な怪異","body":["子泣き爺は、赤ちゃんのような泣き声を出す小さな老人として知られています。","1938年の徳島県のカードでは、山奥にいて見た目は爺ですが、赤子の泣き声を出すと記録されています。","かわいそうに思って抱き上げると急に重くなり、離そうとしても離せなくなり、最後には命を取られるとされています。かなり恐ろしい内容です。","同じカードにはゴギや啼きという一本足の怪物も紹介され、鳴くと地震があると語られます。似た泣き声の怪異を一つにせず、カードの記述をそのまま残します。"],"sourceNote":"柳田國男『妖怪名彙』の徳島個別カードを直接参照しています。"}
+    }
+  ]
 }
