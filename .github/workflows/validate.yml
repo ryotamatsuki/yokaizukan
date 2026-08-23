@@ -23,8 +23,10 @@ jobs:
         run: |
           node --check js/app.js
           node --check js/research.js
+          node --check js/ehime.js
           node --check js/ehime-research-v2.js
           node --check scripts/validate_ehime_research_v2.mjs
+          node --check scripts/validate_ehime_ui_contract.mjs
           node --check scripts/validate_yokai_research_pilot.mjs
           node --check scripts/validate_yokai_research_expansions.mjs
 
