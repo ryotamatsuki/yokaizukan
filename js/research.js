@@ -1,11 +1,15 @@
 const RESEARCH_DATA_URL = 'public/data/yokai_research_pilot.json';
 const RESEARCH_STYLE_URL = 'css/research.css';
 
-// The existing 50-item catalog predates the newer underscore convention for these two IDs.
-// Keep the legacy catalog IDs stable and map the pilot overlay onto them non-destructively.
 const BASE_ID_ALIASES = {
   yuki_onna: 'yuki-onna',
   zashiki_warashi: 'zashiki-warashi'
+};
+
+const EVIDENCE_LABELS = {
+  A: '資料で確認',
+  B: '研究機関の資料から確認',
+  APP: '図鑑編集部の解説'
 };
 
 export function installResearchStyles() {
@@ -22,7 +26,7 @@ export function installResearchStyles() {
 export async function loadPilotResearch(url = RESEARCH_DATA_URL) {
   const response = await fetch(url, { cache: 'no-cache' });
   if (!response.ok) {
-    throw new Error(`原典・地域差データの読み込みに失敗しました。HTTP ${response.status}`);
+    throw new Error(`出典・地域差データの読み込みに失敗しました。HTTP ${response.status}`);
   }
   const payload = await response.json();
   if (!Array.isArray(payload.items) || !Array.isArray(payload.sources)) {
@@ -49,7 +53,7 @@ export function mergePilotResearch(items, payload) {
       title: article.title || item.detailedArticle?.title || item.name,
       subtitle: article.subtitle || item.detailedArticle?.subtitle || '',
       body: Array.isArray(article.body) ? article.body : item.detailedArticle?.body || [],
-      sourceNote: article.sourceNote || '地域差・歴史・行動を、下記の原典・民俗記録にたどれる形で整理しています。',
+      sourceNote: article.sourceNote || '地域差・歴史・行動を、下記の出典・民俗記録にたどれる形で整理しています。',
       references: resolvedSources.map((source) => ({
         title: source.title,
         source: source.provider,
@@ -71,7 +75,8 @@ export function mergePilotResearch(items, payload) {
         ...research,
         baseCatalogId: item.id,
         sources: resolvedSources,
-        evidenceLevels: payload.evidenceLevels || {}
+        evidenceLevels: payload.evidenceLevels || {},
+        glossary: payload.glossary || {}
       }
     };
   });
@@ -95,10 +100,10 @@ export function enhanceDetailWithResearch(yokai) {
   const headingRow = document.createElement('div');
   headingRow.className = 'research-heading-row';
   const heading = document.createElement('h3');
-  heading.textContent = '地域と原典で読む';
+  heading.textContent = '地域と出典で読む';
   const badge = document.createElement('span');
   badge.className = 'research-pilot-badge';
-  badge.textContent = '原典リンク付き';
+  badge.textContent = '出典・記録リンク付き';
   headingRow.append(heading, badge);
 
   const lead = document.createElement('p');
@@ -111,17 +116,31 @@ export function enhanceDetailWithResearch(yokai) {
   if (research.aliases?.length) {
     quickFacts.append(createFact('別名・近い呼び名', research.aliases.join('・')));
   }
-  quickFacts.append(createFact('地域差', `${research.regionalVariants.length}地域の記録を比較`));
-  quickFacts.append(createFact('記録', `${research.sources.length}件の原典・民俗資料へリンク`));
+  quickFacts.append(createFact('地域記録', `${research.regionalVariants?.length || 0}件を掲載`));
+  quickFacts.append(createFact('出典', `${research.sources.length}件の資料・記録へリンク`));
   section.append(quickFacts);
 
   const columns = document.createElement('div');
   columns.className = 'research-columns';
   columns.append(
-    createClaimList('何をする？', research.abilities),
-    createClaimList('弱点・対処の伝承', research.countermeasures)
+    createClaimList(
+      '何をする？',
+      research.abilities,
+      '資料で確認できる固有の行動は、まだ十分に確認できていません。',
+      research.evidenceLevels
+    ),
+    createClaimList(
+      '弱点・対処の伝承',
+      research.countermeasures,
+      'この資料群では、固有の対処法を確認できていません。',
+      research.evidenceLevels
+    )
   );
   section.append(columns);
+
+  if (research.editorial?.interpretation) {
+    section.append(createEditorialNote(research.editorial.interpretation, research.evidenceLevels));
+  }
 
   if (research.regionalVariants?.length) {
     const regionHeading = document.createElement('h4');
@@ -149,7 +168,7 @@ export function enhanceDetailWithResearch(yokai) {
 
   if (research.timeline?.length) {
     const timelineHeading = document.createElement('h4');
-    timelineHeading.textContent = 'いつ、どんな姿で記録された？';
+    timelineHeading.textContent = 'いつ、どんな記録が残った？';
     const timeline = document.createElement('ol');
     timeline.className = 'research-timeline';
     research.timeline.forEach((entry) => {
@@ -164,8 +183,10 @@ export function enhanceDetailWithResearch(yokai) {
     section.append(timelineHeading, timeline);
   }
 
+  appendGlossary(section, research);
+
   const sourceHeading = document.createElement('h4');
-  sourceHeading.textContent = '原典・記録へたどる';
+  sourceHeading.textContent = '出典・記録へたどる';
   const sourceList = document.createElement('ul');
   sourceList.className = 'research-source-list';
   research.sources.forEach((source) => {
@@ -216,7 +237,7 @@ function createFact(labelText, valueText) {
   return block;
 }
 
-function createClaimList(titleText, claims = []) {
+function createClaimList(titleText, claims = [], emptyText, evidenceLevels = {}) {
   const block = document.createElement('div');
   block.className = 'research-claim-block';
   const title = document.createElement('h4');
@@ -226,7 +247,7 @@ function createClaimList(titleText, claims = []) {
   if (!claims.length) {
     const empty = document.createElement('p');
     empty.className = 'muted-text';
-    empty.textContent = '資料で確認できる固有の記述を調査中です。';
+    empty.textContent = emptyText;
     block.append(empty);
     return block;
   }
@@ -239,10 +260,60 @@ function createClaimList(titleText, claims = []) {
     const text = document.createElement('span');
     text.textContent = claim.description;
     const level = document.createElement('small');
-    level.textContent = `確認度 ${claim.evidenceLevel}`;
+    const label = EVIDENCE_LABELS[claim.evidenceLevel] || claim.evidenceLevel;
+    level.textContent = label;
+    const detail = evidenceLevels[claim.evidenceLevel];
+    if (detail) {
+      level.title = `${claim.evidenceLevel}: ${detail}`;
+    }
     item.append(name, text, level);
     list.append(item);
   });
   block.append(list);
   return block;
+}
+
+function createEditorialNote(text, evidenceLevels = {}) {
+  const note = document.createElement('aside');
+  note.className = 'research-editorial-note';
+  const heading = document.createElement('strong');
+  heading.textContent = '図鑑編集部の読み方';
+  const body = document.createElement('p');
+  body.textContent = text;
+  const label = document.createElement('small');
+  label.textContent = EVIDENCE_LABELS.APP;
+  if (evidenceLevels.APP) {
+    label.title = `APP: ${evidenceLevels.APP}`;
+  }
+  note.append(heading, body, label);
+  return note;
+}
+
+function appendGlossary(section, research) {
+  const terms = Array.isArray(research.glossaryTerms) ? research.glossaryTerms : [];
+  if (!terms.length) {
+    return;
+  }
+
+  const entries = terms
+    .map((term) => [term, research.glossary?.[term]])
+    .filter(([, definition]) => Boolean(definition));
+  if (!entries.length) {
+    return;
+  }
+
+  const heading = document.createElement('h4');
+  heading.textContent = 'むずかしいことば';
+  const list = document.createElement('dl');
+  list.className = 'research-glossary';
+  entries.forEach(([term, definition]) => {
+    const item = document.createElement('div');
+    const dt = document.createElement('dt');
+    dt.textContent = term;
+    const dd = document.createElement('dd');
+    dd.textContent = definition;
+    item.append(dt, dd);
+    list.append(item);
+  });
+  section.append(heading, list);
 }
