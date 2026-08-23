@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const BASE_PATH = 'public/data/yokai.json';
 const PILOT_PATH = 'public/data/yokai_research_pilot.json';
 
-const EXPECTED_IDS = [
+const REQUIRED_PILOT_IDS = [
   'kappa',
   'tengu',
   'oni',
@@ -52,20 +52,18 @@ const pilotIds = pilotItems.map((item) => item.id);
 const pilotIdSet = new Set(pilotIds);
 
 assert(pilot.schemaVersion === 2, 'schemaVersion must be 2');
-assert(pilotIds.length === EXPECTED_IDS.length, `pilot must contain exactly ${EXPECTED_IDS.length} items`);
-assert(pilotIdSet.size === pilotIds.length, 'pilot item IDs must be unique');
+assert(pilotIdSet.size === pilotIds.length, 'research item IDs must be unique');
 
-for (const id of EXPECTED_IDS) {
-  assert(pilotIdSet.has(id), `missing pilot item: ${id}`);
-  const baseId = toBaseCatalogId(id);
-  assert(baseIds.has(baseId), `pilot item does not resolve to base yokai.json: ${id} -> ${baseId}`);
+for (const id of REQUIRED_PILOT_IDS) {
+  assert(pilotIdSet.has(id), `missing required pilot item: ${id}`);
 }
 for (const id of pilotIds) {
-  assert(EXPECTED_IDS.includes(id), `unexpected pilot item: ${id}`);
+  const baseId = toBaseCatalogId(id);
+  assert(baseIds.has(baseId), `research item does not resolve to base yokai.json: ${id} -> ${baseId}`);
 }
 
 const resolvedPilotBaseIds = pilotIds.map(toBaseCatalogId);
-assert(new Set(resolvedPilotBaseIds).size === resolvedPilotBaseIds.length, 'pilot IDs must resolve to unique base catalog IDs');
+assert(new Set(resolvedPilotBaseIds).size === resolvedPilotBaseIds.length, 'research IDs must resolve to unique base catalog IDs');
 
 const sourceIds = sources.map((source) => source.id);
 const sourceIdSet = new Set(sourceIds);
@@ -143,23 +141,17 @@ for (const item of pilotItems) {
     assertText(item.editorial.interpretation, `${prefix}.editorial.interpretation`);
   }
 
-  if (item.glossaryTerms !== undefined) {
-    assert(Array.isArray(item.glossaryTerms), `${prefix}.glossaryTerms must be an array`);
-    if (Array.isArray(item.glossaryTerms)) {
-      for (const term of item.glossaryTerms) {
-        assert(Object.hasOwn(glossary, term), `${prefix}.glossaryTerms references missing glossary term: ${term}`);
-      }
-    }
-  }
+  validateNestedSourceSubset(item, prefix);
+  validateGlossaryTerms(item, prefix);
 }
 
 if (errors.length) {
-  console.error('Yokai research pilot validation failed:');
+  console.error('Yokai research validation failed:');
   errors.forEach((error) => console.error(`- ${error}`));
   process.exit(1);
 }
 
-console.log(`Yokai research pilot validation passed: ${pilotItems.length} items / ${sources.length} evidence sources.`);
+console.log(`Yokai research validation passed: ${pilotItems.length} items / ${sources.length} evidence sources.`);
 
 function toBaseCatalogId(researchId) {
   return BASE_ID_ALIASES[researchId] || researchId;
@@ -197,6 +189,79 @@ function validateClaims(claims, path) {
     assert(CLAIM_EVIDENCE_LEVELS.has(claim.evidenceLevel), `${path}[${index}].evidenceLevel must be A or B: ${claim.evidenceLevel}`);
     validateEvidenceSourceRefs(claim.sourceIds, `${path}[${index}].sourceIds`);
   });
+}
+
+function validateNestedSourceSubset(item, prefix) {
+  if (!Array.isArray(item.sourceIds)) {
+    return;
+  }
+  const topLevelSources = new Set(item.sourceIds);
+  const nestedRefs = [];
+
+  collectSourceRefs(item.timeline, 'timeline', nestedRefs);
+  collectSourceRefs(item.abilities, 'abilities', nestedRefs);
+  collectSourceRefs(item.countermeasures, 'countermeasures', nestedRefs);
+  collectSourceRefs(item.regionalVariants, 'regionalVariants', nestedRefs);
+
+  for (const { sourceId, path } of nestedRefs) {
+    assert(topLevelSources.has(sourceId), `${prefix}.${path} references ${sourceId}, but it is missing from ${prefix}.sourceIds`);
+  }
+}
+
+function collectSourceRefs(entries, field, output) {
+  if (!Array.isArray(entries)) {
+    return;
+  }
+  entries.forEach((entry, index) => {
+    if (!Array.isArray(entry?.sourceIds)) {
+      return;
+    }
+    entry.sourceIds.forEach((sourceId) => output.push({ sourceId, path: `${field}[${index}].sourceIds` }));
+  });
+}
+
+function validateGlossaryTerms(item, prefix) {
+  if (item.glossaryTerms === undefined) {
+    return;
+  }
+  assert(Array.isArray(item.glossaryTerms), `${prefix}.glossaryTerms must be an array`);
+  if (!Array.isArray(item.glossaryTerms)) {
+    return;
+  }
+
+  assert(new Set(item.glossaryTerms).size === item.glossaryTerms.length, `${prefix}.glossaryTerms must not contain duplicates`);
+  const renderedText = collectRenderedText(item);
+
+  for (const term of item.glossaryTerms) {
+    assert(Object.hasOwn(glossary, term), `${prefix}.glossaryTerms references missing glossary term: ${term}`);
+    assert(renderedText.includes(term), `${prefix}.glossaryTerms contains '${term}', but that term does not appear in rendered item text`);
+  }
+}
+
+function collectRenderedText(item) {
+  const values = [
+    item.historySummary,
+    item.evidenceNote,
+    item.editorial?.oneLine,
+    item.editorial?.childDescription,
+    item.editorial?.trivia,
+    item.editorial?.interpretation,
+    item.article?.title,
+    item.article?.subtitle,
+    ...(Array.isArray(item.article?.body) ? item.article.body : [])
+  ];
+
+  for (const entry of item.timeline || []) {
+    values.push(entry.label, entry.summary);
+  }
+  for (const claim of [...(item.abilities || []), ...(item.countermeasures || [])]) {
+    values.push(claim.name, claim.description);
+  }
+  for (const variant of item.regionalVariants || []) {
+    values.push(variant.region, variant.summary, ...(variant.localNames || []));
+  }
+
+  return values.filter((value) => typeof value === 'string').join('\n');
 }
 
 function validateEvidenceSourceRefs(refs, path) {
