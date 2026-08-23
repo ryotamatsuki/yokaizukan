@@ -1,7 +1,11 @@
 import { test, expect } from '@playwright/test';
 
 async function openYokai(page, name) {
-  await page.goto('/index.html');
+  await page.goto('/yokai.html');
+  const skipOpening = page.locator('#skipOpeningButton');
+  if (await skipOpening.isVisible()) {
+    await skipOpening.click();
+  }
   await expect(page.locator('#results-count')).toContainText('/ 50 体');
   const card = page.locator('.yokai-card').filter({ hasText: name }).first();
   await expect(card).toBeVisible();
