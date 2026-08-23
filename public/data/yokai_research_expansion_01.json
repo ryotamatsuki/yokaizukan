@@ -3,6 +3,111 @@
   "updatedAt": "2026-08-23",
   "batch": 1,
   "glossary": {},
-  "sources": [],
-  "items": []
+  "sources": [
+    {"id":"ndl-tsukumogami-theme","title":"付喪神絵巻","provider":"国立国会図書館 NDLイメージバンク","year":"室町期以降の付喪神物語を伝える模本","region":"出版・絵巻文化","recordType":"歴史絵巻・機関解説","sourceRole":"evidence","sourceType":"institutional_exhibit","url":"https://www.ndl.go.jp/imagebank/theme/tsukumogami"},
+    {"id":"ndl-kuniyoshi-yokai","title":"歌川国芳の描いた妖怪","provider":"国立国会図書館 NDLイメージバンク","year":"江戸末期","region":"出版文化","recordType":"歴史図像・機関解説","sourceRole":"evidence","sourceType":"historical_image","url":"https://www.ndl.go.jp/imagebank/theme/kuniyoshiyokai"},
+    {"id":"rokuro-osaka-0550079","title":"岡市二洲『怪談茨木附近』―ろくろ首","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1933年","region":"大阪府茨木市柴屋町","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=0550079"},
+    {"id":"hitotsume-tokyo-2240144","title":"藤木喜久麿『一つ目小僧来る』","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1928年","region":"東京都","recordType":"年中行事・民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2240144"},
+    {"id":"bakeneko-gunma-C1040286","title":"群馬県史―化け猫の踊り","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1982年","region":"群馬県邑楽郡大泉町","recordType":"県史収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=C1040286-000"},
+    {"id":"bakeneko-ishikawa-1230533","title":"南栄三『猫の話』―化け猫","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1937年","region":"石川県七尾市白馬町","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=1230533"},
+    {"id":"kitsunebi-oji-3030001","title":"『柳亭記』収録―王子の狐火","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1975年刊資料に収録","region":"東京都北区・王子","recordType":"随筆収録伝承カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=3030001"},
+    {"id":"kitsunebi-gunma-2181785","title":"『戸鹿野の民俗（2）』―狐火","provider":"国際日本文化研究センター 怪異・妖怪伝承データベース","year":"1943年","region":"群馬県沼田市戸鹿野町","recordType":"民俗記録カード","sourceRole":"evidence","sourceType":"folklore_record","url":"https://www.nichibun.ac.jp/cgi-bin/YoukaiDB3/youkai_card.cgi?ID=2181785"}
+  ],
+  "items": [
+    {
+      "id":"rokurokubi","aliases":["ろくろ首","轆轤首"],
+      "editorial":{"oneLine":"眠る娘の首が夜ごと伸びる話など、土地ごとに語られた人型の怪異。","childDescription":"ろくろ首は首が長く伸びる姿で知られます。1933年の大阪・茨木の記録では、商家の夫婦が夜ごと娘の首が伸びるのを見たとされ、祈っても変わらず、噂が広まって一家は土地を離れたと記されています。","trivia":"ろくろ首には『首が伸びる』型だけでなく、別の古典では首が抜ける型もあり、一つの姿だけにまとめない方が安全です。"},
+      "historySummary":"ろくろ首は古典や見世物、地域伝承に複数の型があります。この項目では個別カードで確認できる大阪の『首が伸びる娘』を中心にします。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[{"label":"1933年掲載記録","summary":"大阪府茨木市で、商家の娘の首が夜ごと伸びるとする話が記録される。","sourceIds":["rokuro-osaka-0550079"]}],
+      "abilities":[{"name":"夜に首が伸びる","description":"大阪・茨木の記録では、夫婦が夜な夜な娘の首が伸びるのを見たとされる。","evidenceLevel":"A","sourceIds":["rokuro-osaka-0550079"]}],
+      "countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"祈祷が効かなかったという同カードの記述は、全国共通の対処法にはしません。首が抜ける型などは別資料で確認してから追加します。",
+      "sourceIds":["rokuro-osaka-0550079"],
+      "article":{"title":"ろくろ首―『首が伸びる』にも土地の記録がある","subtitle":"1933年の大阪・茨木の話から読む","body":["ろくろ首は、長い首を持つ女性の妖怪としてよく知られます。ただし、昔の話を全部同じ仕組みだと考える必要はありません。","1933年に掲載された大阪府茨木市の記録では、商家の夫婦が夜ごと娘の首が伸びるのを見たとされています。ここでは『首が伸びる娘』という具体的な家の怪異です。","家族は神仏に祈りますが効果はなく、噂も広まったため一家は別の土地へ移ったと記されています。これはこの話の筋であって、ろくろ首全体の弱点や対処法ではありません。","首が抜ける型や見世物として語られた例もあるため、今後は資料を分けて追加します。この図鑑では、確認できた一枚のカードから全国共通設定を作らないようにします。"],"sourceNote":"大阪府茨木市の個別記録カードを直接参照しています。"}
+    },
+    {
+      "id":"karakasa-kozo","aliases":["からかさ小僧","唐傘小僧"],
+      "editorial":{"oneLine":"一つ目・一本足の傘として有名だが、古道具妖怪の歴史と現代の定番像は分けて読む。","childDescription":"からかさ小僧は、一つ目と一本足の傘の妖怪として今の図鑑ではおなじみです。一方、NDLの『付喪神絵巻』は古道具が妖怪になる物語を伝えますが、この資料だけで現在のからかさ小僧の姿や能力まで昔から同じだったとは言えません。","trivia":"『古い道具が妖怪になる』ことと、『一つ目一本足のからかさ小僧』がいつ成立したかは、別の問題として調べる必要があります。"},
+      "historySummary":"付喪神絵巻は古道具が付喪神へ変化する文化的背景を確認できますが、からかさ小僧という個別キャラクターの成立資料としては不足しています。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"個別の古い『からかさ小僧』資料を確認できるまで、跳ねる・舌を出すなどの有名設定を研究データの能力として固定しません。",
+      "sourceIds":["ndl-tsukumogami-theme"],
+      "article":{"title":"からかさ小僧―付喪神と定番キャラクターを分ける","subtitle":"古道具妖怪の背景は確認できても、個別設定は別に調べる","body":["からかさ小僧は、一つ目の傘に一本足がついた姿で広く知られています。見ただけで分かる、とても強い現代の妖怪デザインです。","国立国会図書館の『付喪神絵巻』では、打ち捨てられた古道具が付喪神という妖怪へ変化する物語を確認できます。道具の妖怪を考える大切な背景です。","しかし、その絵巻が現在のからかさ小僧の一つ目・一本足・舌といった細部を直接証明するわけではありません。背景資料と個別妖怪の資料は分ける必要があります。","そのため、この段階では地域差や能力を無理に埋めません。個別の図像・文献を確認できた時に、からかさ小僧自身の歴史として追加します。"],"sourceNote":"NDL『付喪神絵巻』は道具妖怪の背景資料として使い、個別設定の直接根拠とはしていません。"}
+    },
+    {
+      "id":"chochin-obake","aliases":["提灯お化け","ちょうちんお化け"],
+      "editorial":{"oneLine":"顔のある提灯として親しまれるが、付喪神一般の資料と個別の提灯妖怪は区別する。","childDescription":"提灯お化けは、古い提灯に目や口が現れた姿でよく描かれます。NDLの『付喪神絵巻』からは古道具が妖怪になる物語文化を確認できますが、今の提灯お化けの顔や性格をそのまま古い資料へ戻すことはしません。","trivia":"道具妖怪には、昔の絵巻で確認できるものと、後世に姿が強く定着したものがあります。"},
+      "historySummary":"提灯お化けの現代的な定番像と、古道具が付喪神になる一般的な物語背景を分離します。",
+      "coverage":{"timeline":"insufficient","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[],"abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"提灯が古道具であることだけから、付喪神絵巻の全設定を提灯お化けへ移しません。個別資料が見つかるまでは不足のまま残します。",
+      "sourceIds":["ndl-tsukumogami-theme"],
+      "article":{"title":"提灯お化け―古道具の妖怪と今の顔を分けて考える","subtitle":"『付喪神だから昔からこの姿』とは決めない","body":["提灯お化けは、破れた提灯に大きな目や口がついた姿で、子どもにも分かりやすい妖怪です。","NDLの『付喪神絵巻』では、捨てられた古道具が妖怪へ変わる物語が描かれています。道具を長く使う暮らしと妖怪文化を考える手がかりになります。","ただし、付喪神一般の物語が、今の提灯お化けの顔・舌・行動を直接記録しているとは限りません。似たカテゴリーだからと資料を代用しないことが大切です。","この項目では、個別の古い提灯妖怪資料が十分に確認できるまで能力や地域差を空欄にします。空欄は失敗ではなく、今分かっている範囲の表示です。"],"sourceNote":"付喪神一般の歴史背景のみNDL資料で確認し、提灯お化け個別の設定は保留しています。"}
+    },
+    {
+      "id":"gashadokuro","aliases":["がしゃどくろ","巨大骸骨"],
+      "editorial":{"oneLine":"現代名『がしゃどくろ』と、国芳『相馬の古内裏』の巨大骸骨図像を同一資料として混ぜない。","childDescription":"がしゃどくろは巨大な骸骨妖怪として知られます。国立国会図書館が紹介する歌川国芳『相馬の古内裏』には、滝夜叉姫が使役する巨大な骸骨が迫力ある姿で描かれます。ただし、その作品中の骸骨を当時から『がしゃどくろ』と呼んだとまでは、この資料から言えません。","trivia":"有名な巨大骸骨の絵と、現代の妖怪名『がしゃどくろ』の成立時期は分けて調べる必要があります。"},
+      "historySummary":"江戸末期の巨大骸骨図像は確認できますが、それをそのまま現代名『がしゃどくろ』の原典とは扱いません。",
+      "coverage":{"timeline":"documented","abilities":"insufficient","countermeasures":"insufficient","regionalVariants":"insufficient"},
+      "timeline":[{"label":"江戸末期・歌川国芳","summary":"『相馬の古内裏』に、滝夜叉姫が使役する巨大な骸骨が描かれる。","sourceIds":["ndl-kuniyoshi-yokai"]}],
+      "abilities":[],"countermeasures":[],"regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"国芳の巨大骸骨図像は強い視覚的先行例ですが、作品中の名称が『がしゃどくろ』だったとは断定しません。",
+      "sourceIds":["ndl-kuniyoshi-yokai"],
+      "article":{"title":"がしゃどくろ―巨大骸骨の絵と現代の名前を分ける","subtitle":"国芳『相馬の古内裏』は何を証明するのか","body":["がしゃどくろは、夜に現れる巨大な骸骨妖怪として現代の図鑑でよく知られます。","国立国会図書館の展示では、歌川国芳の代表作『相馬の古内裏』に、滝夜叉姫が使役する巨大な骸骨が描かれていることを確認できます。現代の巨大骸骨妖怪を考えるうえで重要な図像です。","しかし、似た姿だからといって、その巨大骸骨が当時から『がしゃどくろ』という同じ名前と設定で語られていたことにはなりません。図像の連続と名称の成立は別に調べる必要があります。","この図鑑では、国芳の絵を『がしゃどくろの原典』と短絡せず、巨大骸骨イメージの歴史資料として表示します。"],"sourceNote":"NDL『歌川国芳の描いた妖怪』の『相馬の古内裏』解説を図像史の根拠にしています。"}
+    },
+    {
+      "id":"karasu-tengu","aliases":["烏天狗","からす天狗"],
+      "editorial":{"oneLine":"石鎚山麓の記録では、高い木に来る烏天狗として具体的に語られる。","childDescription":"烏天狗は鳥の顔や翼を持つ天狗として知られます。1969年の愛媛・石鎚山麓の記録には、夜になると高い木へ烏天狗が来るという話があり、枝の間の小さな火とともに山の天狗の気配が語られています。","trivia":"長い鼻の天狗だけでなく、『烏天狗』という呼び名が地域の具体的な記録に残っています。"},
+      "historySummary":"烏天狗を天狗一般から完全に切り離さず、石鎚山麓の個別カードで確認できる呼称と出現場所を示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1969年・石鎚山麓","summary":"石鎚山を天狗の巣とし、高い木へ烏天狗が来るという伝承が記録される。","sourceIds":["tengu-ishizuchi-0030258"]}],
+      "abilities":[{"name":"夜に高い木へ来る","description":"石鎚山麓の記録では、烏天狗が夜に高木へ来ると語られる。","evidenceLevel":"A","sourceIds":["tengu-ishizuchi-0030258"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"愛媛・石鎚山麓","localNames":["烏天狗","天狗"],"summary":"高い木に来る烏天狗と、枝の間に見える小さな火が語られる。","sourceIds":["tengu-ishizuchi-0030258"]}],
+      "glossaryTerms":[],"evidenceNote":"飛行・剣術・修行者を試す等の広い天狗イメージを、この一枚のカードだけで烏天狗の能力にはしません。",
+      "sourceIds":["tengu-ishizuchi-0030258"],
+      "article":{"title":"烏天狗―石鎚の高い木に来る天狗","subtitle":"鳥型のイメージより先に個別記録を読む","body":["烏天狗は、くちばしや翼を持つ天狗として現代の絵でよく描かれます。","愛媛の石鎚山麓について1969年に掲載された記録では、石鎚山を天狗の巣とし、夜になると高い木へ烏天狗が来ると語られています。","同じ記録には枝の間に小さな火が見える話もあります。山の暗闇で見上げる木と火が、天狗の存在を感じさせる語りになっています。","このカードから分かるのは、石鎚山麓で『烏天狗』という呼び名と高木の伝承があったことです。現代作品の剣術や飛行設定まで同じ資料で証明しません。"],"sourceNote":"既存パイロットの石鎚山麓個別カードを烏天狗項目でも直接参照しています。"}
+    },
+    {
+      "id":"hitotsume-kozo","aliases":["一つ目小僧","ヒトツメコゾウ"],
+      "editorial":{"oneLine":"師走八日に来るとされ、目の多い籠を門口へ掛けて防ぐという年中行事の怪異。","childDescription":"一つ目小僧は大きな目が一つの子ども姿で知られます。1928年の東京の記録では、師走八日に一つ目小僧が来るとして、門口に目のたくさんある笊や籠を掛け、その目の多さで驚かせて家へ入れないようにしたとあります。","trivia":"『一つ目』に対して『目のたくさんある籠』を見せるという、形を使った対処が具体的に記録されています。"},
+      "historySummary":"一つ目小僧を単なるびっくりキャラクターにせず、東京の年中行事と結びついた具体的な来訪・対処の記録を示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"documented","regionalVariants":"insufficient"},
+      "timeline":[{"label":"1928年掲載記録","summary":"東京で師走八日に一つ目小僧が来るとして、門口に籠を掛ける習俗が記録される。","sourceIds":["hitotsume-tokyo-2240144"]}],
+      "abilities":[{"name":"師走八日に家へ来る","description":"東京の記録では、12月8日に一つ目小僧が来ると語られる。","evidenceLevel":"A","sourceIds":["hitotsume-tokyo-2240144"]}],
+      "countermeasures":[{"name":"目の多い笊・籠を掛ける","description":"門口に笊や籠を掛け、その多くの目で一つ目小僧を驚かせ、入れないようにすると記録される。","evidenceLevel":"A","sourceIds":["hitotsume-tokyo-2240144"]}],
+      "regionalVariants":[],"glossaryTerms":[],
+      "evidenceNote":"人を驚かせるだけの無害な妖怪という現代イメージより、年中行事の来訪者としての記録を優先します。",
+      "sourceIds":["hitotsume-tokyo-2240144"],
+      "article":{"title":"一つ目小僧―目の多い籠で防ぐ来訪者","subtitle":"12月8日の年中行事として読む","body":["一つ目小僧は、大きな目が一つだけある子どもの妖怪として親しまれています。","1928年に掲載された東京の記録では、師走八日、つまり12月8日に一つ目小僧が来るとされました。ここでは夜道で偶然会う妖怪ではなく、決まった日に来る存在です。","家では門口に笊や籠を掛けました。一つ目小僧に、たくさんの『目』がある籠を見せて驚かせ、中へ入れないためだと説明されています。","一つ目という見た目と、目の多い道具を使う対処が結びついている点が面白い記録です。現代のかわいい小僧像だけでは見えない、年中行事とのつながりが分かります。"],"sourceNote":"1928年の東京の個別記録カードを直接参照しています。"}
+    },
+    {
+      "id":"bakeneko","aliases":["化け猫","バケネコ","古猫"],
+      "editorial":{"oneLine":"年を取った猫への恐れや、猫が集まって人のように踊る話などが土地ごとに残る。","childDescription":"化け猫には一つの決まった姿がありません。石川の1937年の記録には『猫は年を取ると化け猫になる』という話があり、群馬の県史には猫たちが原っぱに集まり、鉢巻やほっかぶりをして歌い踊るという不思議な話も載っています。","trivia":"猫又と似ていますが、地域の記録では『化け猫』という呼び名で別の話が多数残ります。"},
+      "historySummary":"化け猫は老猫の変化、猫の集会、変身譚など多くの話を含むため、石川と群馬の個別例を並べます。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"1937年・石川","summary":"猫は飼う期限を決めないと、年を取って化け猫になるという話が記録される。","sourceIds":["bakeneko-ishikawa-1230533"]},{"label":"群馬県史収録の伝承","summary":"猫が原っぱに集まり、人のように鉢巻をして歌い踊る話が記録される。","sourceIds":["bakeneko-gunma-C1040286"]}],
+      "abilities":[{"name":"人のように集まり踊る","description":"群馬県大泉町の記録では、猫たちが集まり、鉢巻やほっかぶりをして歌い踊ったと語られる。","evidenceLevel":"A","sourceIds":["bakeneko-gunma-C1040286"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"石川県七尾市周辺","localNames":["化け猫"],"summary":"猫は年を取ると化け猫になるという俗信が記録される。","sourceIds":["bakeneko-ishikawa-1230533"]},{"region":"群馬県大泉町","localNames":["化け猫"],"summary":"猫の集会と踊りを語る世間話が県史に収録される。","sourceIds":["bakeneko-gunma-C1040286"]}],
+      "glossaryTerms":[],"evidenceNote":"『長く飼うと必ず化ける』を生物学的なルールとして書かず、地域の俗信として扱います。",
+      "sourceIds":["bakeneko-ishikawa-1230533","bakeneko-gunma-C1040286"],
+      "article":{"title":"化け猫―年老いた猫と夜の猫集会","subtitle":"身近な動物が怪異へ変わる二つの記録","body":["化け猫は、長く飼われた猫が不思議な力を持つという話など、身近な猫への想像から生まれた怪異です。","1937年の石川県七尾市周辺の記録には、猫をもらう時には期限を決めておかないと、年を取って化け猫になるという話があります。これはその土地で語られた俗信です。","群馬県大泉町の記録では、猫たちが原っぱに集まり、手拭いで鉢巻やほっかぶりをして、歌いながら踊っていたと語られます。怖い怪物だけではない化け猫の姿です。","猫又と重なる部分もありますが、同じものと決めつけず、カードに書かれた呼び名と話ごとに整理します。"],"sourceNote":"石川・群馬の個別カードを地域別に参照しています。"}
+    },
+    {
+      "id":"kitsunebi","aliases":["狐火","きつね火","キツネビ"],
+      "editorial":{"oneLine":"山や野に並ぶ不思議な灯り。狐の集まり、作柄占い、列になる火など土地ごとに意味が違う。","childDescription":"狐火は夜の山や野に現れる不思議な灯りです。群馬の1943年の記録では約20個の火が一列に現れ、点いた順に消えるとされます。東京・王子の記録では大晦日に狐が稲荷へ集まり狐火を灯し、人々がその様子で作柄を占ったと伝えます。","trivia":"同じ狐火でも、ただの怪しい火ではなく、農作物の出来を占うしるしとして見られた土地もあります。"},
+      "historySummary":"鳥山石燕の図像に加え、王子と群馬の個別記録から、狐火の見え方と意味の地域差を示します。",
+      "coverage":{"timeline":"documented","abilities":"documented","countermeasures":"insufficient","regionalVariants":"documented"},
+      "timeline":[{"label":"江戸中期の図像","summary":"鳥山石燕の妖怪画に『狐火』が描かれる。","sourceIds":["ndl-sekien-theme"]},{"label":"1943年・群馬","summary":"一列に並ぶ約20個の灯火を狐火とする記録が残る。","sourceIds":["kitsunebi-gunma-2181785"]},{"label":"王子の伝承","summary":"大晦日に狐が王子稲荷へ集まり狐火を灯し、人々が作柄を占う話が資料に収録される。","sourceIds":["kitsunebi-oji-3030001"]}],
+      "abilities":[{"name":"列になって現れ、順に消える","description":"群馬県戸鹿野町の記録では、約20個の灯火が一列に現れ、点いた順に消えるとされる。","evidenceLevel":"A","sourceIds":["kitsunebi-gunma-2181785"]},{"name":"作柄を占うしるしになる","description":"王子の伝承では、狐火の様子を見て近所の人が作柄を占ったとされる。","evidenceLevel":"A","sourceIds":["kitsunebi-oji-3030001"]}],
+      "countermeasures":[],
+      "regionalVariants":[{"region":"群馬県沼田市戸鹿野町","localNames":["狐火"],"summary":"赤城山麓に約20個の灯火が一列に現れ、順に消えると語られる。","sourceIds":["kitsunebi-gunma-2181785"]},{"region":"東京都北区・王子","localNames":["狐火"],"summary":"大晦日の狐の集まりと、作柄占いに結びつく伝承がある。","sourceIds":["kitsunebi-oji-3030001"]}],
+      "glossaryTerms":[],"evidenceNote":"狐火の正体説明は地域ごとに異なるため、物理現象を一つに断定せず『そう語られた灯り』として扱います。",
+      "sourceIds":["ndl-sekien-theme","kitsunebi-gunma-2181785","kitsunebi-oji-3030001"],
+      "article":{"title":"狐火―夜の灯りは土地ごとに意味が変わる","subtitle":"群馬の列火と王子の作柄占い","body":["狐火は、夜の山や野に浮かぶ不思議な灯りとして各地で語られてきました。鳥山石燕の妖怪画にも『狐火』が描かれています。","群馬県戸鹿野町の1943年の記録では、赤城山麓に約20個の灯火が一列に現れ、点いた順番に消えるものを狐火と呼んだとあります。","東京・王子に関する伝承では、大晦日の夜に関東の狐が王子稲荷へ集まり狐火を灯し、近所の人がその様子を見て作柄を占ったとされます。","同じ名前でも、ただ怖い火、狐の集会の火、農作物を占うしるしと意味が変わります。狐火は『正体はこれ』と一つに決めるより、地域の夜景と暮らしの中で読む妖怪です。"],"sourceNote":"鳥山石燕の図像と、群馬・王子の個別記録を分けて参照しています。"}
+    }
+  ]
 }
