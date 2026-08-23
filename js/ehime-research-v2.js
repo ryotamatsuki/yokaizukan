@@ -1,11 +1,72 @@
 (() => {
-  const RESEARCH_ONLY_HEADINGS = new Set([
-    '資料から分かること',
-    'まだ分からないこと',
-    'まだ調べられること',
-    'ここで大切なこと',
-    'どこまで古く確認できる？'
-  ]);
+  const ARTICLE_SECTION_ROLES = {
+    uwajima_ushioni_cluster: {
+      '愛媛のどこに残る？': 'context',
+      '怪物の牛鬼と、祭りの牛鬼': 'story',
+      '資料から分かること': 'research_note',
+      'まだ分からないこと': 'research_note'
+    },
+    matsuyama_tanuki_cluster: {
+      '愛媛のどこに残る？': 'context',
+      'どんな物語？': 'story',
+      '資料から分かること': 'research_note',
+      'まだ分からないこと': 'research_note'
+    },
+    iyo_basan_cluster: {
+      'どこに伝わる？': 'context',
+      '1841年の本には何と書かれる？': 'story',
+      '資料から分かること': 'research_note',
+      'まだ分からないこと': 'research_note'
+    },
+    ishizuchi_tengu_cluster: {
+      '愛媛のどこに残る？': 'context',
+      '山麓ではどう語られた？': 'story',
+      '資料から分かること': 'research_note',
+      'まだ分からないこと': 'research_note'
+    },
+    dogo_myth_cluster: {
+      '白鷺が湯を見つけた話': 'story',
+      '少彦名命と玉の石': 'story',
+      '資料から分かること': 'research_note',
+      'ここで大切なこと': 'research_note'
+    },
+    ishiteji_emon_saburo_cluster: {
+      '愛媛のどこに残る？': 'context',
+      'どんな物語？': 'story',
+      'どこまで古く確認できる？': 'research_note',
+      'まだ分からないこと': 'research_note'
+    },
+    uwakai_sea_mystery_cluster: {
+      '大洲・宇和島の「柄杓をくれ」': 'story',
+      '日振島へ帰る船を止める火': 'story',
+      '資料から分かること': 'research_note',
+      'まだ分からないこと': 'research_note'
+    },
+    kihoku_oni_cluster: {
+      '愛媛のどこに残る？': 'context',
+      '鬼王段三郎は何をした？': 'story',
+      '資料から分かること': 'research_note',
+      'まだ分からないこと': 'research_note'
+    },
+    yosuzume: {
+      '愛媛のどこに残る？': 'context',
+      'どんな怪異？': 'story',
+      '資料から分かること': 'research_note',
+      'ここで大切なこと': 'research_note'
+    },
+    nobiagari: {
+      '旧下波村の伸上り': 'story',
+      '城川町の伸上り': 'comparison',
+      '資料から分かること': 'research_note',
+      'まだ調べられること': 'research_note'
+    },
+    kane_no_kami_no_hi: {
+      '愛媛のどこに残る？': 'context',
+      'どんな話？': 'story',
+      '資料から分かること': 'research_note',
+      'まだ分からないこと': 'research_note'
+    }
+  };
 
   document.addEventListener('ehime:detail-opened', (event) => {
     enhanceDetail(event.detail || {});
@@ -17,7 +78,7 @@
     if (!detail || !article || !id || !research) return;
 
     article.querySelector('[data-ehime-research-v2]')?.remove();
-    reduceArticleDuplication(article);
+    reduceArticleDuplication(article, id);
 
     const section = document.createElement('details');
     section.className = 'detail-section ehime-research-v2';
@@ -56,10 +117,11 @@
     else article.append(section);
   }
 
-  function reduceArticleDuplication(article) {
+  function reduceArticleDuplication(article, articleId) {
+    const roleByHeading = ARTICLE_SECTION_ROLES[articleId] || {};
     for (const section of article.querySelectorAll('.detail-section')) {
       const heading = section.querySelector('h3')?.textContent?.trim();
-      if (RESEARCH_ONLY_HEADINGS.has(heading)) section.remove();
+      if (roleByHeading[heading] === 'research_note') section.remove();
       if (heading === '確認メモ') section.remove();
     }
   }
