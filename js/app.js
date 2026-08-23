@@ -3,7 +3,7 @@ import { applyFilters, getScaryOptions, readFilters, resetFilterForm } from './f
 import { renderCards, renderCount, renderFilterOptions, renderStatus } from './render.js';
 import { openDetail as openBaseDetail, setupDetailModal } from './detail.js';
 import { setupOpening } from './opening.js';
-import { LITERARY_PHASE1_URL, LITERARY_PHASE2_URL, mergeLiteraryOverlay } from './literary.js';
+import { LITERARY_PHASE1_URL, LITERARY_PHASE2_URL, LITERARY_PHASE3_URL, mergeLiteraryOverlay } from './literary.js';
 import {
   enhanceDetailWithResearch,
   installResearchStyles,
@@ -40,9 +40,10 @@ async function init() {
 
   try {
     const data = await loadYokaiData();
-    const [literaryPhase1, literaryPhase2] = await Promise.all([
+    const [literaryPhase1, literaryPhase2, literaryPhase3] = await Promise.all([
       loadOptionalJson(LITERARY_PHASE1_URL),
-      loadOptionalJson(LITERARY_PHASE2_URL)
+      loadOptionalJson(LITERARY_PHASE2_URL),
+      loadOptionalJson(LITERARY_PHASE3_URL)
     ]);
     const research = await loadPilotResearch().catch((error) => {
       console.warn('原典・地域差データを読み込めなかったため、基本図鑑だけで続行します。', error);
@@ -51,7 +52,8 @@ async function init() {
 
     const researchedItems = mergePilotResearch(data.items, research);
     const phase1Items = mergeLiteraryOverlay(researchedItems, literaryPhase1);
-    state.allItems = mergeLiteraryOverlay(phase1Items, literaryPhase2);
+    const phase2Items = mergeLiteraryOverlay(phase1Items, literaryPhase2);
+    state.allItems = mergeLiteraryOverlay(phase2Items, literaryPhase3);
     opening.setYokaiPool(state.allItems);
     renderFilterOptions(
       { categorySelect: elements.categorySelect, scarySelect: elements.scarySelect },
