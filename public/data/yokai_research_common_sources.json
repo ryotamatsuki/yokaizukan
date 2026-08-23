@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-08-23",
+  "purpose": "研究バッチ間で共有する、必須ロードの共通出典。expansion間の直接source依存を避ける。",
+  "sources": [
+    {
+      "id": "ndl-tsukumogami-theme",
+      "title": "付喪神絵巻",
+      "provider": "国立国会図書館 NDLイメージバンク",
+      "year": "室町期以降の付喪神物語を伝える模本",
+      "region": "出版・絵巻文化",
+      "recordType": "歴史絵巻・機関解説",
+      "sourceRole": "evidence",
+      "sourceType": "institutional_exhibit",
+      "url": "https://www.ndl.go.jp/imagebank/theme/tsukumogami"
+    }
+  ]
+}
