@@ -7,7 +7,7 @@ async function openYokai(page, id) {
     await skipOpening.click();
   }
   await expect(page.locator('#results-count')).toContainText('/ 50 体');
-  const card = page.locator(`[data-yokai-id="${id}"]`);
+  const card = page.locator(`article.yokai-card[data-yokai-id="${id}"]`);
   await expect(card).toBeVisible();
   const title = (await card.locator('h3').textContent())?.trim() || '';
   await card.getByRole('button', { name: 'くわしく見る' }).click();
