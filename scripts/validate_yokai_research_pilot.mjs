@@ -16,6 +16,11 @@ const EXPECTED_IDS = [
   'nekomata'
 ];
 
+const BASE_ID_ALIASES = {
+  yuki_onna: 'yuki-onna',
+  zashiki_warashi: 'zashiki-warashi'
+};
+
 const ALLOWED_EVIDENCE_LEVELS = new Set(['A', 'B', 'APP']);
 const ALLOWED_SOURCE_HOSTS = new Set([
   'www.ndl.go.jp',
@@ -41,18 +46,22 @@ assert(pilotIdSet.size === pilotIds.length, 'pilot item IDs must be unique');
 
 for (const id of EXPECTED_IDS) {
   assert(pilotIdSet.has(id), `missing pilot item: ${id}`);
-  assert(baseIds.has(id), `pilot item does not exist in base yokai.json: ${id}`);
+  const baseId = toBaseCatalogId(id);
+  assert(baseIds.has(baseId), `pilot item does not resolve to base yokai.json: ${id} -> ${baseId}`);
 }
 for (const id of pilotIds) {
   assert(EXPECTED_IDS.includes(id), `unexpected pilot item: ${id}`);
 }
+
+const resolvedPilotBaseIds = pilotIds.map(toBaseCatalogId);
+assert(new Set(resolvedPilotBaseIds).size === resolvedPilotBaseIds.length, 'pilot IDs must resolve to unique base catalog IDs');
 
 const sourceIds = sources.map((source) => source.id);
 const sourceIdSet = new Set(sourceIds);
 assert(sourceIdSet.size === sourceIds.length, 'source IDs must be unique');
 
 for (const source of sources) {
-  assertText(source.id, `source.id`);
+  assertText(source.id, 'source.id');
   assertText(source.title, `${source.id}.title`);
   assertText(source.provider, `${source.id}.provider`);
   assertText(source.url, `${source.id}.url`);
@@ -112,6 +121,10 @@ if (errors.length) {
 }
 
 console.log(`Yokai research pilot validation passed: ${pilotItems.length} items / ${sources.length} sources.`);
+
+function toBaseCatalogId(researchId) {
+  return BASE_ID_ALIASES[researchId] || researchId;
+}
 
 function validateClaims(claims, path) {
   if (!Array.isArray(claims)) {
