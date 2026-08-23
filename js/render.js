@@ -126,6 +126,7 @@ function createYokaiCard(yokai, onOpenDetail) {
   const card = document.createElement('article');
   card.className = 'yokai-card';
   card.tabIndex = 0;
+  card.dataset.yokaiId = yokai.id || '';
 
   const imageFrame = createImageFrame(yokai, 'card-image');
 
