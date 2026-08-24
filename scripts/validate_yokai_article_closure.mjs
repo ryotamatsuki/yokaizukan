@@ -36,6 +36,8 @@ const PROTECTED = {
   'public/data/ehime_research_v2.json': '4bfe24bb4211358cdf936935ae451073fab048fe'
 };
 
+// These are legacy positive assertions/symbolic conclusions. A closure article may
+// mention the same noun while explicitly saying it is unverified, so avoid single-word bans.
 const LEGACY_DANGER = {
   wanyudo: ['子どもをさらう', '仏教的な因果', '道具と移動の力が、人間の手を離れて走り出す'],
   mokumokuren: ['家そのものが怪異化', '古い家がこちらを見返すとき', '住まいにも時間が積もり'],
@@ -44,10 +46,10 @@ const LEGACY_DANGER = {
   'karakasa-kozo': ['古い傘が妖怪になった付喪神です', 'ものを大切にする生活倫理', '忘れられたものの反撃'],
   'chochin-obake': ['人間が作った光の不安', '四谷怪談のような上演文化', '古びた提灯が顔を持つ付喪神として語られる'],
   nuppeppo: ['墓地や廃寺に現れるといった説明も見られますが、それが古い絵の本文に直接書かれているとは限りません。'],
-  shiro_uneri: ['忘れられた布', '物置'],
-  fumikuruma_yohi: ['届かなかった手紙', '恋文の恨み', '言葉が妖怪の身体'],
-  kaichigo: ['貝合わせ', '婚礼道具'],
-  enenra: ['心のきれいな人だけ見える', '見る人の心が形を作る'],
+  shiro_uneri: ['物置で夜にうねる', '忘れられた布そのものが妖怪'],
+  fumikuruma_yohi: ['言葉が妖怪の身体になる', '強い思いが妖怪化する'],
+  kaichigo: ['海の広さを貝殻に宿す', '婚礼道具から生まれ'],
+  enenra: ['見る人の心が形を作る', '囲炉裏・焚き火・湯気へ現れる'],
   ame_onna: ['雪女との対', '白・青の衣', '農作物と雨を待つ']
 };
 
@@ -133,6 +135,8 @@ const literarySource = fs.readFileSync(LITERARY_PATH, 'utf8');
 const appSource = fs.readFileSync(APP_PATH, 'utf8');
 assert(literarySource.includes("ARTICLE_CLOSURE_URL = 'public/data/yokai_article_closure.json'"), 'Closure URL missing');
 assert(literarySource.includes('export function mergeArticleClosureOverlay'), 'Closure merge function missing');
+assert(literarySource.includes('next.visualFeatures = []'), 'Closure must clear legacy visualFeatures');
+assert(literarySource.includes('next.textReferenceUrls = []'), 'Closure must clear legacy textReferenceUrls');
 assert(literarySource.includes("references: hasResearch && Array.isArray(existingArticle.references)"), 'Research references must be preserved when available');
 assert(literarySource.includes("references: hasResearch") && literarySource.includes(": []"), 'Legacy references must be cleared when Research is unavailable');
 const p1Pos = appSource.indexOf('mergeLiteraryOverlay(researchedItems, literaryPhase1)');
