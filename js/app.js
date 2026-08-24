@@ -60,7 +60,8 @@ async function init() {
 
     const researchedItems = mergePilotResearch(data.items, research);
     const phase1Items = mergeLiteraryOverlay(researchedItems, literaryPhase1);
-    const phase2Items = mergeLiteraryOverlay(phase1Items, literaryPhase2);
+    state.allItems = mergeLiteraryOverlay(phase1Items, literaryPhase2);
+    const phase2Items = state.allItems;
     const phase3Items = mergeLiteraryOverlay(phase2Items, literaryPhase3);
     state.allItems = mergeArticleClosureOverlay(phase3Items, articleClosure);
     opening.setYokaiPool(state.allItems);
