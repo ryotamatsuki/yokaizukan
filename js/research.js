@@ -3,6 +3,7 @@ const RESEARCH_COMMON_SOURCES_URL = 'public/data/yokai_research_common_sources.j
 const RESEARCH_EXPANSION_URLS = [1, 2, 3, 4, 5].map(
   (batch) => `public/data/yokai_research_expansion_0${batch}.json`
 );
+const RESEARCH_DEEPENING_URL = 'public/data/yokai_research_deepening_phase4.json';
 const RESEARCH_STYLE_URL = 'css/research.css';
 
 const BASE_ID_ALIASES = {
@@ -17,9 +18,7 @@ const EVIDENCE_LABELS = {
 };
 
 export function installResearchStyles() {
-  if (document.querySelector('link[data-yokai-research-style]')) {
-    return;
-  }
+  if (document.querySelector('link[data-yokai-research-style]')) return;
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   link.href = RESEARCH_STYLE_URL;
@@ -35,31 +34,25 @@ export async function loadPilotResearch(url = RESEARCH_DATA_URL) {
   const expansionResults = await Promise.allSettled(
     RESEARCH_EXPANSION_URLS.map((batchUrl) => fetchResearchPayload(batchUrl))
   );
-
   const payloads = [basePayload, commonPayload];
   expansionResults.forEach((result, index) => {
-    if (result.status === 'fulfilled') {
-      payloads.push(result.value);
-      return;
-    }
-    console.warn(`研究データ batch ${index + 1} の読み込みをスキップしました。`, result.reason);
+    if (result.status === 'fulfilled') payloads.push(result.value);
+    else console.warn(`研究データ batch ${index + 1} の読み込みをスキップしました。`, result.reason);
   });
-
+  try {
+    payloads.push(await fetchResearchPayload(RESEARCH_DEEPENING_URL));
+  } catch (error) {
+    console.warn('Phase 4 Research Deepening の読み込みをスキップしました。', error);
+  }
   return combineResearchPayloads(payloads);
 }
 
 export function mergePilotResearch(items, payload) {
   const sourceIndex = new Map(payload.sources.map((source) => [source.id, source]));
-  const researchIndex = new Map(
-    payload.items.map((item) => [toBaseCatalogId(item.id), item])
-  );
-
+  const researchIndex = new Map(payload.items.map((item) => [toBaseCatalogId(item.id), item]));
   return items.map((item) => {
     const research = researchIndex.get(item.id);
-    if (!research) {
-      return item;
-    }
-
+    if (!research) return item;
     const resolvedSources = resolveSources(research.sourceIds, sourceIndex);
     const article = research.article || {};
     const detailedArticle = {
@@ -74,9 +67,7 @@ export function mergePilotResearch(items, payload) {
         note: [source.year, source.region, source.recordType].filter(Boolean).join(' / ')
       }))
     };
-
     const childDescription = research.editorial?.childDescription || item.childDescription;
-
     return {
       ...item,
       oneLine: research.editorial?.oneLine || item.oneLine,
@@ -96,15 +87,9 @@ export function mergePilotResearch(items, payload) {
 }
 
 export function enhanceDetailWithResearch(yokai) {
-  if (!yokai?.research) {
-    return;
-  }
-
+  if (!yokai?.research) return;
   const body = document.querySelector('#detail-content .detail-body');
-  if (!body || body.querySelector('[data-research-overview]')) {
-    return;
-  }
-
+  if (!body || body.querySelector('[data-research-overview]')) return;
   const research = yokai.research;
   const section = document.createElement('section');
   section.className = 'detail-section research-overview full-span';
@@ -118,7 +103,6 @@ export function enhanceDetailWithResearch(yokai) {
   badge.className = 'research-pilot-badge';
   badge.textContent = '出典・記録リンク付き';
   headingRow.append(heading, badge);
-
   const lead = document.createElement('p');
   lead.className = 'research-lead';
   lead.textContent = research.historySummary;
@@ -126,9 +110,7 @@ export function enhanceDetailWithResearch(yokai) {
 
   const quickFacts = document.createElement('div');
   quickFacts.className = 'research-quick-facts';
-  if (research.aliases?.length) {
-    quickFacts.append(createFact('別名・近い呼び名', research.aliases.join('・')));
-  }
+  if (research.aliases?.length) quickFacts.append(createFact('別名・近い呼び名', research.aliases.join('・')));
   quickFacts.append(createFact('地域記録', `${research.regionalVariants?.length || 0}件を掲載`));
   quickFacts.append(createFact('出典', `${research.sources.length}件の資料・記録へリンク`));
   section.append(quickFacts);
@@ -136,24 +118,11 @@ export function enhanceDetailWithResearch(yokai) {
   const columns = document.createElement('div');
   columns.className = 'research-columns';
   columns.append(
-    createClaimList(
-      '何をする？',
-      research.abilities,
-      '資料で確認できる固有の行動は、まだ十分に確認できていません。',
-      research.evidenceLevels
-    ),
-    createClaimList(
-      '弱点・対処の伝承',
-      research.countermeasures,
-      'この資料群では、固有の対処法を確認できていません。',
-      research.evidenceLevels
-    )
+    createClaimList('何をする？', research.abilities, '資料で確認できる固有の行動は、まだ十分に確認できていません。', research.evidenceLevels),
+    createClaimList('弱点・対処の伝承', research.countermeasures, 'この資料群では、固有の対処法を確認できていません。', research.evidenceLevels)
   );
   section.append(columns);
-
-  if (research.editorial?.interpretation) {
-    section.append(createEditorialNote(research.editorial.interpretation, research.evidenceLevels));
-  }
+  if (research.editorial?.interpretation) section.append(createEditorialNote(research.editorial.interpretation, research.evidenceLevels));
 
   if (research.regionalVariants?.length) {
     const regionHeading = document.createElement('h4');
@@ -185,25 +154,24 @@ export function enhanceDetailWithResearch(yokai) {
     const timeline = document.createElement('ol');
     timeline.className = 'research-timeline';
     research.timeline.forEach((entry) => {
-      const item = document.createElement('li');
+      const row = document.createElement('li');
       const label = document.createElement('strong');
       label.textContent = entry.label;
       const text = document.createElement('span');
       text.textContent = entry.summary;
-      item.append(label, text);
-      timeline.append(item);
+      row.append(label, text);
+      timeline.append(row);
     });
     section.append(timelineHeading, timeline);
   }
 
   appendGlossary(section, research);
-
   const sourceHeading = document.createElement('h4');
   sourceHeading.textContent = '出典・記録へたどる';
   const sourceList = document.createElement('ul');
   sourceList.className = 'research-source-list';
   research.sources.forEach((source) => {
-    const item = document.createElement('li');
+    const row = document.createElement('li');
     const link = document.createElement('a');
     link.href = source.url;
     link.target = '_blank';
@@ -211,22 +179,17 @@ export function enhanceDetailWithResearch(yokai) {
     link.textContent = source.title;
     const meta = document.createElement('span');
     meta.textContent = [source.provider, source.year, source.region, source.recordType].filter(Boolean).join(' / ');
-    item.append(link, meta);
-    sourceList.append(item);
+    row.append(link, meta);
+    sourceList.append(row);
   });
   section.append(sourceHeading, sourceList);
-
   const note = document.createElement('p');
   note.className = 'research-evidence-note';
   note.textContent = research.evidenceNote;
   section.append(note);
-
   const detailedControls = body.querySelector('.detail-more-controls');
-  if (detailedControls) {
-    body.insertBefore(section, detailedControls);
-  } else {
-    body.append(section);
-  }
+  if (detailedControls) body.insertBefore(section, detailedControls);
+  else body.append(section);
 }
 
 export function toBaseCatalogId(researchId) {
@@ -235,13 +198,9 @@ export function toBaseCatalogId(researchId) {
 
 async function fetchResearchPayload(url) {
   const response = await fetch(url, { cache: 'no-cache' });
-  if (!response.ok) {
-    throw new Error(`${url} の読み込みに失敗しました。HTTP ${response.status}`);
-  }
+  if (!response.ok) throw new Error(`${url} の読み込みに失敗しました。HTTP ${response.status}`);
   const payload = await response.json();
-  if (!Array.isArray(payload.items) || !Array.isArray(payload.sources)) {
-    throw new Error(`${url} の形式が正しくありません。`);
-  }
+  if (!Array.isArray(payload.items) || !Array.isArray(payload.sources)) throw new Error(`${url} の形式が正しくありません。`);
   return payload;
 }
 
@@ -250,9 +209,8 @@ function combineResearchPayloads(payloads) {
   const sources = [];
   const items = [];
   const sourceIds = new Set();
-  const itemIds = new Set();
+  const itemIndex = new Map();
   const glossary = {};
-
   for (const payload of payloads) {
     Object.assign(glossary, payload.glossary || {});
     for (const source of payload.sources || []) {
@@ -264,27 +222,24 @@ function combineResearchPayloads(payloads) {
       sources.push(source);
     }
     for (const item of payload.items || []) {
-      if (itemIds.has(item.id)) {
+      const existingIndex = itemIndex.get(item.id);
+      if (existingIndex !== undefined && payload.overlayMode === 'research_deepening') {
+        items[existingIndex] = { ...items[existingIndex], ...item };
+        continue;
+      }
+      if (existingIndex !== undefined) {
         console.warn(`重複する研究item idをスキップしました: ${item.id}`);
         continue;
       }
-      itemIds.add(item.id);
+      itemIndex.set(item.id, items.length);
       items.push(item);
     }
   }
-
-  return {
-    ...base,
-    sources,
-    items,
-    glossary
-  };
+  return { ...base, sources, items, glossary };
 }
 
 function resolveSources(sourceIds = [], sourceIndex) {
-  return [...new Set(sourceIds)]
-    .map((id) => sourceIndex.get(id))
-    .filter(Boolean);
+  return [...new Set(sourceIds)].map((id) => sourceIndex.get(id)).filter(Boolean);
 }
 
 function createFact(labelText, valueText) {
@@ -304,7 +259,6 @@ function createClaimList(titleText, claims = [], emptyText, evidenceLevels = {})
   const title = document.createElement('h4');
   title.textContent = titleText;
   block.append(title);
-
   if (!claims.length) {
     const empty = document.createElement('p');
     empty.className = 'muted-text';
@@ -312,23 +266,19 @@ function createClaimList(titleText, claims = [], emptyText, evidenceLevels = {})
     block.append(empty);
     return block;
   }
-
   const list = document.createElement('ul');
   claims.forEach((claim) => {
-    const item = document.createElement('li');
+    const row = document.createElement('li');
     const name = document.createElement('strong');
     name.textContent = claim.name;
     const text = document.createElement('span');
     text.textContent = claim.description;
     const level = document.createElement('small');
-    const label = EVIDENCE_LABELS[claim.evidenceLevel] || claim.evidenceLevel;
-    level.textContent = label;
+    level.textContent = EVIDENCE_LABELS[claim.evidenceLevel] || claim.evidenceLevel;
     const detail = evidenceLevels[claim.evidenceLevel];
-    if (detail) {
-      level.title = `${claim.evidenceLevel}: ${detail}`;
-    }
-    item.append(name, text, level);
-    list.append(item);
+    if (detail) level.title = `${claim.evidenceLevel}: ${detail}`;
+    row.append(name, text, level);
+    list.append(row);
   });
   block.append(list);
   return block;
@@ -343,38 +293,27 @@ function createEditorialNote(text, evidenceLevels = {}) {
   body.textContent = text;
   const label = document.createElement('small');
   label.textContent = EVIDENCE_LABELS.APP;
-  if (evidenceLevels.APP) {
-    label.title = `APP: ${evidenceLevels.APP}`;
-  }
+  if (evidenceLevels.APP) label.title = `APP: ${evidenceLevels.APP}`;
   note.append(heading, body, label);
   return note;
 }
 
 function appendGlossary(section, research) {
   const terms = Array.isArray(research.glossaryTerms) ? research.glossaryTerms : [];
-  if (!terms.length) {
-    return;
-  }
-
-  const entries = terms
-    .map((term) => [term, research.glossary?.[term]])
-    .filter(([, definition]) => Boolean(definition));
-  if (!entries.length) {
-    return;
-  }
-
+  const entries = terms.map((term) => [term, research.glossary?.[term]]).filter(([, definition]) => Boolean(definition));
+  if (!entries.length) return;
   const heading = document.createElement('h4');
   heading.textContent = 'むずかしいことば';
   const list = document.createElement('dl');
   list.className = 'research-glossary';
   entries.forEach(([term, definition]) => {
-    const item = document.createElement('div');
+    const row = document.createElement('div');
     const dt = document.createElement('dt');
     dt.textContent = term;
     const dd = document.createElement('dd');
     dd.textContent = definition;
-    item.append(dt, dd);
-    list.append(item);
+    row.append(dt, dd);
+    list.append(row);
   });
   section.append(heading, list);
 }
