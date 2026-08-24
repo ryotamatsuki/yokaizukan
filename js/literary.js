@@ -4,7 +4,7 @@ export const LITERARY_PHASE3_URL = 'public/data/yokai_literary_phase3.json';
 export const ARTICLE_CLOSURE_URL = 'public/data/yokai_article_closure.json';
 
 const ALLOWED_ARTICLE_FIELDS = new Set(['title', 'subtitle', 'body']);
-const CLOSURE_TEXT_FIELDS = ['oneLine', 'childDescription', 'trivia', 'notes'];
+const CLOSURE_TEXT_FIELDS = ['oneLine', 'childDescription', 'trivia'];
 const CLOSURE_ARRAY_FIELDS = ['habitat', 'tags', 'quiz'];
 
 export function mergeLiteraryOverlay(items = [], literaryData = null) {
@@ -46,6 +46,9 @@ export function mergeArticleClosureOverlay(items = [], closureData = null) {
     const childDescription = cleanText(overlay.childDescription);
     if (childDescription) next.description = childDescription;
 
+    // Closure metadata is editorial/audit data, not a public explanatory note.
+    next.notes = '';
+
     // Legacy base metadata can otherwise survive even when the article is replaced.
     // For closure targets, visual claims belong in the Research panel / article itself,
     // and reference links must come from current Research sourceIds only.
@@ -59,7 +62,7 @@ export function mergeArticleClosureOverlay(items = [], closureData = null) {
       ...existingArticle,
       ...articlePatch,
       sourceNote: hasResearch
-        ? existingArticle.sourceNote
+        ? '出典リンクは現在のResearch sourceIdsから表示しています。詳しい確認範囲は「地域と出典で読む」を参照してください。'
         : '研究データを読み込めなかったため、出典リンクは現在表示していません。',
       references: hasResearch && Array.isArray(existingArticle.references)
         ? existingArticle.references
