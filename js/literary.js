@@ -8,28 +8,20 @@ const CLOSURE_TEXT_FIELDS = ['oneLine', 'childDescription', 'trivia', 'notes'];
 const CLOSURE_ARRAY_FIELDS = ['habitat', 'tags', 'quiz'];
 
 export function mergeLiteraryOverlay(items = [], literaryData = null) {
-  if (!literaryData || !Array.isArray(literaryData.items)) {
-    return items;
-  }
-
+  if (!literaryData || !Array.isArray(literaryData.items)) return items;
   const overlays = new Map(literaryData.items.map((item) => [item.id, item]));
 
   return items.map((item) => {
     const overlay = overlays.get(item.id);
     if (!overlay) return item;
-
     const articlePatch = sanitizeArticlePatch(overlay.detailedArticle);
     const childDescription = cleanText(overlay.childDescription) || item.childDescription;
-
     return {
       ...item,
       oneLine: cleanText(overlay.oneLine) || item.oneLine,
       childDescription,
       description: childDescription,
-      detailedArticle: {
-        ...item.detailedArticle,
-        ...articlePatch
-      }
+      detailedArticle: { ...item.detailedArticle, ...articlePatch }
     };
   });
 }
@@ -54,6 +46,12 @@ export function mergeArticleClosureOverlay(items = [], closureData = null) {
     const childDescription = cleanText(overlay.childDescription);
     if (childDescription) next.description = childDescription;
 
+    // Legacy base metadata can otherwise survive even when the article is replaced.
+    // For closure targets, visual claims belong in the Research panel / article itself,
+    // and reference links must come from current Research sourceIds only.
+    next.visualFeatures = [];
+    next.textReferenceUrls = [];
+
     const articlePatch = sanitizeArticlePatch(overlay.detailedArticle);
     const hasResearch = Boolean(item.research);
     const existingArticle = item.detailedArticle || {};
@@ -74,7 +72,6 @@ export function mergeArticleClosureOverlay(items = [], closureData = null) {
 
 function sanitizeArticlePatch(article) {
   if (!article || typeof article !== 'object') return {};
-
   const patch = {};
   for (const key of ALLOWED_ARTICLE_FIELDS) {
     if (!(key in article)) continue;
