@@ -3,7 +3,14 @@ import { applyFilters, getScaryOptions, readFilters, resetFilterForm } from './f
 import { renderCards, renderCount, renderFilterOptions, renderStatus } from './render.js';
 import { openDetail as openBaseDetail, setupDetailModal } from './detail.js';
 import { setupOpening } from './opening.js';
-import { LITERARY_PHASE1_URL, LITERARY_PHASE2_URL, LITERARY_PHASE3_URL, mergeLiteraryOverlay } from './literary.js';
+import {
+  ARTICLE_CLOSURE_URL,
+  LITERARY_PHASE1_URL,
+  LITERARY_PHASE2_URL,
+  LITERARY_PHASE3_URL,
+  mergeArticleClosureOverlay,
+  mergeLiteraryOverlay
+} from './literary.js';
 import {
   enhanceDetailWithResearch,
   installResearchStyles,
@@ -40,10 +47,11 @@ async function init() {
 
   try {
     const data = await loadYokaiData();
-    const [literaryPhase1, literaryPhase2, literaryPhase3] = await Promise.all([
+    const [literaryPhase1, literaryPhase2, literaryPhase3, articleClosure] = await Promise.all([
       loadOptionalJson(LITERARY_PHASE1_URL),
       loadOptionalJson(LITERARY_PHASE2_URL),
-      loadOptionalJson(LITERARY_PHASE3_URL)
+      loadOptionalJson(LITERARY_PHASE3_URL),
+      loadOptionalJson(ARTICLE_CLOSURE_URL)
     ]);
     const research = await loadPilotResearch().catch((error) => {
       console.warn('原典・地域差データを読み込めなかったため、基本図鑑だけで続行します。', error);
@@ -54,7 +62,8 @@ async function init() {
     const phase1Items = mergeLiteraryOverlay(researchedItems, literaryPhase1);
     state.allItems = mergeLiteraryOverlay(phase1Items, literaryPhase2);
     const phase2Items = state.allItems;
-    state.allItems = mergeLiteraryOverlay(phase2Items, literaryPhase3);
+    const phase3Items = mergeLiteraryOverlay(phase2Items, literaryPhase3);
+    state.allItems = mergeArticleClosureOverlay(phase3Items, articleClosure);
     opening.setYokaiPool(state.allItems);
     renderFilterOptions(
       { categorySelect: elements.categorySelect, scarySelect: elements.scarySelect },
@@ -76,9 +85,7 @@ function bindEvents() {
   });
 
   elements.form.addEventListener('input', (event) => {
-    if (event.target.matches('input, select')) {
-      updateView();
-    }
+    if (event.target.matches('input, select')) updateView();
   });
 
   elements.form.addEventListener('change', updateView);
