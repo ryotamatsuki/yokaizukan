@@ -25,6 +25,7 @@ jobs:
           node --check js/literary.js
           node --check js/research.js
           node --check js/ehime.js
+          node --check js/ehime-opening.js
           node --check js/ehime-research-v2.js
           node --check scripts/run_data_integrity_compact.mjs
           node --check scripts/validate_ehime_research_v2.mjs
@@ -38,6 +39,7 @@ jobs:
           node --check scripts/validate_yokai_literary_phase3.mjs
           node --check scripts/validate_yokai_research_deepening_phase4.mjs
           node --check playwright.config.mjs
+          node --check tests/e2e/ehime-opening.spec.mjs
           node --check tests/e2e/ehime-research.spec.mjs
           node --check tests/e2e/yokai-literary.spec.mjs
           node --check tests/e2e/yokai-literary-phase3.spec.mjs
