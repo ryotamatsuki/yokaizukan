@@ -28,6 +28,24 @@ jobs:
       - name: Apply data migration
         run: node scripts/apply_ishizuchi_hokibo_patch.mjs
 
+      - name: Refine literary wording
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const paths = ['public/data/articles.json', 'scripts/fixtures/ehime_11_articles.json'];
+          const from = '法起坊大天狗の信仰と、こうした山麓の口承は、同じ石鎚の天狗でも資料の系統を分けて読みます。';
+          const to = '法起坊大天狗の信仰と、こうした山麓の口承は、同じ石鎚の天狗でも別々の資料に伝わっています。';
+          for (const path of paths) {
+            const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const article = data.articles.find((item) => item.id === 'ishizuchi_tengu_cluster');
+            const section = article?.sections.find((item) => item.heading === '山麓に残る烏天狗の話');
+            const index = section?.body.findIndex((paragraph) => paragraph === from) ?? -1;
+            if (index < 0) throw new Error(`${path}: literary wording target not found`);
+            section.body[index] = to;
+            fs.writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
+          }
+          NODE
+
       - name: Validate JavaScript syntax
         run: |
           node --check scripts/validate_ehime_11_traditions.mjs
