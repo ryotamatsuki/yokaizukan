@@ -3,7 +3,7 @@
     "title": "愛媛ふしぎ伝承図鑑",
     "subtitle": "山・海・温泉・寺・島に残る11の物語",
     "description": "愛媛県の特定の場所や資料と結びつきを確認できる、11の伝承・神話・祭礼・寺院縁起を紹介します。",
-    "updatedAt": "2026-08-23",
+    "updatedAt": "2026-08-25",
     "dataPolicy": "公的資料・地域資料・妖怪研究の入口となる資料を確認し、断定できない部分は伝承として表現します。",
     "sourceDescription": "この図鑑では、伝承が記録された場所、記録者や編者、資料名、刊行年をできる限り示しています。伝承が語る出来事を歴史的事実と断定するものではありません。"
   },
@@ -103,24 +103,52 @@
       "displayInList": true,
       "region": "東予・山間部",
       "municipality": "西条市・久万高原町ほか",
-      "areaTags": ["石鎚山", "天狗岳", "修験"],
+      "areaTags": [
+        "石鎚山",
+        "天狗岳",
+        "修験",
+        "法起坊",
+        "天狗経"
+      ],
       "type": "山岳妖怪・山神・修験",
       "traditionType": "山に伝わる",
       "evidenceLevel": "A",
-      "evidenceLabel": "石鎚山麓の民俗採集記録で確認",
+      "evidenceLabel": "石鎚神社公式資料と山麓の民俗採集記録で確認",
       "scaryLevel": 3,
       "scaryLabel": "ちょっとふしぎ",
-      "shortDescription": "石鎚山麓では、高い木の烏天狗や白装束の人物、小さな火などの天狗話が記録されています。",
-      "childDescription": "石鎚山麓では、高い木の烏天狗や白装束の人物、小さな火などの天狗話が記録されています。",
+      "shortDescription": "石鎚山には大天狗「石鎚山法起坊」の伝承があり、山麓には高い木に来る烏天狗や小さな火、白装束の人物の天狗譚も記録されています。",
+      "childDescription": "石鎚山には大天狗「石鎚山法起坊」の伝承があり、山麓には高い木に来る烏天狗や小さな火、白装束の人物の天狗譚も記録されています。",
       "locationId": "ishizuchi",
       "imagePath": "public/assets/ehime/generated/ishizuchi_tengu_cluster.png",
       "articleId": "ishizuchi_tengu_cluster",
-      "sourceIds": ["SRC_ASHINAKA_116_TENGU", "SRC_ISHIZUCHI_OFFICIAL"],
-      "courseIds": ["ishizuchi_tengu_course"],
+      "sourceIds": [
+        "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+        "SRC_ASHINAKA_116_TENGU",
+        "SRC_ISHIZUCHI_OFFICIAL",
+        "SRC_JAC_ISHIZUCHI_HOKIBO",
+        "SRC_TENGUKYO_MIYAKE_2023"
+      ],
+      "courseIds": [
+        "ishizuchi_tengu_course"
+      ],
       "childItems": [],
-      "missions": ["山の地名に妖怪の名前が残る理由を考えてみよう", "天狗の持ち物や姿を全国の妖怪図鑑と比べてみよう"],
-      "quiz": [{"question": "石鎚山の頂上部には、どんな名前の峰がありますか？", "choices": ["天狗岳", "狸岳", "貝岳"], "answer": "天狗岳", "explanation": "石鎚山には天狗岳という名の峰があります。地名は天狗伝承とは別の資料として確認します。"}],
-      "notes": "実在の山岳信仰と妖怪イメージを混同しすぎず、学習用に整理する。",
+      "missions": [
+        "法起坊と烏天狗は、同じ「石鎚の天狗」でも資料の中でどう違って語られているか比べてみよう",
+        "「天狗経」に山の名前と天狗の坊号が並ぶ理由を考えてみよう"
+      ],
+      "quiz": [
+        {
+          "question": "石鎚山の大天狗として名が伝わるのはだれですか？",
+          "choices": [
+            "法起坊",
+            "刑部狸",
+            "波山"
+          ],
+          "answer": "法起坊",
+          "explanation": "石鎚神社の社報は、石鎚山法起坊を石鎚山を住処とする大天狗とし、「天狗経」の48天狗に数えられると紹介しています。"
+        }
+      ],
+      "notes": "法起坊＝役小角は信仰上の伝承として記す。「日本八大天狗」は数え方に揺れがあるため断定しない。「天狗経」は修験道独自の経として扱い、成立年代を固定しない。山麓の烏天狗譚と法起坊信仰は別資料系統として併記する。",
       "childItemIds": [],
       "traditionLayer": "folklore_collection"
     },

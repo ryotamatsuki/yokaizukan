@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-08-25",
   "sources": [
     {
       "id": "SRC_UWAJIMA_CITY_2026",
@@ -323,6 +323,57 @@
       "pages": null,
       "recordId": "CiNii BN05729787",
       "sourceQuality": "folklore_dictionary"
+    },
+    {
+      "id": "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+      "title": "石鎚社報 第765号",
+      "organization": "石鎚神社",
+      "url": "https://ishizuchisan.jp/ishizuchi_wp/wp-content/uploads/2023/11/7fc65113730ce1c8bb49b0598854c507.pdf",
+      "type": "official_periodical_pdf",
+      "note": "石鎚山法起坊を霊峰石鎚山を住処とする大天狗とし、「天狗経」の48天狗、日本八大天狗の一人とも別格ともされること、役小角その人とも言われることを紹介する。",
+      "articleOrSection": "石鎚山法起坊・天狗経・八大天狗・役小角",
+      "authorOrEditor": null,
+      "informant": null,
+      "publicationYear": 2023,
+      "publicationDate": "2023-11-01",
+      "volumeIssue": "第765号",
+      "pages": "9",
+      "recordId": "ISHIZUCHI-SHAHO-765",
+      "sourceQuality": "official"
+    },
+    {
+      "id": "SRC_JAC_ISHIZUCHI_HOKIBO",
+      "title": "石鎚山表参道",
+      "organization": "公益社団法人日本山岳会",
+      "url": "https://kodo.jac1.or.jp/kodo120_detail/106_isiduti/",
+      "type": "institutional_webpage",
+      "note": "石鎚山表参道沿いの極楽寺「石鎚山大天狗法起坊堂」を紹介し、法起坊大天狗を石鎚山開山の祖「役の行者」の天狗名とする現地伝承を記す。",
+      "articleOrSection": "石鎚山大天狗法起坊堂",
+      "authorOrEditor": null,
+      "informant": null,
+      "publicationYear": null,
+      "publicationDate": null,
+      "volumeIssue": null,
+      "pages": null,
+      "recordId": "JAC-KODO120-106",
+      "sourceQuality": "institutional"
+    },
+    {
+      "id": "SRC_TENGUKYO_MIYAKE_2023",
+      "title": "修験道の経・講式・和讃・唱言",
+      "organization": "春秋社",
+      "url": "https://ndlsearch.ndl.go.jp/books/R100000002-I033065211",
+      "type": "scholarly_monograph",
+      "note": "宮家準の研究書。目次で「天狗経」を第二章「修験道独自の経」に収録し、修験道で用いられる経の中での位置づけを確認できる。",
+      "articleOrSection": "第二章 修験道独自の経 6 天狗経",
+      "authorOrEditor": "宮家準",
+      "informant": null,
+      "publicationYear": 2023,
+      "publicationDate": "2023-09",
+      "volumeIssue": null,
+      "pages": null,
+      "recordId": "NDLBibID:033065211",
+      "sourceQuality": "scholarly_monograph"
     }
   ]
 }

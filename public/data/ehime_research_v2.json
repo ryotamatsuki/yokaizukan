@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-08-23",
+  "updatedAt": "2026-08-25",
   "purpose": "愛媛11伝承を、子どもでも読める一方、具体的な地域・資料・未確認事項までたどれる研究レイヤーとして整理する。未確認事項の正本は evidence_check_table.json とする。",
   "coverageStatuses": ["documented", "insufficient", "not_applicable"],
   "items": [
@@ -46,15 +46,98 @@
     {
       "id": "ishizuchi_tengu_cluster",
       "traditionType": "folklore_collection",
-      "coverage": {"history":"documented","regionalRecords":"documented","claims":"documented"},
-      "locality": {"region":"東予・石鎚山麓","municipality":"西条市小松町・丹原町など","specificPlaces":["石鎚山","旧小松町","旧丹原町","天狗岳"]},
-      "childLead": "石鎚の天狗は全国の天狗設定を当てはめず、石鎚山麓で実際に記録された高い木の烏天狗や枝の間の小さな火などから読みます。",
-      "regionalRecords":[
-        {"place":"西条市小松町・丹原町周辺","summary":"石鎚山を天狗の巣とし、高い木の烏天狗、枝の間の小さな火、白装束の天狗などが記録される。","sourceIds":["SRC_ASHINAKA_116_TENGU"]},
-        {"place":"石鎚山","summary":"天狗岳という地名、山岳信仰と修験道の背景を公式資料で確認できる。","sourceIds":["SRC_ISHIZUCHI_OFFICIAL"]}
+      "coverage": {
+        "history": "documented",
+        "regionalRecords": "documented",
+        "claims": "documented"
+      },
+      "locality": {
+        "region": "東予・石鎚山麓",
+        "municipality": "西条市・石鎚山周辺",
+        "specificPlaces": [
+          "石鎚山",
+          "極楽寺・石鎚山大天狗法起坊堂",
+          "旧小松町",
+          "旧丹原町",
+          "天狗岳"
+        ]
+      },
+      "childLead": "石鎚の天狗には、霊山を守る大天狗「石鎚山法起坊」の信仰と、山麓で採集された烏天狗・怪火・白装束の人物の話があります。二つを同じ資料の一つの物語にはせず、並べて読みます。",
+      "regionalRecords": [
+        {
+          "place": "石鎚山・石鎚神社",
+          "summary": "2023年の「石鎚社報」で、法起坊を石鎚山を住処とする大天狗、「天狗経」の48天狗に数えられる存在として紹介する。",
+          "sourceIds": [
+            "SRC_ISHIZUCHI_SHAHO_765_HOKIBO"
+          ]
+        },
+        {
+          "place": "西条市・極楽寺",
+          "summary": "石鎚山表参道沿いに「石鎚山大天狗法起坊堂」があり、法起坊を役の行者の天狗名とする伝承が紹介される。",
+          "sourceIds": [
+            "SRC_JAC_ISHIZUCHI_HOKIBO"
+          ]
+        },
+        {
+          "place": "西条市小松町・丹原町周辺",
+          "summary": "石鎚山を天狗の巣とし、高い木の烏天狗、枝の間の小さな火、白装束の天狗などが記録される。",
+          "sourceIds": [
+            "SRC_ASHINAKA_116_TENGU"
+          ]
+        },
+        {
+          "place": "石鎚山",
+          "summary": "天狗岳という地名、山岳信仰と修験道の背景を公式資料で確認できる。",
+          "sourceIds": [
+            "SRC_ISHIZUCHI_OFFICIAL"
+          ]
+        }
       ],
-      "claims":[{"label":"民俗記録と宗教史を分ける","text":"天狗の具体的な怪異記録と、石鎚山の山岳信仰・修験道という歴史背景は別資料で確認する。","evidenceLevel":"A","sourceIds":["SRC_ASHINAKA_116_TENGU","SRC_ISHIZUCHI_OFFICIAL"]}],
-      "sourceIds":["SRC_ASHINAKA_116_TENGU","SRC_ISHIZUCHI_OFFICIAL"]
+      "claims": [
+        {
+          "label": "法起坊は現在の石鎚信仰に明示される大天狗",
+          "text": "石鎚神社公式資料と表参道の施設解説から、法起坊大天狗が石鎚山と結びつく現在の信仰伝承として確認できる。",
+          "evidenceLevel": "A",
+          "sourceIds": [
+            "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+            "SRC_JAC_ISHIZUCHI_HOKIBO"
+          ]
+        },
+        {
+          "label": "「天狗経」は修験道独自の経として扱う",
+          "text": "石鎚神社は法起坊を「天狗経」の48天狗に数え、宮家準の研究書は「天狗経」を「修験道独自の経」に分類している。正統仏典と同列の経とは説明しない。",
+          "evidenceLevel": "A",
+          "sourceIds": [
+            "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+            "SRC_TENGUKYO_MIYAKE_2023"
+          ]
+        },
+        {
+          "label": "法起坊と山麓の烏天狗譚を分ける",
+          "text": "法起坊大天狗の信仰資料と、高木の烏天狗・怪火・白装束の人物を記す民俗採集記事は別の資料系統として併記する。",
+          "evidenceLevel": "A",
+          "sourceIds": [
+            "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+            "SRC_ASHINAKA_116_TENGU"
+          ]
+        },
+        {
+          "label": "役小角との同一視は伝承",
+          "text": "法起坊を役小角その人、または役の行者の天狗名とする説明は現在確認できるが、歴史上の同一人物であることの証明とは扱わない。",
+          "evidenceLevel": "B",
+          "sourceIds": [
+            "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+            "SRC_JAC_ISHIZUCHI_HOKIBO"
+          ]
+        }
+      ],
+      "sourceIds": [
+        "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+        "SRC_ASHINAKA_116_TENGU",
+        "SRC_ISHIZUCHI_OFFICIAL",
+        "SRC_JAC_ISHIZUCHI_HOKIBO",
+        "SRC_TENGUKYO_MIYAKE_2023"
+      ]
     },
     {
       "id": "dogo_myth_cluster",

@@ -4,9 +4,9 @@ import assert from 'node:assert/strict';
 
 const ARTICLES_PATH = 'public/data/articles.json';
 const PROTECTED_FILES = {
-  'public/data/ehime_research_v2.json': '4bfe24bb4211358cdf936935ae451073fab048fe',
-  'public/data/evidence_check_table.json': '082e5b20ef0b38cb872ea02bce710030a4e872d3',
-  'public/data/sources.json': 'a1504a0dabfc44cb777c3db22d8d2a3d859f7979'
+  'public/data/ehime_research_v2.json': 'a716eb10217768225259295176a60c22ed42ec6e',
+  'public/data/evidence_check_table.json': '24deed9c473b7fb3e1a7a87aa809a72e69f61c94',
+  'public/data/sources.json': '5cbec3a44fae921df0ad4b0a333d30b24b145fa0'
 };
 
 const EDITED_IDS = new Set([
@@ -27,7 +27,7 @@ const EXPECTED_SOURCE_IDS = {
   uwajima_ushioni_cluster: ['SRC_UWAJIMA_CITY_2026', 'SRC_IYO_MINZOKU_0200004', 'SRC_IYO_MINZOKU_0200265'],
   matsuyama_tanuki_cluster: ['SRC_NDL_TANUKI_REFERENCE', 'SRC_MATSUYAMA_TANUKI_OFFICIAL'],
   iyo_basan_cluster: ['SRC_EHON_HYAKU_MONOGATARI_1841'],
-  ishizuchi_tengu_cluster: ['SRC_ASHINAKA_116_TENGU', 'SRC_ISHIZUCHI_OFFICIAL'],
+  ishizuchi_tengu_cluster: ['SRC_ISHIZUCHI_SHAHO_765_HOKIBO', 'SRC_ASHINAKA_116_TENGU', 'SRC_ISHIZUCHI_OFFICIAL', 'SRC_JAC_ISHIZUCHI_HOKIBO', 'SRC_TENGUKYO_MIYAKE_2023'],
   dogo_myth_cluster: ['SRC_YOYOGUN_GORIGENSHU_1710', 'SRC_IYOKOKU_FUDOKI_DOGO', 'SRC_DOGO_OFFICIAL'],
   ishiteji_emon_saburo_cluster: ['SRC_EMON_SABURO_REFERENCE'],
   uwakai_sea_mystery_cluster: ['SRC_EHIME_PREF_FOLKLORE_1983', 'SRC_IYO_MINZOKU_0200237'],
@@ -41,7 +41,7 @@ const WRITABLE_HEADINGS = {
   uwajima_ushioni_cluster: ['愛媛のどこに残る？', '怪物の牛鬼と、祭りの牛鬼'],
   matsuyama_tanuki_cluster: ['愛媛のどこに残る？', 'どんな物語？'],
   iyo_basan_cluster: ['どこに伝わる？', '1841年の本には何と書かれる？'],
-  ishizuchi_tengu_cluster: ['愛媛のどこに残る？', '山麓ではどう語られた？'],
+  ishizuchi_tengu_cluster: ['愛媛のどこに残る？', '山を守る大天狗・法起坊', '「天狗経」に残る「石鎚山法起坊」', '山麓に残る烏天狗の話', '役行者との関係は「伝承」'],
   dogo_myth_cluster: ['白鷺が湯を見つけた話', '少彦名命と玉の石'],
   ishiteji_emon_saburo_cluster: ['愛媛のどこに残る？', 'どんな物語？'],
   uwakai_sea_mystery_cluster: ['大洲・宇和島の『柄杓をくれ』', '日振島へ帰る船を止める火'],
@@ -65,8 +65,8 @@ const EXPECTED_RESEARCH_NOTES = {
     'まだ分からないこと': ['愛媛県内の具体的な市町村で、波山が口承として採集された記録は今回確認できていません。後世の妖怪図鑑の説明を地域伝承として逆輸入しません。']
   },
   ishizuchi_tengu_cluster: {
-    '資料から分かること': ['民俗採集記録から確認できるのは、石鎚山を天狗の巣とする語り、高木の烏天狗、小さな火、白装束の人物などです。石鎚神社公式資料は、天狗岳や山岳信仰・修験道の歴史背景を確認する別の資料です。'],
-    'まだ分からないこと': ['各話の詳細な採集地点や話者まで、すべてのケースで特定できているわけではありません。また、山岳信仰がそのまま天狗伝承の原因だったと単純化しません。']
+    '資料から分かること': ['石鎚神社の公式資料で法起坊大天狗と「天狗経」の48天狗という現在の説明を確認でき、宮家準の研究書では「天狗経」が「修験道独自の経」に分類されています。山麓の烏天狗・怪火・白装束の人物は、1969年の民俗採集記事という別資料から確認します。'],
+    'まだ分からないこと': ['法起坊信仰がいつ現在の形に成立したか、「天狗経」の各伝本で名称や配列がどう異なるかは、さらに原本調査が必要です。また、「日本八大天狗」の数え方には揺れがあるため、法起坊を八大天狗の一人と断定しません。役小角との同一視も伝承として扱います。']
   },
   dogo_myth_cluster: {
     '資料から分かること': ['白鷺伝説は近世の地誌、神々の説話は古代の風土記逸文という異なる資料系統です。道後温泉公式資料は、現在どのように二つの伝承が紹介されているかを確認するために使います。'],
