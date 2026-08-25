@@ -18,6 +18,7 @@
     let diveTimer = null;
     let fogController = null;
     let finished = false;
+    let previousBodyOverflow = document.body.style.overflow;
 
     const clearTimers = () => {
       window.clearTimeout(finishTimer);
@@ -27,6 +28,17 @@
     const stopFog = () => {
       fogController?.stop?.();
       fogController = null;
+    };
+
+    const lockPage = () => {
+      previousBodyOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      document.documentElement.classList.add('ehime-opening-active');
+    };
+
+    const unlockPage = () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.classList.remove('ehime-opening-active');
     };
 
     const scheduleFinish = () => {
@@ -41,7 +53,7 @@
       opening.hidden = false;
       opening.classList.remove('is-finished', 'is-diving');
       opening.setAttribute('aria-hidden', 'false');
-      document.documentElement.classList.add('ehime-opening-active');
+      lockPage();
       hero.classList.remove('is-opening-arrival');
       restartCssAnimations(opening);
       fogController = reduceMotion ? null : createFog(canvas);
@@ -56,10 +68,13 @@
       stopFog();
       opening.classList.add('is-finished');
       opening.setAttribute('aria-hidden', 'true');
-      document.documentElement.classList.remove('ehime-opening-active');
+      unlockPage();
       hero.classList.remove('is-opening-arrival');
       void hero.offsetWidth;
       hero.classList.add('is-opening-arrival');
+      if (opening.contains(document.activeElement)) {
+        replayButton?.focus({ preventScroll: true });
+      }
       window.setTimeout(() => {
         opening.hidden = true;
       }, 720);
@@ -83,7 +98,7 @@
       if (event.key === 'Escape') beginDive(true);
     });
 
-    document.documentElement.classList.add('ehime-opening-active');
+    lockPage();
     fogController = reduceMotion ? null : createFog(canvas);
     scheduleFinish();
   }
