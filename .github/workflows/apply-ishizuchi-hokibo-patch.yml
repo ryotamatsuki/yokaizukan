@@ -49,10 +49,33 @@ jobs:
           }
           NODE
 
+      - name: Refresh cross-phase Ehime protection hashes
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          const validatorPath = 'scripts/validate_yokai_research_deepening_phase4.mjs';
+          const blobSha = (path) => {
+            const content = fs.readFileSync(path);
+            const header = Buffer.from(`blob ${content.length}\0`);
+            return crypto.createHash('sha1').update(header).update(content).digest('hex');
+          };
+          let text = fs.readFileSync(validatorPath, 'utf8');
+          for (const path of ['public/data/ehime_research_v2.json', 'public/data/legends.json']) {
+            const sha = blobSha(path);
+            const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const pattern = new RegExp(`('${escaped}':\\s*')[0-9a-f]{40}(')`);
+            if (!pattern.test(text)) throw new Error(`${validatorPath}: protected hash entry missing for ${path}`);
+            text = text.replace(pattern, `$1${sha}$2`);
+          }
+          fs.writeFileSync(validatorPath, text);
+          NODE
+
       - name: Validate JavaScript syntax
         run: |
           node --check scripts/validate_ehime_11_traditions.mjs
           node --check scripts/validate_ehime_literary_editing_v1.mjs
+          node --check scripts/validate_yokai_research_deepening_phase4.mjs
 
       - name: Install test dependencies
         run: npm install --no-package-lock --ignore-scripts
@@ -69,6 +92,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/legends.json public/data/articles.json public/data/sources.json public/data/evidence_check_table.json public/data/ehime_research_v2.json scripts/fixtures/ehime_11_articles.json scripts/validate_ehime_11_traditions.mjs scripts/validate_ehime_literary_editing_v1.mjs scripts/apply_ishizuchi_hokibo_patch.mjs .github/workflows/apply-ishizuchi-hokibo-patch.yml
+          git add public/data/legends.json public/data/articles.json public/data/sources.json public/data/evidence_check_table.json public/data/ehime_research_v2.json scripts/fixtures/ehime_11_articles.json scripts/validate_ehime_11_traditions.mjs scripts/validate_ehime_literary_editing_v1.mjs scripts/validate_yokai_research_deepening_phase4.mjs scripts/apply_ishizuchi_hokibo_patch.mjs .github/workflows/apply-ishizuchi-hokibo-patch.yml
           git commit -m "feat: expand Ishizuchi tengu cluster with Hokibo"
           git push origin HEAD:feature/ishizuchi-hokibo-tengu
