@@ -6,7 +6,7 @@ const ARTICLES_PATH = 'public/data/articles.json';
 const PROTECTED_FILES = {
   'public/data/ehime_research_v2.json': 'a716eb10217768225259295176a60c22ed42ec6e',
   'public/data/evidence_check_table.json': '24deed9c473b7fb3e1a7a87aa809a72e69f61c94',
-  'public/data/sources.json': 'c9a5e5145dde8a14255ced414623e0b136686ef3'
+  'public/data/sources.json': '5cbec3a44fae921df0ad4b0a333d30b24b145fa0'
 };
 
 const EDITED_IDS = new Set([
