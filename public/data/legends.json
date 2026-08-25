@@ -3,7 +3,7 @@
     "title": "愛媛ふしぎ伝承図鑑",
     "subtitle": "山・海・温泉・寺・島に残る11の物語",
     "description": "愛媛県の特定の場所や資料と結びつきを確認できる、11の伝承・神話・祭礼・寺院縁起を紹介します。",
-    "updatedAt": "2026-08-23",
+    "updatedAt": "2026-08-25",
     "dataPolicy": "公的資料・地域資料・妖怪研究の入口となる資料を確認し、断定できない部分は伝承として表現します。",
     "sourceDescription": "この図鑑では、伝承が記録された場所、記録者や編者、資料名、刊行年をできる限り示しています。伝承が語る出来事を歴史的事実と断定するものではありません。"
   },
@@ -16,7 +16,11 @@
       "displayInList": true,
       "region": "南予",
       "municipality": "宇和島市ほか",
-      "areaTags": ["南予", "宇和島", "宇和海"],
+      "areaTags": [
+        "南予",
+        "宇和島",
+        "宇和海"
+      ],
       "type": "妖怪・祭礼・海の怪異",
       "traditionType": "お祭りに残っている",
       "evidenceLevel": "A",
@@ -28,11 +32,31 @@
       "locationId": "uwajima",
       "imagePath": "public/assets/ehime/generated/uwajima_ushioni_cluster.png",
       "articleId": "uwajima_ushioni_cluster",
-      "sourceIds": ["SRC_UWAJIMA_CITY_2026", "SRC_IYO_MINZOKU_0200004", "SRC_IYO_MINZOKU_0200265"],
-      "courseIds": ["nanyo_ushioni_course"],
+      "sourceIds": [
+        "SRC_UWAJIMA_CITY_2026",
+        "SRC_IYO_MINZOKU_0200004",
+        "SRC_IYO_MINZOKU_0200265"
+      ],
+      "courseIds": [
+        "nanyo_ushioni_course"
+      ],
       "childItems": [],
-      "missions": ["牛鬼の角・首・体の特徴を絵から探してみよう", "祭りに出る妖怪が、どうして地域で大切にされるのか考えてみよう"],
-      "quiz": [{"question": "宇和島の牛鬼は、今どのような場面でよく見られますか？", "choices": ["祭り", "雪山の小屋", "学校の授業中"], "answer": "祭り", "explanation": "宇和島では牛鬼が祭礼の中に登場し、地域の人々に親しまれています。"}],
+      "missions": [
+        "牛鬼の角・首・体の特徴を絵から探してみよう",
+        "祭りに出る妖怪が、どうして地域で大切にされるのか考えてみよう"
+      ],
+      "quiz": [
+        {
+          "question": "宇和島の牛鬼は、今どのような場面でよく見られますか？",
+          "choices": [
+            "祭り",
+            "雪山の小屋",
+            "学校の授業中"
+          ],
+          "answer": "祭り",
+          "explanation": "宇和島では牛鬼が祭礼の中に登場し、地域の人々に親しまれています。"
+        }
+      ],
       "notes": "姿や物語には地域差があるため、説明では一つの形に限定しすぎない。",
       "childItemIds": [],
       "traditionLayer": "festival_tradition"
@@ -45,7 +69,11 @@
       "displayInList": true,
       "region": "中予",
       "municipality": "松山市",
-      "areaTags": ["松山", "城下町", "狸"],
+      "areaTags": [
+        "松山",
+        "城下町",
+        "狸"
+      ],
       "type": "化け狸・城下町怪談",
       "traditionType": "古い本にのっている",
       "evidenceLevel": "A",
@@ -57,11 +85,30 @@
       "locationId": "matsuyama_castle",
       "imagePath": "public/assets/ehime/generated/matsuyama_tanuki_cluster.png",
       "articleId": "matsuyama_tanuki_cluster",
-      "sourceIds": ["SRC_NDL_TANUKI_REFERENCE", "SRC_MATSUYAMA_TANUKI_OFFICIAL"],
-      "courseIds": ["matsuyama_tanuki_course"],
+      "sourceIds": [
+        "SRC_NDL_TANUKI_REFERENCE",
+        "SRC_MATSUYAMA_TANUKI_OFFICIAL"
+      ],
+      "courseIds": [
+        "matsuyama_tanuki_course"
+      ],
       "childItems": [],
-      "missions": ["狸が化けるなら、町のどんな場所が舞台になりそうか考えてみよう", "ほかの動物変化の妖怪と比べてみよう"],
-      "quiz": [{"question": "隠神刑部は、どんな動物の妖怪として語られますか？", "choices": ["狸", "牛", "鳥"], "answer": "狸", "explanation": "松山の八百八狸伝説では、隠神刑部は狸たちの大親分のように語られます。"}],
+      "missions": [
+        "狸が化けるなら、町のどんな場所が舞台になりそうか考えてみよう",
+        "ほかの動物変化の妖怪と比べてみよう"
+      ],
+      "quiz": [
+        {
+          "question": "隠神刑部は、どんな動物の妖怪として語られますか？",
+          "choices": [
+            "狸",
+            "牛",
+            "鳥"
+          ],
+          "answer": "狸",
+          "explanation": "松山の八百八狸伝説では、隠神刑部は狸たちの大親分のように語られます。"
+        }
+      ],
       "notes": "講談・物語として広まった部分と、地域伝承としての部分を分けて読む。",
       "childItemIds": [],
       "traditionLayer": "literary_legend"
@@ -74,7 +121,11 @@
       "displayInList": true,
       "region": "伊予",
       "municipality": "特定の市町村は記録されていない",
-      "areaTags": ["伊予", "竹藪", "怪鳥"],
+      "areaTags": [
+        "伊予",
+        "竹藪",
+        "怪鳥"
+      ],
       "type": "怪鳥・音の怪異",
       "traditionType": "古い本にのっている",
       "evidenceLevel": "A",
@@ -86,11 +137,29 @@
       "locationId": "iyo_general",
       "imagePath": "public/assets/ehime/generated/iyo_basan_cluster.png",
       "articleId": "iyo_basan_cluster",
-      "sourceIds": ["SRC_EHON_HYAKU_MONOGATARI_1841"],
-      "courseIds": ["iyo_mystery_course"],
+      "sourceIds": [
+        "SRC_EHON_HYAKU_MONOGATARI_1841"
+      ],
+      "courseIds": [
+        "iyo_mystery_course"
+      ],
       "childItems": [],
-      "missions": ["波山の名前がどんな音から来たのか想像してみよう", "夜の竹藪で聞こえそうな自然の音を書き出してみよう"],
-      "quiz": [{"question": "波山の特徴としてよく語られるものはどれですか？", "choices": ["羽音と怪火", "頭の皿", "海の泡"], "answer": "羽音と怪火", "explanation": "波山は、ばさばさという羽音や熱を持たない火を吐く怪鳥として紹介されます。"}],
+      "missions": [
+        "波山の名前がどんな音から来たのか想像してみよう",
+        "夜の竹藪で聞こえそうな自然の音を書き出してみよう"
+      ],
+      "quiz": [
+        {
+          "question": "波山の特徴としてよく語られるものはどれですか？",
+          "choices": [
+            "羽音と怪火",
+            "頭の皿",
+            "海の泡"
+          ],
+          "answer": "羽音と怪火",
+          "explanation": "波山は、ばさばさという羽音や熱を持たない火を吐く怪鳥として紹介されます。"
+        }
+      ],
       "notes": "出版物の『伊予』表記と、地域で採集された口承を混同しない。",
       "childItemIds": [],
       "traditionLayer": "early_modern_yokai_book"
@@ -103,24 +172,52 @@
       "displayInList": true,
       "region": "東予・山間部",
       "municipality": "西条市・久万高原町ほか",
-      "areaTags": ["石鎚山", "天狗岳", "修験"],
+      "areaTags": [
+        "石鎚山",
+        "天狗岳",
+        "修験",
+        "法起坊",
+        "天狗経"
+      ],
       "type": "山岳妖怪・山神・修験",
       "traditionType": "山に伝わる",
       "evidenceLevel": "A",
-      "evidenceLabel": "石鎚山麓の民俗採集記録で確認",
+      "evidenceLabel": "石鎚神社公式資料と山麓の民俗採集記録で確認",
       "scaryLevel": 3,
       "scaryLabel": "ちょっとふしぎ",
-      "shortDescription": "石鎚山麓では、高い木の烏天狗や白装束の人物、小さな火などの天狗話が記録されています。",
-      "childDescription": "石鎚山麓では、高い木の烏天狗や白装束の人物、小さな火などの天狗話が記録されています。",
+      "shortDescription": "石鎚山には大天狗「石鎚山法起坊」の伝承があり、山麓には高い木に来る烏天狗や小さな火、白装束の人物の天狗譚も記録されています。",
+      "childDescription": "石鎚山には大天狗「石鎚山法起坊」の伝承があり、山麓には高い木に来る烏天狗や小さな火、白装束の人物の天狗譚も記録されています。",
       "locationId": "ishizuchi",
       "imagePath": "public/assets/ehime/generated/ishizuchi_tengu_cluster.png",
       "articleId": "ishizuchi_tengu_cluster",
-      "sourceIds": ["SRC_ASHINAKA_116_TENGU", "SRC_ISHIZUCHI_OFFICIAL"],
-      "courseIds": ["ishizuchi_tengu_course"],
+      "sourceIds": [
+        "SRC_ISHIZUCHI_SHAHO_765_HOKIBO",
+        "SRC_ASHINAKA_116_TENGU",
+        "SRC_ISHIZUCHI_OFFICIAL",
+        "SRC_JAC_ISHIZUCHI_HOKIBO",
+        "SRC_TENGUKYO_MIYAKE_2023"
+      ],
+      "courseIds": [
+        "ishizuchi_tengu_course"
+      ],
       "childItems": [],
-      "missions": ["山の地名に妖怪の名前が残る理由を考えてみよう", "天狗の持ち物や姿を全国の妖怪図鑑と比べてみよう"],
-      "quiz": [{"question": "石鎚山の頂上部には、どんな名前の峰がありますか？", "choices": ["天狗岳", "狸岳", "貝岳"], "answer": "天狗岳", "explanation": "石鎚山には天狗岳という名の峰があります。地名は天狗伝承とは別の資料として確認します。"}],
-      "notes": "実在の山岳信仰と妖怪イメージを混同しすぎず、学習用に整理する。",
+      "missions": [
+        "法起坊と烏天狗は、同じ「石鎚の天狗」でも資料の中でどう違って語られているか比べてみよう",
+        "「天狗経」に山の名前と天狗の坊号が並ぶ理由を考えてみよう"
+      ],
+      "quiz": [
+        {
+          "question": "石鎚山の大天狗として名が伝わるのはだれですか？",
+          "choices": [
+            "法起坊",
+            "刑部狸",
+            "波山"
+          ],
+          "answer": "法起坊",
+          "explanation": "石鎚神社の社報は、石鎚山法起坊を石鎚山を住処とする大天狗とし、「天狗経」の48天狗に数えられると紹介しています。"
+        }
+      ],
+      "notes": "法起坊＝役小角は信仰上の伝承として記す。「日本八大天狗」は数え方に揺れがあるため断定しない。「天狗経」は修験道独自の経として扱い、成立年代を固定しない。山麓の烏天狗譚と法起坊信仰は別資料系統として併記する。",
       "childItemIds": [],
       "traditionLayer": "folklore_collection"
     },
@@ -132,7 +229,11 @@
       "displayInList": true,
       "region": "中予",
       "municipality": "松山市",
-      "areaTags": ["道後", "温泉", "神話"],
+      "areaTags": [
+        "道後",
+        "温泉",
+        "神話"
+      ],
       "type": "温泉神話・霊泉伝説",
       "traditionType": "神社・温泉に伝わる",
       "evidenceLevel": "A",
@@ -144,11 +245,31 @@
       "locationId": "dogo_onsen",
       "imagePath": "public/assets/ehime/generated/dogo_myth_cluster.png",
       "articleId": "dogo_myth_cluster",
-      "sourceIds": ["SRC_YOYOGUN_GORIGENSHU_1710", "SRC_IYOKOKU_FUDOKI_DOGO", "SRC_DOGO_OFFICIAL"],
-      "courseIds": ["dogo_mystery_course"],
+      "sourceIds": [
+        "SRC_YOYOGUN_GORIGENSHU_1710",
+        "SRC_IYOKOKU_FUDOKI_DOGO",
+        "SRC_DOGO_OFFICIAL"
+      ],
+      "courseIds": [
+        "dogo_mystery_course"
+      ],
       "childItems": [],
-      "missions": ["温泉の伝説に鳥や神さまが出てくる理由を考えてみよう", "白鷺の姿を見ながら、癒やしの場としての温泉を説明してみよう"],
-      "quiz": [{"question": "道後温泉の発見伝説に出てくる鳥はどれですか？", "choices": ["白鷺", "烏", "鶴"], "answer": "白鷺", "explanation": "道後温泉には、白鷺が湯で傷をいやしたという伝説が伝わっています。"}],
+      "missions": [
+        "温泉の伝説に鳥や神さまが出てくる理由を考えてみよう",
+        "白鷺の姿を見ながら、癒やしの場としての温泉を説明してみよう"
+      ],
+      "quiz": [
+        {
+          "question": "道後温泉の発見伝説に出てくる鳥はどれですか？",
+          "choices": [
+            "白鷺",
+            "烏",
+            "鶴"
+          ],
+          "answer": "白鷺",
+          "explanation": "道後温泉には、白鷺が湯で傷をいやしたという伝説が伝わっています。"
+        }
+      ],
       "notes": "神話・伝説として紹介し、歴史事実と断定しない。",
       "childItemIds": [],
       "traditionLayer": "myth_or_local_text"
@@ -161,7 +282,11 @@
       "displayInList": true,
       "region": "中予",
       "municipality": "松山市",
-      "areaTags": ["石手寺", "遍路", "弘法大師"],
+      "areaTags": [
+        "石手寺",
+        "遍路",
+        "弘法大師"
+      ],
       "type": "弘法大師伝説・遍路伝承・再来譚",
       "traditionType": "神社・お寺に伝わる",
       "evidenceLevel": "A",
@@ -173,11 +298,29 @@
       "locationId": "ishiteji",
       "imagePath": "public/assets/ehime/generated/ishiteji_emon_saburo_cluster.png",
       "articleId": "ishiteji_emon_saburo_cluster",
-      "sourceIds": ["SRC_EMON_SABURO_REFERENCE"],
-      "courseIds": ["dogo_mystery_course"],
+      "sourceIds": [
+        "SRC_EMON_SABURO_REFERENCE"
+      ],
+      "courseIds": [
+        "dogo_mystery_course"
+      ],
       "childItems": [],
-      "missions": ["衛門三郎の話が、なぜ遍路と結びつくのか考えてみよう", "『反省してやり直す』物語として読んでみよう"],
-      "quiz": [{"question": "石手寺の衛門三郎伝説は、どの巡礼と深く関わりますか？", "choices": ["四国遍路", "山登り競争", "海水浴"], "answer": "四国遍路", "explanation": "衛門三郎の話は、弘法大師と四国遍路の物語として広く知られています。"}],
+      "missions": [
+        "衛門三郎の話が、なぜ遍路と結びつくのか考えてみよう",
+        "『反省してやり直す』物語として読んでみよう"
+      ],
+      "quiz": [
+        {
+          "question": "石手寺の衛門三郎伝説は、どの巡礼と深く関わりますか？",
+          "choices": [
+            "四国遍路",
+            "山登り競争",
+            "海水浴"
+          ],
+          "answer": "四国遍路",
+          "explanation": "衛門三郎の話は、弘法大師と四国遍路の物語として広く知られています。"
+        }
+      ],
       "notes": "宗教的伝承のため、敬意を持って事実確認と伝承表現を分ける。",
       "childItemIds": [],
       "traditionLayer": "temple_legend"
@@ -190,7 +333,14 @@
       "displayInList": true,
       "region": "南予",
       "municipality": "大洲市・宇和島市・日振島方面",
-      "areaTags": ["南予", "大洲", "宇和島", "宇和海", "日振島", "船"],
+      "areaTags": [
+        "南予",
+        "大洲",
+        "宇和島",
+        "宇和海",
+        "日振島",
+        "船"
+      ],
       "type": "海の怪異・船幽霊・陰火",
       "traditionType": "海や川に伝わる",
       "evidenceLevel": "A",
@@ -202,11 +352,30 @@
       "locationId": "uwakai",
       "imagePath": "public/assets/ehime/generated/uwakai_sea_mystery_cluster.png",
       "articleId": "uwakai_sea_mystery_cluster",
-      "sourceIds": ["SRC_EHIME_PREF_FOLKLORE_1983", "SRC_IYO_MINZOKU_0200237"],
-      "courseIds": ["nanyo_ushioni_course"],
+      "sourceIds": [
+        "SRC_EHIME_PREF_FOLKLORE_1983",
+        "SRC_IYO_MINZOKU_0200237"
+      ],
+      "courseIds": [
+        "nanyo_ushioni_course"
+      ],
       "childItems": [],
-      "missions": ["柄杓型と陰火型の船幽霊の違いを比べてみよう", "同じ船幽霊でも場所によって話が違う理由を考えてみよう"],
-      "quiz": [{"question": "南予の船幽霊の記録には、どんな二つの型がありますか？", "choices": ["柄杓を求める型と陰火型", "雪女型と天狗型", "狸型と河童型"], "answer": "柄杓を求める型と陰火型", "explanation": "大洲・宇和島には柄杓を求める型、宇和海・日振島航路には陰火型が記録されています。"}],
+      "missions": [
+        "柄杓型と陰火型の船幽霊の違いを比べてみよう",
+        "同じ船幽霊でも場所によって話が違う理由を考えてみよう"
+      ],
+      "quiz": [
+        {
+          "question": "南予の船幽霊の記録には、どんな二つの型がありますか？",
+          "choices": [
+            "柄杓を求める型と陰火型",
+            "雪女型と天狗型",
+            "狸型と河童型"
+          ],
+          "answer": "柄杓を求める型と陰火型",
+          "explanation": "大洲・宇和島には柄杓を求める型、宇和海・日振島航路には陰火型が記録されています。"
+        }
+      ],
       "notes": "大洲の記録を宇和海の海域伝承と誤って一括しない。",
       "childItemIds": [],
       "traditionLayer": "folklore_collection"
@@ -219,7 +388,12 @@
       "displayInList": true,
       "region": "南予・山間部",
       "municipality": "鬼北町・松野町",
-      "areaTags": ["鬼北", "松野", "鬼ヶ城山", "鬼"],
+      "areaTags": [
+        "鬼北",
+        "松野",
+        "鬼ヶ城山",
+        "鬼"
+      ],
       "type": "鬼・地名伝承・山の怪異",
       "traditionType": "地名に残っている",
       "evidenceLevel": "A",
@@ -231,11 +405,29 @@
       "locationId": "kihoku",
       "imagePath": "public/assets/ehime/generated/kihoku_oni_cluster.png",
       "articleId": "kihoku_oni_cluster",
-      "sourceIds": ["SRC_KIHOKU_ONI_LEGEND"],
-      "courseIds": ["nanyo_ushioni_course"],
+      "sourceIds": [
+        "SRC_KIHOKU_ONI_LEGEND"
+      ],
+      "courseIds": [
+        "nanyo_ushioni_course"
+      ],
       "childItems": [],
-      "missions": ["鬼が怖いだけでなく地域のシンボルになる理由を考えてみよう", "鬼ヶ城という地名から、どんな地形を想像するか話してみよう"],
-      "quiz": [{"question": "鬼北町の名前に入っている妖怪・怪物はどれですか？", "choices": ["鬼", "狸", "人魚"], "answer": "鬼", "explanation": "鬼北町は名前に『鬼』の字を持ち、鬼を地域の個性として発信しています。"}],
+      "missions": [
+        "鬼が怖いだけでなく地域のシンボルになる理由を考えてみよう",
+        "鬼ヶ城という地名から、どんな地形を想像するか話してみよう"
+      ],
+      "quiz": [
+        {
+          "question": "鬼北町の名前に入っている妖怪・怪物はどれですか？",
+          "choices": [
+            "鬼",
+            "狸",
+            "人魚"
+          ],
+          "answer": "鬼",
+          "explanation": "鬼北町は名前に『鬼』の字を持ち、鬼を地域の個性として発信しています。"
+        }
+      ],
       "notes": "現代の地域PRと、等妙寺縁起を紹介する資料に残る伝説を区別して扱う。",
       "childItemIds": [],
       "traditionLayer": "temple_legend"
@@ -248,7 +440,13 @@
       "displayInList": true,
       "region": "南予",
       "municipality": "愛南町周辺・旧南宇和郡",
-      "areaTags": ["南宇和", "愛南町", "夜道", "山犬", "鳥の怪異"],
+      "areaTags": [
+        "南宇和",
+        "愛南町",
+        "夜道",
+        "山犬",
+        "鳥の怪異"
+      ],
       "type": "鳥の怪異・夜道の怪異",
       "traditionType": "地域で採集された",
       "evidenceLevel": "A",
@@ -260,13 +458,34 @@
       "locationId": "minamiuwa_ainan",
       "imagePath": "public/assets/ehime/generated/children/yosuzume.png",
       "articleId": "yosuzume",
-      "sourceIds": ["SRC_YOSUZUME_1100055"],
+      "sourceIds": [
+        "SRC_YOSUZUME_1100055"
+      ],
       "courseIds": [],
       "childItems": [],
-      "missions": ["夜雀が姿ではなく音で語られる理由を考えてみよう", "夜雀と山犬がどのように結びつけられているか記事から探してみよう"],
-      "quiz": [{"question": "南宇和の夜雀は、何が近づく前触れと考えられていましたか？", "choices": ["山犬", "牛鬼", "白鷺"], "answer": "山犬", "explanation": "南宇和では、夜雀の声の後に山犬が現れると語られていました。"}],
+      "missions": [
+        "夜雀が姿ではなく音で語られる理由を考えてみよう",
+        "夜雀と山犬がどのように結びつけられているか記事から探してみよう"
+      ],
+      "quiz": [
+        {
+          "question": "南宇和の夜雀は、何が近づく前触れと考えられていましたか？",
+          "choices": [
+            "山犬",
+            "牛鬼",
+            "白鷺"
+          ],
+          "answer": "山犬",
+          "explanation": "南宇和では、夜雀の声の後に山犬が現れると語られていました。"
+        }
+      ],
       "childItemIds": [],
-      "visualFeatures": ["小さな鳥", "夜道", "羽音", "灯り"],
+      "visualFeatures": [
+        "小さな鳥",
+        "夜道",
+        "羽音",
+        "灯り"
+      ],
       "traditionLayer": "folklore_collection"
     },
     {
@@ -277,7 +496,13 @@
       "displayInList": true,
       "region": "南予",
       "municipality": "宇和島市下波・西予市城川町",
-      "areaTags": ["北宇和", "宇和島市下波", "西予市城川町", "夜道", "伸上り"],
+      "areaTags": [
+        "北宇和",
+        "宇和島市下波",
+        "西予市城川町",
+        "夜道",
+        "伸上り"
+      ],
       "type": "夜道の怪異",
       "traditionType": "地域で採集された",
       "evidenceLevel": "A",
@@ -289,13 +514,35 @@
       "locationId": "kitauwa_nanyo",
       "imagePath": "public/assets/ehime/generated/children/nobiagari.png",
       "articleId": "nobiagari",
-      "sourceIds": ["SRC_NOBIAGARI_0200015", "SRC_NOBIAGARI_0200232"],
+      "sourceIds": [
+        "SRC_NOBIAGARI_0200015",
+        "SRC_NOBIAGARI_0200232"
+      ],
       "courseIds": [],
       "childItems": [],
-      "missions": ["下波と城川町で伝えられた伸上りの違いを探してみよう", "伸上りへの対処法が地域によって違う理由を考えてみよう"],
-      "quiz": [{"question": "旧下波村では、伸上りに出会ったとき、どうするとよいと語られていましたか？", "choices": ["地面から一尺ほど上を蹴る", "柄杓を渡す", "鳥の声をまねる"], "answer": "地面から一尺ほど上を蹴る", "explanation": "旧下波村では、伸上りに出会ったとき、地面から一尺ほど上を蹴るとよいと語られていました。"}],
+      "missions": [
+        "下波と城川町で伝えられた伸上りの違いを探してみよう",
+        "伸上りへの対処法が地域によって違う理由を考えてみよう"
+      ],
+      "quiz": [
+        {
+          "question": "旧下波村では、伸上りに出会ったとき、どうするとよいと語られていましたか？",
+          "choices": [
+            "地面から一尺ほど上を蹴る",
+            "柄杓を渡す",
+            "鳥の声をまねる"
+          ],
+          "answer": "地面から一尺ほど上を蹴る",
+          "explanation": "旧下波村では、伸上りに出会ったとき、地面から一尺ほど上を蹴るとよいと語られていました。"
+        }
+      ],
       "childItemIds": [],
-      "visualFeatures": ["長い影", "夜道", "木立", "丸い目"],
+      "visualFeatures": [
+        "長い影",
+        "夜道",
+        "木立",
+        "丸い目"
+      ],
       "traditionLayer": "folklore_collection"
     },
     {
@@ -306,7 +553,14 @@
       "displayInList": true,
       "region": "中予・島しょ部",
       "municipality": "松山市怒和島",
-      "areaTags": ["怒和島", "松山市", "大みそか", "氏神", "歳徳神", "神の火"],
+      "areaTags": [
+        "怒和島",
+        "松山市",
+        "大みそか",
+        "氏神",
+        "歳徳神",
+        "神の火"
+      ],
       "type": "年中行事・神の来訪・神の火",
       "traditionType": "年中行事に伝わる",
       "evidenceLevel": "B",
@@ -318,13 +572,34 @@
       "locationId": "nuwa_island",
       "imagePath": "public/assets/ehime/generated/children/kane_no_kami_no_hi.png",
       "articleId": "kane_no_kami_no_hi",
-      "sourceIds": ["SRC_SOGO_NIHON_MINZOKU_GOI_1955"],
+      "sourceIds": [
+        "SRC_SOGO_NIHON_MINZOKU_GOI_1955"
+      ],
       "courseIds": [],
       "childItems": [],
-      "missions": ["この火が妖怪の怪火ではなく神の来訪と考えられた理由を探してみよう", "大みそかと新しい年の神さまの関係を考えてみよう"],
-      "quiz": [{"question": "怒和島では、大みそかの火は何の知らせだと説明されましたか？", "choices": ["歳徳神が現れた知らせ", "船幽霊が近づく知らせ", "牛鬼まつりが始まる知らせ"], "answer": "歳徳神が現れた知らせ", "explanation": "島の老人たちは、この火を新しい年の福をもたらす歳徳神の来訪を知らせるものだと説明しました。"}],
+      "missions": [
+        "この火が妖怪の怪火ではなく神の来訪と考えられた理由を探してみよう",
+        "大みそかと新しい年の神さまの関係を考えてみよう"
+      ],
+      "quiz": [
+        {
+          "question": "怒和島では、大みそかの火は何の知らせだと説明されましたか？",
+          "choices": [
+            "歳徳神が現れた知らせ",
+            "船幽霊が近づく知らせ",
+            "牛鬼まつりが始まる知らせ"
+          ],
+          "answer": "歳徳神が現れた知らせ",
+          "explanation": "島の老人たちは、この火を新しい年の福をもたらす歳徳神の来訪を知らせるものだと説明しました。"
+        }
+      ],
       "childItemIds": [],
-      "visualFeatures": ["金色の火", "小さな社", "夜道", "静かな光"],
+      "visualFeatures": [
+        "金色の火",
+        "小さな社",
+        "夜道",
+        "静かな光"
+      ],
       "traditionLayer": "calendar_custom"
     }
   ]

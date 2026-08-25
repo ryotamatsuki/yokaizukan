@@ -23,7 +23,7 @@ const expectedEvidence = {
   uwajima_ushioni_cluster: ["A", "公式資料と南予の民俗資料で確認"],
   matsuyama_tanuki_cluster: ["A", "郷土資料と図書館調査で確認"],
   iyo_basan_cluster: ["A", "1841年の『絵本百物語』で確認"],
-  ishizuchi_tengu_cluster: ["A", "石鎚山麓の民俗採集記録で確認"],
+  ishizuchi_tengu_cluster: ["A", "石鎚神社公式資料と山麓の民俗採集記録で確認"],
   dogo_myth_cluster: ["A", "古い地誌・風土記逸文・公式資料で確認"],
   ishiteji_emon_saburo_cluster: ["A", "石手寺刻板と図書館調査で確認"],
   uwakai_sea_mystery_cluster: ["A", "県史と南予の民俗資料で確認"],

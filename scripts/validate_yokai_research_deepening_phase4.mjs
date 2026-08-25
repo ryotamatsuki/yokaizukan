@@ -18,8 +18,8 @@ const PROTECTED = {
   'public/data/yokai_literary_phase1.json': 'c77ba23319ffd0d2fb502c7c8ae97db81a6633c4',
   'public/data/yokai_literary_phase2.json': 'c21fbccbe7595b0bb39fcb09597823e6c28c3a02',
   'public/data/yokai_literary_phase3.json': '2b1e5d67f2ae2d2b514a68737d21f7cae62b933c',
-  'public/data/ehime_research_v2.json': '4bfe24bb4211358cdf936935ae451073fab048fe',
-  'public/data/legends.json': 'd753f6497416cb0c1fc976121b160736b09d1ff6'
+  'public/data/ehime_research_v2.json': '26c073053568eff3a2f8c6d25fcb234980d04db0',
+  'public/data/legends.json': '77f46f3893e0daaf7e11f1115e22371bcdee0866'
 };
 
 const data = JSON.parse(fs.readFileSync(DATA, 'utf8'));
