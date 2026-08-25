@@ -6,12 +6,58 @@
     <title>愛媛ふしぎ伝承図鑑</title>
     <meta name="description" content="愛媛県に伝わる妖怪・怪異・神話・祭礼を、地図・図鑑・探検コース・出典でたどる子ども向け図鑑です。">
     <link rel="stylesheet" href="css/ehime.css">
+    <link rel="stylesheet" href="css/ehime-opening.css">
     <link rel="stylesheet" href="css/ehime-research-v2.css">
+    <script src="js/ehime-opening.js" defer></script>
     <script src="js/ehime.js" defer></script>
     <script src="js/ehime-research-v2.js" defer></script>
   </head>
   <body class="ehime-body">
     <a class="skip-link" href="#ehimeMain">本文へ移動</a>
+
+    <section id="ehimeOpening" class="ehime-opening" role="dialog" aria-modal="true" aria-labelledby="ehimeOpeningTitle" aria-hidden="false">
+      <canvas id="ehimeFogCanvas" class="ehime-opening__fog-canvas" aria-hidden="true"></canvas>
+      <div class="ehime-opening__mist" aria-hidden="true"></div>
+      <div class="ehime-opening__grain" aria-hidden="true"></div>
+
+      <div class="ehime-opening__stage">
+        <div class="ehime-opening__map-glow" aria-hidden="true"></div>
+        <div class="ehime-opening__map-wrap" aria-hidden="true">
+          <img class="ehime-opening__map" src="public/assets/ehime/generated/ehime_generated_map.png" alt="">
+        </div>
+
+        <div class="ehime-opening__lights" aria-hidden="true">
+          <span class="ehime-opening__light" style="--x:26%;--y:35%;--delay:0ms"></span>
+          <span class="ehime-opening__light" style="--x:37%;--y:31%;--delay:70ms"></span>
+          <span class="ehime-opening__light" style="--x:48%;--y:29%;--delay:140ms"></span>
+          <span class="ehime-opening__light" style="--x:58%;--y:38%;--delay:210ms"></span>
+          <span class="ehime-opening__light" style="--x:66%;--y:34%;--delay:280ms"></span>
+          <span class="ehime-opening__light" style="--x:42%;--y:48%;--delay:350ms"></span>
+          <span class="ehime-opening__light" style="--x:51%;--y:53%;--delay:420ms"></span>
+          <span class="ehime-opening__light" style="--x:40%;--y:64%;--delay:490ms"></span>
+          <span class="ehime-opening__light" style="--x:50%;--y:70%;--delay:560ms"></span>
+          <span class="ehime-opening__light" style="--x:61%;--y:69%;--delay:630ms"></span>
+          <span class="ehime-opening__light" style="--x:73%;--y:59%;--delay:700ms"></span>
+        </div>
+
+        <div class="ehime-opening__figures" aria-hidden="true">
+          <img class="ehime-opening__figure ehime-opening__figure--ushioni" src="public/assets/ehime/generated/uwajima_ushioni_cluster.png" alt="">
+          <img class="ehime-opening__figure ehime-opening__figure--tanuki" src="public/assets/ehime/generated/matsuyama_tanuki_cluster.png" alt="">
+          <img class="ehime-opening__figure ehime-opening__figure--tengu" src="public/assets/ehime/generated/ishizuchi_tengu_cluster.png" alt="">
+        </div>
+
+        <div class="ehime-opening__title-block">
+          <p class="ehime-opening__eyebrow">11 TALES FROM EHIME</p>
+          <h1 id="ehimeOpeningTitle" class="ehime-opening__title">愛媛ふしぎ伝承図鑑</h1>
+          <p class="ehime-opening__subtitle">山・海・温泉・寺・島に残る11の物語へ。</p>
+        </div>
+      </div>
+
+      <div class="ehime-opening__vignette" aria-hidden="true"></div>
+      <div class="ehime-opening__actions">
+        <button id="skipEhimeOpening" class="ehime-opening__button" type="button">スキップ</button>
+      </div>
+    </section>
 
     <header class="ehime-header">
       <nav class="ehime-top-nav" aria-label="ページ">
@@ -32,6 +78,7 @@
             <button type="button" class="ehime-primary-button" data-target-view="map">地図で探す</button>
             <button type="button" class="ehime-secondary-button" data-target-view="encyclopedia">図鑑で読む</button>
           </div>
+          <button id="replayEhimeOpening" type="button" class="ehime-secondary-button ehime-replay-opening">もう一度オープニングを見る</button>
         </div>
         <div class="ehime-hero__media">
           <img src="public/assets/ehime/generated/ehime_hero.png" alt="愛媛の山、海、温泉、妖怪をやさしい図鑑風にまとめたイラスト">
