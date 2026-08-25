@@ -1,5 +1,13 @@
 import { test, expect } from '@playwright/test';
 
+async function dismissOpening(page) {
+  const skip = page.getByRole('button', { name: 'スキップ' });
+  if (await skip.isVisible()) {
+    await skip.click();
+    await expect(page.locator('#ehimeOpening')).toBeHidden();
+  }
+}
+
 async function assertResearchPanel(page) {
   const panel = page.locator('.ehime-research-v2');
   await expect(panel).toBeVisible();
@@ -14,6 +22,7 @@ async function assertResearchPanel(page) {
 
 test('図鑑カードから詳細を開き、資料パネルと出典リンクを表示できる', async ({ page }) => {
   await page.goto('/ehime.html');
+  await dismissOpening(page);
   const detailButton = page.locator('[data-open-detail]').first();
   await expect(detailButton).toBeVisible();
   await detailButton.click();
@@ -23,6 +32,7 @@ test('図鑑カードから詳細を開き、資料パネルと出典リンク�
 
 test('地図マーカーから開いても同じResearch経路が動く', async ({ page }) => {
   await page.goto('/ehime.html');
+  await dismissOpening(page);
   await page.locator('[data-target-view="map"]').first().click();
   const marker = page.locator('#ehimeMap .map-marker').first();
   await expect(marker).toBeVisible();
