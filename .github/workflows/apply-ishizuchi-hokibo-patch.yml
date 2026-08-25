@@ -1,0 +1,53 @@
+name: Apply Ishizuchi Hokibo migration
+
+on:
+  push:
+    branches:
+      - feature/ishizuchi-hokibo-tengu
+    paths:
+      - scripts/apply_ishizuchi_hokibo_patch.mjs
+      - .github/workflows/apply-ishizuchi-hokibo-patch.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/ishizuchi-hokibo-tengu
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Apply data migration
+        run: node scripts/apply_ishizuchi_hokibo_patch.mjs
+
+      - name: Validate JavaScript syntax
+        run: |
+          node --check scripts/validate_ehime_11_traditions.mjs
+          node --check scripts/validate_ehime_literary_editing_v1.mjs
+
+      - name: Install test dependencies
+        run: npm install --no-package-lock --ignore-scripts
+
+      - name: Run data validation
+        run: npm run validate:data
+
+      - name: Remove one-shot migration files
+        run: |
+          rm scripts/apply_ishizuchi_hokibo_patch.mjs
+          rm .github/workflows/apply-ishizuchi-hokibo-patch.yml
+
+      - name: Commit migrated source-of-truth data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/legends.json public/data/articles.json public/data/sources.json public/data/evidence_check_table.json public/data/ehime_research_v2.json scripts/fixtures/ehime_11_articles.json scripts/validate_ehime_11_traditions.mjs scripts/validate_ehime_literary_editing_v1.mjs scripts/apply_ishizuchi_hokibo_patch.mjs .github/workflows/apply-ishizuchi-hokibo-patch.yml
+          git commit -m "feat: expand Ishizuchi tengu cluster with Hokibo"
+          git push origin HEAD:feature/ishizuchi-hokibo-tengu
