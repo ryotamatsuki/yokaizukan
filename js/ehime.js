@@ -6,7 +6,8 @@
     courses: "public/data/courses.json",
     sources: "public/data/sources.json",
     evidence: "public/data/evidence_check_table.json",
-    research: "public/data/ehime_research_v2.json"
+    research: "public/data/ehime_research_v2.json",
+    geojson: "public/data/geo/ehime-municipalities.geojson"
   };
 
   const STORAGE_KEY = "ehimeLegendNotebook";
@@ -20,13 +21,18 @@
     temple_legend: "寺院縁起に残る伝説",
     calendar_custom: "年中行事と神の来訪"
   };
-  const GENERATED_MAP_IMAGE = "public/assets/ehime/generated/ehime_generated_map.png";
-  const MAP_BOUNDS = {
-    west: 132.0,
-    east: 133.35,
-    north: 34.35,
-    south: 32.85
+  const LOCATION_PRECISION_LABELS = {
+    exact: "実地点",
+    site: "史跡・施設地点",
+    locality: "地域内の代表点",
+    municipality: "市町域の代表点",
+    regional: "伝承地域の代表点",
+    broad_historical_area: "歴史的広域の代表点",
+    marine: "海域伝承の代表点",
+    multiple_locations: "複数伝承地の代表点"
   };
+  const GENERATED_MAP_IMAGE = "public/assets/ehime/generated/ehime_generated_map.png";
+  const MAP_VIEWBOX = { width: 1000, height: 760, padding: 42 };
   const MARKER_LABEL_OFFSETS = {
     matsuyama_tanuki_cluster: { x: -116, y: -76 },
     dogo_myth_cluster: { x: 134, y: -96 },
@@ -46,6 +52,7 @@
     sources: [],
     evidence: [],
     research: [],
+    geojson: null,
     currentView: "home",
     filteredLegends: []
   };
@@ -87,14 +94,15 @@
   }
 
   async function loadAllData() {
-    const [legendsData, articlesData, locationsData, coursesData, sourcesData, evidenceData, researchData] = await Promise.all([
+    const [legendsData, articlesData, locationsData, coursesData, sourcesData, evidenceData, researchData, geojsonData] = await Promise.all([
       loadJson(DATA_PATHS.legends),
       loadJson(DATA_PATHS.articles),
       loadJson(DATA_PATHS.locations),
       loadJson(DATA_PATHS.courses),
       loadJson(DATA_PATHS.sources),
       loadJson(DATA_PATHS.evidence),
-      loadOptionalJson(DATA_PATHS.research)
+      loadOptionalJson(DATA_PATHS.research),
+      loadJson(DATA_PATHS.geojson)
     ]);
 
     state.legends = normalizeArray(legendsData.legends).filter((legend) => legend.displayInList !== false);
@@ -104,6 +112,7 @@
     state.sources = normalizeArray(sourcesData.sources);
     state.evidence = normalizeArray(evidenceData.legendEvidence);
     state.research = normalizeArray(researchData?.items);
+    state.geojson = geojsonData;
   }
 
   function normalizeArray(value) {
@@ -111,7 +120,7 @@
   }
 
   function registerStaticEvents() {
-    $$("[data-target-view]").forEach((button) => {
+    $$('[data-target-view]').forEach((button) => {
       button.addEventListener("click", () => setView(button.dataset.targetView));
     });
 
@@ -125,7 +134,7 @@
       }
     });
 
-    $$("[data-close-detail]").forEach((button) => {
+    $$('[data-close-detail]').forEach((button) => {
       button.addEventListener("click", closeDetail);
     });
 
@@ -190,15 +199,14 @@
     list.innerHTML = "";
     map.setAttribute("aria-label", "生成背景地図で見る愛媛県のふしぎマップ");
     const markerLayer = renderGeneratedMap(map);
-
-    const placements = getMapMarkerPlacements(state.legends);
+    const projection = createProjection(state.geojson, MAP_VIEWBOX);
 
     state.legends.forEach((legend) => {
       const location = findLocation(legend.locationId);
       const marker = document.createElement("button");
       marker.type = "button";
       marker.className = "map-marker";
-      positionMapMarker(marker, location, placements.get(legend.id));
+      positionMapMarker(marker, legend, location, projection);
       marker.textContent = legend.name.replace("と", "と ");
       marker.addEventListener("click", () => openDetail(legend.id));
       markerLayer.appendChild(marker);
@@ -209,6 +217,12 @@
       item.addEventListener("click", () => openDetail(legend.id));
       list.appendChild(item);
     });
+
+    map.dataset.geographicSource = "local-n03-2026";
+    map.dataset.legendGeographyPhase = "B";
+    map.dataset.legendCount = String(state.legends.length);
+    markerLayer.dataset.projection = "phase-a-common";
+    markerLayer.dataset.locationModel = "phase-b-precision";
   }
 
   function renderGeneratedMap(map) {
@@ -230,52 +244,91 @@
     return markerLayer;
   }
 
-  function positionMapMarker(marker, location, placement) {
-    if (placement) {
-      marker.style.left = `${placement.x}%`;
-      marker.style.top = `${placement.y}%`;
-      marker.style.setProperty("--marker-label-x", `${placement.labelX}px`);
-      marker.style.setProperty("--marker-label-y", `${placement.labelY}px`);
-      return;
+  function positionMapMarker(marker, legend, location, projection) {
+    const geographicPoint = resolveLocationPoint(location);
+    if (!geographicPoint) {
+      throw new Error(`${legend.id}: 描画用の地理座標がありません。`);
     }
 
-    marker.style.left = `${location?.mapPosition?.x ?? 50}%`;
-    marker.style.top = `${location?.mapPosition?.y ?? 50}%`;
+    const point = projection.projectPoint(geographicPoint.lng, geographicPoint.lat);
+    const offset = MARKER_LABEL_OFFSETS[legend.id] || { x: 0, y: 0 };
+    marker.style.left = `${round(point.x / MAP_VIEWBOX.width * 100)}%`;
+    marker.style.top = `${round(point.y / MAP_VIEWBOX.height * 100)}%`;
+    marker.style.setProperty("--marker-label-x", `${offset.x}px`);
+    marker.style.setProperty("--marker-label-y", `${offset.y}px`);
+    marker.dataset.legendId = legend.id;
+    marker.dataset.locationPrecision = location.locationPrecision;
+    marker.dataset.coordinateRole = geographicPoint.coordinateRole || "representative";
+    marker.dataset.projectedX = String(round(point.x));
+    marker.dataset.projectedY = String(round(point.y));
+    marker.dataset.projectionSource = "local-n03-2026";
+    const precisionLabel = LOCATION_PRECISION_LABELS[location.locationPrecision] || location.locationPrecision;
+    marker.setAttribute("aria-description", precisionLabel);
+    marker.title = `${legend.name} — ${precisionLabel}`;
   }
 
-  function getMapMarkerPlacements(legends) {
-    const placements = new Map();
+  function resolveLocationPoint(location) {
+    if (Number.isFinite(location?.lat) && Number.isFinite(location?.lng)) {
+      return { lat: location.lat, lng: location.lng, coordinateRole: location.coordinateRole || "exact" };
+    }
+    const point = location?.representativePoint;
+    if (Number.isFinite(point?.lat) && Number.isFinite(point?.lng)) {
+      return point;
+    }
+    return null;
+  }
 
-    legends.forEach((legend) => {
-      const location = findLocation(legend.locationId);
-      if (!Number.isFinite(location?.lat) || !Number.isFinite(location?.lng)) {
-        return;
-      }
+  function createProjection(geojson, { width, height, padding }) {
+    const coordinates = [];
+    normalizeArray(geojson?.features).forEach((feature) => collectCoordinates(feature?.geometry?.coordinates, coordinates));
+    if (coordinates.length === 0) {
+      throw new Error("N03行政区域の座標がありません。");
+    }
 
-      const point = projectMapPosition(location.lng, location.lat);
-      const offset = MARKER_LABEL_OFFSETS[legend.id] || { x: 0, y: 0 };
-      placements.set(legend.id, {
-        x: point.x,
-        y: point.y,
-        labelX: offset.x,
-        labelY: offset.y
-      });
+    const meanLat = coordinates.reduce((sum, point) => sum + point[1], 0) / coordinates.length;
+    const lonScale = Math.cos(meanLat * Math.PI / 180);
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minLat = Infinity;
+    let maxLat = -Infinity;
+
+    coordinates.forEach(([lng, lat]) => {
+      const x = lng * lonScale;
+      minX = Math.min(minX, x);
+      maxX = Math.max(maxX, x);
+      minLat = Math.min(minLat, lat);
+      maxLat = Math.max(maxLat, lat);
     });
 
-    return placements;
-  }
+    const extentX = Math.max(maxX - minX, Number.EPSILON);
+    const extentY = Math.max(maxLat - minLat, Number.EPSILON);
+    const scale = Math.min((width - padding * 2) / extentX, (height - padding * 2) / extentY);
+    const drawingWidth = extentX * scale;
+    const drawingHeight = extentY * scale;
+    const offsetX = (width - drawingWidth) / 2;
+    const offsetY = (height - drawingHeight) / 2;
 
-  function projectMapPosition(lng, lat) {
-    const x = (lng - MAP_BOUNDS.west) / (MAP_BOUNDS.east - MAP_BOUNDS.west) * 100;
-    const y = (MAP_BOUNDS.north - lat) / (MAP_BOUNDS.north - MAP_BOUNDS.south) * 100;
     return {
-      x: clamp(x, 2, 98),
-      y: clamp(y, 4, 96)
+      projectPoint(lng, lat) {
+        return {
+          x: offsetX + (lng * lonScale - minX) * scale,
+          y: offsetY + (maxLat - lat) * scale
+        };
+      }
     };
   }
 
-  function clamp(value, min, max) {
-    return Math.max(min, Math.min(max, value));
+  function collectCoordinates(value, output) {
+    if (!Array.isArray(value)) return;
+    if (value.length >= 2 && Number.isFinite(value[0]) && Number.isFinite(value[1])) {
+      output.push(value);
+      return;
+    }
+    value.forEach((child) => collectCoordinates(child, output));
+  }
+
+  function round(value) {
+    return Math.round(value * 100) / 100;
   }
 
   function renderLegendGrid() {
@@ -582,17 +635,17 @@
   }
 
   function bindDynamicActions(root) {
-    $$("[data-open-detail]", root).forEach((button) => {
+    $$('[data-open-detail]', root).forEach((button) => {
       button.addEventListener("click", () => openDetail(button.dataset.openDetail));
     });
 
-    $$("[data-notebook]", root).forEach((button) => {
+    $$('[data-notebook]', root).forEach((button) => {
       button.addEventListener("click", () => {
         addNotebook(button.dataset.notebook, true);
       });
     });
 
-    $$("[data-remove-notebook]", root).forEach((button) => {
+    $$('[data-remove-notebook]', root).forEach((button) => {
       button.addEventListener("click", () => {
         removeNotebook(button.dataset.removeNotebook);
       });
@@ -646,7 +699,7 @@
   function setView(view) {
     state.currentView = view || "home";
 
-    $$("[data-ehime-view]").forEach((section) => {
+    $$('[data-ehime-view]').forEach((section) => {
       section.classList.toggle("is-active", section.dataset.ehimeView === state.currentView);
     });
 

@@ -1,144 +1,146 @@
 {
-  "updatedAt": "2026-08-26",
+  "updatedAt": "2026-08-27",
+  "schemaVersion": "2.0.0",
+  "locationPolicy": "Phase B separates tradition precision from the cartographic point used to render it. representativePoint is never evidence that a tradition occurred at that exact coordinate. Canonical provenance is recorded in public/data/ehime_location_evidence.json.",
   "locations": [
     {
       "id": "uwajima",
-      "name": "宇和島市中心部・和霊神社周辺",
+      "name": "宇和島・南予の牛鬼伝承域",
       "region": "南予",
-      "municipality": "宇和島市",
-      "summary": "牛鬼が祭りに登場し、川面や町なかを練り歩く南予の中心地。",
-      "mapPosition": {
-        "x": 30,
-        "y": 76
-      },
-      "lat": 33.2289,
-      "lng": 132.5662
+      "municipality": "宇和島市ほか",
+      "summary": "吉田町の牛鬼塚伝承と、南予の祭礼に登場する牛鬼を束ねる複数地点の伝承。",
+      "locationPrecision": "multiple_locations",
+      "geographicScope": {"type": "multiple_locations", "municipalities": ["宇和島市"], "historicalRegion": "南予", "namedPlaces": ["宇和島市吉田町泉ヶ森の牛鬼塚", "うわじま牛鬼まつり・和霊大祭周辺"]},
+      "representativePoint": {"lat": 33.2289, "lng": 132.5662, "coordinateRole": "representative", "label": "宇和島市街の表示代表点", "cartographicOnly": true},
+      "sourceIds": ["SRC_UWAJIMA_CITY_2026", "SRC_IYO_MINZOKU_0200004", "SRC_IYO_MINZOKU_0200265"],
+      "confidence": "high"
     },
     {
       "id": "matsuyama_castle",
-      "name": "松山市・松山城下",
+      "name": "松山市内の八百八狸・狸伝承域",
       "region": "中予",
       "municipality": "松山市",
-      "summary": "八百八狸や隠神刑部の物語が語られる城下町。",
-      "mapPosition": {
-        "x": 47,
-        "y": 42
-      },
-      "lat": 33.8456,
-      "lng": 132.7656
+      "summary": "刑部狸を含む松山の狸伝説は、市内の複数地点に結び付いている。",
+      "locationPrecision": "multiple_locations",
+      "geographicScope": {"type": "multiple_locations", "municipalities": ["松山市"], "historicalRegion": "松山城下・周辺", "namedPlaces": ["南堀端町", "大街道3丁目・毘沙門坂", "上野町甲50・大宮八幡神社", "久谷町"]},
+      "representativePoint": {"lat": 33.8456, "lng": 132.7656, "coordinateRole": "representative", "label": "松山城下の表示代表点", "cartographicOnly": true},
+      "sourceIds": ["SRC_NDL_TANUKI_REFERENCE", "SRC_MATSUYAMA_TANUKI_OFFICIAL"],
+      "confidence": "high"
     },
     {
       "id": "iyo_general",
       "name": "『絵本百物語』に記された伊予の山中",
       "region": "伊予",
       "municipality": "特定の市町村は記録されていない",
-      "summary": "波山は、江戸時代の『絵本百物語』で伊予の山中にいる怪鳥として描かれています。",
-      "locationPrecision": "historical_broad_area",
-      "mapPosition": {
-        "x": 42,
-        "y": 50
-      }
+      "summary": "波山は『絵本百物語』で伊予の山中の怪鳥とされるが、現代の一点へ特定できない。",
+      "locationPrecision": "broad_historical_area",
+      "geographicScope": {"type": "broad_historical_area", "municipalities": [], "historicalRegion": "伊予国", "namedPlaces": ["伊予の山中"]},
+      "representativePoint": {"lat": 33.62, "lng": 132.86, "coordinateRole": "representative", "label": "伊予国広域の表示代表点", "cartographicOnly": true},
+      "sourceIds": ["SRC_EHON_HYAKU_MONOGATARI_1841"],
+      "confidence": "high"
     },
     {
       "id": "ishizuchi",
-      "name": "石鎚山・天狗岳",
-      "region": "東予",
-      "municipality": "西条市・久万高原町",
-      "summary": "西日本最高峰とされ、山岳信仰や修験の記憶が重なる霊山。",
-      "mapPosition": {
-        "x": 63,
-        "y": 45
-      },
-      "lat": 33.767778,
-      "lng": 133.115
+      "name": "石鎚山・山麓の天狗伝承域",
+      "region": "東予・山間部",
+      "municipality": "西条市・久万高原町ほか",
+      "summary": "法起坊信仰と山麓の天狗譚は石鎚山・周辺山域にまたがる。天狗岳は表示上のsite anchorで、伝承を山頂一点に限定しない。",
+      "locationPrecision": "regional",
+      "geographicScope": {"type": "regional", "municipalities": ["西条市", "久万高原町"], "historicalRegion": "石鎚山・山麓", "namedPlaces": ["石鎚山", "天狗岳", "西条市小松町・丹原町"]},
+      "representativePoint": {"lat": 33.767778, "lng": 133.115, "coordinateRole": "site_anchor", "label": "石鎚山天狗岳"},
+      "sourceIds": ["SRC_ISHIZUCHI_SHAHO_765_HOKIBO", "SRC_ASHINAKA_116_TENGU", "SRC_ISHIZUCHI_OFFICIAL"],
+      "confidence": "high"
     },
     {
       "id": "dogo_onsen",
       "name": "道後温泉",
       "region": "中予",
       "municipality": "松山市",
-      "summary": "白鷺伝説、少彦名命と大国主命の説話が残る温泉地。",
-      "mapPosition": {
-        "x": 50,
-        "y": 40
-      },
+      "summary": "白鷺伝説と少彦名命・大国主命の説話が道後温泉という具体的siteに結び付く。",
+      "locationPrecision": "site",
+      "geographicScope": {"type": "site", "municipalities": ["松山市"], "historicalRegion": "道後", "namedPlaces": ["道後温泉"]},
       "lat": 33.8521,
-      "lng": 132.7863
+      "lng": 132.7863,
+      "coordinateRole": "site_anchor",
+      "sourceIds": ["SRC_YOYOGUN_GORIGENSHU_1710", "SRC_IYOKOKU_FUDOKI_DOGO", "SRC_DOGO_OFFICIAL"],
+      "confidence": "high"
     },
     {
       "id": "ishiteji",
       "name": "石手寺",
       "region": "中予",
       "municipality": "松山市",
-      "summary": "四国遍路と衛門三郎伝説にゆかりのある寺。",
-      "mapPosition": {
-        "x": 52,
-        "y": 42
-      },
+      "summary": "衛門三郎伝説を伝える石手寺という具体的site。",
+      "locationPrecision": "site",
+      "geographicScope": {"type": "site", "municipalities": ["松山市"], "historicalRegion": null, "namedPlaces": ["石手寺"]},
       "lat": 33.8469,
-      "lng": 132.7967
+      "lng": 132.7967,
+      "coordinateRole": "site_anchor",
+      "sourceIds": ["SRC_EMON_SABURO_REFERENCE"],
+      "confidence": "high"
     },
     {
       "id": "uwakai",
       "name": "宇和海沿岸・日振島方面",
       "region": "南予",
-      "municipality": "大洲市・宇和島市・日振島方面",
-      "summary": "柄杓を求める船幽霊と、日振島へ帰る船を止めた陰火が記録された海域です。",
-      "mapPosition": {
-        "x": 24,
-        "y": 82
-      },
-      "lat": 33.1414,
-      "lng": 132.4225
+      "municipality": "宇和島市・宇和海沿岸",
+      "summary": "船幽霊や陰火の記録は海上・沿岸に関係し、陸上の市町一点では表せない。",
+      "locationPrecision": "marine",
+      "geographicScope": {"type": "marine", "municipalities": ["宇和島市"], "historicalRegion": "宇和海", "namedPlaces": ["宇和海", "日振島方面", "蒋淵・戸島間の海上"]},
+      "representativePoint": {"lat": 33.1414, "lng": 132.4225, "coordinateRole": "representative", "label": "宇和海の表示代表点", "cartographicOnly": true},
+      "sourceIds": ["SRC_EHIME_PREF_FOLKLORE_1983", "SRC_IYO_MINZOKU_0200237"],
+      "confidence": "high"
     },
     {
       "id": "kihoku",
-      "name": "鬼北町等妙寺旧境内・松野町古鬼ヶ城山周辺",
+      "name": "鬼北・松野の鬼王段三郎伝承地",
       "region": "南予",
       "municipality": "鬼北町・松野町",
-      "summary": "等妙寺縁起に残る鬼王段三郎、鬼ヶ城、タモト岩、鼓岩に関係する地域です。",
-      "mapPosition": {
-        "x": 35,
-        "y": 72
-      },
-      "lat": 33.242,
-      "lng": 132.703
+      "summary": "等妙寺旧境内と松野町目黒の山中を結ぶ複数地点の開基伝承。",
+      "locationPrecision": "multiple_locations",
+      "geographicScope": {"type": "multiple_locations", "municipalities": ["鬼北町", "松野町"], "historicalRegion": "北宇和", "namedPlaces": ["等妙寺旧境内", "松野町目黒"]},
+      "locations": [
+        {"lat": 33.226667, "lng": 132.676111, "coordinateRole": "site_anchor", "label": "等妙寺旧境内", "source": "鬼北町公式資料に記載された史跡中心座標"}
+      ],
+      "representativePoint": {"lat": 33.226667, "lng": 132.676111, "coordinateRole": "site_anchor", "label": "等妙寺旧境内"},
+      "sourceIds": ["SRC_KIHOKU_ONI_LEGEND"],
+      "confidence": "high"
     },
     {
       "id": "minamiuwa_ainan",
-      "name": "南宇和・愛南町周辺",
+      "name": "南宇和・愛南の夜雀伝承域",
       "region": "南予",
       "municipality": "愛南町周辺・旧南宇和郡",
-      "summary": "夜雀と山犬を結びつける話が記録された地域。",
+      "summary": "夜雀は南宇和郡・愛南町の山道で採集された地域伝承で、特定一点は記録されない。",
       "locationPrecision": "regional",
-      "mapPosition": {
-        "x": 20,
-        "y": 91
-      }
+      "geographicScope": {"type": "regional", "municipalities": ["愛南町"], "historicalRegion": "南宇和郡", "namedPlaces": ["南宇和郡", "愛南町", "岩松からの夜道"]},
+      "representativePoint": {"lat": 32.965, "lng": 132.58, "coordinateRole": "representative", "label": "南宇和の表示代表点", "cartographicOnly": true},
+      "sourceIds": ["SRC_YOSUZUME_1100055"],
+      "confidence": "high"
     },
     {
       "id": "kitauwa_nanyo",
       "name": "北宇和・南予の伸上り伝承地",
       "region": "南予",
-      "municipality": "宇和島市下波・西予市城川町",
-      "summary": "伸上りの姿と対処法が異なる複数の記録が残る地域。",
-      "locationPrecision": "multiple_regional_records",
-      "mapPosition": {
-        "x": 34,
-        "y": 73
-      }
+      "municipality": "宇和島市下波・西予市",
+      "summary": "伸上りは宇和島市下波と西予市など複数の採集地点に別々の記録がある。",
+      "locationPrecision": "multiple_locations",
+      "geographicScope": {"type": "multiple_locations", "municipalities": ["宇和島市", "西予市"], "historicalRegion": "北宇和・南予", "namedPlaces": ["宇和島市下波", "西予市の下池"]},
+      "representativePoint": {"lat": 33.242, "lng": 132.703, "coordinateRole": "representative", "label": "複数記録の表示代表点", "cartographicOnly": true},
+      "sourceIds": ["SRC_NOBIAGARI_0200015", "SRC_NOBIAGARI_0200232"],
+      "confidence": "high"
     },
     {
       "id": "nuwa_island",
       "name": "怒和島",
       "region": "中予・島しょ部",
       "municipality": "松山市",
-      "summary": "大みそかの夜、氏神の後ろに現れる火を歳徳神の来訪とした話が記録された島。",
-      "locationPrecision": "island",
-      "mapPosition": {
-        "x": 39,
-        "y": 25
-      }
+      "summary": "歳徳神の来訪を告げる火の記録は怒和島という島単位まで確認できるが、島内の一点は登録出典で確定していない。",
+      "locationPrecision": "locality",
+      "geographicScope": {"type": "locality", "municipalities": ["松山市"], "historicalRegion": "忽那諸島", "namedPlaces": ["怒和島"]},
+      "representativePoint": {"lat": 33.98325, "lng": 132.54742, "coordinateRole": "representative", "label": "怒和島の島代表点", "cartographicOnly": true},
+      "sourceIds": ["SRC_SOGO_NIHON_MINZOKU_GOI_1955"],
+      "confidence": "medium"
     }
   ]
 }
