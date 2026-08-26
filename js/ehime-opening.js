@@ -16,6 +16,7 @@
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let finishTimer = null;
     let diveTimer = null;
+    let hideTimer = null;
     let fogController = null;
     let finished = false;
     let previousBodyOverflow = document.body.style.overflow;
@@ -23,6 +24,10 @@
     const clearTimers = () => {
       window.clearTimeout(finishTimer);
       window.clearTimeout(diveTimer);
+      window.clearTimeout(hideTimer);
+      finishTimer = null;
+      diveTimer = null;
+      hideTimer = null;
     };
 
     const stopFog = () => {
@@ -75,8 +80,9 @@
       if (opening.contains(document.activeElement)) {
         replayButton?.focus({ preventScroll: true });
       }
-      window.setTimeout(() => {
+      hideTimer = window.setTimeout(() => {
         opening.hidden = true;
+        hideTimer = null;
       }, 720);
     };
 
