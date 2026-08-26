@@ -15,6 +15,7 @@ locations = location_doc['locations']
 ledger = load('public/data/ehime_location_evidence.json')['items']
 geojson = load('public/data/geo/ehime-municipalities.geojson')
 registered_sources = load('public/data/sources.json')['sources']
+package = load('package.json')
 
 assert len(legends) == 11, f'canonical legends must be 11, got {len(legends)}'
 assert len(locations) == 11, f'locations must be 11, got {len(locations)}'
@@ -106,9 +107,33 @@ assert location_by_id['minamiuwa_ainan']['locationPrecision'] == 'regional'
 assert location_by_id['nuwa_island']['locationPrecision'] == 'locality'
 assert location_by_id['matsuyama_castle']['locationPrecision'] == 'multiple_locations'
 
-# The runtime Phase B projection must be local N03-derived and must annotate all markers.
-runtime = (ROOT / 'js/ehime-map-debug.js').read_text(encoding='utf-8')
-for token in ["GEOJSON_PATH = 'public/data/geo/ehime-municipalities.geojson'", "marker.dataset.locationPrecision", "marker.dataset.projectionSource = 'local-n03-2026'", "markerLayer.dataset.projection = 'phase-a-common'", "map.dataset.legendGeographyPhase = 'B'"]:
-    assert token in runtime, f'runtime Phase B contract missing: {token}'
+# Production marker positioning must itself use the local Phase A N03-derived projection.
+production = (ROOT / 'js/ehime.js').read_text(encoding='utf-8')
+for token in [
+    'geojson: "public/data/geo/ehime-municipalities.geojson"',
+    'const projection = createProjection(state.geojson, MAP_VIEWBOX)',
+    'marker.dataset.locationPrecision = location.locationPrecision',
+    'marker.dataset.projectionSource = "local-n03-2026"',
+    'markerLayer.dataset.projection = "phase-a-common"',
+    'map.dataset.legendGeographyPhase = "B"'
+]:
+    assert token in production, f'production Phase B projection contract missing: {token}'
+for legacy_token in ['const MAP_BOUNDS =', 'location?.mapPosition', 'projectMapPosition(']:
+    assert legacy_token not in production, f'legacy geographic positioning remains in production path: {legacy_token}'
 
-print('Ehime Phase B legend geography hard gate OK: 11/11 precision + evidence + registered provenance + common local-N03 projection semantics')
+# Debug must retain the Phase A municipality/office + Phase B legend overlay.
+debug_runtime = (ROOT / 'js/ehime-map-debug.js').read_text(encoding='utf-8')
+for token in [
+    "GEOJSON_PATH = 'public/data/geo/ehime-municipalities.geojson'",
+    'ehime-hall-anchor',
+    'ehime-legend-geo-anchor',
+    'pointInFeatureCollection'
+]:
+    assert token in debug_runtime, f'geoDebug Phase B contract missing: {token}'
+
+# The new desktop/smartphone Phase B regression must actually run under the repository test scripts.
+phase_b_spec = 'tests/e2e/ehime-location-precision.spec.mjs'
+assert phase_b_spec in package.get('scripts', {}).get('test:e2e:ehime', ''), 'Phase B spec missing from test:e2e:ehime'
+assert phase_b_spec in package.get('scripts', {}).get('test:e2e', ''), 'Phase B spec missing from full test:e2e'
+
+print('Ehime Phase B legend geography hard gate OK: 11/11 precision + evidence + registered provenance + production local-N03 projection + regression wiring')
