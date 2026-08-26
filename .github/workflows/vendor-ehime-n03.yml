@@ -1,0 +1,46 @@
+name: Vendor Ehime N03 geographic base
+
+on:
+  push:
+    branches:
+      - feature/ehime-geographic-base
+    paths:
+      - scripts/vendor_ehime_n03.py
+      - public/data/ehime_municipality_anchors.json
+      - .github/workflows/vendor-ehime-n03.yml
+
+permissions:
+  contents: write
+
+jobs:
+  vendor:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/ehime-geographic-base
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install geospatial build dependencies
+        run: python -m pip install --disable-pip-version-check shapely==2.1.1 pyproj==3.7.1
+
+      - name: Download, dissolve, simplify and validate official N03 2026 Ehime data
+        run: python scripts/vendor_ehime_n03.py
+
+      - name: Commit vendored geographic base
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/geo/ehime-municipalities.geojson public/data/geo/ehime-municipalities.meta.json
+          if git diff --cached --quiet; then
+            echo "Vendored outputs are already current."
+            exit 0
+          fi
+          git commit -m "feat: vendor N03 2026 Ehime municipality boundaries"
+          git push origin HEAD:feature/ehime-geographic-base
