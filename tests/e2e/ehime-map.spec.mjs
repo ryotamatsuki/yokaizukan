@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test('通常表示はPhase Aでも既存の生成背景地図を維持する', async ({ page }) => {
   await page.goto('/ehime.html');
   await page.getByRole('button', { name: 'スキップ' }).click();
-  await page.getByRole('button', { name: '地図' }).click();
+  await page.getByRole('button', { name: '地図', exact: true }).click();
 
   await expect(page.locator('#ehimeMap .generated-map-image')).toBeVisible();
   await expect(page.locator('#ehimeMap .ehime-geo-debug')).toHaveCount(0);
@@ -14,7 +14,7 @@ test('mapDebug=1で20市町を同一投影したPhase A校正マップを表示�
   test.setTimeout(60_000);
   await page.goto('/ehime.html?mapDebug=1');
   await page.getByRole('button', { name: 'スキップ' }).click();
-  await page.getByRole('button', { name: '地図' }).click();
+  await page.getByRole('button', { name: '地図', exact: true }).click();
 
   const debug = page.locator('#ehimeMap .ehime-geo-debug');
   await expect(debug).toBeVisible({ timeout: 30_000 });
@@ -37,7 +37,7 @@ test('390px幅でもPhase A校正マップと20市町リストを操作できる
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/ehime.html?mapDebug=1');
   await page.getByRole('button', { name: 'スキップ' }).click();
-  await page.getByRole('button', { name: '地図' }).click();
+  await page.getByRole('button', { name: '地図', exact: true }).click();
 
   const map = page.locator('#ehimeMap');
   await expect(map.locator('.ehime-geo-debug__svg')).toBeVisible({ timeout: 30_000 });
