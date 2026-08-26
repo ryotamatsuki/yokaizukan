@@ -32,7 +32,10 @@ OUT_DIR = ROOT / "public/data/geo"
 OUT_GEOJSON = OUT_DIR / "ehime-municipalities.geojson"
 OUT_META = OUT_DIR / "ehime-municipalities.meta.json"
 SOURCE_URL = "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_38_GML.zip"
-EXPECTED_ARCHIVE_SHA256 = "7a5fdecb18f09159fd487c979dcfc3a7a46dc43a360bd20782507e8e433aa3c7"
+# Re-fetched from the official MLIT endpoint in CI on 2026-08-26. The
+# originally mirrored archive had a different ZIP hash, so this pins the
+# currently distributed official package rather than a third-party mirror.
+EXPECTED_ARCHIVE_SHA256 = "88061f7ae784bbdd7b81f514ea904dcef853645b6d477691c1ba31091ab41dbf"
 SOURCE_GEOJSON = "N03-20260101_38.geojson"
 TARGET_CRS = "EPSG:6672"
 CANDIDATE_TOLERANCES_M = (25.0, 50.0, 75.0, 100.0)
