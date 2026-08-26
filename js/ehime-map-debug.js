@@ -1,9 +1,10 @@
 (() => {
   const params = new URLSearchParams(window.location.search);
-  if (params.get('mapDebug') !== '1') return;
+  if (params.get('mapDebug') !== '1' && params.get('geoDebug') !== '1') return;
 
   const SVG_NS = 'http://www.w3.org/2000/svg';
   const ANCHOR_PATH = 'public/data/ehime_municipality_anchors.json';
+  const GEOJSON_PATH = 'public/data/geo/ehime-municipalities.geojson';
   const VIEWBOX = { width: 1000, height: 760, padding: 42 };
 
   let datasetPromise = null;
@@ -48,37 +49,47 @@
     if (datasetPromise) return datasetPromise;
 
     datasetPromise = (async () => {
-      const anchorResponse = await fetch(ANCHOR_PATH);
+      const [anchorResponse, boundaryResponse] = await Promise.all([
+        fetch(ANCHOR_PATH, { cache: 'force-cache' }),
+        fetch(GEOJSON_PATH, { cache: 'force-cache' })
+      ]);
       if (!anchorResponse.ok) throw new Error(`校正アンカーを読み込めませんでした (${anchorResponse.status})`);
-      const anchorData = await anchorResponse.json();
+      if (!boundaryResponse.ok) throw new Error(`N03行政区域を読み込めませんでした (${boundaryResponse.status})`);
+
+      const [anchorData, geojson] = await Promise.all([anchorResponse.json(), boundaryResponse.json()]);
       const municipalities = Array.isArray(anchorData.municipalities) ? anchorData.municipalities : [];
+      const features = Array.isArray(geojson.features) ? geojson.features : [];
       if (municipalities.length !== 20) throw new Error(`市町アンカーが20件ではありません (${municipalities.length})`);
+      if (features.length !== 20) throw new Error(`N03市町境界が20件ではありません (${features.length})`);
 
-      const boundaryResults = await Promise.all(municipalities.map(async (municipality) => {
-        const endpoint = anchorData.boundarySource.endpointTemplate
-          .replace('{municipalityCode}', encodeURIComponent(municipality.code));
-        const response = await fetch(endpoint, { cache: 'force-cache' });
-        if (!response.ok) throw new Error(`${municipality.name}の境界を読み込めませんでした (${response.status})`);
-        return { municipality, geojson: await response.json(), endpoint };
-      }));
+      const featureByCode = new Map(features.map((feature) => [String(feature?.properties?.code ?? ''), feature]));
+      municipalities.forEach((municipality) => {
+        const feature = featureByCode.get(municipality.code);
+        if (!feature) throw new Error(`${municipality.name} (${municipality.code}) のN03境界がありません`);
+        if (feature?.properties?.name !== municipality.name) {
+          throw new Error(`${municipality.code} の市町名が一致しません (${feature?.properties?.name} / ${municipality.name})`);
+        }
+      });
 
-      return { anchorData, boundaryResults };
+      return { anchorData, municipalities, geojson, featureByCode };
     })();
 
     return datasetPromise;
   }
 
   async function renderDebugMap(map) {
-    const { boundaryResults } = await loadDataset();
-    const projection = createProjection(boundaryResults.map((item) => item.geojson), VIEWBOX);
+    const { municipalities, geojson, featureByCode } = await loadDataset();
+    const projection = createProjection([geojson], VIEWBOX);
 
     const root = document.createElement('div');
     root.className = 'ehime-geo-debug';
     root.dataset.phase = 'A';
+    root.dataset.geojsonSource = GEOJSON_PATH;
+    root.dataset.municipalityCount = String(municipalities.length);
 
     const header = document.createElement('div');
     header.className = 'ehime-geo-debug__header';
-    header.innerHTML = '<strong>Phase A 地理校正モード</strong><span>20市町の行政区域と役所・役場アンカーを同じ投影で確認しています。</span>';
+    header.innerHTML = '<strong>Phase A 地理校正モード</strong><span>N03 2026の20市町行政区域と役所・役場アンカーを同じ投影で確認しています。</span>';
 
     const svg = document.createElementNS(SVG_NS, 'svg');
     svg.classList.add('ehime-geo-debug__svg');
@@ -104,14 +115,16 @@
     svg.appendChild(anchorLayer);
 
     const validation = [];
-    boundaryResults.forEach(({ municipality, geojson }, index) => {
+    municipalities.forEach((municipality, index) => {
+      const feature = featureByCode.get(municipality.code);
+      const featureCollection = { type: 'FeatureCollection', features: [feature] };
       const group = document.createElementNS(SVG_NS, 'g');
       group.classList.add('ehime-municipality-shape');
       group.dataset.municipalityCode = municipality.code;
       group.dataset.municipalityName = municipality.name;
 
       const path = document.createElementNS(SVG_NS, 'path');
-      path.setAttribute('d', featureCollectionToPath(geojson, projection.project));
+      path.setAttribute('d', featureCollectionToPath(featureCollection, projection.projectPoint));
       path.setAttribute('fill-rule', 'evenodd');
       path.setAttribute('vector-effect', 'non-scaling-stroke');
       const title = document.createElementNS(SVG_NS, 'title');
@@ -120,14 +133,16 @@
       group.appendChild(path);
       shapeLayer.appendChild(group);
 
-      const point = projection.project(municipality.lng, municipality.lat);
-      const inside = pointInFeatureCollection([municipality.lng, municipality.lat], geojson);
-      validation.push({ municipality, inside });
+      const point = projection.projectPoint(municipality.lng, municipality.lat);
+      const inside = pointInFeatureCollection([municipality.lng, municipality.lat], featureCollection);
+      validation.push({ municipality, inside, point });
 
       const anchorGroup = document.createElementNS(SVG_NS, 'g');
       anchorGroup.classList.add('ehime-hall-anchor');
       anchorGroup.dataset.municipalityCode = municipality.code;
       anchorGroup.dataset.anchorInside = String(inside);
+      anchorGroup.dataset.projectedX = String(round(point.x));
+      anchorGroup.dataset.projectedY = String(round(point.y));
       anchorGroup.setAttribute('transform', `translate(${round(point.x)}, ${round(point.y)})`);
 
       const circle = document.createElementNS(SVG_NS, 'circle');
@@ -153,6 +168,7 @@
 
     root.append(header, svg, footer);
     map.replaceChildren(root);
+    map.dataset.geographicSource = 'local-n03-2026';
     map.setAttribute('aria-label', 'Phase A 愛媛県20市町の地理校正マップ');
     renderDebugList(validation);
   }
@@ -212,13 +228,20 @@
     const offsetX = (width - drawingWidth) / 2;
     const offsetY = (height - drawingHeight) / 2;
 
+    const projectPoint = (lng, lat) => ({
+      x: offsetX + (lng * lonScale - minX) * scale,
+      y: offsetY + (maxLat - lat) * scale
+    });
+
     return {
-      project(lng, lat) {
-        return {
-          x: offsetX + (lng * lonScale - minX) * scale,
-          y: offsetY + (maxLat - lat) * scale
-        };
-      }
+      projectPoint,
+      geographicBounds: {
+        west: minX / lonScale,
+        east: maxX / lonScale,
+        south: minLat,
+        north: maxLat
+      },
+      displayPadding: padding
     };
   }
 
@@ -231,25 +254,25 @@
     value.forEach((child) => collectCoordinates(child, output));
   }
 
-  function featureCollectionToPath(collection, project) {
-    return (collection.features || []).map((feature) => geometryToPath(feature.geometry, project)).filter(Boolean).join(' ');
+  function featureCollectionToPath(collection, projectPoint) {
+    return (collection.features || []).map((feature) => geometryToPath(feature.geometry, projectPoint)).filter(Boolean).join(' ');
   }
 
-  function geometryToPath(geometry, project) {
+  function geometryToPath(geometry, projectPoint) {
     if (!geometry) return '';
-    if (geometry.type === 'Polygon') return polygonToPath(geometry.coordinates, project);
-    if (geometry.type === 'MultiPolygon') return geometry.coordinates.map((polygon) => polygonToPath(polygon, project)).join(' ');
+    if (geometry.type === 'Polygon') return polygonToPath(geometry.coordinates, projectPoint);
+    if (geometry.type === 'MultiPolygon') return geometry.coordinates.map((polygon) => polygonToPath(polygon, projectPoint)).join(' ');
     return '';
   }
 
-  function polygonToPath(polygon, project) {
-    return polygon.map((ring) => ringToPath(ring, project)).join(' ');
+  function polygonToPath(polygon, projectPoint) {
+    return polygon.map((ring) => ringToPath(ring, projectPoint)).join(' ');
   }
 
-  function ringToPath(ring, project) {
+  function ringToPath(ring, projectPoint) {
     if (!Array.isArray(ring) || ring.length === 0) return '';
     return ring.map((coordinate, index) => {
-      const point = project(coordinate[0], coordinate[1]);
+      const point = projectPoint(coordinate[0], coordinate[1]);
       return `${index === 0 ? 'M' : 'L'}${round(point.x)} ${round(point.y)}`;
     }).join(' ') + ' Z';
   }
@@ -286,7 +309,7 @@
     console.error('Ehime Phase A geographic debug failed.', error);
     const panel = document.createElement('div');
     panel.className = 'ehime-geo-debug ehime-geo-debug--error';
-    panel.innerHTML = `<strong>Phase A 地理校正データを表示できませんでした。</strong><p>${escapeHtml(error?.message || String(error))}</p><p>通常表示は影響を受けません。ネットワークまたは境界データ取得元を確認してください。</p>`;
+    panel.innerHTML = `<strong>Phase A 地理校正データを表示できませんでした。</strong><p>${escapeHtml(error?.message || String(error))}</p><p>通常表示は影響を受けません。ローカルのN03境界データと校正アンカーを確認してください。</p>`;
     map.replaceChildren(panel);
   }
 
