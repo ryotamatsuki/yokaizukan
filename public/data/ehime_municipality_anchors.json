@@ -1,38 +1,208 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updatedAt": "2026-08-26",
-  "purpose": "愛媛県20市町の地理描画を校正するための役所・役場アンカー。通常の伝承位置としては使用しない。",
+  "purpose": "愛媛県20市町の地理描画を校正するための役所・役場本庁アンカー。伝承地点の代替座標としては使用しない。",
   "boundarySource": {
-    "provider": "Geolonia japanese-admins",
-    "endpointTemplate": "https://geolonia.github.io/japanese-admins/38/{municipalityCode}.json",
-    "note": "国土数値情報（行政区域データ）を加工した公開GeoJSONをPhase Aの校正表示に利用する。正式背景地図は国土数値情報N03 2026年版の固定成果物へ置換する。"
+    "provider": "国土交通省 国土数値情報",
+    "dataset": "行政区域データ N03 2026年版",
+    "runtimePath": "public/data/geo/ehime-municipalities.geojson",
+    "note": "ブラウザ実行時はリポジトリ固定済みのN03 GeoJSONのみを使用し、外部境界APIへアクセスしない。"
   },
   "anchorSource": {
+    "provider": "国土交通省 国土数値情報",
+    "dataset": "市町村役場等及び公的集会施設 P05 2022年版",
+    "referenceDate": "2022-04",
+    "facilityClass": "1",
+    "facilityClassMeaning": "本庁（市役所、区役所、町役場、村役場）",
+    "sourcePage": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05-2022.html",
+    "sourceArchive": "https://nlftp.mlit.go.jp/ksj/gml/data/P05/P05-22/P05-22_38_GML.zip",
+    "sourceArchiveSha256": "9187eca50edbb6a4e48e9d70d64d2ad3380b80d4d4069ea981a1bceccedecc61",
+    "sourceArchiveBytes": 239332,
+    "sourceFile": "P05-22_38.geojson",
+    "license": "CC BY 4.0",
     "role": "calibration_only",
-    "reference": "全国市区町村の city code および役所の緯度経度（公開一覧、2025-11-28更新）",
-    "officialVerificationTarget": "国土数値情報 P05 2022年版（本庁=施設分類1）",
-    "note": "Phase Aでは地図の相対位置を検証する仮アンカーとして使用し、公開用伝承座標とは分離する。"
+    "note": "P05の最新公表版（2022年4月基準）から施設分類1を抽出した固定アンカー。公開用の妖怪・伝承座標とは分離する。"
   },
   "municipalities": [
-    {"code":"38201","name":"松山市","office":"松山市役所","lat":33.839157,"lng":132.765575},
-    {"code":"38202","name":"今治市","office":"今治市役所","lat":34.066098,"lng":132.997860},
-    {"code":"38203","name":"宇和島市","office":"宇和島市役所","lat":33.223340,"lng":132.560557},
-    {"code":"38204","name":"八幡浜市","office":"八幡浜市役所","lat":33.462898,"lng":132.423336},
-    {"code":"38205","name":"新居浜市","office":"新居浜市役所","lat":33.960290,"lng":133.283351},
-    {"code":"38206","name":"西条市","office":"西条市役所","lat":33.919511,"lng":133.181170},
-    {"code":"38207","name":"大洲市","office":"大洲市役所","lat":33.506194,"lng":132.544509},
-    {"code":"38210","name":"伊予市","office":"伊予市役所","lat":33.757429,"lng":132.703729},
-    {"code":"38213","name":"四国中央市","office":"四国中央市役所","lat":33.980761,"lng":133.549195},
-    {"code":"38214","name":"西予市","office":"西予市役所","lat":33.362620,"lng":132.510992},
-    {"code":"38215","name":"東温市","office":"東温市役所","lat":33.791024,"lng":132.872296},
-    {"code":"38356","name":"上島町","office":"上島町役場","lat":34.257336,"lng":133.204507},
-    {"code":"38386","name":"久万高原町","office":"久万高原町役場","lat":33.655606,"lng":132.901671},
-    {"code":"38401","name":"松前町","office":"松前町役場","lat":33.787440,"lng":132.711375},
-    {"code":"38402","name":"砥部町","office":"砥部町役場","lat":33.749263,"lng":132.792228},
-    {"code":"38422","name":"内子町","office":"内子町役場","lat":33.532902,"lng":132.658007},
-    {"code":"38442","name":"伊方町","office":"伊方町役場","lat":33.488574,"lng":132.354012},
-    {"code":"38484","name":"松野町","office":"松野町役場","lat":33.227189,"lng":132.710799},
-    {"code":"38488","name":"鬼北町","office":"鬼北町役場","lat":33.255857,"lng":132.684104},
-    {"code":"38506","name":"愛南町","office":"愛南町役場","lat":32.962164,"lng":132.583324}
+    {
+      "code": "38201",
+      "name": "松山市",
+      "office": "松山市役所",
+      "lat": 33.839212,
+      "lng": 132.765579,
+      "address": "松山市二番町4-7-2",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38202",
+      "name": "今治市",
+      "office": "今治市役所",
+      "lat": 34.0660971,
+      "lng": 132.997867,
+      "address": "今治市別宮町1-4-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38203",
+      "name": "宇和島市",
+      "office": "宇和島市役所",
+      "lat": 33.22334,
+      "lng": 132.560563,
+      "address": "宇和島市曙町1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38204",
+      "name": "八幡浜市",
+      "office": "八幡浜市役所",
+      "lat": 33.4629229,
+      "lng": 132.4231742,
+      "address": "八幡浜市北浜1-1-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38205",
+      "name": "新居浜市",
+      "office": "新居浜市役所",
+      "lat": 33.960329,
+      "lng": 133.283379,
+      "address": "新居浜市一宮町1-5-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38206",
+      "name": "西条市",
+      "office": "西条市役所",
+      "lat": 33.919615,
+      "lng": 133.181186,
+      "address": "西条市明屋敷164",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38207",
+      "name": "大洲市",
+      "office": "大洲市役所",
+      "lat": 33.506285,
+      "lng": 132.544514,
+      "address": "大洲市大洲690-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38210",
+      "name": "伊予市",
+      "office": "伊予市役所",
+      "lat": 33.757461,
+      "lng": 132.703778,
+      "address": "伊予市米湊820",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38213",
+      "name": "四国中央市",
+      "office": "四国中央市役所",
+      "lat": 33.980694,
+      "lng": 133.549188,
+      "address": "四国中央市三島宮川4-6-55",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38214",
+      "name": "西予市",
+      "office": "西予市役所",
+      "lat": 33.363017,
+      "lng": 132.510967,
+      "address": "西予市宇和町卯之町3-434-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38215",
+      "name": "東温市",
+      "office": "東温市役所",
+      "lat": 33.791027,
+      "lng": 132.872299,
+      "address": "東温市見奈良530-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38356",
+      "name": "上島町",
+      "office": "上島町役場",
+      "lat": 34.257455,
+      "lng": 133.204529,
+      "address": "上島町弓削下弓削210",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38386",
+      "name": "久万高原町",
+      "office": "久万高原町役場",
+      "lat": 33.655606,
+      "lng": 132.901671,
+      "address": "久万高原町久万212",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38401",
+      "name": "松前町",
+      "office": "松前町役場",
+      "lat": 33.787479,
+      "lng": 132.711364,
+      "address": "松前町大字筒井631",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38402",
+      "name": "砥部町",
+      "office": "砥部町役場",
+      "lat": 33.74926,
+      "lng": 132.792233,
+      "address": "砥部町宮内1392",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38422",
+      "name": "内子町",
+      "office": "内子町役場",
+      "lat": 33.532937,
+      "lng": 132.658093,
+      "address": "内子町平岡甲168",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38442",
+      "name": "伊方町",
+      "office": "伊方町役場",
+      "lat": 33.488593,
+      "lng": 132.353998,
+      "address": "伊方町湊浦1993-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38484",
+      "name": "松野町",
+      "office": "松野町役場",
+      "lat": 33.22715,
+      "lng": 132.710935,
+      "address": "松野町松丸343",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38488",
+      "name": "鬼北町",
+      "office": "鬼北町役場",
+      "lat": 33.255792,
+      "lng": 132.684032,
+      "address": "鬼北町大字近永800-1",
+      "source": "MLIT_P05_2022"
+    },
+    {
+      "code": "38506",
+      "name": "愛南町",
+      "office": "愛南町役場",
+      "lat": 32.962043,
+      "lng": 132.58322,
+      "address": "愛南町城辺甲2420",
+      "source": "MLIT_P05_2022"
+    }
   ]
 }
