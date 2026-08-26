@@ -14,6 +14,7 @@ location_doc = load('public/data/locations.json')
 locations = location_doc['locations']
 ledger = load('public/data/ehime_location_evidence.json')['items']
 geojson = load('public/data/geo/ehime-municipalities.geojson')
+registered_sources = load('public/data/sources.json')['sources']
 
 assert len(legends) == 11, f'canonical legends must be 11, got {len(legends)}'
 assert len(locations) == 11, f'locations must be 11, got {len(locations)}'
@@ -23,11 +24,12 @@ allowed_precision = {
     'exact', 'site', 'locality', 'municipality', 'regional',
     'broad_historical_area', 'marine', 'multiple_locations'
 }
-allowed_roles = {'exact', 'site_anchor', 'representative', 'scope_centroid', 'multiple_site'}
+allowed_roles = {'exact', 'site_anchor', 'representative', 'multiple_site'}
 municipality_names = {f['properties']['name'] for f in geojson['features']}
 feature_by_name = {f['properties']['name']: shape(f['geometry']) for f in geojson['features']}
 location_by_id = {x['id']: x for x in locations}
 ledger_by_id = {x['legend_id']: x for x in ledger}
+source_ids = {x['id'] for x in registered_sources}
 assert len(location_by_id) == 11 and len(ledger_by_id) == 11, 'duplicate location/evidence keys'
 
 def point_of(location):
@@ -49,11 +51,17 @@ for legend in legends:
     assert precision in allowed_precision, f'{lid}: invalid precision {precision}'
     assert evidence.get('precision_class') == precision, f'{lid}: ledger/location precision mismatch'
     assert evidence.get('location_id') == location['id'], f'{lid}: ledger location mismatch'
+    assert evidence.get('coordinate_role') == point_of(location)[2], f'{lid}: ledger/location coordinate role mismatch'
     assert evidence.get('evidence_summary'), f'{lid}: missing evidence summary'
     assert evidence.get('confidence') in {'high', 'medium', 'low'}, f'{lid}: invalid confidence'
     assert evidence.get('sources'), f'{lid}: no location sources'
     for src in evidence['sources']:
-        assert src.get('title') and str(src.get('url', '')).startswith('https://'), f'{lid}: invalid source provenance'
+        url = str(src.get('url', ''))
+        assert src.get('title') and url.startswith('https://'), f'{lid}: invalid source provenance'
+        assert 'simsearch.cgi' not in url and 'ksearch.cgi' not in url, f'{lid}: discovery URL cannot be canonical evidence: {url}'
+
+    for source_id in location.get('sourceIds', []):
+        assert source_id in source_ids, f'{lid}: unregistered location source ID {source_id}'
 
     scope = location.get('geographicScope') or {}
     assert scope.get('type') == precision, f'{lid}: geographicScope.type mismatch'
@@ -71,9 +79,13 @@ for legend in legends:
         assert len(municipalities) == 1, f'{lid}: site must identify one municipality'
         assert feature_by_name[municipalities[0]].covers(Point(lng, lat)), f'{lid}: site anchor outside {municipalities[0]}'
 
-    if precision in {'regional', 'broad_historical_area', 'marine', 'locality'} and role in {'representative', 'scope_centroid'}:
+    if precision in {'regional', 'broad_historical_area', 'marine', 'locality'} and role == 'representative':
         p = location.get('representativePoint') or {}
         assert p.get('cartographicOnly') is True, f'{lid}: non-site representative must be explicitly cartographicOnly'
+
+    if precision == 'multiple_locations' and role == 'representative':
+        p = location.get('representativePoint') or {}
+        assert p.get('cartographicOnly') is True, f'{lid}: multiple-location representative must be explicitly cartographicOnly'
 
     if precision == 'marine':
         assert not any(geom.covers(Point(lng, lat)) for geom in feature_by_name.values()), f'{lid}: marine representative point is on municipal land'
@@ -99,4 +111,4 @@ runtime = (ROOT / 'js/ehime-map-debug.js').read_text(encoding='utf-8')
 for token in ["GEOJSON_PATH = 'public/data/geo/ehime-municipalities.geojson'", "marker.dataset.locationPrecision", "marker.dataset.projectionSource = 'local-n03-2026'", "markerLayer.dataset.projection = 'phase-a-common'", "map.dataset.legendGeographyPhase = 'B'"]:
     assert token in runtime, f'runtime Phase B contract missing: {token}'
 
-print('Ehime Phase B legend geography hard gate OK: 11/11 precision + evidence + common local-N03 projection semantics')
+print('Ehime Phase B legend geography hard gate OK: 11/11 precision + evidence + registered provenance + common local-N03 projection semantics')
