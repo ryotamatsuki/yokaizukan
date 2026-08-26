@@ -17,20 +17,15 @@
     if (!map) return;
 
     const observer = new MutationObserver(() => {
-      if (!map.querySelector(':scope > .ehime-geo-debug')) {
-        scheduleRender();
-      }
+      if (!map.querySelector(':scope > .ehime-geo-debug')) scheduleRender();
     });
     observer.observe(map, { childList: true });
-
     scheduleRender();
   }
 
   function scheduleRender() {
     window.clearTimeout(scheduleRender.timer);
-    scheduleRender.timer = window.setTimeout(() => {
-      void ensureDebugMap();
-    }, 40);
+    scheduleRender.timer = window.setTimeout(() => void ensureDebugMap(), 40);
   }
 
   async function ensureDebugMap() {
@@ -54,24 +49,17 @@
 
     datasetPromise = (async () => {
       const anchorResponse = await fetch(ANCHOR_PATH);
-      if (!anchorResponse.ok) {
-        throw new Error(`校正アンカーを読み込めませんでした (${anchorResponse.status})`);
-      }
+      if (!anchorResponse.ok) throw new Error(`校正アンカーを読み込めませんでした (${anchorResponse.status})`);
       const anchorData = await anchorResponse.json();
       const municipalities = Array.isArray(anchorData.municipalities) ? anchorData.municipalities : [];
-      if (municipalities.length !== 20) {
-        throw new Error(`市町アンカーが20件ではありません (${municipalities.length})`);
-      }
+      if (municipalities.length !== 20) throw new Error(`市町アンカーが20件ではありません (${municipalities.length})`);
 
       const boundaryResults = await Promise.all(municipalities.map(async (municipality) => {
         const endpoint = anchorData.boundarySource.endpointTemplate
           .replace('{municipalityCode}', encodeURIComponent(municipality.code));
         const response = await fetch(endpoint, { cache: 'force-cache' });
-        if (!response.ok) {
-          throw new Error(`${municipality.name}の境界を読み込めませんでした (${response.status})`);
-        }
-        const geojson = await response.json();
-        return { municipality, geojson, endpoint };
+        if (!response.ok) throw new Error(`${municipality.name}の境界を読み込めませんでした (${response.status})`);
+        return { municipality, geojson: await response.json(), endpoint };
       }));
 
       return { anchorData, boundaryResults };
@@ -90,10 +78,7 @@
 
     const header = document.createElement('div');
     header.className = 'ehime-geo-debug__header';
-    header.innerHTML = `
-      <strong>Phase A 地理校正モード</strong>
-      <span>20市町の行政区域と役所・役場アンカーを同じ投影で確認しています。</span>
-    `;
+    header.innerHTML = '<strong>Phase A 地理校正モード</strong><span>20市町の行政区域と役所・役場アンカーを同じ投影で確認しています。</span>';
 
     const svg = document.createElementNS(SVG_NS, 'svg');
     svg.classList.add('ehime-geo-debug__svg');
@@ -119,7 +104,6 @@
     svg.appendChild(anchorLayer);
 
     const validation = [];
-
     boundaryResults.forEach(({ municipality, geojson }, index) => {
       const group = document.createElementNS(SVG_NS, 'g');
       group.classList.add('ehime-municipality-shape');
@@ -155,7 +139,6 @@
       number.textContent = String(index + 1);
       const anchorTitle = document.createElementNS(SVG_NS, 'title');
       anchorTitle.textContent = `${municipality.office} (${municipality.lat}, ${municipality.lng})`;
-
       anchorGroup.append(circle, number, anchorTitle);
       anchorLayer.appendChild(anchorGroup);
     });
@@ -171,14 +154,12 @@
     root.append(header, svg, footer);
     map.replaceChildren(root);
     map.setAttribute('aria-label', 'Phase A 愛媛県20市町の地理校正マップ');
-
     renderDebugList(validation);
   }
 
   function renderDebugList(validation) {
     const list = document.querySelector('#mapLegendList');
     if (!list) return;
-
     list.innerHTML = '';
     list.classList.add('map-debug-list');
 
@@ -187,10 +168,7 @@
       button.type = 'button';
       button.className = 'map-debug-list__item';
       button.dataset.municipalityCode = municipality.code;
-      button.innerHTML = `
-        <strong><span>${index + 1}</span>${escapeHtml(municipality.name)}</strong>
-        <small>${escapeHtml(municipality.office)} / ${inside ? '区域内' : '要確認'}</small>
-      `;
+      button.innerHTML = `<strong><span>${index + 1}</span>${escapeHtml(municipality.name)}</strong><small>${escapeHtml(municipality.office)} / ${inside ? '区域内' : '要確認'}</small>`;
       button.addEventListener('click', () => selectMunicipality(municipality.code));
       list.appendChild(button);
     });
@@ -209,14 +187,23 @@
     });
     if (coordinates.length === 0) throw new Error('行政区域の座標がありません。');
 
-    const latitudes = coordinates.map((point) => point[1]);
-    const meanLat = latitudes.reduce((sum, value) => sum + value, 0) / latitudes.length;
+    let latitudeTotal = 0;
+    coordinates.forEach((point) => { latitudeTotal += point[1]; });
+    const meanLat = latitudeTotal / coordinates.length;
     const lonScale = Math.cos(meanLat * Math.PI / 180);
-    const rawX = coordinates.map((point) => point[0] * lonScale);
-    const minX = Math.min(...rawX);
-    const maxX = Math.max(...rawX);
-    const minLat = Math.min(...latitudes);
-    const maxLat = Math.max(...latitudes);
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minLat = Infinity;
+    let maxLat = -Infinity;
+
+    coordinates.forEach(([lng, lat]) => {
+      const x = lng * lonScale;
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+    });
+
     const extentX = Math.max(maxX - minX, Number.EPSILON);
     const extentY = Math.max(maxLat - minLat, Number.EPSILON);
     const scale = Math.min((width - padding * 2) / extentX, (height - padding * 2) / extentY);
@@ -245,18 +232,13 @@
   }
 
   function featureCollectionToPath(collection, project) {
-    return (collection.features || [])
-      .map((feature) => geometryToPath(feature.geometry, project))
-      .filter(Boolean)
-      .join(' ');
+    return (collection.features || []).map((feature) => geometryToPath(feature.geometry, project)).filter(Boolean).join(' ');
   }
 
   function geometryToPath(geometry, project) {
     if (!geometry) return '';
     if (geometry.type === 'Polygon') return polygonToPath(geometry.coordinates, project);
-    if (geometry.type === 'MultiPolygon') {
-      return geometry.coordinates.map((polygon) => polygonToPath(polygon, project)).join(' ');
-    }
+    if (geometry.type === 'MultiPolygon') return geometry.coordinates.map((polygon) => polygonToPath(polygon, project)).join(' ');
     return '';
   }
 
@@ -279,9 +261,7 @@
   function pointInGeometry(point, geometry) {
     if (!geometry) return false;
     if (geometry.type === 'Polygon') return pointInPolygon(point, geometry.coordinates);
-    if (geometry.type === 'MultiPolygon') {
-      return geometry.coordinates.some((polygon) => pointInPolygon(point, polygon));
-    }
+    if (geometry.type === 'MultiPolygon') return geometry.coordinates.some((polygon) => pointInPolygon(point, polygon));
     return false;
   }
 
@@ -306,11 +286,7 @@
     console.error('Ehime Phase A geographic debug failed.', error);
     const panel = document.createElement('div');
     panel.className = 'ehime-geo-debug ehime-geo-debug--error';
-    panel.innerHTML = `
-      <strong>Phase A 地理校正データを表示できませんでした。</strong>
-      <p>${escapeHtml(error?.message || String(error))}</p>
-      <p>通常表示は影響を受けません。ネットワークまたは境界データ取得元を確認してください。</p>
-    `;
+    panel.innerHTML = `<strong>Phase A 地理校正データを表示できませんでした。</strong><p>${escapeHtml(error?.message || String(error))}</p><p>通常表示は影響を受けません。ネットワークまたは境界データ取得元を確認してください。</p>`;
     map.replaceChildren(panel);
   }
 
