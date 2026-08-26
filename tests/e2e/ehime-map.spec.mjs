@@ -108,6 +108,7 @@ test('desktop: geoDebug=1はローカルN03とP05役場20件を共通projection�
   expect(runtime.externalGeoRequests).toEqual([]);
   expect(runtime.pageErrors).toEqual([]);
   expect(runtime.consoleErrors).toEqual([]);
+  await page.screenshot({ path: 'test-results/ehime-geo-desktop.png', fullPage: true });
 });
 
 test('mapDebug=1 aliasでもPhase A校正マップを維持する', async ({ page }) => {
@@ -151,4 +152,5 @@ test('390px smartphone: 島嶼部を含む20市町がclipping・横overflowな�
   expect(runtime.externalGeoRequests).toEqual([]);
   expect(runtime.pageErrors).toEqual([]);
   expect(runtime.consoleErrors).toEqual([]);
+  await page.screenshot({ path: 'test-results/ehime-geo-smartphone-390.png', fullPage: true });
 });
