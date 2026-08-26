@@ -1,86 +1,146 @@
-# 愛媛版 地理基盤データ provenance
+# 愛媛版 Geographic Base Phase A provenance
 
 更新日: 2026-08-26
 
-## 1. 目的
+## 1. 目的と設計原則
 
-愛媛ふしぎ伝承図鑑の地図について、AI生成背景画像に手動座標を重ねる構造から、実際の行政区域と緯度経度を同一投影で扱う構造へ移行する。
+愛媛ふしぎ伝承図鑑では、AI生成背景画像に手動座標を重ねる方式だけでは、市町・島嶼・寺社・山・海域・複数地点伝承を相互に正しい位置関係で比較できない。
 
-Phase Aでは本番地図を直ちに置き換えず、`ehime.html?mapDebug=1` の校正モードだけで20市町の行政区域と役所・役場アンカーを表示する。通常の `ehime.html` は既存地図を維持する。
+Phase Aでは、行政区域と校正点を実緯度経度から同一projectionへ通す地理基盤を確立した。`ehime_generated_map.png` 等の生成画像は今後もtexture / atmosphereとして使用できるが、県形・市町境界・marker anchorの地理的正本にはしない。
 
-## 2. 本番地理基盤の正本候補: 国土数値情報 N03
+通常の `ehime.html` は既存11伝承の見せ方を維持し、`ehime.html?geoDebug=1`（互換alias: `?mapDebug=1`）で20市町の行政区域と役所・役場本庁アンカーを検査できる。
 
-- データ: 国土数値情報 行政区域データ（N03）
-- 提供: 国土交通省
+## 2. 行政区域の正本: 国土数値情報 N03 2026
+
+- 提供: 国土交通省 国土数値情報
+- データ: 行政区域データ N03 2026年版
 - 対象: 愛媛県（都道府県コード38）
-- データ基準年月日: 2026-01-01
-- ファイル: `N03-20260101_38_GML.zip`
-- 公式掲載ページ: https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html
-- 公式ダウンロードURL: https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_38_GML.zip
-- 座標系: JGD2011
-- 形状: 面
-- 主な属性: 都道府県名、市区町村名、全国地方公共団体コード
-- 使用許諾条件: 公式ページの表示では CC BY 4.0。原典に国土地理院の測量成果を含むため、公開時は国土地理院の利用手続案内も確認する。
+- 基準日: 2026-01-01
+- 公式ファイル: `N03-20260101_38_GML.zip`
+- 公式URL: `https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_38_GML.zip`
+- 取得ZIP SHA-256: `88061f7ae784bbdd7b81f514ea904dcef853645b6d477691c1ba31091ab41dbf`
+- 取得ZIP: 12,542,884 bytes
+- 元GeoJSON: `N03-20260101_38.geojson` / 16,841,979 bytes
+- ランタイム固定成果物: `public/data/geo/ehime-municipalities.geojson`
+- metadata: `public/data/geo/ehime-municipalities.meta.json`
 
-取得物の再現性確認用として、外部の公開データパイプライン `TakashiSasaki/museum-yama-data` が同一公式URLから取得した2026年愛媛県版について、以下を記録している。
+ブラウザ実行時には国土地理院、国交省、Geoloniaその他の外部GeoJSON endpointへアクセスしない。外部取得はメンテナンス時の生成scriptに限定する。
 
-- raw ZIP SHA-256: `88061f7ae784bbdd7b81f514ea904dcef853645b6d477691c1ba31091ab41dbf`
-- extracted GeoJSON: `N03-20260101_38.geojson`
-- extracted GeoJSON SHA-256: `16e3af28d9af3a864922869826cec6bfe55adc11d51a81fbc2a12000555adc11`
+## 3. dissolve / simplification
 
-Phase Bで本番地図へ移行する前に、公式N03成果物からWeb用GeoJSON/SVGを生成し、リポジトリへ固定する。ランタイムで第三者サービスへ依存する構成にはしない。
+`scripts/vendor_ehime_n03.py` が公式N03を取得し、以下の処理を行う。
 
-## 3. Phase Aの境界ブートストラップ
+1. `N03_007`（全国地方公共団体コード）で愛媛県20市町を抽出する。
+2. municipality単位でdissolveする。Polygon / MultiPolygon / holeを維持する。
+3. WGS84/JGD2011の度単位のまま簡略化せず、JGD2011 / 平面直角座標系IV `EPSG:6672` へ投影する。
+4. Shapely `simplify(..., preserve_topology=True)` を用いる。
+5. 5 / 10 / 15 / 20 / 25 / 50 / 75 / 100mを比較する。
+6. polygon component維持、20/20役場包含、最大面積誤差0.1%以下をHard Gateとする。
 
-Phase Aの校正表示では、Geolonia `japanese-admins` の市町村別GeoJSON endpointを一時的に利用する。
+選定結果は10m。
 
-- repository: https://github.com/geolonia/japanese-admins
-- endpoint: `https://geolonia.github.io/japanese-admins/38/{municipalityCode}.json`
-- 同repositoryのREADMEでは、国土交通省「国土数値情報（行政区域データ）」を加工して作成したデータと説明されている。
+- dissolve直後 vertex count: 451,208
+- 簡略化後 vertex count: 55,543
+- vertex reduction: 87.690156%
+- 最大面積誤差: 0.07295222182972971%
+- 平均面積誤差: 0.010701718661439456%
+- raw polygon components: 4,778
+- simplified polygon components: 4,778
+- component preservation: PASS
+- 出力GeoJSON: 1,760,840 bytes
 
-用途は `?mapDebug=1` の校正表示のみ。本番地図の正本にはしない。Phase Aの目的は、20市町を同一座標系で描画し、投影・レスポンシブ・アンカーの問題を先に発見することにある。
+15m以上は最大面積誤差0.1%を満たさなかったため採用していない。閾値を緩和して軽量化するのではなく、地理精度を優先した。
 
-## 4. 20市町役所・役場アンカー
+松山市、今治市、宇和島市、上島町等の島嶼をMultiPolygonとして残し、全component数の同一性をCIで検査する。
 
-`public/data/ehime_municipality_anchors.json` に20市町の仮校正点を保存する。
+## 4. 20市町役所・役場アンカー: 国土数値情報 P05 2022
 
-Phase A初期値は、公開されている「全国市区町村の city code および役所の緯度経度」一覧（2025-11-28更新）を参照した。これらは `calibration_only` であり、伝承の公開位置には使用しない。
+`public/data/ehime_municipality_anchors.json` は、国土交通省「市町村役場等及び公的集会施設 P05 2022年版」を正本とする。
 
-正式確認対象は国土数値情報「市町村役場等及び公的集会施設データ」（P05）2022年版とする。
-
-- 公式掲載ページ: https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05-2022.html
+- 基準年月: 2022-04
 - 愛媛県ファイル: `P05-22_38_GML.zip`
-- P05の施設分類1（本庁）を基本に照合する。
+- 公式掲載ページ: `https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P05-2022.html`
+- 公式取得URL: `https://nlftp.mlit.go.jp/ksj/gml/data/P05/P05-22/P05-22_38_GML.zip`
+- 取得ZIP SHA-256: `9187eca50edbb6a4e48e9d70d64d2ad3380b80d4d4069ea981a1bceccedecc61`
+- 取得ZIP: 239,332 bytes
+- 使用ファイル: `P05-22_38.geojson`
+- 施設分類: `P05_002 = 1`（本庁）
+- license: CC BY 4.0
 
-Phase B開始前に20件をP05または各自治体公式所在地と照合し、差異がある場合は `ehime_municipality_anchors.json` を更新する。
+`scripts/vendor_ehime_office_anchors.py` は現在の愛媛県20市町コードについて施設分類1が各1件だけ存在することを要求し、そのpoint・名称・所在地を固定する。
 
-## 5. Phase A投影ルール
+これらはprojectionのcontrol point / calibration anchorであり、妖怪・伝承地点の代替ではない。
 
-- 全20市町のGeoJSONとアンカーを同一projection関数へ通す。
-- SVG viewBoxは `1000 760`。
-- longitudeは平均緯度のcosで補正した簡易正距円筒系とし、全境界のboundsから一括fitする。
-- SVGは `preserveAspectRatio="xMidYMid meet"` を使用し、縦横を別々に伸縮しない。
-- 各役所・役場点について、対応する市町polygon内に入るか point-in-polygon で検証する。
-- 位置確認のための番号・市町リストは校正モードだけに表示する。
+## 5. 20/20 point-in-polygon Hard Gate
 
-この投影は図鑑上の相対位置表示を目的としたWeb表示用であり、測量成果として座標・距離・面積を提供する機能ではない。
+`scripts/validate_ehime_geographic_base.py` と `scripts/validate_ehime_geographic_base.mjs` は、固定済みP05本庁pointと固定済みN03 municipality geometryを読み、対応コードごとにpoint-in-polygonを行う。
 
-## 6. Phase Aで変更しないもの
+Hard Gate:
 
-- 11伝承の `locationId`
-- `public/data/locations.json` の既存座標・`mapPosition`
-- 通常表示の `ehime_generated_map.png`
-- オープニングの生成背景地図と11灯の手動配置
+- municipality geometry: 20/20
+- municipality office anchor: 20/20
+- point-in-polygon: 20/20
+- Polygon / MultiPolygon以外: FAIL
+- invalid geometry: FAIL
+- raw/simplified component数不一致: FAIL
+- 主要島嶼自治体のMultiPolygon消失: FAIL
+- 選択simplificationの面積誤差上限超過: FAIL
 
-これらはPhase B/Cで、地理基盤の校正結果を確認してから移行する。
+19/20以下ではmergeしない。
 
-## 7. Phase A Hard Gate
+## 6. projection / SVG
 
-- 愛媛県20市町のコード・名称が一意に揃う。
-- 20件の校正アンカーが存在する。
-- `?mapDebug=1` だけが新しい地理校正表示を有効化する。
-- 20市町を単一SVG・単一projectionで描画する。
-- 20アンカーのpolygon包含判定を画面上とE2Eで確認できる。
-- 通常表示では11伝承の既存地図が維持される。
-- desktop / 390px smartphoneの双方で校正マップを確認できる。
-- Phase B開始前に公式N03 2026成果物のローカル固定とP05アンカー照合を完了する。
+`js/ehime-map-debug.js` がローカルN03 GeoJSON全体から地理boundsを算出し、単一の `projectPoint(lng, lat)` を生成する。
+
+同じ `projectPoint` を以下に適用する。
+
+- municipality polygon
+- municipality office marker
+- 将来のlegend /伝承marker
+
+SVG viewBoxは `1000 760`、`preserveAspectRatio="xMidYMid meet"`。表示paddingは42で、地理boundsとは別の値として扱う。旧 `mapPosition` や手書き `MAP_BOUNDS` を行政区域SVG・役場markerの別系統計算には使用しない。
+
+表示用projectionは全座標の平均緯度を用いてlongitudeをcos補正し、GeoJSON全体をviewBoxへfitする。図鑑UI上の相対位置表示が目的であり、測量距離・面積計算用ではない。
+
+## 7. debug / browser QA
+
+`?geoDebug=1` または `?mapDebug=1` で以下を表示する。
+
+- 愛媛県20市町境界
+- 20市町役所・役場本庁anchor
+- 市町名一覧
+- 各anchorの区域内判定
+- 20/20 status
+
+Playwrightではdesktopと390px smartphoneの双方について、ローカルGeoJSONの200 response、20 geometry、20 anchor、SVG path、marker projected bounds、外部GeoJSON requestがないこと、console/page errorがないこと、スマートフォン横overflowがないこと、上島町等の島嶼部がDOM上で存在・操作できることを検査する。
+
+## 8. 既存表示とのレイヤー関係
+
+Phase Aでは通常表示の既存世界観を維持する。
+
+1. generated image: 装飾・texture
+2. geographic SVG: N03を正本とする地理レイヤー（Phase Aではdebug表示）
+3. marker layer: 共通projection上のpoint（Phase AではP05 calibration anchors）
+
+既存11伝承を役場へ一律移動しない。
+
+## 9. 石鎚山座標の修正
+
+`public/data/locations.json` の石鎚山・天狗岳は、旧 `33.21, 133.06` を廃止し、国土地理院の天狗岳座標 N33°46′04″ / E133°06′54″ に対応する `33.767778, 133.115` へ修正した。
+
+この修正以外はPhase Aで11伝承すべてのlocation precision調査へ拡張しない。
+
+## 10. Phase Bへの接続
+
+Phase Bでは11伝承ごとにlocation precisionを整理する。
+
+- exact
+- site
+- municipality
+- regional
+- broad historical area
+- multiple locations
+
+道後温泉・石手寺・石鎚山等の実地点、宇和島牛鬼等の代表地点、伊予の婆さん等の歴史的広域、宇和海怪異等の海域を区別し、今回確立した `lng/lat -> projectPoint()` 基盤へ載せ替える。
+
+役場anchorはPhase Bでも校正用のままであり、伝承位置として流用しない。
