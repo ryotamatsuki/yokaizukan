@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-08-26",
   "locations": [
     {
       "id": "uwajima",
@@ -49,8 +49,8 @@
         "x": 63,
         "y": 45
       },
-      "lat": 33.21,
-      "lng": 133.06
+      "lat": 33.767778,
+      "lng": 133.115
     },
     {
       "id": "dogo_onsen",
