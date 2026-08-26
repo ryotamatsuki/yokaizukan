@@ -51,6 +51,7 @@ jobs:
           node --check tests/e2e/ehime-opening.spec.mjs
           node --check tests/e2e/ehime-research.spec.mjs
           node --check tests/e2e/ehime-map.spec.mjs
+          node --check tests/e2e/ehime-location-precision.spec.mjs
           node --check tests/e2e/yokai-literary.spec.mjs
           node --check tests/e2e/yokai-literary-phase3.spec.mjs
           node --check tests/e2e/yokai-research-phase4.spec.mjs
@@ -60,6 +61,7 @@ jobs:
           python -m py_compile scripts/vendor_ehime_n03.py
           python -m py_compile scripts/vendor_ehime_office_anchors.py
           python -m py_compile scripts/validate_ehime_geographic_base.py
+          python -m py_compile scripts/validate_ehime_location_precision.py
 
       - name: Check whitespace errors
         run: git diff --check origin/${{ github.base_ref || 'main' }}...HEAD
@@ -69,6 +71,9 @@ jobs:
 
       - name: Run Ehime geographic 20/20 hard gate
         run: python scripts/validate_ehime_geographic_base.py
+
+      - name: Run Ehime Phase B legend geography hard gate
+        run: python scripts/validate_ehime_location_precision.py
 
       - name: Install test dependencies
         run: npm install --no-package-lock --ignore-scripts
@@ -90,4 +95,6 @@ jobs:
           path: |
             test-results/ehime-geo-desktop.png
             test-results/ehime-geo-smartphone-390.png
+            test-results/ehime-phase-b-desktop.png
+            test-results/ehime-phase-b-smartphone-390.png
           if-no-files-found: ignore
