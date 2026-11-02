@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {readOptional,writeAtomic} from './atomic-file.mjs';
 
 const DATA_PATH = 'public/data/yokai.json';
 const PROMPTS_PATH = 'public/data/generation_prompts.json';
@@ -532,11 +533,12 @@ mergedItems.forEach((item) => {
   }
 });
 data.items = mergedItems;
-fs.writeFileSync(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+writeAtomic(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 
 let promptData = { version: 1, updatedAt: UPDATED_AT, prompts: [] };
-if (fs.existsSync(PROMPTS_PATH)) {
-  const raw = JSON.parse(fs.readFileSync(PROMPTS_PATH, 'utf8'));
+const existingPrompts=readOptional(PROMPTS_PATH,null);
+if (existingPrompts!==null) {
+  const raw = JSON.parse(existingPrompts);
   if (Array.isArray(raw)) {
     promptData.prompts = raw;
   } else {
@@ -561,7 +563,7 @@ additions.forEach((addition) => {
 promptData.version = 1;
 promptData.updatedAt = UPDATED_AT;
 promptData.prompts = [...promptMap.values()].sort((a, b) => a.id.localeCompare(b.id));
-fs.writeFileSync(PROMPTS_PATH, `${JSON.stringify(promptData, null, 2)}\n`, 'utf8');
+writeAtomic(PROMPTS_PATH, `${JSON.stringify(promptData, null, 2)}\n`, 'utf8');
 
 console.log(JSON.stringify({
   yokaiCount: data.items.length,
