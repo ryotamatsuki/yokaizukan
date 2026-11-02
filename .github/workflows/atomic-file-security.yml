@@ -1,0 +1,18 @@
+name: Atomic yokai generation security tests
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --check scripts/build_detailed_articles.mjs
+      - run: node --check scripts/update_50_yokai_data.mjs
+      - run: node --test tests/atomic-file.test.mjs
