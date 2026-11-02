@@ -423,7 +423,7 @@
         <h3>${escapeHtml(source.title)}</h3>
         <p>${escapeHtml(source.organization || "")}</p>
         <p>${escapeHtml(source.note || "")}</p>
-        <a href="${escapeAttribute(source.url || "#")}" target="_blank" rel="noopener">資料を開く</a>
+        <a href="${escapeAttribute(safeHttpURL(source.url) || "#")}" target="_blank" rel="noopener">資料を開く</a>
       </article>
     `).join("");
   }
@@ -563,7 +563,7 @@
         <dl>
           ${rows.map(([label, value]) => `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(Array.isArray(value) ? value.join("、") : String(value))}</dd>`).join("")}
         </dl>
-        ${source.url ? `<a href="${escapeAttribute(source.url)}" target="_blank" rel="noopener">資料を開く</a>` : ""}
+        ${safeHttpURL(source.url) ? `<a href="${escapeAttribute(safeHttpURL(source.url))}" target="_blank" rel="noopener">資料を開く</a>` : ""}
       </article>
     `;
   }
@@ -719,7 +719,7 @@
     if (!path) {
       return `<div class="image-placeholder">画像準備中</div>`;
     }
-    return `<img src="${escapeAttribute(path)}" alt="${escapeAttribute(alt || "")}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'image-placeholder',textContent:'画像準備中'}))">`;
+    return `<img src="${escapeAttribute(safeHttpURL(path))}" alt="${escapeAttribute(alt || "")}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'image-placeholder',textContent:'画像準備中'}))">`;
   }
 
   function badge(text, tone = "") {
@@ -778,6 +778,17 @@
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  }
+
+  // Escaping attribute characters alone cannot prevent javascript: URLs.
+  function safeHttpURL(value) {
+    if (!value) return "";
+    try {
+      const url = new URL(String(value), window.location.href);
+      return url.protocol === "https:" || url.protocol === "http:" ? url.href : "";
+    } catch {
+      return "";
+    }
   }
 
   function escapeAttribute(value) {
