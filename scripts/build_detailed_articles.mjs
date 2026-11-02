@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {readOptional,writeAtomic} from './atomic-file.mjs';
 
 const DATA_PATH = 'public/data/yokai.json';
 const ARTICLE_PATH = 'yokai_detailed_articles.md';
@@ -103,21 +104,21 @@ if (!Array.isArray(items)) {
   throw new Error('public/data/yokai.json の items が配列ではありません。');
 }
 
-const originalMarkdown = fs.existsSync(ARTICLE_PATH)
-  ? fs.readFileSync(ARTICLE_PATH, 'utf8')
-  : '# 子ども向け妖怪図鑑「もっと詳しく」記事原稿集\n';
+const originalMarkdown = readOptional(ARTICLE_PATH,'# 子ども向け妖怪図鑑「もっと詳しく」記事原稿集\n');
 
 const existingArticles = parseMarkdownArticles(originalMarkdown);
 const markdownByName = new Map(existingArticles.map((article) => [article.title, article]));
 const missingItems = items.filter((item) => !markdownByName.has(item.name));
 
+let fullMarkdown = originalMarkdown;
 if (missingItems.length > 0) {
   const additions = missingItems.map(generateMarkdownArticle).join('\n');
   const separator = originalMarkdown.trimEnd().endsWith('---') ? '\n\n' : '\n\n---\n\n';
-  fs.writeFileSync(ARTICLE_PATH, `${originalMarkdown.trimEnd()}${separator}${additions}\n`, 'utf8');
+  fullMarkdown = `${originalMarkdown.trimEnd()}${separator}${additions}\n`;
+  writeAtomic(ARTICLE_PATH,fullMarkdown);
 }
 
-const fullMarkdown = fs.readFileSync(ARTICLE_PATH, 'utf8');
+// Reuse the content just generated instead of a second, racing read.
 const articles = parseMarkdownArticles(fullMarkdown);
 const articleMap = new Map(articles.map((article) => [article.title, article]));
 
@@ -136,9 +137,9 @@ if (!Array.isArray(data)) {
   data.version = Math.max(Number(data.version || 1), 4);
   data.updatedAt = UPDATED_AT;
   data.items = items;
-  fs.writeFileSync(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
+  writeAtomic(DATA_PATH, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 } else {
-  fs.writeFileSync(DATA_PATH, `${JSON.stringify(items, null, 2)}\n`, 'utf8');
+  writeAtomic(DATA_PATH, `${JSON.stringify(items, null, 2)}\n`, 'utf8');
 }
 
 console.log(JSON.stringify({
